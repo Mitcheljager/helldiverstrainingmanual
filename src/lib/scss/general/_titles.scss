@@ -1,0 +1,24 @@
+h1, h2, h3, h4, h5 {
+  margin: 0 0 $margin;
+  font-family: $font-family-brand;
+  color: $white;
+}
+
+$sizes: (
+  clamp(32px, 5vw, 72px),
+  clamp(28px, 4vw, 48px),
+  clamp(24px, 3vw, 28px),
+  clamp(18px, 2.5vw, 24px),
+  clamp(16px, 2vw, 21px),
+);
+
+$i: 1;
+
+@each $size in $sizes {
+  h#{$i} {
+    font-size: $size;
+    line-height: 1.25em;
+  }
+
+  $i: $i + 1;
+}

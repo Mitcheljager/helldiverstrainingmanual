@@ -1,0 +1,43 @@
+* {
+	box-sizing: border-box;
+
+	&::selection {
+		background: $primary;
+		color: black;
+	}
+}
+
+html,
+body {
+	width: 100%;
+}
+
+body {
+	position: relative;
+	margin: 0;
+	padding: 0;
+	background-color: $bg-base;
+	color: $text-color;
+	font-size: 16px;
+  font-family: "Lato";
+  line-height: 1.45rem;
+	overflow-x: hidden;
+
+	@include safari() {
+		display: block;
+	}
+}
+
+a {
+	color: $primary;
+
+	&:hover,
+	&:active,
+	&:focus {
+		color: var(--secondary);
+	}
+
+	&:focus {
+		outline: none;
+	}
+}
