@@ -1,0 +1,25 @@
+@mixin breakpoint($breakpoint, $type: min) {
+  $value: $breakpoint;
+
+  @if map-has-key($breakpoints, $breakpoint) {
+    $value: map-get($breakpoints, $breakpoint);
+  } @else if type-of($breakpoint) == string {
+    @error "Breakpoint '#{$breakpoint}' not found in map.";
+  }
+
+  @if $type == max {
+    $value: $value - 1px;
+  }
+
+  @media (#{$type}-width: $value) {
+    @content;
+  }
+}
+
+@mixin safari() {
+	@media not all and (min-resolution: 0.001dpcm) {
+		@supports (-webkit-appearance: none) {
+			@content;
+		}
+	}
+}
