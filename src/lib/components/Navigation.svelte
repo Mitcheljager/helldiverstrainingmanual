@@ -12,7 +12,7 @@
   }, {
     text: "Stratagems",
     subroutes: [{
-      text: "Practice",
+      text: "Interactive Practice",
     }, {
       text: "Weapons",
       subroutes: [{
@@ -32,22 +32,22 @@
     }]
   }]
 
-  function toPath(string) {
-    return string.toLowerCase().replaceAll(" ", "-")
+  function toPath(array = []) {
+    return "/" + array.map(string => string.toLowerCase().replaceAll(" ", "-")).join("/")
   }
 </script>
 
 <nav>
   {#each routes as route, i}
-    <a class="route" href="/{toPath(route.text)}"><span>{i}.</span> {route.text}</a>
+    <a class="route" href={route.route !== undefined ? "/" : toPath([route.text])}><span>{i}.</span> {route.text}</a>
 
     {#if route.subroutes}
       {#each route.subroutes as subroute, j}
-        <a class="subroute" href="/{toPath(route.text)}{toPath(route.text) ? "/" : ""}{toPath(subroute.text)}"><span>{i}{alphabet[j]}.</span> {subroute.text}</a>
+        <a class="subroute" href={toPath([route.text, subroute.text])}><span>{i}{alphabet[j]}.</span> {subroute.text}</a>
 
         {#if subroute.subroutes}
           {#each subroute.subroutes as subsubroute, k}
-            <a class="subsubroute" href="/{toPath(route.text)}/{toPath(subroute.text)}/{toPath(subsubroute.text)}"><span>{i}{alphabet[j]}-{k}.</span> {subsubroute.text}</a>
+            <a class="subsubroute" href={toPath([route.text, subroute.text, subsubroute.text])}><span>{i}{alphabet[j]}-{k}.</span> {subsubroute.text}</a>
           {/each}
         {/if}
       {/each}
