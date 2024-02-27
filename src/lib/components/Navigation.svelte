@@ -6,52 +6,48 @@
     route: "",
   }, {
     text: "Super Destroyer",
-    route: "super-destroyer",
     subroutes: [{
       text: "Currencies",
-      route: "currencies"
     }]
   }, {
     text: "Stratagems",
-    route: "stratagems",
     subroutes: [{
+      text: "Practice",
+    }, {
       text: "Weapons",
-      route: "weapons",
       subroutes: [{
         text: "Machine Gun",
-        route: "machine-gun"
       }, {
         text: "Anti-Material Rifle",
-        route: "anti-material-rifle"
       }, {
         text: "Stalwart",
-        route: "stalwart"
       }]
     }, {
       text: "Orbital",
-      route: "orbital",
       subroutes: [{
         text: "Gatling Barrage",
-        route: "gatling-barrage"
       }, {
         text: "Airburst Strike",
-        route: "airburst-strike"
       }]
     }]
   }]
+
+  function toPath(string) {
+    return string.toLowerCase().replaceAll(" ", "-")
+  }
 </script>
 
 <nav>
   {#each routes as route, i}
-    <a class="route" href="/{route.route}"><span>{i}.</span> {route.text}</a>
+    <a class="route" href="/{toPath(route.text)}"><span>{i}.</span> {route.text}</a>
 
     {#if route.subroutes}
       {#each route.subroutes as subroute, j}
-        <a class="subroute" href="/{route.route}{route.route ? "/" : ""}{subroute.route}"><span>{i}{alphabet[j]}.</span> {subroute.text}</a>
+        <a class="subroute" href="/{toPath(route.text)}{toPath(route.text) ? "/" : ""}{toPath(subroute.text)}"><span>{i}{alphabet[j]}.</span> {subroute.text}</a>
 
         {#if subroute.subroutes}
           {#each subroute.subroutes as subsubroute, k}
-            <a class="subsubroute" href="/{route.route}/{subroute.route}/{subsubroute.route}"><span>{i}{alphabet[j]}-{k}.</span> {subsubroute.text}</a>
+            <a class="subsubroute" href="/{toPath(route.text)}/{toPath(subroute.text)}/{toPath(subsubroute.text)}"><span>{i}{alphabet[j]}-{k}.</span> {subsubroute.text}</a>
           {/each}
         {/if}
       {/each}
