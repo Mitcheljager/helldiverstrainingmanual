@@ -16,9 +16,10 @@ $i: 1;
 
 @each $size in $sizes {
   h#{$i} {
+    max-width: $text-limit;
+    margin: $margin * 0.5 0 0;
     font-size: $size;
     line-height: 1.15em;
-    max-width: $text-limit;
   }
 
   $i: $i + 1;

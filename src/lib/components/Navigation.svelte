@@ -4,10 +4,6 @@
   const routes = [{
     text: "Introduction",
     route: "",
-    subroutes: [{
-      text: "Your first day",
-      route: "your-first-day"
-    }],
   }, {
     text: "Super Destroyer",
     route: "super-destroyer",
@@ -64,8 +60,14 @@
 </nav>
 
 <style lang="scss">
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
   a {
-    display: block;
+    display: inline-block;
     color: $text-color;
     text-decoration: none;
 

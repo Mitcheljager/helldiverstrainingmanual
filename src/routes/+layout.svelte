@@ -42,12 +42,27 @@
   }
 
   .sidebar {
+    position: relative;
     height: 100vh;
     padding: $margin;
     border-right: 5px solid $bg-dark;
     overflow-y: auto;
 
     @include styled-scrollbar();
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 20rem;
+      background: $white;
+      filter: blur(100px);
+      opacity: 0.1;
+      z-index: -1;
+    }
 
     img {
       width: 100%;
@@ -56,6 +71,7 @@
   }
 
   .article {
+    position: relative;
     padding: $margin;
     height: 100vh;
     overflow-y: auto;
