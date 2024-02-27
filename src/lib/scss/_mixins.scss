@@ -23,3 +23,33 @@
 		}
 	}
 }
+
+@mixin styled-scrollbar($scrollbar-width: thin) {
+  scrollbar-width: $scrollbar-width;
+  scrollbar-color: lighten($bg-base, 10%) $bg-base;
+
+	&::-webkit-scrollbar {
+		@if $scrollbar-width == thin {
+			width: 0.75rem;
+		} @else {
+			width: 1rem;
+		}
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $bg-dark;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: lighten($bg-base, 10%);
+    border: 2px solid $bg-dark;
+
+    &:hover {
+      background: $bg-light;
+    }
+
+    &:active {
+      background: lighten($bg-light, 10%);
+    }
+  }
+}

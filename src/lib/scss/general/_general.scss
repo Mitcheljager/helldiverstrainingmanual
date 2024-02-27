@@ -19,13 +19,9 @@ body {
 	background-color: $bg-base;
 	color: $text-color;
 	font-size: 16px;
-  font-family: "Lato";
+  font-family: $font-family;
   line-height: 1.45rem;
 	overflow-x: hidden;
-
-	@include safari() {
-		display: block;
-	}
 }
 
 a {
@@ -40,4 +36,12 @@ a {
 	&:focus {
 		outline: none;
 	}
+}
+
+mark {
+  background-color: $primary;
+}
+
+p {
+  max-width: 50rem;
 }

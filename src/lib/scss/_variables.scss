@@ -15,7 +15,8 @@ $bg-base: #111;
 $bg-light: #6f6f6f;
 $bg-dark: #4e4e4e;
 
-$text-color: hsl(219, 22%, 77%);
+$text-color: #c3c3c3;
+$text-color-dark: darken($text-color, 35%);
 
 $font-family: "Lato", sans-serif;
 $font-family-brand: "Jockey One", monospace;
