@@ -32,7 +32,7 @@
     justify-content: center;
     height: 20rem;
     max-width: $text-limit * 1.5;
-    margin: $margin * -0.5;
+    margin: $margin * -1;
     border: 5px solid $primary;
     background: lighten($bg-base, 5%);
     overflow: hidden;

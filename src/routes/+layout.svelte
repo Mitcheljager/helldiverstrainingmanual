@@ -72,7 +72,7 @@
 
   .article {
     position: relative;
-    padding: $margin;
+    padding: $margin * 2;
     height: 100vh;
     overflow-y: auto;
 
