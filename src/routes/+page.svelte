@@ -16,7 +16,7 @@
 
 <p>In this manual, you will find everything you need to know to become a proficient Helldiver. From basic training exercises to advanced combat tactics, we've got you covered. So strap in, soldier, and get ready for the adventure of a lifetime. Remember, the fate of <em>Liberty</em> and <em>Democracy</em> rests in your hands.</p>
 
-<p><strong>Are you ready to dive headfirst into hell?</strong></p>
+<p><strong class="text-primary">Are you ready to dive headfirst into hell?</strong></p>
 
-<p class="mt-1 font-tiny"><em>Under Section 4 of Subsection 238, Article XIII, Chapter 323 of the National Helldiver Code, it is hereby mandated that all Helldivers must read and adhere to the guidelines outlined in this manual. Failure to recognize this manual may lead to immediate termination.</em></p>
+<p class="mt-1 font-tiny"><em>Under Section 4 of Subsection 238, Article XIII, Chapter 323 of the National Helldiver Authority, it is hereby mandated that all Helldivers must read and adhere to the guidelines outlined in this manual. Failure to recognize this manual may lead to immediate termination.</em></p>
 

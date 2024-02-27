@@ -15,3 +15,5 @@
 <p>
   So, soldier, when the fate of humanity hangs in the balance, remember the importance of your Stratagems. They are not mere tools; they are the difference between triumph and oblivion. With each activation, you reaffirm your commitment to the cause and strike fear into the hearts of our alien adversaries. Use them wisely, use them decisively, and may they lead us to victory against the forces of tyranny and oppression.
 </p>
+
+<p class="mt-1 font-tiny"><em>Unauthorized or reckless use of Stratagems without just cause may result in disciplinary action, including but not limited to reduction in pay, immediate termination, or more severe consequences if called for.</em></p>
