@@ -1,8 +1,4 @@
-<h1 class="m-0">Welcome to SvelteKit</h1>
-<h2 class="m-0">Welcome to SvelteKit</h2>
-<h3 class="m-0">Welcome to SvelteKit</h3>
-<h4 class="m-0">Welcome to SvelteKit</h4>
-<h5 class="m-0">Welcome to SvelteKit</h5>
+<h1 class="m-0">An introductory guide to becoming a victorious Helldiver</h1>
 
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quoniamque in iis rebus, quae neque in virtutibus sunt neque in vitiis, est tamen quiddam, quod usui possit esse, tollendum id non est. Sit hoc ultimum bonorum, quod nunc a me defenditur; Sunt enim prima elementa naturae, quibus auctis vírtutis quasi germen efficitur. Hoc uno captus Erillus scientiam summum bonum esse defendit nec rem ullam aliam per se expetendam. Idem etiam dolorem saepe perpetiuntur, ne, si id non faciant, incidant in maiorem. </p>
 
