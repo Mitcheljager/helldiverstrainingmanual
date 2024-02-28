@@ -2,7 +2,7 @@
   import Confetti from "svelte-confetti"
 	import Arrow from "$lib/components/Arrow.svelte"
 	import { slide } from "svelte/transition"
-	import { onMount } from "svelte";
+	import { onDestroy, onMount } from "svelte";
 
   export let randomize = false
   export let sequence = []
@@ -10,15 +10,19 @@
   const options = ["up", "down", "left", "right"]
 
   let currentIndex = 0
-  let active = false
+  let active = true
   let complete = false
   let error = false
+  let currentTime = 0
+  let bestTime = 0
+  let interval = null
 
-  onMount(() => {
-    if (randomize) setRandomSequence()
-  })
+  onMount(setRandomSequence)
+  onDestroy(stopTimer)
 
   function setRandomSequence() {
+    if (!randomize) return
+
     const count = Math.floor(Math.random() * (10 - 4 + 1) + 4)
 
     sequence = []
@@ -54,14 +58,19 @@
     currentIndex++;
 
     if (currentIndex === sequence.length) success()
+    if (currentIndex === 1) startTimer()
   }
 
   function incorrect() {
     error = true
+
+    if (interval) stopTimer()
   }
 
   function success() {
     complete = true
+
+    if (interval) stopTimer()
   }
 
   function reset() {
@@ -71,6 +80,24 @@
     complete = false
     active = true
     error = false
+
+    currentTime = 0
+    stopTimer()
+  }
+
+  function startTimer() {
+    stopTimer()
+    currentTime = 0
+    interval = setInterval(() => currentTime += 10, 10)
+  }
+
+  function stopTimer() {
+    if (interval) clearInterval(interval)
+    if (!error && currentTime && (!bestTime || currentTime < bestTime)) bestTime = currentTime
+  }
+
+  function toTime(seconds) {
+    return (Math.round(seconds * 100) / 100).toFixed(2)
   }
 </script>
 
@@ -90,15 +117,25 @@
     {/if}
   </div>
 
-  {#if !active}
-    <button class="button" on:click={() => active = true} transition:slide={{ duration: 200 }}>
-      Start Practice
+  {#if active}
+    <div class="timer" transition:slide={{ duration: 200 }}>
+      <span>Timer: {toTime(currentTime / 1000)}<small>s</small></span>
+
+      {#if !randomize && bestTime}
+        <span>Best: {toTime(bestTime / 1000)}<small>s</small></span>
+      {/if}
+    </div>
+
+    <button class="button" class:active={active && !complete && !error} class:error class:complete on:click={() => active = false} transition:slide={{ duration: 200 }}>
+      Reset [R]
     </button>
   {/if}
 
-  {#if active}
-    <button class="button" class:active={active && !complete && !error} class:error class:complete on:click={() => active = false} transition:slide={{ duration: 200 }}>
-      Reset [R]
+  {#if !active}
+    <div class="pt-1/4" transition:slide={{ duration: 200 }} />
+
+    <button class="button" on:click={() => active = true} transition:slide={{ duration: 200 }}>
+      Start Practice
     </button>
   {/if}
 </section>
@@ -185,7 +222,6 @@
     justify-content: center;
     gap: $margin * 0.25;
     padding: $margin * 0.25;
-    margin-bottom: $margin * 0.25;
     min-height: 1rem;
     border: 5px solid $bg-dark;
     background: darken($bg-dark, 20%);
@@ -213,5 +249,15 @@
     left: 0;
     width: 100%;
     pointer-events: none;
+  }
+
+  .timer {
+    display: flex;
+    justify-content: space-between;
+    padding: $margin * 0.25 0;
+    font-family: $font-family-alt;
+    font-size: 1.15rem;
+    font-weight: bolder;
+    text-transform: uppercase;
   }
 </style>
