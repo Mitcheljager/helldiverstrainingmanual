@@ -10,7 +10,7 @@
   const options = ["up", "down", "left", "right"]
 
   let currentIndex = 0
-  let active = true
+  let active = false
   let complete = false
   let error = false
   let currentTime = 0
@@ -119,7 +119,7 @@
 
   {#if active}
     <div class="timer" transition:slide={{ duration: 200 }}>
-      <span>Timer: {toTime(currentTime / 1000)}<small>s</small></span>
+      <span>Timer: {#if error}Fail{:else}{toTime(currentTime / 1000)}<small>s</small>{/if}</span>
 
       {#if !randomize && bestTime}
         <span>Best: {toTime(bestTime / 1000)}<small>s</small></span>
@@ -259,5 +259,10 @@
     font-size: 1.15rem;
     font-weight: bolder;
     text-transform: uppercase;
+
+    small {
+      font-size: 0.8em;
+      line-height: 1em;
+    }
   }
 </style>
