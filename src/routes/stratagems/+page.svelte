@@ -1,4 +1,4 @@
-<h1 class="mb-1">Stratagems: Unleashing Tactical Madness</h1>
+<h1>Stratagems: Unleashing Tactical Madness</h1>
 
 <p>
   In the unforgiving battlegrounds of the galaxy, every Helldiver knows that survival depends on more than just firepower - it requires strategy, cunning, and the judicious use of Stratagems. These tools of war are not to be taken lightly; they are the instruments through which we assert our dominance over the alien menace and uphold the values of <strong>freedom</strong> and <strong>democracy</strong>.
