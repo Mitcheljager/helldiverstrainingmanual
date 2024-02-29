@@ -1,5 +1,6 @@
 <script>
-	import { stratagems } from "$lib/data/stratagems";
+	import { stratagems } from "$lib/data/stratagems"
+  import { page } from "$app/stores"
 
   const alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
 
@@ -20,6 +21,8 @@
     ]
   }]
 
+  $: console.log($page)
+
   function toPath(array = []) {
     return "/" + array.map(string => string.toLowerCase().replaceAll(" ", "-")).join("/")
   }
@@ -27,15 +30,15 @@
 
 <nav>
   {#each routes as route, i}
-    <a class="route" href={route.route !== undefined ? "/" : toPath([route.text])}><span>{i}.</span> {route.text}</a>
+    <a class="route" class:active={$page.url.pathname === toPath([route.text])} href={route.route !== undefined ? "/" : toPath([route.text])}><span>{i}.</span> {route.text}</a>
 
     {#if route.subroutes}
       {#each route.subroutes as subroute, j}
-        <a class="subroute" href={toPath([route.text, subroute.text])}><span>{i}{alphabet[j]}.</span> {subroute.text}</a>
+        <a class="subroute" class:active={$page.url.pathname === toPath([route.text, subroute.text])} href={toPath([route.text, subroute.text])}><span>{i}{alphabet[j]}.</span> {subroute.text}</a>
 
         {#if subroute.subroutes}
           {#each subroute.subroutes as subsubroute, k}
-            <a class="subsubroute" href={toPath([route.text, subroute.text, subsubroute.text])}><span>{i}{alphabet[j]}-{k}.</span> {subsubroute.text}</a>
+            <a class="subsubroute" class:active={$page.url.pathname === toPath([route.text, subroute.text, subsubroute.text])} href={toPath([route.text, subroute.text, subsubroute.text])}><span>{i}{alphabet[j]}-{k}.</span> {subsubroute.text}</a>
           {/each}
         {/if}
       {/each}
@@ -59,10 +62,15 @@
       color: $white;
     }
 
+    &.active {
+      color: $primary;
+    }
+
     span {
       color: $text-color-dark;
       font-size: 0.85em;
       font-family: $font-family-brand;
+      font-weight: normal;
     }
   }
 
