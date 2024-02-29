@@ -5,6 +5,10 @@
   import "$lib/scss/fonts.scss"
 </script>
 
+<svelte:head>
+  <title>Helldivers Training Manual</title>
+</svelte:head>
+
 <div class="layout">
   <aside class="sidebar">
     <header class="header">

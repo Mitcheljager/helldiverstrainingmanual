@@ -1,3 +1,7 @@
+<svelte:head>
+  <title>Stratagems | Helldivers Training Manual</title>
+</svelte:head>
+
 <h1>Stratagems: Unleashing Tactical Madness</h1>
 
 <p>

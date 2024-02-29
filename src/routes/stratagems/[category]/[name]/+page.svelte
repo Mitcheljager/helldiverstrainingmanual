@@ -6,7 +6,11 @@
   $: ({ category, stratagem } = data)
 </script>
 
-<strong>{category.category}</strong>
+<svelte:head>
+  <title>{stratagem.name} | Helldivers Training Manual</title>
+</svelte:head>
+
+<strong>Stratagems / {category.category}</strong>
 <h1>{stratagem.name}</h1>
 
 {@html stratagem.content || ""}

@@ -2,6 +2,10 @@
 	import Stratagem from "$lib/components/Stratagem.svelte"
 </script>
 
+<svelte:head>
+  <title>Interactive Practice | Helldivers Training Manual</title>
+</svelte:head>
+
 <h1>Interactive Stratagem Practice</h1>
 
 <p>In this section, you'll have the opportunity to hone your skills and familiarize yourself with the vital codes used to call in Stratagems on the battlefield.</p>
