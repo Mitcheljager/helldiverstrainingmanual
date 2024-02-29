@@ -21,29 +21,33 @@
     ]
   }]
 
-  $: console.log($page)
-
   function toPath(array = []) {
     return "/" + array.map(string => string.toLowerCase().replaceAll(" ", "-")).join("/")
+  }
+
+  function isActive(array = []) {
+    return $page.url.pathname === toPath(array)
   }
 </script>
 
 <nav>
-  {#each routes as route, i}
-    <a class="route" class:active={$page.url.pathname === toPath([route.text])} href={route.route !== undefined ? "/" : toPath([route.text])}><span>{i}.</span> {route.text}</a>
+  {#key $page.url.pathname}
+    {#each routes as route, i}
+      <a class="route" class:active={isActive([route.text])} href={route.route !== undefined ? "/" : toPath([route.text])}><span>{i}.</span> {route.text}</a>
 
-    {#if route.subroutes}
-      {#each route.subroutes as subroute, j}
-        <a class="subroute" class:active={$page.url.pathname === toPath([route.text, subroute.text])} href={toPath([route.text, subroute.text])}><span>{i}{alphabet[j]}.</span> {subroute.text}</a>
+      {#if route.subroutes}
+        {#each route.subroutes as subroute, j}
+          <a class="subroute" class:active={isActive([route.text, subroute.text])} href={toPath([route.text, subroute.text])}><span>{i}{alphabet[j]}.</span> {subroute.text}</a>
 
-        {#if subroute.subroutes}
-          {#each subroute.subroutes as subsubroute, k}
-            <a class="subsubroute" class:active={$page.url.pathname === toPath([route.text, subroute.text, subsubroute.text])} href={toPath([route.text, subroute.text, subsubroute.text])}><span>{i}{alphabet[j]}-{k}.</span> {subsubroute.text}</a>
-          {/each}
-        {/if}
-      {/each}
-    {/if}
-  {/each}
+          {#if subroute.subroutes}
+            {#each subroute.subroutes as subsubroute, k}
+              <a class="subsubroute" class:active={isActive([route.text, subroute.text, subsubroute.text])} href={toPath([route.text, subroute.text, subsubroute.text])}><span>{i}{alphabet[j]}-{k}.</span> {subsubroute.text}</a>
+            {/each}
+          {/if}
+        {/each}
+      {/if}
+    {/each}
+  {/key}
 </nav>
 
 <style lang="scss">
