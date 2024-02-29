@@ -11,7 +11,14 @@ export const stratagems = [{
     `
   }, {
     name: "Anti-Material Rifle",
-    sequence: ["down", "left", "right", "up", "down"]
+    sequence: ["down", "left", "right", "up", "down"],
+    content: `
+      <p>The Anti-Materiel Rifle is the ultimate precision instrument for dealing with those big, bad enemies that think they're invincible. This beast of a sniper rifle is your solution when you need to reach out and touch someone – hard.</p>
+      <p>Imagine the scenario: you're face-to-face with a towering Automaton Hulk, its armored plates gleaming with menace. With the Anti-Materiel Rifle in hand, you take aim, squeeze the trigger, and watch as two shots are all it takes to dismantle that mechanical monstrosity.</p>
+      <p>But here's the kicker – this ain't your granddaddy's hunting rifle. The Anti-Materiel Rifle can only be aimed down sights, meaning you'll need a steady hand and a keen eye to make every shot count. Lucky for you, this baby comes equipped with multiple zoom levels, so you can pick off targets from afar with surgical precision.</p>
+      <p>And speaking of precision, here's a pro tip: stay low and steady to maximize stability and reduce recoil. Whether you're crouched behind cover or prone in the dirt, taking the time to line up your shot will ensure that each round finds its mark with deadly accuracy.</p>
+      <p>So, soldier, when the chips are down and the Automatons are closing in, trust in the power of the Anti-Materiel Rifle to deliver justice from a distance. With its unmatched stopping power and pinpoint accuracy, liberty is just a well-placed shot away.</p>
+    `
   }, {
     name: "Stalwart",
     sequence: ["down", "left", "down", "up", "up", "left"]
