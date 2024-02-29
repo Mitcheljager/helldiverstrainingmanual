@@ -1,35 +1,23 @@
 <script>
+	import { stratagems } from "$lib/data/stratagems";
+
   const alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+
+  const stratagemRoutes = stratagems.map(s => ({
+    text: s.category,
+    subroutes: s.items.map(i => ({ text: i.name }))
+  }))
 
   const routes = [{
     text: "Introduction",
     route: "",
   }, {
-    text: "Super Destroyer",
-    subroutes: [{
-      text: "Currencies",
-    }]
-  }, {
     text: "Stratagems",
     subroutes: [{
-      text: "Interactive Practice",
-    }, {
-      text: "Weapons",
-      subroutes: [{
-        text: "Machine Gun",
-      }, {
-        text: "Anti-Material Rifle",
-      }, {
-        text: "Stalwart",
-      }]
-    }, {
-      text: "Orbital",
-      subroutes: [{
-        text: "Gatling Barrage",
-      }, {
-        text: "Airburst Strike",
-      }]
-    }]
+        text: "Interactive Practice",
+      },
+      ...stratagemRoutes
+    ]
   }]
 
   function toPath(array = []) {
