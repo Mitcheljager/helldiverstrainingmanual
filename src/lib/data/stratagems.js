@@ -77,7 +77,7 @@ export const stratagems = [{
     `
   }]
 }, {
-  category: "Orbital",
+  category: "Orbital Cannons",
   items: [{
     name: "Gatling Barrage",
     sequence: ["right", "down", "left", "up", "up"],

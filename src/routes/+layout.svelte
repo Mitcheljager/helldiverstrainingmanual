@@ -8,7 +8,7 @@
 <div class="layout">
   <aside class="sidebar">
     <header class="header">
-      <img src="/images/logo.png" alt="Helldivers 2" height="200" />
+      <img src="/images/helldivers-2-logo.png" alt="Helldivers 2" height="200" />
 
       <p>Helldivers Training Manual</p>
     </header>

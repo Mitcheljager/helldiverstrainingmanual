@@ -103,6 +103,8 @@
 
 <svelte:window on:keydown={addGiven} />
 
+<h3 class="mb-1/2">Stratagem Practice</h3>
+
 <section class="stratagem">
   <div class="codes" class:complete class:error>
     {#each sequence as direction, i}
