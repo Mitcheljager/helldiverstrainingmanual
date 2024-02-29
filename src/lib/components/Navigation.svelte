@@ -50,6 +50,10 @@
   {/key}
 </nav>
 
+<div class="coming-soon">
+  More coming soon...
+</div>
+
 <style lang="scss">
   nav {
     display: flex;
@@ -95,5 +99,15 @@
 
   .subsubroute {
     padding-left: $margin * 0.5;
+  }
+
+  .coming-soon {
+    padding: $margin * 0.25;
+    margin-top: $margin;
+    background: repeating-linear-gradient(45deg, $bg-dark, $bg-dark 4px, transparent 4px, transparent 0.75rem);
+    color: $text-color-light;
+    font-weight: bold;
+    text-align: center;
+    font-family: $font-family-brand;
   }
 </style>

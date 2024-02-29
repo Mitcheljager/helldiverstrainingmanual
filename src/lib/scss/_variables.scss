@@ -20,6 +20,7 @@ $bg-light: #6f6f6f;
 $bg-dark: #4e4e4e;
 
 $text-color: #c3c3c3;
+$text-color-light: lighten($text-color, 10%);
 $text-color-dark: darken($text-color, 35%);
 
 $font-family: "Lato", sans-serif;
