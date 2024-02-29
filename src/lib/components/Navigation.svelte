@@ -62,7 +62,8 @@
   }
 
   a {
-    display: inline-block;
+    display: grid;
+    align-items: flex-end;
     color: $text-color;
     text-decoration: none;
 
@@ -83,6 +84,7 @@
   }
 
   .route {
+    grid-template-columns: 0.95rem auto;
     margin-top: $margin * 0.25;
     color: $white;
     font-family: $font-family-brand;
@@ -94,10 +96,12 @@
   }
 
   .subroute {
+    grid-template-columns: 1.15rem auto;
     padding-left: $margin * 0.25;
   }
 
   .subsubroute {
+    grid-template-columns: 1.85rem auto;
     padding-left: $margin * 0.5;
   }
 
