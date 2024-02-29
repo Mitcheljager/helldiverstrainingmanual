@@ -122,7 +122,7 @@
       <span>Timer: {#if error}Fail{:else}{toTime(currentTime / 1000)}<small>s</small>{/if}</span>
 
       {#if !randomize && bestTime}
-        <span>Best: {toTime(bestTime / 1000)}<small>s</small></span>
+        <span class:highlighted={currentTime === bestTime}>Best: {toTime(bestTime / 1000)}<small>s</small></span>
       {/if}
     </div>
 
@@ -263,6 +263,10 @@
     small {
       font-size: 0.8em;
       line-height: 1em;
+    }
+
+    .highlighted {
+      color: $green;
     }
   }
 </style>
