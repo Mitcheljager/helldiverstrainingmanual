@@ -40,6 +40,9 @@
     if (!active) return
     if (error) return
     if (currentIndex === sequence.length) return
+    if (!["w", "ArrowUp", "s", "ArrowDown", "a", "ArrowLeft", "d", "ArrowRight"].includes(key)) return
+
+    event?.preventDefault()
 
     const current = sequence[currentIndex]
 
@@ -161,7 +164,8 @@
     position: relative;
     display: flex;
     justify-content: center;
-    gap: $margin * 0.25;
+    flex-wrap: wrap;
+    gap: $margin * 0.15;
     padding: $margin * 0.25;
     min-height: 1rem;
     border: 5px solid $bg-dark;
@@ -169,6 +173,10 @@
     overflow: hidden;
     transition: color 200ms, border-color 200ms;
     color: lighten($bg-dark, 20%);
+
+    @include breakpoint(sm) {
+      gap: $margin * 0.25;
+    }
 
     &.complete {
       color: $green;
