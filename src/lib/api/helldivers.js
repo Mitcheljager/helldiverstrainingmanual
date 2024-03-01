@@ -6,6 +6,8 @@ const CacheTimeout = 20000
 const statusCache = writable({ datetime: Date.now(), result: null })
 const infoCache = writable({ datetime: Date.now(), result: null })
 
+const options = { headers: { "Accept-Language": "en-US" } }
+
 function useCache(store) {
   if (!get(store)?.result) return false
   if (Date.now() - get(store)?.datetime > CacheTimeout) return false
@@ -17,7 +19,7 @@ export async function fetchStatus(fetch) {
   if (useCache(statusCache)) return get(statusCache).result
 
   try {
-    const response = await fetch(`https://api.live.prod.thehelldiversgame.com/api/WarSeason/${WarId}/Status`)
+    const response = await fetch(`https://api.live.prod.thehelldiversgame.com/api/WarSeason/${WarId}/Status`, options)
 
     if (!response.ok) throw new Error("Network response was not ok")
 
@@ -34,7 +36,7 @@ export async function fetchInfo(fetch) {
   if (useCache(infoCache)) return get(infoCache).result
 
   try {
-    const response = await fetch(`https://api.live.prod.thehelldiversgame.com/api/WarSeason/${WarId}/WarInfo`)
+    const response = await fetch(`https://api.live.prod.thehelldiversgame.com/api/WarSeason/${WarId}/WarInfo`, options)
 
     if (!response.ok) throw new Error("Network response was not ok")
 
