@@ -145,6 +145,8 @@
   .content {
     margin: 0;
     padding: $margin * 0.25;
+    font-size: 1rem;
+    line-height: 1.45em;
   }
 
   .bar {
