@@ -15,7 +15,7 @@ export const stratagems = [{
       <p>Now, about armor penetration - the MG-43 may not cut through armor like a hot knife through butter, but it'll sure give those enemies a run for their money. So when you see a tough bug or a sturdy automaton, don't be afraid to lay down some suppressive fire and watch those bullets find their mark.</p>
     `
   }, {
-    name: "Anti-Material Rifle",
+    name: "Anti-Materiel Rifle",
     sequence: ["down", "left", "right", "up", "down"],
     content: `
       <p>The Anti-Materiel Rifle is the ultimate precision instrument for dealing with those big, bad enemies that think they're invincible. This beast of a sniper rifle is your solution when you need to reach out and touch someone - hard.</p>

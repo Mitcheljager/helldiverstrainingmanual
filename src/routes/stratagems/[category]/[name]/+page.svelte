@@ -1,5 +1,7 @@
 <script>
-	import Stratagem from "$lib/components/Stratagem.svelte"
+	import Hero from "$lib/components/Hero.svelte"
+  import Stratagem from "$lib/components/Stratagem.svelte"
+	import { toSlug } from "$lib/utils/route"
 
   export let data
 
@@ -10,11 +12,16 @@
   <title>{stratagem.name} | Helldivers Training Manual</title>
 </svelte:head>
 
-<strong>Stratagems / {category.category}</strong>
-<h1>{stratagem.name}</h1>
+{#key stratagem.name}
+  <Hero video="/videos/stratagems/{toSlug(stratagem.name)}.mp4">
+    {stratagem.name}
+  </Hero>
 
-{@html stratagem.content || ""}
+  <strong>Stratagems / {category.category}</strong>
 
-<div class="mt-1/2 md:mt-1">
-	<Stratagem sequence={stratagem.sequence} />
-</div>
+  {@html stratagem.content || ""}
+
+  <div class="mt-1/2 md:mt-1">
+    <Stratagem sequence={stratagem.sequence} />
+  </div>
+{/key}
