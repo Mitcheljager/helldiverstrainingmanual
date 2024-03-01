@@ -16,11 +16,11 @@
 
 <div class="layout">
   <aside class="sidebar" class:active={sidebarActive}>
-    <header class="header">
+    <a href="/" class="header">
       <img src="/images/helldivers-2-logo.png" alt="Helldivers 2" height="200" />
 
       <p>Helldivers Training Manual</p>
-    </header>
+    </a>
 
     <Navigation />
   </aside>
@@ -49,10 +49,12 @@
   }
 
   .header {
+    display: block;
     margin-bottom: $margin;
     font-size: 1.75rem;
     font-family: "Jockey One";
     text-align: center;
+    text-decoration: none;
 
     img {
       max-width: 300px;
