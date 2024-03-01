@@ -1,49 +1,22 @@
 <script>
 	import { invalidateAll } from "$app/navigation"
 	import Hero from "$lib/components/Hero.svelte";
+	import { factions } from "$lib/data/factions.js";
 	import { planetNames } from "$lib/data/planets"
+	import { formatCampaigns } from "$lib/utils/campaign.js";
 	import { onDestroy, onMount } from "svelte"
 
   export let data
-
-  const factions = {
-    1: "Super Earth",
-    2: "Terminids",
-    3: "Automatons"
-  }
 
   let interval
 
   $: ({ status, info } = data)
   $: ({ globalEvents, campaigns, planetStatus } = (status || {}))
   $: ({ planetInfos } = (info || {}))
+  $: formattedCampaigns = formatCampaigns(campaigns, planetStatus, planetInfos)
 
   onMount(() => interval = setInterval(invalidateAll, 10000) )
   onDestroy(() => { if (interval) clearInterval(interval) })
-
-  function formatCampaigns() {
-    if (!campaigns || !planetStatus || !planetInfos) return []
-
-    const mapped = (campaigns || []).map(campaign => {
-      const { planetIndex } = campaign
-      const name = planetNames[planetIndex]
-      const currentStatus = planetStatus[planetIndex]
-      const planetInfo = planetInfos[planetIndex]
-      const faction = factions[currentStatus.owner]
-      const { health, players } = currentStatus
-      const maxHealth = planetInfo.maxHealth
-      const percentage = 100 - (100 / maxHealth * health)
-
-      return {
-        name,
-        faction,
-        players,
-        percentage
-      }
-    })
-
-    return mapped.sort((a, b) => a > b ? -1 : 1).sort((a, b) => a.percentage > b.percentage ? -1 : 1)
-  }
 </script>
 
 <svelte:head>
@@ -84,7 +57,7 @@
 <h2 class="mt-1 mb-1/4">Active Efforts</h2>
 
 <div class="items">
-  {#each formatCampaigns() as { name, faction, percentage, players }}
+  {#each formattedCampaigns as { name, faction, percentage, players }}
     <div class="item {faction.toLowerCase()}">
       <h3>{name || "Unknown Planet"} <small>{faction}</small></h3>
 
@@ -100,6 +73,21 @@
       </div>
     </div>
   {/each}
+</div>
+
+<div class="api">
+  <h5 class="mt-1 mb-1/2">API</h5>
+
+  <p>The API grants you access to real-time battle data, empowering you to spread the word of our noble cause across the galaxy. Use it to share updates, rally allies, and showcase our progress in the fight for democracy. Let's unite the galaxy in our mission to eradicate tyranny and usher in a new era of peace and democracy. Together, we can ignite the flames of liberty across the stars!</p>
+
+  <ul>
+    <li><code>/api/war/status</code> - Provides the current status of all planets along with their player count</li>
+    <li><code>/api/war/info</code> - Provides static info of planet listed by their index</li>
+    <li><code>/api/war/planets</code> - Provides names for each planet, matching the index given from previous endpoints</li>
+    <li><code>/api/war/campaign</code> - Provides a shorter and more ready to handle list of all current active planets</li>
+  </ul>
+
+  <p>The API is fairly barebones but provides all the info you need to replicate this page and more. There is no authentication or rate limiting. Handle it with respect, soldier.</p>
 </div>
 
 <style lang="scss">
@@ -174,5 +162,24 @@
     font-weight: bold;
     font-size: 0.85rem;
     line-height: 1em;
+  }
+
+  .api {
+    font-size: 1rem;
+    line-height: 1.45em;
+
+    ul {
+      padding: 0;
+    }
+
+    li {
+      list-style: none;
+      margin-bottom: 0.35em;
+    }
+
+    code {
+      background: lighten($bg-base, 5%);
+      padding: 0.25em;
+    }
   }
 </style>
