@@ -120,6 +120,10 @@
     background: $bg-base;
     border: 0;
 
+    @include breakpoint(lg) {
+      display: none;
+    }
+
     &:active {
       svg {
         transform: scale(0.9);
