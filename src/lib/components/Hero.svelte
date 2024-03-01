@@ -23,19 +23,27 @@
 <style lang="scss">
   h1 {
     position: relative;
-    margin: calc(-1em + $margin * -0.5) 0 $margin;
+    margin: $margin * 0.5 0 $margin;
+
+    @include breakpoint(md) {
+      margin: calc(-1em + $margin * -0.5) 0 $margin;
+    }
   }
 
   .hero {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 20rem;
+    height: clamp(15rem, 20vw, 20rem);
     max-width: $text-limit * 1.5;
-    margin: $margin * -0.5;
+    margin: $margin * -0.5 $margin * -0.5 0;
     border: 5px solid $primary;
     background: lighten($bg-base, 5%);
     overflow: hidden;
+
+    @include breakpoint(md) {
+      margin: $margin * -0.5;
+    }
   }
 
   .blur {

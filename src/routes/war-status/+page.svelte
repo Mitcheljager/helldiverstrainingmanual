@@ -157,11 +157,16 @@
   .info {
     display: flex;
     justify-content: space-between;
+    gap: $margin * 0.5;
     margin-top: $margin * 0.25;
     font-family: $font-family-alt;
     font-weight: bold;
     font-size: 0.85rem;
     line-height: 1em;
+
+    span:last-child {
+      text-align: right;
+    }
   }
 
   .api {

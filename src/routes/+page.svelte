@@ -32,9 +32,12 @@
 <style lang="scss">
   .buttons {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
     gap: $margin * 0.25;
     max-width: $text-limit;
     margin-bottom: $margin;
+
+    @include breakpoint(sm) {
+      grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+    }
   }
 </style>

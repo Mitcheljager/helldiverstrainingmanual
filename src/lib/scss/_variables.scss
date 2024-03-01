@@ -1,9 +1,11 @@
 $margin: 3rem;
 
 $breakpoints: (
+	xxs: 350px,
 	xs: 400px,
 	sm: 640px,
 	md: 768px,
+	lg: 900px,
 );
 
 $text-limit: 50rem;
