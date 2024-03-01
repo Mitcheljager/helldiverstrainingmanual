@@ -14,6 +14,9 @@
     text: "Introduction",
     route: "",
   }, {
+    text: "Live War Status",
+    route: "war-status",
+  }, {
     text: "Stratagems",
     subroutes: [{
         text: "Interactive Practice",
@@ -30,7 +33,7 @@
 <nav>
   {#key $page.url.pathname}
     {#each routes as route, i}
-      <a class="route" class:active={isActive([route.text])} href={route.route !== undefined ? "/" : toPath([route.text])}><span>{i}.</span> {route.text}</a>
+      <a class="route" class:active={isActive([route.route || route.text])} href={route.route === "" ? "/" : toPath([route.route || route.text])}><span>{i}.</span> {route.text}</a>
 
       {#if route.subroutes}
         {#each route.subroutes as subroute, j}
