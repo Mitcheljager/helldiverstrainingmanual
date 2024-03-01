@@ -31,27 +31,6 @@
 
 <p><em><small>This section updates automatically</small></em></p>
 
-<h2 class="mt-1 mb-1/2">Global Events</h2>
-
-{#if globalEvents}
-  <div class="items">
-    {#each globalEvents as { title, message }}
-      <div class="item">
-        <h3>{title}</h3>
-        <p class="content">
-          {#if message}
-            {message}
-          {:else}
-            <em>No message was provided</em>
-          {/if}
-        </p>
-      </div>
-    {/each}
-  </div>
-{:else}
-  <p>Failed to retrieve global events</p>
-{/if}
-
 <h2 class="mt-1 mb-1/4">Active Efforts</h2>
 
 <div class="items">
@@ -72,6 +51,27 @@
     </div>
   {/each}
 </div>
+
+<h2 class="mt-1 mb-1/4">Global Events</h2>
+
+{#if globalEvents}
+  <div class="items">
+    {#each globalEvents as { title, message }}
+      <div class="item">
+        <h3>{title}</h3>
+        <p class="content">
+          {#if message}
+            {message}
+          {:else}
+            <em>No message was provided</em>
+          {/if}
+        </p>
+      </div>
+    {/each}
+  </div>
+{:else}
+  <p>Failed to retrieve global events</p>
+{/if}
 
 <div class="api">
   <h5 class="mt-1 mb-1/2">API</h5>
