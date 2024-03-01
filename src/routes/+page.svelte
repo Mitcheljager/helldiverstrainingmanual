@@ -10,6 +10,11 @@
   An introductory guide to becoming a victorious <span class="text-primary">Helldiver</span>.
 </Hero>
 
+<div class="buttons">
+  <a href="/war-status" class="button">Live War Status</a>
+  <a href="/stratagems/interactive-practice" class="button">Stratagem Practice</a>
+</div>
+
 <p><strong>Welcome, Helldiver!</strong></p>
 
 <p>Congratulations on joining the <strong>Helldivers</strong>, the elite fighting force tasked with spreading <em>Liberty</em> and <em>Democracy</em> across the galaxy. As a Helldiver, you are not just a soldier; you are a beacon of <strong>freedom</strong> in the darkest corners of the universe.</p>
@@ -24,3 +29,12 @@
 
 <p class="mt-1 font-tiny"><em>Under Section 4 of Subsection 238, Article XIII, Chapter 323 of the National Helldiver Authority, it is hereby mandated that all Helldivers must read and adhere to the guidelines outlined in this manual. Failure to recognize this manual may lead to immediate termination.</em></p>
 
+<style lang="scss">
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    gap: $margin * 0.25;
+    max-width: $text-limit;
+    margin-bottom: $margin;
+  }
+</style>

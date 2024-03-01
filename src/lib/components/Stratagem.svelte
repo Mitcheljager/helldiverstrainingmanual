@@ -147,67 +147,6 @@
     max-width: $text-limit;
   }
 
-  .button {
-    --color: #{$primary};
-    --gradient-color: #{rgba($primary, 0.25)};
-    appearance: none;
-    position: relative;
-    display: block;
-    width: 100%;
-    padding: $margin * 0.25;
-    border: 5px solid var(--color);
-    background: repeating-linear-gradient(45deg, var(--gradient-color), var(--gradient-color) 4px, transparent 4px, transparent 0.75rem);
-    cursor: pointer;
-    color: var(--color);
-    font-family: $font-family-alt;
-    font-size: 1.35rem;
-    font-weight: bolder;
-    text-transform: uppercase;
-    transition: color 200ms, border-color 200ms;
-
-    &:hover {
-      color: $bg-base;
-
-      &::before {
-        opacity: 1;
-      }
-    }
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: var(--color);
-      opacity: 0;
-      pointer-events: none;
-      z-index: -1;
-      transition: opacity 200ms;
-    }
-
-    &.active {
-      --color: #{$bg-dark};
-      --gradient-color: #{rgba($bg-dark, 0.25)};
-      color: $text-color-dark;
-
-      &:hover {
-        color: $bg-base;
-      }
-    }
-
-    &.complete {
-      --color: #{$green};
-      --gradient-color: #{rgba($green, 0.25)};
-    }
-
-    &.error {
-      --color: #{$red};
-      --gradient-color: #{rgba($red, 0.25)};
-    }
-  }
-
   @keyframes pulse {
     0% {
       box-shadow: 0 0 0 0 $bg-base, 0 0 0 0 $red;
