@@ -15,6 +15,7 @@ export function formatCampaigns(campaigns, planetStatus, planetInfos) {
     const percentage = 100 - (100 / maxHealth * health)
 
     return {
+      index: planetIndex,
       name,
       faction,
       players,

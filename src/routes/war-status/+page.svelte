@@ -57,8 +57,8 @@
 <h2 class="mt-1 mb-1/4">Active Efforts</h2>
 
 <div class="items">
-  {#each formattedCampaigns as { name, faction, percentage, players }}
-    <div class="item {faction.toLowerCase()}">
+  {#each formattedCampaigns as { index, name, faction, percentage, players }}
+    <div class="item {faction.toLowerCase()}" data-index={index}>
       <h3>{name || "Unknown Planet"} <small>{faction}</small></h3>
 
       <div class="content">

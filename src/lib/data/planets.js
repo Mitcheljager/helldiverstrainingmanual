@@ -125,7 +125,7 @@ export const planetNames = {
   123: "Esker",
   124: "Bore Rock",
   125: "",
-  126: "",
+  126: "Turing",
   127: "Angel's Venture",
   128: "",
   129: "",
