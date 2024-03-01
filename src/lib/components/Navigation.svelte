@@ -95,6 +95,7 @@
   .subroute {
     grid-template-columns: 1.15rem auto;
     padding-left: $margin * 0.25;
+    font-weight: bold;
   }
 
   .subsubroute {

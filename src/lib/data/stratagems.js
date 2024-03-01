@@ -143,53 +143,72 @@ export const stratagems = [{
   }]
 }, {
   category: "Hangar",
+  content: `
+    <p>The Eagle represents the pinnacle of aerial firepower, delivering devastating strikes from above to crush our enemies beneath the heel of justice. These strategems are deployed from the Eagle strike craft, a fearsome machine of war that prowls the skies, raining destruction upon our adversaries with unparalleled precision and power.</p>
+    <p>From strafing runs to precision airstrikes, the Eagle category offers a diverse array of weapons and tactics to suit any battlefield scenario. Whether it's clearing small targets with a hail of bullets or obliterating fortified positions with a massive bomb, the Eagle is always ready to answer the call of duty and deliver justice from above.</p>
+    <p>But the true strength of the Eagle lies not just in its firepower, but in its versatility. With short cooldowns and multiple charges, Eagle strategems can be deployed rapidly and repeatedly, allowing us to maintain constant pressure on the enemy and keep them on the back foot at all times.</p>
+    <p>However, with great power comes great responsibility. The destructive force unleashed by the Eagle can wreak havoc on both friend and foe alike if not used judiciously. It's imperative that we exercise caution and precision when calling in these strikes, ensuring that our firepower is directed towards our enemies and not our allies.</p>
+  `,
   items: [{
     name: "Eagle Strafing Run",
     sequence: ["up", "right", "right"],
     content: `
-
+      <p>The Eagle Strafing Run is like a lightning bolt from the sky - a rapid-fire strafing run that clears small targets with surgical precision, delivered almost instantly to the heart of the battlefield. When called, the strike will start from the beacon and unleash a torrent of destruction away from the direction you were facing when it was thrown. The Eagle can perform this devastating strafing run not just once, not twice, but three times before it needs to reload its bullets back at base. That's three opportunities to rain liberty and democracy upon our enemies below.</p>
+      <p>A streak of fire blazing across the sky, followed by a deafening roar as the Eagle swoops in to rain death upon our enemies below. Whether it's bugs, Automatons, or anything else foolish enough to stand in our way, the Eagle Strafing Run makes short work of them all, leaving nothing but smoking craters in its wake.</p>
+      <p>Don't hesitate to call in the Eagle and watch as the enemy is torn apart by a hail of bullets and explosions.</p>
     `
   }, {
     name: "Eagle Airstrike",
     sequence: ["up", "right", "down", "right"],
     content: `
-
+      <p>A the wrath of democracy unleashed upon the battlefield - a relentless barrage of bombs creating a non-targeted carpet of explosions, raining freedom and liberty upon our enemies with indiscriminate ferocity. When called, the strike will be perpendicular from the direction you were facing when thrown, blanketing the area in chaos and devastation, all in the name of spreading democracy. The Eagle can unleash this devastating airstrike twice before it needs to reload its arsenal back at base.</p>
     `
   }, {
     name: "Eagle Cluster Bomb",
     sequence: ["up", "right", "down", "down", "right", "down"],
     content: `
-
+      <p>A targeted air strike designed to rain down a barrage of explosive projectiles, clearing smaller targets with ruthless efficiency. While it may not have the power to level buildings, it excels at decimating enemy forces and turning the tide of battle in our favor. When called, the strike will be perpendicular from the direction you were facing when thrown, saturating the area with a deadly rain of bombs.</p>
+      <p>The Eagle Cluster Bomb isn't a one-trick pony. It can be deployed a total of four times before it needs to reload its payload back at base, giving you ample opportunities to unleash devastation upon our enemies and pave the way for victory.</p>
     `
   }, {
     name: "Eagle Napalm Airstrike",
     sequence: ["up", "right", "down", "up"],
     content: `
-
+      <p>A blaze of glory descending from the heavens - a relentless barrage of napalm bombs creating a wall of fire that will stop the enemy dead in their tracks. When called, the strike will be perpendicular from the direction you were facing when thrown, engulfing the battlefield in a searing inferno of destruction. It can be unleashed twice before it needs to reload its fiery payload back at base.</p>
+      <p>A wall of fire erupts from the ground, consuming everything in its path with relentless fury. Bugs, Automatons, and any other enemies foolish enough to stand against us are engulfed in flames, their advance halted by the searing heat of the Eagle Napalm Strike.</p>
     `
   }, {
     name: "Jump Pack",
     sequence: ["down", "up", "up", "down", "up"],
     content: `
+      <p>The Jump Pack propels you to great heights with each leap, allowing you to soar through the air like a majestic eagle. With its power, you can leap entire stories high, gaining advantage over enemies or reaching strategic positions on the battlefield.</p>
+      <p>However, the Jump Pack requires a fairly long recharge between jumps, making timing and strategy crucial for its effective use. Whether you need to evade enemies or engage them from unexpected angles, the Jump Pack offers freedom and flexibility in combat.</p>
+      <p>Imagine activating the Jump Pack as the ground trembles beneath your feet, launching you into the air with a powerful leap. Bugs and Automatons alike are caught off guard as you ascend overhead, ready to turn the tide of battle from above.</p>
+      <p>With the Jump Pack, the sky's the limit - quite literally.</p>
 
     `
   }, {
     name: "Eagle Smoke Strike",
     sequence: ["up", "right", "up", "down"],
     content: `
-
+      <p>The Eagle Smoke Strike unleashes a barrage of smoke grenades, enveloping the battlefield in a thick screen of smoke to obscure enemy vision and disrupt their plans. When called, the strike blankets the area with a haze of confusion, creating chaos among our adversaries and giving us the upper hand in combat.</p>
+      <p>With the Eagle Smoke Strike in our arsenal, victory is within reach. So when the enemy advances and the odds seem stacked against us, we call upon the power of smoke and mirrors to turn the tide in our favor. A literal fog of war.</p>
     `
   }, {
     name: "Eagle 110MM Rocket Pods",
     sequence: ["up", "down", "up", "left"],
     content: `
-
+      <p>The Eagle 110mm Rocket Pods unleash a relentless barrage of explosive rockets, raining destruction upon the largest target near the stratagem beacon. This deadly payload seeks out its target with unerring accuracy, striking with devastating force and dealing massive amounts of damage to even the toughest adversaries.</p>
+      <p>With each rocket finding its mark, the Eagle 110mm Rocket Pods leave a trail of devastation in their wake, decimating enemy armor and turning the tide of battle in our favor. Whether it's a towering behemoth or a heavily fortified position, no foe can withstand the onslaught of firepower unleashed by these potent munitions.</p>
     `
   }, {
     name: "Eagle 500KG Bomb",
     sequence: ["up", "left", "down", "down", "down"],
     content: `
-
+      <p>The Eagle 500kg Bomb is a weapon of unparalleled devastation, a titanic force of destruction that strikes fear into the hearts of our enemies and leaves the battlefield scorched and smoldering in its wake. When called upon, this behemoth of annihilation descends upon the battlefield with the weight of a thousand thunderclaps, heralding its arrival with a deafening roar that echoes across the land.</p>
+      <p>As the bomb hurtles towards its target, time seems to slow, every second stretching into an eternity as anticipation builds and tension mounts. Then, with a blinding flash of light and an earth-shattering explosion, the bomb detonates, unleashing a cataclysmic wave of destruction that engulfs everything in its path. The shockwave ripples outward, tearing through the earth and rending the very fabric of reality asunder. Buildings crumble like sandcastles in a hurricane, reduced to rubble and dust in the blink of an eye. Vehicles are tossed aside like toys, their twisted wreckage scattered across the landscape like discarded playthings. Those unfortunate enough to be caught within the blast radius are subjected to a maelstrom of destruction unlike anything they've ever experienced. The intense heat sears flesh from bone, leaving nothing but charred husks in its wake. The force of the explosion hurls bodies through the air like rag dolls, their screams lost amidst the cacophony of destruction.</p>
+      <p>As the dust settles and the smoke clears, the true extent of the devastation becomes apparent. The once-vibrant battlefield lies in ruins, transformed into a desolate wasteland by the awesome power of the Eagle 500kg Bomb. It serves as a stark reminder of the consequences of war, a testament to the destructive potential of Super Earth's most lethal creations.</p>
+      <p>With this bomb in our arsenal, victory is assured - but at what cost? The toll of its devastation weighs heavy on the hearts of those who witness its power, a grim reminder of the sacrifices made in the name of liberty and justice. Yet, in the crucible of war, such sacrifices are necessary if we are to emerge victorious against the forces of tyranny and oppression.</p>
     `
   }]
 }, {
