@@ -1,9 +1,7 @@
 <script>
 	import { invalidateAll } from "$app/navigation"
-	import Hero from "$lib/components/Hero.svelte";
-	import { factions } from "$lib/data/factions.js";
-	import { planetNames } from "$lib/data/planets"
-	import { formatCampaigns } from "$lib/utils/campaign.js";
+	import Hero from "$lib/components/Hero.svelte"
+	import { formatCampaigns } from "$lib/utils/campaign.js"
 	import { onDestroy, onMount } from "svelte"
 
   export let data
