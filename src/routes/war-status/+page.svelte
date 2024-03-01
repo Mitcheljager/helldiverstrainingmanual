@@ -18,11 +18,6 @@
   $: ({ globalEvents, campaigns, planetStatus } = (status || {}))
   $: ({ planetInfos } = (info || {}))
 
-  $: console.log('status', status)
-  $: console.log('info', info)
-  $: console.log('planetStatus', planetStatus)
-  $: console.log(formatCampaigns())
-
   onMount(() => interval = setInterval(invalidateAll, 10000) )
   onDestroy(() => { if (interval) clearInterval(interval) })
 
@@ -70,7 +65,13 @@
     {#each globalEvents as { title, message }}
       <div class="item">
         <h3>{title}</h3>
-        <p class="content">{message}</p>
+        <p class="content">
+          {#if message}
+            {message}
+          {:else}
+            <em>No message was provided</em>
+          {/if}
+        </p>
       </div>
     {/each}
   </div>
@@ -85,7 +86,7 @@
 <div class="items">
   {#each formatCampaigns() as { name, faction, percentage, players }}
     <div class="item {faction.toLowerCase()}">
-      <h3>{name} <small>{faction}</small></h3>
+      <h3>{name || "Unknown Planet"} <small>{faction}</small></h3>
 
       <div class="content">
         <div class="bar">
