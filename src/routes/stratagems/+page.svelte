@@ -7,7 +7,7 @@
 </svelte:head>
 
 <Hero src="/images/content/stratagems.jpg">
-  <h1>Stratagems: Unleashing Tactical Madness</h1>
+  Stratagems: Unleashing Tactical Madness
 </Hero>
 
 <p>
