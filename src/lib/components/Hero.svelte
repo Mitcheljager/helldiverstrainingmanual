@@ -23,7 +23,7 @@
 <style lang="scss">
   h1 {
     position: relative;
-    margin: $margin * 0.5 0 $margin;
+    margin: $margin * 0.5 0;
 
     @include breakpoint(md) {
       margin: calc(-1em + $margin * -0.5) 0 $margin;

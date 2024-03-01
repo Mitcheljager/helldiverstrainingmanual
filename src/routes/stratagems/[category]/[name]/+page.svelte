@@ -15,6 +15,6 @@
 
 {@html stratagem.content || ""}
 
-<div class="mt-1">
+<div class="mt-1/2 md:mt-1">
 	<Stratagem sequence={stratagem.sequence} />
 </div>

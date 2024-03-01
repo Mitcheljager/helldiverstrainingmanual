@@ -17,9 +17,13 @@ $i: 1;
 @each $size in $sizes {
   h#{$i} {
     max-width: $text-limit;
-    margin: 0 0 $margin;
+    margin: 0 0 $margin * 0.5;
     font-size: $size;
     line-height: 1.15em;
+
+    @include breakpoint(md) {
+      margin: 0 0 $margin;
+    }
   }
 
   $i: $i + 1;

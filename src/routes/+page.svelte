@@ -34,10 +34,14 @@
     display: grid;
     gap: $margin * 0.25;
     max-width: $text-limit;
-    margin-bottom: $margin;
+    margin: $margin * 0.5 0;
 
     @include breakpoint(sm) {
       grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+    }
+
+    @include breakpoint(md) {
+      margin: $margin 0;
     }
   }
 </style>

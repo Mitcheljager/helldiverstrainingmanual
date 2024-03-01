@@ -15,7 +15,7 @@
 
 {@html category.content || ""}
 
-<ul class="mt-1">
+<ul class="mt-1/2 md:mt-1">
   {#each category.items as item}
     <li><a class="subsubroute" href={toPath([item.name, item.name, item.name])}><span>{item.name}</a></li>
   {/each}
