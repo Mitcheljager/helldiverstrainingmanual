@@ -83,47 +83,62 @@ export const stratagems = [{
   }]
 }, {
   category: "Orbital Cannons",
+  content: `
+    <p>Orbital Cannons encompass a range of devastating stratagems that call down destruction from the heavens, raining fire and fury upon our enemies with unparalleled force. From precision strikes to sweeping barrages, these orbital weapons are the ultimate trump card in our arsenal, turning the tide of battle with the flick of a switch.</p>
+    <p>Whether it's the relentless bombardment of the Orbital 120mm HE Barrage, the precision annihilation of the Orbital Railcannon Strike, or the fiery wrath of the Orbital Laser, each stratagem in this category brings its own brand of destruction to the battlefield. No enemy is safe from the wrath of the heavens when these weapons are unleashed, and victory is all but assured when they're on our side.</p>
+    <p>But with great power comes great responsibility - communication with teammates is advised, lest we inadvertently turn each other into smoking craters along with the enemy. So when the going gets tough and the bugs start swarming, don't hesitate to call in the big guns from above.</p>
+
+  `,
   items: [{
-    name: "Gatling Barrage",
+    name: "Orbital Gatling Barrage",
     sequence: ["right", "down", "left", "up", "up"],
     content: `
-
+      <p>The Orbital Gatling Barrage is the stuff of nightmares for our enemies below - a relentless storm of high explosive rounds raining down from the heavens like the hammer of justice itself. Fired from the Destroyer's high-speed rotary autocannons, this barrage turns enemy formations into chaos and rubble in the blink of an eye.</p>
+      <p>But don't be fooled by the size of these rounds - they may not be rockets, but they pack a punch that'll make the enemy think twice about crossing our path. These babies are like big bullets of freedom, tearing through enemy ranks with ease and leaving nothing but destruction in their wake.</p>
     `
   }, {
-    name: "Airburst Strike",
+    name: "Orbital Airburst Strike",
     sequence: ["right", "right", "right"],
     content: `
+      <p>The Orbital Airburst Strike is like nature's own fireworks display - except instead of pretty lights, it rains down a deadly shower of shrapnel from above, turning enemy formations into chaos faster than you can say "duck and cover!" This projectile explodes while airborne, creating a deadly rain of shrapnel that's perfect for raining down death and destruction on our enemies below.</p>
+      <p>While the Orbital Airburst Strike may not be effective against heavy armor, it's the perfect tool for dealing with those pesky lighter enemies that just won't take a hint. Whether you're facing off against swarms of bugs or waves of Automatons, this Strategem is your go-to choice for thinning out the herd and making the battlefield safe in the name of democracy.</p>
 
     `
   }, {
-    name: "120MM HE Barrage",
+    name: "Orbital 120mm HE Barrage",
     sequence: ["right", "down", "down", "left", "down", "right", "down", "down"],
     content: `
-
+      <p>The Orbital 120mm HE Barrage is like a symphony of destruction for the discerning Helldiver - a precision artillery salvo that transforms the battlefield into a chaotic dance of devastation and mayhem. With bombs the size of small cars raining down from the heavens, this Strategem is perfect for dispersing concentrated enemy units and turning the tide of battle in our favor.</p>
+      <p>But don't expect surgical precision from this bad boy - oh no! These bombs land in random locations, creating a deadly game of chance where the only guaranteed winner is freedom itself. Sure, it may not be the most accurate airstrike in the book, but when you're dealing with a large area, who needs pinpoint accuracy anyway?</p>
+      <p>Whether you're looking to thin out enemy ranks before a big push or simply want to make a statement, the Orbital 120mm HE Barrage is your ticket to turning the battlefield into a warzone worthy of the history books. With its explosive power and the might of the Destroyer at your command, victory is just a bomb drop away.</p>
     `
   }, {
-    name: "380MM HE Barrage",
+    name: "Orbital 380mm HE Barrage",
     sequence: ["right", "down", "down", "up", "up", "left", "down", "down", "down"],
     content: `
-
+      <p>The 380mm HE Barrage is the big brother of destruction, a prolonged onslaught of devastation that blankets the battlefield in chaos and carnage. With bombs the size of small houses raining down from the heavens, this Strategem is not for the faint of heart - when one of these bad boys is pulled out, you'd better take cover or kiss your behind goodbye!</p>
+      <p>Just when you thought things couldn't get any crazier, along comes the 380mm HE Barrage, wreaking extended havoc over a larger area than your average battleground. Communication with teammates is advised - not because it's particularly helpful, but because it's always good to have someone to share your impending doom with.</p>
+      <p>Whether you're looking to clear out a heavily fortified position or just want to see the world burn (metaphorically speaking, of course), the 380mm HE Barrage is your one-way ticket to chaos and destruction. With its colossal explosive power and the might of the Destroyer at your command, victory is just a bomb drop away - assuming there's anything left standing to claim it.</p>
     `
   }, {
-    name: "Walking Barrage",
+    name: "Orbital Walking Barrage",
     sequence: ["right", "down", "right", "down", "right", "down"],
     content: `
-
+      <p>The Orbital Walking Barrage is like a relentless giant stomping its way across the battlefield, driving the enemy out of cover with every thunderous step and paving the way for our glorious advance. But instead of feet, it's bombs - big, explosive ones that leave nothing but chaos and destruction in their wake.</p>
+      <p>With the Orbital Walking Barrage on our side, victory is just a series of explosive steps away. So don't just stand there - follow the bombs, advance with confidence, and show the enemy what happens when they try to stand in the way of progress. With the power of destruction at your command, victory is inevitable.</p>
     `
   }, {
-    name: "Laser Strike",
+    name: "Orbital Laser Strike",
     sequence: ["right", "up", "left", "up", "right", "left"],
     content: `
-
+      <p>The Orbital Laser is the Destroyer's answer to all our problems - a blazing beam of destruction that sweeps over the designated area like the fiery wrath of the gods, vaporizing everything in its path with ruthless efficiency. This isn't your run-of-the-mill laser pointer, folks - this is a laser cannon so powerful, it makes the sun jealous! Anything caught in its path is destined to become a crispy critter faster than you can say "well done."</p>
     `
   }, {
-    name: "Railcannon Strike",
+    name: "Orbital Railcannon Strike",
     sequence: ["right", "down", "up", "down", "left"],
     content: `
-
+      <p>The Orbital Railcannon Strike is like a sniper's dream come true - a high-velocity railcannon round fired from the heavens, zeroing in on the largest target in close proximity to the beacon and obliterating it in one fell swoop. It's like playing a game of cosmic whack-a-mole, except instead of moles, you're squashing enemy forces with extreme prejudice.</p>
+      <p>Targeting is automatic, meaning you don't have to lift a finger - just plant the beacon and let the railcannon do the rest. With the power of the railcannon at your command, victory is assured - or at least, very, very satisfying.</p>
     `
   }]
 }, {
