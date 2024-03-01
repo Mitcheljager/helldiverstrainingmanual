@@ -58,6 +58,8 @@
 
 <p>In the vast expanse of the galaxy, our battles are not fought alone. Together, as one united force, Helldivers from every corner of the universe stand shoulder to shoulder, confronting the greatest threats to our freedom and democracy.</p>
 
+<p><em><small>This section updates automatically</small></em></p>
+
 <h2 class="mt-1 mb-1/2">Global Events</h2>
 
 {#if globalEvents}
@@ -80,8 +82,6 @@
 {/if}
 
 <h2 class="mt-1 mb-1/4">Active Efforts</h2>
-
-<p class="mb-1/2"><em>This section updates automatically</em></p>
 
 <div class="items">
   {#each formatCampaigns() as { name, faction, percentage, players }}
