@@ -31,15 +31,19 @@
   }
 
   .hero {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     height: clamp(15rem, 20vw, 20rem);
     max-width: $text-limit * 1.5;
     margin: $margin * -0.5 $margin * -0.5 0;
     border: 5px solid $primary;
     background: lighten($bg-base, 5%);
     overflow: hidden;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 
     @include breakpoint(md) {
       margin: $margin * -0.5;
