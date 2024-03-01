@@ -1,5 +1,10 @@
 export const stratagems = [{
   category: "Support Weapons",
+  content: `
+    <p>Support Weapons are the bread and butter of any self-respecting Helldiver, providing you with the firepower you need to spread liberty and democracy across the galaxy - one bullet at a time.</p>
+    <p>These bad boys aren't your grandma's knitting needles - oh no! From heavy machine guns to rocket launchers, each Support Weapon is a shining beacon of freedom, ready to rain down righteous fury upon our enemies and make them wish they'd stayed home.</p>
+    <p>When the bugs start crawling and the Automatons come a-knockin', don't just stand there like a deer in headlights - grab weapon, lock and load, and show those alien scum what it means to mess with the best! With the power of democracy and the support of your fellow soldiers, Super Earth will be victorious.</p>
+  `,
   items: [{
     name: "Machine Gun",
     sequence: ["down", "left", "down", "up", "right"],
