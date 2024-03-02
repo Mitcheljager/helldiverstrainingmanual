@@ -8,7 +8,7 @@
   export let data
 
   let interval
-  let compact = false
+  let compact = true
 
   $: ({ status, info } = data)
   $: ({ globalEvents, campaigns, planetStatus } = (status || {}))
