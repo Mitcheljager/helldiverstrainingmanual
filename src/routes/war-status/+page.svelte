@@ -125,12 +125,13 @@
     --background-color: #{lighten($bg-base, 5%)};
     max-width: $text-limit;
     border: 5px solid var(--border-color);
+    transition: border 200ms;
 
     .compact & {
       display: grid;
       grid-template-columns: 1fr 2fr;
       align-items: center;
-      border: 0;
+      border: 0 solid transparent;
     }
 
     h3 {
@@ -141,6 +142,7 @@
       margin: 0;
       background: var(--background-color);
       padding: $margin * 0.25;
+      transition: font-size 200ms, padding 200ms;
 
       .compact & {
         height: 100%;
@@ -184,6 +186,7 @@
     padding: $margin * 0.25;
     font-size: 1rem;
     line-height: 1.45em;
+    transition: padding 200ms;
 
     .compact & {
       width: 100%;
@@ -194,6 +197,7 @@
   .bar {
     height: 2rem;
     background: var(--border-color);
+    transition: height 200ms;
 
     .compact & {
       height: 1rem;
@@ -221,6 +225,7 @@
     font-weight: bold;
     font-size: 0.85rem;
     line-height: 1em;
+    transition: font-size 200ms;
 
     .compact & {
       font-size: 0.75rem;
