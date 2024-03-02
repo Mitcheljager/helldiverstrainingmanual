@@ -21,7 +21,7 @@
     <img {src} {alt}>
   {:else if video}
     <!-- svelte-ignore a11y-media-has-caption -->
-    <video src={video} muted playsinline bind:this={videoElement} on:playing={() => videoPlaying = true} on:pause={() => videoPlaying = false} />
+    <video src={video} muted playsinline loop bind:this={videoElement} on:playing={() => videoPlaying = true} on:pause={() => videoPlaying = false} />
 
     <button class="play" on:click={playpause}>
       {#if videoPlaying}
