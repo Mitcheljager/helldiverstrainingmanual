@@ -13,9 +13,13 @@
 </svelte:head>
 
 {#key stratagem.name}
-  <Hero video="/videos/stratagems/{toSlug(stratagem.name)}.mp4">
-    {stratagem.name}
-  </Hero>
+  {#if category.category !== "Mission Stratagems"} <!-- Hacky solution to exclude stratagems without videos -->
+    <Hero video="/videos/stratagems/{toSlug(stratagem.name)}.mp4">
+      {stratagem.name}
+    </Hero>
+  {:else}
+    <h1>{stratagem.name}</h1>
+  {/if}
 
   <strong>Stratagems / {category.category}</strong>
 
