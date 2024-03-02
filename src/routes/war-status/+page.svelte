@@ -152,6 +152,7 @@
       transition: font-size 200ms, padding 200ms;
 
       .compact & {
+        flex: 0 0 auto;
         height: 100%;
         padding: $margin * 0.15 $margin * 0.25;
         font-size: 1.15rem;
