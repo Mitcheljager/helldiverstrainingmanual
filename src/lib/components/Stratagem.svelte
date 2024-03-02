@@ -5,6 +5,8 @@
 	import { onDestroy } from "svelte"
 	import Select from "$lib/components/Select.svelte"
 	import { stratagems } from "$lib/data/stratagems"
+	import GamepadControls from "$lib/components/GamepadControls.svelte"
+	import { browser } from "$app/environment"
 
   export let stratagem = ""
 
@@ -18,6 +20,7 @@
   let currentTime = 0
   let bestTime = 0
   let interval = null
+  let gamepadActive = false
 
   $: stratagemOptions = stratagems.map(i => i.items).flat(1).map(i => ({ text: i.name, value: i.sequence }))
   $: extraOptions = [{ text: randomLabel, value: getRandomSequence() }]
@@ -59,6 +62,30 @@
       (current === "down" && ["s", "ArrowDown"].includes(key)) ||
       (current === "left" && ["a", "ArrowLeft"].includes(key)) ||
       (current === "right" && ["d", "ArrowRight"].includes(key))) {
+      correct()
+    } else {
+      incorrect()
+    }
+  }
+
+  function onGamepadPress({ key }) {
+    if (key === "a") {
+      reset()
+      return
+    }
+
+    if (!active) return
+    if (error) return
+    if (currentIndex === sequence.length) return
+    if (!["du", "dd", "dl", "dr"].includes(key)) return
+
+    const current = sequence[currentIndex]
+
+    if (
+      (current === "up" && key === "du") ||
+      (current === "down" && key === "dd") ||
+      (current === "left" && key === "dl") ||
+      (current === "right" && key === "dr")) {
       correct()
     } else {
       incorrect()
@@ -117,6 +144,10 @@
 
 <svelte:window on:keydown={addGiven} />
 
+{#if browser}
+  <GamepadControls on:connect={() => gamepadActive = true} on:disconnect={() => gamepadActive = false} on:press={({ detail }) => onGamepadPress(detail)} />
+{/if}
+
 <h3 class="mb-1/2">Stratagem Practice</h3>
 
 <section class="stratagem">
@@ -148,6 +179,9 @@
 
     <button class="button" class:active={active && !complete && !error} class:error class:complete on:click={() => active = false} transition:slide={{ duration: 200 }}>
       Reset [R]
+      {#if gamepadActive}
+        - Gamepad [A]
+      {/if}
     </button>
   {/if}
 
@@ -158,7 +192,10 @@
       Start Practice
     </button>
   {/if}
+
+  <em class="tip">Tip: Prefer the liberty of a controller? No problem! Press [A] to get start.</em>
 </section>
+
 
 <style lang="scss">
   .stratagem {
@@ -232,5 +269,12 @@
     .highlighted {
       color: $green;
     }
+  }
+
+  .tip {
+    display: block;
+    text-align: center;
+    font-size: 0.8rem;
+    color: lighten($text-color-dark, 10%);
   }
 </style>
