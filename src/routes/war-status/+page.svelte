@@ -1,6 +1,7 @@
 <script>
 	import { invalidateAll } from "$app/navigation"
 	import Hero from "$lib/components/Hero.svelte"
+	import Map from "$lib/components/Map.svelte";
 	import Switch from "$lib/components/Switch.svelte";
 	import { formatCampaigns } from "$lib/utils/campaign.js"
 	import { onDestroy, onMount } from "svelte"
@@ -32,6 +33,10 @@
 <p>In the vast expanse of the galaxy, our battles are not fought alone. Together, as one united force, Helldivers from every corner of the universe stand shoulder to shoulder, confronting the greatest threats to our freedom and democracy.</p>
 
 <p><em><small>This section updates automatically</small></em></p>
+
+<h2>Galaxy Map</h2>
+
+<Map planets={planetInfos} campaigns={formattedCampaigns} />
 
 <h2>
   <div>Active Efforts</div>
