@@ -214,7 +214,7 @@ export const stratagems = [{
 }, {
   category: "Bridge",
   items: [{
-    name: "Orbital Precision Strikes",
+    name: "Orbital Precision Strike",
     sequence: ["right", "right", "up"],
     content: `
 
