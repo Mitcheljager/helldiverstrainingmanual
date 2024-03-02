@@ -17,5 +17,5 @@
 <p>Remember, practice makes perfect, and in the unforgiving war against the alien menace, every second counts. So get ready to punch in those codes, Helldiver, and show those bugs and automatons what you're made of!</p>
 
 <div class="mt-1">
-	<Stratagem randomize />
+	<Stratagem stratagem="Random Sequence" />
 </div>

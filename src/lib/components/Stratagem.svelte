@@ -2,12 +2,14 @@
   import Confetti from "svelte-confetti"
 	import Arrow from "$lib/components/Arrow.svelte"
 	import { slide } from "svelte/transition"
-	import { onDestroy, onMount } from "svelte";
+	import { onDestroy } from "svelte"
+	import Select from "$lib/components/Select.svelte"
+	import { stratagems } from "$lib/data/stratagems"
 
-  export let randomize = false
-  export let sequence = []
+  export let stratagem = ""
 
   const options = ["up", "down", "left", "right"]
+  const randomLabel = "Random Sequence"
 
   let currentIndex = 0
   let active = false
@@ -17,18 +19,25 @@
   let bestTime = 0
   let interval = null
 
-  onMount(setRandomSequence)
+  $: stratagemOptions = stratagems.map(i => i.items).flat(1).map(i => ({ text: i.name, value: i.sequence }))
+  $: extraOptions = [{ text: randomLabel, value: getRandomSequence() }]
+  $: selectOptions = [...extraOptions, ...stratagemOptions]
+  $: initialSelectValue = selectOptions.find(i => i.text === stratagem)
+  $: selectValue = initialSelectValue
+  $: randomize = stratagem === randomLabel
+  $: sequence = selectValue?.value || []
+
   onDestroy(stopTimer)
 
-  function setRandomSequence() {
-    if (!randomize) return
-
+  function getRandomSequence() {
     const count = Math.floor(Math.random() * (10 - 4 + 1) + 4)
 
-    sequence = []
+    let random = []
     for (let index = 0; index < count; index++) {
-      sequence = [...sequence, options[Math.floor(Math.random() * options.length)]]
+      random = [...random, options[Math.floor(Math.random() * options.length)]]
     }
+
+    return random
   }
 
   function addGiven({ key }) {
@@ -77,7 +86,10 @@
   }
 
   function reset() {
-    if (randomize && currentIndex === sequence.length) setRandomSequence()
+    if (randomize && currentIndex === sequence.length) {
+      console.log('set')
+      selectValue = { text: randomLabel, value: getRandomSequence() }
+    }
 
     currentIndex = 0
     complete = false
@@ -109,6 +121,10 @@
 <h3 class="mb-1/2">Stratagem Practice</h3>
 
 <section class="stratagem">
+  <div class="mb-1/4">
+    <Select up options={selectOptions} value={selectValue} on:change={({ detail }) => selectValue = detail} />
+  </div>
+
   <div class="codes" class:complete class:error>
     {#each sequence as direction, i}
       <Arrow {direction} filled={i < currentIndex} />
