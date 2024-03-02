@@ -152,7 +152,7 @@
         display: -webkit-box;
         -webkit-line-clamp: 1;
         -webkit-box-orient: vertical;
-        height: 1em;
+        height: 1.15em;
         overflow: hidden;
         line-break: anywhere;
       }
