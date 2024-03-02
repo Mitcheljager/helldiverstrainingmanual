@@ -34,10 +34,6 @@
 
 <p><em><small>This section updates automatically</small></em></p>
 
-<h2>Galaxy Map</h2>
-
-<Map planets={planetInfos} campaigns={formattedCampaigns} />
-
 <h2>
   <div>Active Efforts</div>
 
@@ -67,6 +63,10 @@
     </div>
   {/each}
 </div>
+
+<h2>Galaxy Map</h2>
+
+<Map planets={planetInfos} campaigns={formattedCampaigns} />
 
 <h2>Global Events</h2>
 
