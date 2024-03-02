@@ -1,12 +1,14 @@
 <script>
 	import { invalidateAll } from "$app/navigation"
 	import Hero from "$lib/components/Hero.svelte"
+	import Switch from "$lib/components/Switch.svelte";
 	import { formatCampaigns } from "$lib/utils/campaign.js"
 	import { onDestroy, onMount } from "svelte"
 
   export let data
 
   let interval
+  let compact = false
 
   $: ({ status, info } = data)
   $: ({ globalEvents, campaigns, planetStatus } = (status || {}))
@@ -31,12 +33,21 @@
 
 <p><em><small>This section updates automatically</small></em></p>
 
-<h2 class="mt-1 mb-1/4">Active Efforts</h2>
+<h2>
+  <div>Active Efforts</div>
 
-<div class="items">
+  <Switch bind:active={compact}>
+    Compact view
+  </Switch>
+</h2>
+
+<div class="items" class:compact>
   {#each formattedCampaigns as { index, name, faction, percentage, players }}
     <div class="item {faction.toLowerCase()}" data-index={index}>
-      <h3>{name || "Unknown Planet"} <small>{faction}</small></h3>
+      <h3>
+        <div>{name || "Unknown Planet"}</div>
+        <small>{faction}</small>
+      </h3>
 
       <div class="content">
         <div class="bar">
@@ -52,7 +63,7 @@
   {/each}
 </div>
 
-<h2 class="mt-1 mb-1/4">Global Events</h2>
+<h2>Global Events</h2>
 
 {#if globalEvents}
   <div class="items">
@@ -89,10 +100,24 @@
 </div>
 
 <style lang="scss">
+  h2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: $margin * 0.25;
+    width: 100%;
+    margin: $margin 0 $margin * 0.25;
+  }
+
   .items {
     display: flex;
     flex-direction: column;
     gap: $margin * 0.5;
+
+    &.compact {
+      gap: $margin * 0.25;
+    }
   }
 
   .item {
@@ -100,6 +125,13 @@
     --background-color: #{lighten($bg-base, 5%)};
     max-width: $text-limit;
     border: 5px solid var(--border-color);
+
+    .compact & {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      align-items: center;
+      border: 0;
+    }
 
     h3 {
       display: flex;
@@ -110,10 +142,29 @@
       background: var(--background-color);
       padding: $margin * 0.25;
 
+      .compact & {
+        height: 100%;
+        padding: $margin * 0.15 $margin * 0.25;
+        font-size: 1.15rem;
+      }
+
+      div {
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        height: 1em;
+        overflow: hidden;
+        line-break: anywhere;
+      }
+
       small {
         opacity: 0.75;
         color: var(--border-color);
         font-size: 0.65em;
+
+        .compact & {
+          display: none;
+        }
       }
     }
 
@@ -133,11 +184,20 @@
     padding: $margin * 0.25;
     font-size: 1rem;
     line-height: 1.45em;
+
+    .compact & {
+      width: 100%;
+      padding: $margin * 0.15 0 $margin * 0.15 $margin * 0.25;
+    }
   }
 
   .bar {
     height: 2rem;
     background: var(--border-color);
+
+    .compact & {
+      height: 1rem;
+    }
   }
 
   @keyframes progress {
@@ -161,6 +221,10 @@
     font-weight: bold;
     font-size: 0.85rem;
     line-height: 1em;
+
+    .compact & {
+      font-size: 0.75rem;
+    }
 
     span:last-child {
       text-align: right;
