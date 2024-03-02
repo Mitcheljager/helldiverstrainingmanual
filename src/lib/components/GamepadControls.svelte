@@ -39,19 +39,19 @@
   function checkControls() {
     if (!gamepads?.length) return
 
-    const pad = gamepads[0]
+    gamepads.forEach(gamepad => {
+      const buttons = ["ga", "gb", "gx", "gy", "lb", "rb", "lt", "rt", "map", "menu", "lstick", "rstick", "du", "dd", "dl", "dr", "xbox"]
 
-    const buttons = ["ga", "gb", "gx", "gy", "lb", "rb", "lt", "rt", "map", "menu", "lstick", "rstick", "du", "dd", "dl", "dr", "xbox"]
+      gamepad.buttons.forEach((button, i) => {
+        if (button.pressed === (heldButtons[i] || false)) return
 
-    pad.buttons.forEach((button, i) => {
-      if (button.pressed === (heldButtons[i] || false)) return
+        heldButtons[i] = button.pressed
 
-      heldButtons[i] = button.pressed
-
-      if (button.pressed) {
-        dispatch(buttons[i])
-        dispatch("press", { key: buttons[i] })
-      }
+        if (button.pressed) {
+          dispatch(buttons[i])
+          dispatch("press", { key: buttons[i] })
+        }
+      })
     })
   }
 </script>
