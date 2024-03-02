@@ -97,6 +97,8 @@
   </ul>
 
   <p>The API is fairly barebones but provides all the info you need to replicate this page and more. There is no authentication or rate limiting. Handle it with respect, soldier.</p>
+
+  <p>The data comes from an official endpoint, but it's not an officially open API. It's entirely possible it will stop working at some point.</p>
 </div>
 
 <style lang="scss">
