@@ -237,136 +237,147 @@ export const stratagems = [{
   }]
 }, {
   category: "Bridge",
+  content: `
+    <p>From precision strikes and explosive barrages to incendiary bombardments and high-energy laser beams, these orbital weapons deliver unparalleled destructive power against enemy targets. Whether clearing entrenched enemy positions, disrupting hostile advances, or obliterating high-value targets, these devastating orbital strikes are essential assets in the Helldivers' arsenal, enabling them to turn the tide of battle and secure victory in the ongoing struggle for liberty and democracy across the galaxy.</p>
+  `,
   items: [{
     name: "Orbital Precision Strike",
     cost: 0,
     sequence: ["right", "right", "up"],
     content: `
-
+      <p>Marvel at the Orbital Precision Strike, the illustrious initiation bestowed upon fledgling Helldivers embarking on their gallant escapades. With a singular shot from the venerable 'ATLAS' cannon, unleashed from the ethereal confines of the mighty Destroyer, this stratagem instills dread in the hearts of our adversaries and proclaims our supremacy with resolute vigor. From the inaugural unleashing of its wrath upon the battlefield, you'll grasp the weighty burden placed upon you as a Helldiver, and the pivotal role you occupy in safeguarding the virtues of liberty and democracy across the cosmos.</p>
     `
   }, {
     name: "Orbital Gas Strike",
     cost: 6000,
     sequence: ["right", "right", "down", "right"],
     content: `
-
+      <p>A noxious gift from the heavens that unleashes a swirling maelstrom of corrosive gas upon the battlefield. This insidious cloud spares no foe, searing through both organic and robotic lifeforms with equal contempt. As it engulfs the battlefield, it leaves naught but devastation in its wake, choking our enemies and dissolving their defenses with unrelenting efficiency. With the Orbital Gas Strike at your command, you wield a weapon of unparalleled potency, capable of turning the tide of battle with a single toxic breath.</p>
     `
   }, {
     name: "Orbital EMS Strike",
     cost: 6000,
     sequence: ["right", "right", "left", "down"],
     content: `
-
+      <p>A marvel of compliance engineering designed to recalibrate enemy behavior with a single, electrifying pulse. This projectile, imbued with the power to temporarily stun all targets within its strike radius, serves as a potent reminder of the consequences of defiance against the forces of liberty and democracy. As it arcs through the heavens and descends upon the battlefield, it delivers a shockwave of enlightenment that leaves our adversaries momentarily incapacitated, their wills bent to our cause. With the Orbital EMS Strike at your disposal, you wield not just a weapon, but a tool for shaping the very fabric of the battlefield itself.</p>
     `
   }, {
     name: "Orbital Smoke Strike",
     cost: 4000,
     sequence: ["right", "right", "down", "up"],
     content: `
-
+      <p>A strategic masterpiece that blankets the battlefield in a dense fog of liberty, shielding our forces from the prying eyes of tyranny. This stratagem conjures a veil of democratic smoke that descends from the heavens, obscuring the vision of our adversaries, including the relentless Automatons, and thwarting their attempts to suppress our pursuit of freedom. With their line of sight compromised, our enemies find themselves ensnared in the smokescreen of liberty, unable to penetrate the righteous resolve of the Helldivers. With the Orbital Smoke Strike at your command, you wield not just a weapon, but a shield of democracy that ensures our victory against the forces of oppression.</p>
     `
   }, {
     name: "HMG Emplacement",
     cost: 10000,
     sequence: ["up", "down", "left", "right", "right", "left"],
     content: `
-
+      <p>A formidable fortification that transforms any battlefield into a bastion of liberty. Manned by courageous Helldivers, this turret delivers unparalleled firepower against lightly armored targets, serving as a steadfast guardian against the encroaching forces of tyranny. Though slow to turn, its strategic placement is paramount, ensuring maximum coverage and efficacy on the front lines of democracy's defense. With the HMG Emplacement at your disposal, you become the stalwart sentinel of freedom, standing firm against all who dare to oppose our righteous cause.</p>
     `
   }, {
     name: "Shield Generator Relay",
     cost: 9000,
     sequence: ["down", "up", "left", "right", "left", "down"],
     content: `
-
+      <p>Enter the Shield Generator Relay, a beacon of protection that erects a steadfast energy shield, providing resolute cover against the relentless barrage of projectiles unleashed by our adversaries. Stationary yet stalwart, this shield generator serves as a bulwark against tyranny, offering a temporary sanctuary for Helldivers in the heat of battle. However, its lifespan is finite once deployed, requiring judicious placement and timely activation to maximize its defensive capabilities. With the Shield Generator Relay in play, you become the guardian of democracy, ensuring the safety and security of our righteous cause amid the chaos of conflict.</p>
     `
   }, {
     name: "Tesla Tower",
     cost: 8000,
     sequence: ["down", "up", "right", "up", "left", "right"],
     content: `
-
+      <p>Behold the Tesla Tower, a towering testament to the electrifying power of Helldiver ingenuity and the boundless spirit of democracy. This formidable turret channels the raw energy of liberty itself, unleashing devastating electrical charges at targets in close range, arcing through the air with righteous fury to vanquish our enemies. To safeguard the principles of freedom, Helldivers are advised to adopt a prone position while in proximity of this electrifying marvel, ensuring the safety of their comrades amidst the chaos of battle.</p>
     `
   }]
 }, {
   category: "Engineering Bay",
+  content: `
+    <p>The Engineering Bay offers a diverse array of armaments and defensive tools utilized by Helldivers to confront and overcome enemy threats across the battlefield. From explosive ordnance like the anti-personnel Minefield and Grenade Launcher to advanced energy-based weaponry such as the Laser Cannon and Arc Thrower, each weapon offers unique tactical advantages tailored to various combat situations. Additionally, defensive equipment like the Ballistic Shield Backpack and Shield Generator Pack provide vital protection and support for Helldivers in the heat of battle. Whether raining down explosive devastation or unleashing precise energy beams, these weapons enable Helldivers to unleash the full extent of their combat prowess in the ongoing struggle for liberty and democracy against alien adversaries.</p>
+  `,
   items: [{
     name: "Anti-Personnel Minefield",
     cost: 1500,
     sequence: ["down", "left", "down", "up", "right"],
     content: `
-
+      <p>This formidable stratagem deploys a tower that swiftly saturates the surrounding area with a deluge of landmines, creating a perilous barrier that halts enemy progress in its tracks. As these explosive guardians lay in wait, poised to detonate upon contact with any intruder, they serve as a formidable deterrent against the encroaching forces of tyranny. With the Anti-Personnel Minefield at your disposal, you command a lethal arsenal of democracy's defense, ensuring that our enemies tread cautiously on the path to their inevitable defeat.</p>
     `
   }, {
     name: "Supply Pack",
     cost: 4000,
     sequence: ["down", "left", "down", "up", "up", "down"],
     content: `
-
+      <p>This essential stratagem deploys supply boxes brimming with precious ammunition, accompanied by a versatile backpack that empowers the user to distribute these vital resources to fellow comrades in arms. Whether resupplying allies or replenishing one's own arsenal, the Supply Pack stands as a beacon of solidarity and resilience on the battlefield. With its capacity for sustained provision, Helldivers wield the power to sustain the fight against tyranny and uphold the sacred values of liberty and democracy.</p>
     `
   }, {
     name: "Grenade Launcher",
     cost: 6000,
     sequence: ["down", "left", "down", "up", "left", "down", "down"],
     content: `
-
+      <p>This formidable weapon launches grenades with devastating force, unleashing chaos and destruction upon our adversaries with each explosive payload. As the battlefield erupts in a symphony of detonations, the Grenade Launcher stands as a symbol of our unwavering resolve to combat tyranny and oppression. With its explosive projectiles raining down upon our enemies, Helldivers pave the way for liberty and democracy to triumph over the forces of darkness.</p>
     `
   }, {
     name: "Laser Cannon",
     cost: 4000,
     sequence: ["down", "left", "down", "up", "left"],
     content: `
-
+      <p>Presenting the Laser Cannon, a marvel of cutting-edge technology and the pinnacle of Helldiver armament. This formidable cannon harnesses upscaled, weaponized laser technology to unleash a relentless torrent of destructive energy upon our adversaries. Its heavy, continuous laser beam cuts through enemy ranks with surgical precision, leaving naught but scorched earth in its wake. Unlike conventional weapons, the Laser Cannon consumes no traditional ammunition, instead relying on a delicate balance of power and heat management. To maintain optimal performance, Helldivers must load emergency heat dump canisters into the cannon, ensuring a continuous barrage of laser fire.</p>
     `
   }, {
     name: "Incendiary Mines",
     cost: 4000,
     sequence: ["down", "left", "left", "down"],
     content: `
-
+      <p>This stratagem deploys a minefield saturated with incendiary devices, poised to ignite both terrain and targets alike when triggered by unsuspecting adversaries. As the flames of liberty engulf our enemies, Helldivers stand as guardians of democracy, harnessing the power of fire to repel the forces of tyranny. Similar to its explosive counterpart, the Incendiary Mines serve as a formidable deterrent against enemy incursions, creating a perilous obstacle for those who dare to challenge our righteous cause.</p>
     `
   }, {
     name: "Guard Dog Rover",
     cost: 7500,
     sequence: ["down", "left", "down", "up", "left", "down", "down"],
     content: `
-
+      <p>An autonomous enforcer armed to the teeth with a laser rifle and itching for a fight. This formidable drone serves as a relentless harbinger of destruction, prowling the battlefield with lethal intent and unleashing a torrent of laser fire upon any who dare to oppose the cause of liberty. With its 360-degree coverage, the Guard Dog Rover ensures that no enemy can escape its relentless barrage, leaving a trail of scorched earth in its wake. However, such unrestrained firepower comes at a cost, as even the Helldiver who commands it must tread cautiously to avoid being caught in the crossfire.</p>
     `
   }, {
     name: "Ballistic Shield Backpack",
     cost: 6000,
     sequence: ["down", "left", "up", "up", "right"],
     content: `
-
+      <p>This compact backpack, when wielded in one hand, transforms into a sturdy ballistic shield capable of withstanding the onslaught of small arms fire with ease. As Helldivers advance into the heart of enemy territory, the Ballistic Shield Backpack stands as a steadfast bulwark against tyranny, providing invaluable protection to those who dare to challenge the forces of oppression.</p>
     `
   }, {
     name: "Arc Thrower",
     cost: 7000,
     sequence: ["down", "right", "up", "left", "down"],
     content: `
-
+      <p>This potent tool charges up to unleash bolts of crackling electricity, capable of arcing between multiple targets with devastating effect. Remarkably, the Arc Thrower's inexhaustible energy source ensures that it can be fired infinitely, delivering relentless punishment to our enemies without the need for traditional ammunition. However, wielders must exercise caution when deploying the Arc Thrower in close proximity to comrades, as its indiscriminate discharge may inadvertently harm nearby teammates.</p>
     `
   }, {
     name: "Shield Generator Pack",
     cost: 10000,
     sequence: ["down", "up", "left", "down", "right", "right"],
     content: `
-
+      <p>A groundbreaking innovation designed to safeguard Helldivers amidst the chaos of enemy territory. This remarkable device encases the wearer in a protective spherical shield, offering unparalleled defense against the onslaught of high-speed projectiles and enemy assaults. With its formidable protection, Helldivers can confidently navigate through hostile environments, shielded from harm and empowered to confront the forces of tyranny head-on. Although its deployment is temporary, the Shield Generator Pack ensures that Helldivers remain unscathed amidst the relentless barrage of enemy fire, providing a vital lifeline in the heat of battle.</p>
     `
   }]
 }, {
   category: "Robotics Workshop",
+  content: `
+    <p>These versatile sentries serve as stalwart guardians, capable of deploying devastating weaponry to hold strategic locations and thwart hostile advances. From machine gun emplacements and gatling turrets to mortar installations and energy-based defenses, each Sentry variant offers unique advantages tailored to different combat scenarios. When deployed strategically, these automated sentries can provide invaluable support, bolstering Helldiver firepower and securing key objectives with unwavering vigilance. However, their effectiveness hinges on proper placement and maintenance, as well as the Helldivers' ability to anticipate and adapt to enemy tactics.</p>
+
+  `,
   items: [{
     name: "Machine Gun Sentry",
     cost: 1500,
     sequence: ["down", "up", "right", "right", "up"],
     content: `
-
+      <p> This imposing turret stands as a stalwart guardian, tirelessly scanning the battlefield for any sign of opposition and unleashing a relentless barrage of firepower upon those who dare to challenge the cause of liberty. With its unmatched precision and unwavering determination, the Machine Gun Sentry serves as a steadfast sentinel, safeguarding strategic locations and ensuring the continued advance of democracy's champions.</p>
     `
   }, {
     name: "Gatling Sentry",
     cost: 4000,
     sequence: ["down", "up", "right", "left", "down"],
     content: `
+      <p>Prepare for a symphony of destruction with the Gatling Sentry, an awe-inspiring addition to our arsenal that unleashes a relentless storm of bullets upon our foes. This fearsome turret stands as a formidable bulwark against the forces of tyranny, its spinning barrels serving as a testament to the unyielding resolve of Helldivers in the pursuit of liberty. With its unparalleled rate of fire and unerring accuracy, the Gatling Sentry sweeps aside all who oppose the march of democracy, leaving a trail of destruction in its wake.</p>
 
     `
   }, {
@@ -374,20 +385,23 @@ export const stratagems = [{
     cost: 7000,
     sequence: ["down", "up", "right", "right", "down"],
     content: `
-
+      <p> This formidable turret stands as a testament to the ingenuity of Helldivers, its explosive shells serving as harbingers of liberty's triumph over tyranny. With its unparalleled range and devastating firepower, the Mortar Sentry strikes fear into the hearts of our enemies, decimating their ranks and clearing the path for democracy's advance.</p>
     `
   }, {
     name: "Guard Dog",
     cost: 7500,
     sequence: ["down", "up", "left", "up", "right", "down"],
     content: `
-
+      <p> This relentless companion serves as a steadfast ally on the battlefield, its keen senses and unwavering resolve ensuring that democracy's champions remain protected from every threat. With its 360-degree coverage and formidable firepower, the Guard Dog stands as a vigilant defender of liberty, tirelessly engaging enemy forces and securing victory for the cause of freedom. As it bravely patrols the front lines, the Guard Dog epitomizes the indomitable spirit of Helldivers, inspiring confidence in our ranks and striking fear into the hearts of our adversaries.</p>
     `
   }, {
     name: "Autocannon Sentry",
     cost: 6000,
     sequence: ["down", "up", "right", "up", "left", "up"],
     content: `
+      <p>Behold the Autocannon Sentry, a sentinel of thunderous might, whose rapid-fire barrage paints the skies with trails of explosive light. In the crucible of battle, it stands as a beacon of defiance, its fiery salvoes heralding the triumph of liberty's alliance. With each resounding boom, it shatters the chains of oppression, carving pathways to freedom with relentless aggression.</p>
+      <p>In its relentless fury, armored titans tremble and falter, as torrents of explosive wrath rend their defenses asunder. Yet not only the mighty fall before its thunderous call, but also the hordes of tyranny, scattered and cleft by its explosive ballet.</p>
+      <p>Thus, amidst the chaos of war, the Autocannon Sentry reigns supreme, a testament to the indomitable spirit of those who dare to dream. With each detonation, it sings the anthem of freedom's ascent, forging a path to victory where democracy's light shines ever resplendent.</p>
 
     `
   }, {
@@ -395,14 +409,14 @@ export const stratagems = [{
     cost: 7500,
     sequence: ["down", "up", "right", "right", "left"],
     content: `
-
+      <p>Behold the might of the Rocket Sentry, a formidable automated turret designed to rain destruction upon armored adversaries with relentless precision. This towering guardian stands as a beacon of defiance against tyranny, its guided missiles soaring through the skies to seek out and obliterate the largest of foes. With each thunderous detonation, the Rocket Sentry carves a path of fiery retribution, ensuring that the forces of oppression tremble in the face of democracy's advance.</p>
     `
   }, {
     name: "EMS Mortar Sentry",
     cost: 8000,
     sequence: ["down", "down", "up", "up", "left"],
     content: `
-
+      <p>An electrifying turret armed with static field generators that disrupt enemy advances with the fervor of democracy itself. This mighty guardian stands as a bastion of liberty, its pulsating fields of electromagnetic fury casting a net of confusion upon the enemy ranks, leaving tyranny quaking in its boots. With each thunderous pulse, the EMS Mortar Sentry proclaims the triumph of freedom's champions, striking fear into the hearts of all who dare oppose the righteous march of democracy.</p>
     `
   }]
 }, {
@@ -411,30 +425,33 @@ export const stratagems = [{
     name: "Reinforce",
     sequence: ["up", "down", "right", "left", "up"],
     content: `
-
+      <p>Amidst the chaos of battle, amidst the thunderous roar of conflict, we stand as one, united in purpose, bound by the sacred oath of liberty's champions. For every Helldiver who has fallen, for every comrade lost in the crucible of war, their memory shall be etched in the annals of heroism, their valor a beacon that guides us through the darkest of nights.</p>
+      <p>With each Reinforce beacon that pierces the heavens, we pay homage to those who have gone before us, their spirits soaring alongside our resolve, their sacrifice a testament to the unwavering spirit of democracy's defenders. Though they may be gone from our sight, their legacy lives on in the hearts of every Helldiver who takes up arms in their name, their courage fueling our relentless pursuit of freedom's dawn.</p>
+      <p>As we call forth new recruits to join our ranks, we do so with reverence and solemnity, for we know that every Helldiver who stands upon the battlefield carries with them the indomitable spirit of those who have fallen, their sacrifice a clarion call to arms that echoes across the stars. Let us honor their memory with each step we take, with each victory we claim, for in doing so, we ensure that their sacrifice was not in vain, that their legacy endures in the triumph of democracy's righteous cause.</p>
     `
   }, {
     name: "SOS Beacon",
     sequence: ["up", "down", "right", "up"],
     content: `
-
+      <p>In the heat of battle, when the shadows of adversity loom large, there emerges a beacon of hope – the SOS Beacon, a lifeline to reinforcements in our darkest hour. With each pulse of its signal, we rally the brave and the bold to stand alongside us in the relentless fight for liberty, igniting a flame of courage amidst the encroaching darkness. As its signal pierces the heavens, it serves as a testament to the unyielding spirit of Helldivers, reaffirming our commitment to confront tyranny head-on and triumph against all odds. Together, united in purpose, we stand resolute, knowing that in the unity of our ranks lies the strength to overcome any obstacle and emerge victorious in the pursuit of freedom.</p>
     `
   }, {
     name: "Super Earth Flag",
     sequence: ["down", "up", "down", "up"],
     content: `
-
+      <p>Bearing the emblem of Super Earth, the beacon of democracy and freedom across the galaxy, the Super Earth Flag is a symbol of our unwavering resolve and steadfast commitment to our cause. When called down to claim a particular location, it serves as a rallying point for all Helldivers, a bastion of liberty amidst the chaos of war. As its colors unfurl upon the battlefield, they inspire hope and unity, reminding us of the values we hold dear and the sacrifices we make in the name of justice and democracy.</p>
     `
   }, {
     name: "Upload Data",
     sequence: ["left", "right", "up", "up", "up"],
     content: `
-
+      <p>Uploading data...</p>
     `
   }, {
     name: "Hellbomb",
     sequence: ["down", "up", "left", "down", "up", "right", "down", "up"],
     content: `
+      <p>The "Hellbomb" is a formidable weapon utilized by Helldivers to obliterate enemy encampments with overwhelming force. Upon deployment, it can be activated to unleash a massive explosion, creating a devastating blast radius that annihilates anything in its path. This destructive capability makes it an indispensable tool for clearing out entrenched enemy positions and disrupting hostile operations. However, its potency comes with a significant risk - Helldivers must evacuate the area swiftly to avoid being caught in the cataclysmic aftermath.</p>
 
     `
   }]
