@@ -22,6 +22,7 @@
     font-family: $font-family-brand;
     font-size: 1rem;
     color: $text-color;
+    cursor: pointer;
   }
 
   .switch {
