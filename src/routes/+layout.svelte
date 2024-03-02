@@ -10,10 +10,6 @@
   afterNavigate(() => sidebarActive = false)
 </script>
 
-<svelte:head>
-  <title>Helldivers Training Manual</title>
-</svelte:head>
-
 <div class="layout">
   <aside class="sidebar" class:active={sidebarActive}>
     <a href="/" class="header">
