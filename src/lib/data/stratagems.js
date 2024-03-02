@@ -128,7 +128,7 @@ export const stratagems = [{
       <p>With the Orbital Walking Barrage on our side, victory is just a series of explosive steps away. So don't just stand there - follow the bombs, advance with confidence, and show the enemy what happens when they try to stand in the way of progress. With the power of destruction at your command, victory is inevitable.</p>
     `
   }, {
-    name: "Orbital Laser Strike",
+    name: "Orbital Laser",
     sequence: ["right", "up", "left", "up", "right", "left"],
     content: `
       <p>The Orbital Laser is the Destroyer's answer to all our problems - a blazing beam of destruction that sweeps over the designated area like the fiery wrath of the gods, vaporizing everything in its path with ruthless efficiency. This isn't your run-of-the-mill laser pointer, folks - this is a laser cannon so powerful, it makes the sun jealous! Anything caught in its path is destined to become a crispy critter faster than you can say "well done."</p>
