@@ -156,6 +156,10 @@
         height: 100%;
         padding: $margin * 0.15 $margin * 0.25;
         font-size: 1.15rem;
+
+        @include safari() {
+          height: auto;
+        }
       }
 
       div {
