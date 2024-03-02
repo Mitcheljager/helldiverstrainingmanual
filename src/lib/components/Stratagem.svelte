@@ -249,6 +249,7 @@
 
   .tip {
     display: block;
+    margin-top: $margin * 0.15;
     text-align: center;
     font-size: 0.8rem;
     color: lighten($text-color-dark, 10%);
