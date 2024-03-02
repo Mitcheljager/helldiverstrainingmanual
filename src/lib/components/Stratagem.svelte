@@ -22,8 +22,7 @@
   $: stratagemOptions = stratagems.map(i => i.items).flat(1).map(i => ({ text: i.name, value: i.sequence }))
   $: extraOptions = [{ text: randomLabel, value: getRandomSequence() }]
   $: selectOptions = [...extraOptions, ...stratagemOptions]
-  $: initialSelectValue = selectOptions.find(i => i.text === stratagem)
-  $: selectValue = initialSelectValue
+  $: selectValue = selectOptions.find(i => i.text === stratagem)
   $: randomize = stratagem === randomLabel
   $: sequence = selectValue?.value || []
 
