@@ -7,6 +7,7 @@ export const stratagems = [{
   `,
   items: [{
     name: "Machine Gun",
+    cost: 0,
     sequence: ["down", "left", "down", "up", "right"],
     content: `
       <p>Behold, soldier, the mighty MG-43 Machine Gun - a weapon fit for heroes and hotheads alike. This trusty companion is your ticket to glory on the battlefield, but beware, for with great power comes great responsibility (and a hefty kickback).</p>
@@ -16,6 +17,7 @@ export const stratagems = [{
     `
   }, {
     name: "Anti-Materiel Rifle",
+    cost: 5000,
     sequence: ["down", "left", "right", "up", "down"],
     content: `
       <p>The Anti-Materiel Rifle is the ultimate precision instrument for dealing with those big, bad enemies that think they're invincible. This beast of a sniper rifle is your solution when you need to reach out and touch someone - hard.</p>
@@ -26,6 +28,7 @@ export const stratagems = [{
     `
   }, {
     name: "Stalwart",
+    cost: 3500,
     sequence: ["down", "left", "down", "up", "up", "left"],
     content: `
       <p>The M-105 Stalwart is a compact and nimble machine gun designed for soldiers who value agility and versatility on the battlefield. Unlike its heavier counterparts, the Stalwart sacrifices raw power for ease of use, making it the perfect choice for those who need to stay mobile in the heat of combat.</p>
@@ -34,6 +37,7 @@ export const stratagems = [{
     `
   }, {
     name: "Expendable Anti-Tank",
+    cost: 3000,
     sequence: ["down", "down", "left", "up", "right"],
     content: `
       <p>The EAT-17 Expandable Anti-Tank is a single-use weapon specially designed to wreak havoc on vehicle armor targets.</p>
@@ -42,6 +46,7 @@ export const stratagems = [{
     `
   }, {
     name: "Recoilless Rifle",
+    cost: 6000,
     sequence: ["down", "left", "right", "right", "left"],
     content: `
       <p>Behold, the GR-8 Recoilless Rifle - a weapon so mighty, it'll make even the toughest armored vehicles quake in fear. This bad boy is your ticket to turning enemy armor into scrap metal faster than you can say "reload."</p>
@@ -50,6 +55,7 @@ export const stratagems = [{
     `
   }, {
     name: "Flamethrower",
+    cost: 6000,
     sequence: ["down", "left", "up", "down", "up"],
     content: `
       <p>The FLAM-40 Flamethrower is a weapon of fiery destruction, perfect for scorching enemies at close range. With its incendiary power, this weapon doesn't just burn targets - it turns them into crispy critters faster than you can say "extra crispy."</p>
@@ -58,6 +64,7 @@ export const stratagems = [{
     `
   }, {
     name: "Autocannon",
+    cost: 7000,
     sequence: ["down", "right", "left", "down", "down", "up", "up", "right"],
     content: `
     <p>The AC-8 Autocannon is a fully-automatic cannon designed to rain destruction upon light vehicle armor with ruthless efficiency. With its rapid-fire capability, this weapon turns enemy vehicles into scrap metal faster than you can say "reload."</p>
@@ -67,6 +74,7 @@ export const stratagems = [{
     `
   }, {
     name: "Railgun",
+    cost: 10000,
     sequence: ["down", "right", "left", "down", "down", "up", "left", "down", "right"],
     content: `
       <p>The RS-422 Railgun isn't your grandpa's pea shooter - it's a cutting-edge piece of experimental tech that's so hot, it makes the sun jealous. This baby is all about one thing and one thing only: blasting through armor like it's going out of style.</p>
@@ -75,6 +83,7 @@ export const stratagems = [{
     `
   }, {
     name: "Spear",
+    cost: 9000,
     sequence: ["down", "down", "up", "down", "down"],
     content: `
       <p>The FAF-14 Spear is the pinnacle of anti-tank warfare, a homing missile that locks onto its target with deadly precision before unleashing its destructive payload. With its auto-lock-on system, this weapon is your best friend when it comes to taking down large and armored enemies, no matter how fast they're moving.</p>
@@ -91,6 +100,7 @@ export const stratagems = [{
   `,
   items: [{
     name: "Orbital Gatling Barrage",
+    cost: 1500,
     sequence: ["right", "down", "left", "up", "up"],
     content: `
       <p>The Orbital Gatling Barrage is the stuff of nightmares for our enemies below - a relentless storm of high explosive rounds raining down from the heavens like the hammer of justice itself. Fired from the Destroyer's high-speed rotary autocannons, this barrage turns enemy formations into chaos and rubble in the blink of an eye.</p>
@@ -98,6 +108,7 @@ export const stratagems = [{
     `
   }, {
     name: "Orbital Airburst Strike",
+    cost: 4000,
     sequence: ["right", "right", "right"],
     content: `
       <p>The Orbital Airburst Strike is like nature's own fireworks display - except instead of pretty lights, it rains down a deadly shower of shrapnel from above, turning enemy formations into chaos faster than you can say "duck and cover!" This projectile explodes while airborne, creating a deadly rain of shrapnel that's perfect for raining down death and destruction on our enemies below.</p>
@@ -106,6 +117,7 @@ export const stratagems = [{
     `
   }, {
     name: "Orbital 120mm HE Barrage",
+    cost: 4000,
     sequence: ["right", "down", "down", "left", "down", "right", "down", "down"],
     content: `
       <p>The Orbital 120mm HE Barrage is like a symphony of destruction for the discerning Helldiver - a precision artillery salvo that transforms the battlefield into a chaotic dance of devastation and mayhem. With bombs the size of small cars raining down from the heavens, this Strategem is perfect for dispersing concentrated enemy units and turning the tide of battle in our favor.</p>
@@ -114,6 +126,7 @@ export const stratagems = [{
     `
   }, {
     name: "Orbital 380mm HE Barrage",
+    cost: 7500,
     sequence: ["right", "down", "down", "up", "up", "left", "down", "down", "down"],
     content: `
       <p>The 380mm HE Barrage is the big brother of destruction, a prolonged onslaught of devastation that blankets the battlefield in chaos and carnage. With bombs the size of small houses raining down from the heavens, this Strategem is not for the faint of heart - when one of these bad boys is pulled out, you'd better take cover or kiss your behind goodbye!</p>
@@ -122,6 +135,7 @@ export const stratagems = [{
     `
   }, {
     name: "Orbital Walking Barrage",
+    cost: 7500,
     sequence: ["right", "down", "right", "down", "right", "down"],
     content: `
       <p>The Orbital Walking Barrage is like a relentless giant stomping its way across the battlefield, driving the enemy out of cover with every thunderous step and paving the way for our glorious advance. But instead of feet, it's bombs - big, explosive ones that leave nothing but chaos and destruction in their wake.</p>
@@ -129,12 +143,14 @@ export const stratagems = [{
     `
   }, {
     name: "Orbital Laser",
+    cost: 10000,
     sequence: ["right", "up", "left", "up", "right", "left"],
     content: `
       <p>The Orbital Laser is the Destroyer's answer to all our problems - a blazing beam of destruction that sweeps over the designated area like the fiery wrath of the gods, vaporizing everything in its path with ruthless efficiency. This isn't your run-of-the-mill laser pointer, folks - this is a laser cannon so powerful, it makes the sun jealous! Anything caught in its path is destined to become a crispy critter faster than you can say "well done."</p>
     `
   }, {
     name: "Orbital Railcannon Strike",
+    cost: 10000,
     sequence: ["right", "down", "up", "down", "left"],
     content: `
       <p>The Orbital Railcannon Strike is like a sniper's dream come true - a high-velocity railcannon round fired from the heavens, zeroing in on the largest target in close proximity to the beacon and obliterating it in one fell swoop. It's like playing a game of cosmic whack-a-mole, except instead of moles, you're squashing enemy forces with extreme prejudice.</p>
@@ -151,6 +167,7 @@ export const stratagems = [{
   `,
   items: [{
     name: "Eagle Strafing Run",
+    cost: 1500,
     sequence: ["up", "right", "right"],
     content: `
       <p>The Eagle Strafing Run is like a lightning bolt from the sky - a rapid-fire strafing run that clears small targets with surgical precision, delivered almost instantly to the heart of the battlefield. When called, the strike will start from the beacon and unleash a torrent of destruction away from the direction you were facing when it was thrown. The Eagle can perform this devastating strafing run not just once, not twice, but three times before it needs to reload its bullets back at base. That's three opportunities to rain liberty and democracy upon our enemies below.</p>
@@ -159,12 +176,14 @@ export const stratagems = [{
     `
   }, {
     name: "Eagle Airstrike",
+    cost: 4000,
     sequence: ["up", "right", "down", "right"],
     content: `
       <p>A the wrath of democracy unleashed upon the battlefield - a relentless barrage of bombs creating a non-targeted carpet of explosions, raining freedom and liberty upon our enemies with indiscriminate ferocity. When called, the strike will be perpendicular from the direction you were facing when thrown, blanketing the area in chaos and devastation, all in the name of spreading democracy. The Eagle can unleash this devastating airstrike twice before it needs to reload its arsenal back at base.</p>
     `
   }, {
     name: "Eagle Cluster Bomb",
+    cost: 4000,
     sequence: ["up", "right", "down", "down", "right", "down"],
     content: `
       <p>A targeted air strike designed to rain down a barrage of explosive projectiles, clearing smaller targets with ruthless efficiency. While it may not have the power to level buildings, it excels at decimating enemy forces and turning the tide of battle in our favor. When called, the strike will be perpendicular from the direction you were facing when thrown, saturating the area with a deadly rain of bombs.</p>
@@ -172,6 +191,7 @@ export const stratagems = [{
     `
   }, {
     name: "Eagle Napalm Airstrike",
+    cost: 5000,
     sequence: ["up", "right", "down", "up"],
     content: `
       <p>A blaze of glory descending from the heavens - a relentless barrage of napalm bombs creating a wall of fire that will stop the enemy dead in their tracks. When called, the strike will be perpendicular from the direction you were facing when thrown, engulfing the battlefield in a searing inferno of destruction. It can be unleashed twice before it needs to reload its fiery payload back at base.</p>
@@ -179,6 +199,7 @@ export const stratagems = [{
     `
   }, {
     name: "Jump Pack",
+    cost: 6000,
     sequence: ["down", "up", "up", "down", "up"],
     content: `
       <p>The Jump Pack propels you to great heights with each leap, allowing you to soar through the air like a majestic eagle. With its power, you can leap entire stories high, gaining advantage over enemies or reaching strategic positions on the battlefield.</p>
@@ -189,6 +210,7 @@ export const stratagems = [{
     `
   }, {
     name: "Eagle Smoke Strike",
+    cost: 4000,
     sequence: ["up", "right", "up", "down"],
     content: `
       <p>The Eagle Smoke Strike unleashes a barrage of smoke grenades, enveloping the battlefield in a thick screen of smoke to obscure enemy vision and disrupt their plans. When called, the strike blankets the area with a haze of confusion, creating chaos among our adversaries and giving us the upper hand in combat.</p>
@@ -196,6 +218,7 @@ export const stratagems = [{
     `
   }, {
     name: "Eagle 110MM Rocket Pods",
+    cost: 7500,
     sequence: ["up", "down", "up", "left"],
     content: `
       <p>The Eagle 110mm Rocket Pods unleash a relentless barrage of explosive rockets, raining destruction upon the largest target near the stratagem beacon. This deadly payload seeks out its target with unerring accuracy, striking with devastating force and dealing massive amounts of damage to even the toughest adversaries.</p>
@@ -203,6 +226,7 @@ export const stratagems = [{
     `
   }, {
     name: "Eagle 500KG Bomb",
+    cost: 10000,
     sequence: ["up", "left", "down", "down", "down"],
     content: `
       <p>The Eagle 500kg Bomb is a weapon of unparalleled devastation, a titanic force of destruction that strikes fear into the hearts of our enemies and leaves the battlefield scorched and smoldering in its wake. When called upon, this behemoth of annihilation descends upon the battlefield with the weight of a thousand thunderclaps, heralding its arrival with a deafening roar that echoes across the land.</p>
@@ -215,42 +239,49 @@ export const stratagems = [{
   category: "Bridge",
   items: [{
     name: "Orbital Precision Strike",
+    cost: 0,
     sequence: ["right", "right", "up"],
     content: `
 
     `
   }, {
     name: "Orbital Gas Strike",
+    cost: 6000,
     sequence: ["right", "right", "down", "right"],
     content: `
 
     `
   }, {
     name: "Orbital EMS Strike",
+    cost: 6000,
     sequence: ["right", "right", "left", "down"],
     content: `
 
     `
   }, {
     name: "Orbital Smoke Strike",
+    cost: 4000,
     sequence: ["right", "right", "down", "up"],
     content: `
 
     `
   }, {
     name: "HMG Emplacement",
+    cost: 10000,
     sequence: ["up", "down", "left", "right", "right", "left"],
     content: `
 
     `
   }, {
     name: "Shield Generator Relay",
+    cost: 9000,
     sequence: ["down", "up", "left", "right", "left", "down"],
     content: `
 
     `
   }, {
     name: "Tesla Tower",
+    cost: 8000,
     sequence: ["down", "up", "right", "up", "left", "right"],
     content: `
 
@@ -260,54 +291,63 @@ export const stratagems = [{
   category: "Engineering Bay",
   items: [{
     name: "Anti-Personnel Minefield",
+    cost: 1500,
     sequence: ["down", "left", "down", "up", "right"],
     content: `
 
     `
   }, {
     name: "Supply Pack",
+    cost: 4000,
     sequence: ["down", "left", "down", "up", "up", "down"],
     content: `
 
     `
   }, {
     name: "Grenade Launcher",
+    cost: 6000,
     sequence: ["down", "left", "down", "up", "left", "down", "down"],
     content: `
 
     `
   }, {
     name: "Laser Cannon",
+    cost: 4000,
     sequence: ["down", "left", "down", "up", "left"],
     content: `
 
     `
   }, {
     name: "Incendiary Mines",
+    cost: 4000,
     sequence: ["down", "left", "left", "down"],
     content: `
 
     `
   }, {
     name: "Guard Dog Rover",
+    cost: 7500,
     sequence: ["down", "left", "down", "up", "left", "down", "down"],
     content: `
 
     `
   }, {
     name: "Ballistic Shield Backpack",
+    cost: 6000,
     sequence: ["down", "left", "up", "up", "right"],
     content: `
 
     `
   }, {
     name: "Arc Thrower",
+    cost: 7000,
     sequence: ["down", "right", "up", "left", "down"],
     content: `
 
     `
   }, {
     name: "Shield Generator Pack",
+    cost: 10000,
     sequence: ["down", "up", "left", "down", "right", "right"],
     content: `
 
@@ -317,42 +357,49 @@ export const stratagems = [{
   category: "Robotics Workshop",
   items: [{
     name: "Machine Gun Sentry",
+    cost: 1500,
     sequence: ["down", "up", "right", "right", "up"],
     content: `
 
     `
   }, {
     name: "Gatling Sentry",
+    cost: 4000,
     sequence: ["down", "up", "right", "left", "down"],
     content: `
 
     `
   }, {
     name: "Mortar Sentry",
+    cost: 7000,
     sequence: ["down", "up", "right", "right", "down"],
     content: `
 
     `
   }, {
     name: "Guard Dog",
+    cost: 7500,
     sequence: ["down", "up", "left", "up", "right", "down"],
     content: `
 
     `
   }, {
     name: "Autocannon Sentry",
+    cost: 6000,
     sequence: ["down", "up", "right", "up", "left", "up"],
     content: `
 
     `
   }, {
     name: "Rocket Sentry",
+    cost: 7500,
     sequence: ["down", "up", "right", "right", "left"],
     content: `
 
     `
   }, {
     name: "EMS Mortar Sentry",
+    cost: 8000,
     sequence: ["down", "down", "up", "up", "left"],
     content: `
 

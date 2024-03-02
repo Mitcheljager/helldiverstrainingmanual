@@ -19,9 +19,26 @@
 
   <strong>Stratagems / {category.category}</strong>
 
+  {#if "cost" in stratagem}
+    <div class="cost">
+      Cost: <strong>{stratagem.cost?.toLocaleString()}</strong>
+    </div>
+  {/if}
+
   {@html stratagem.content || ""}
 
   <div class="mt-1/2 md:mt-1">
     <Stratagem stratagem={stratagem.name} />
   </div>
 {/key}
+
+<style lang="scss">
+  .cost {
+    margin: $margin * 0.25 0;
+    color: $primary;
+
+    strong {
+      color: $white;
+    }
+  }
+</style>
