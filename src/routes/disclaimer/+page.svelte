@@ -1,6 +1,6 @@
 <h1>Disclaimer</h1>
 
-<p>This website is not officially associated with or endorsed by Helldivers 2 or its developer Arrowhead Studios. All trademarks, registered trademarks, product names, and company names or logos mentioned herein are the property of their respective owners.</p>
+<p>This website is not officially associated with or endorsed by Helldivers 2 or its developer Arrowhead Game Studios. All trademarks, registered trademarks, product names, and company names or logos mentioned herein are the property of their respective owners.</p>
 
 <p>Any references to Helldivers 2 or Arrowhead Studios are for descriptive purposes only. The content provided on this website is for informational purposes and does not imply any official partnership or endorsement by Helldivers 2 or Arrowhead Studios.</p>
 
