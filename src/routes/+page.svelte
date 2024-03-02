@@ -2,10 +2,6 @@
 	import Hero from "$lib/components/Hero.svelte"
 </script>
 
-<svelte:head>
-  <title>Helldivers Training Manual</title>
-</svelte:head>
-
 <Hero src="/images/content/introduction.jpg">
   An introductory guide to becoming a victorious <span class="text-primary">Helldiver</span>.
 </Hero>
