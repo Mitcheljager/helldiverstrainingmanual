@@ -41,7 +41,7 @@
 
     const pad = gamepads[0]
 
-    const buttons = ["a", "b", "x", "y", "lb", "rb", "lt", "rt", "map", "menu", "lstick", "rstick", "du", "dd", "dl", "dr", "xbox"]
+    const buttons = ["ga", "gb", "gx", "gy", "lb", "rb", "lt", "rt", "map", "menu", "lstick", "rstick", "du", "dd", "dl", "dr", "xbox"]
 
     pad.buttons.forEach((button, i) => {
       if (button.pressed === (heldButtons[i] || false)) return

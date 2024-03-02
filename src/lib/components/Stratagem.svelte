@@ -43,7 +43,7 @@
   }
 
   function addGiven({ key }) {
-    if (key === "r") {
+    if (key === "r" || key === "ga") {
       reset()
       return
     }
@@ -51,41 +51,17 @@
     if (!active) return
     if (error) return
     if (currentIndex === sequence.length) return
-    if (!["w", "ArrowUp", "s", "ArrowDown", "a", "ArrowLeft", "d", "ArrowRight"].includes(key)) return
+    if (!["w", "ArrowUp", "du", "s", "ArrowDown", "dd", "a", "ArrowLeft", "dl", "d", "ArrowRight", "dr"].includes(key)) return
 
     event?.preventDefault()
 
     const current = sequence[currentIndex]
 
     if (
-      (current === "up" && ["w", "ArrowUp"].includes(key)) ||
-      (current === "down" && ["s", "ArrowDown"].includes(key)) ||
-      (current === "left" && ["a", "ArrowLeft"].includes(key)) ||
-      (current === "right" && ["d", "ArrowRight"].includes(key))) {
-      correct()
-    } else {
-      incorrect()
-    }
-  }
-
-  function onGamepadPress({ key }) {
-    if (key === "a") {
-      reset()
-      return
-    }
-
-    if (!active) return
-    if (error) return
-    if (currentIndex === sequence.length) return
-    if (!["du", "dd", "dl", "dr"].includes(key)) return
-
-    const current = sequence[currentIndex]
-
-    if (
-      (current === "up" && key === "du") ||
-      (current === "down" && key === "dd") ||
-      (current === "left" && key === "dl") ||
-      (current === "right" && key === "dr")) {
+      (current === "up" && ["w", "ArrowUp", "du"].includes(key)) ||
+      (current === "down" && ["s", "ArrowDown", "dd"].includes(key)) ||
+      (current === "left" && ["a", "ArrowLeft", "dl"].includes(key)) ||
+      (current === "right" && ["d", "ArrowRight", "dr"].includes(key))) {
       correct()
     } else {
       incorrect()
@@ -145,7 +121,7 @@
 <svelte:window on:keydown={addGiven} />
 
 {#if browser}
-  <GamepadControls on:connect={() => gamepadActive = true} on:disconnect={() => gamepadActive = false} on:press={({ detail }) => onGamepadPress(detail)} />
+  <GamepadControls on:connect={() => gamepadActive = true} on:disconnect={() => gamepadActive = false} on:press={({ detail }) => addGiven(detail)} />
 {/if}
 
 <h3 class="mb-1/2">Stratagem Practice</h3>
