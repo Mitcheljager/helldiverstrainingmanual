@@ -54,6 +54,8 @@
   More coming soon...
 </div>
 
+<a class="disclaimer" href="/disclaimer">Disclaimer</a>
+
 <style lang="scss">
   nav {
     display: flex;
@@ -114,5 +116,10 @@
     font-weight: bold;
     text-align: center;
     font-family: $font-family-brand;
+  }
+
+  .disclaimer {
+    margin-top: $margin;
+    font-size: 0.85rem;
   }
 </style>
