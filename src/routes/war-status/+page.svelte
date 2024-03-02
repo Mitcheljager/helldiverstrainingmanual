@@ -190,7 +190,7 @@
 
     .compact & {
       width: 100%;
-      padding: $margin * 0.15 0 $margin * 0.15 $margin * 0.25;
+      padding: 0 0 0 $margin * 0.25;
     }
   }
 
