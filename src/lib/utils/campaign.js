@@ -12,7 +12,7 @@ export function formatCampaigns(campaigns, planetStatus, planetInfos) {
     const faction = factions[currentStatus.owner]
     const { health, players } = currentStatus
     const maxHealth = planetInfo.maxHealth
-    const percentage = 100 - (100 / maxHealth * health)
+    const percentage = faction === "Super Earth" ? 100 : 100 - (100 / maxHealth * health)
 
     return {
       index: planetIndex,

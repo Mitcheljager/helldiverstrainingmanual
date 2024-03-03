@@ -44,9 +44,16 @@
 
 <div class="items" class:compact>
   {#each formattedCampaigns as { index, name, faction, percentage, players }}
-    <div class="item {faction.toLowerCase()}" data-index={index}>
+    <div class="item {faction.toLowerCase().replace(" ", "-")}" data-index={index}>
       <h3>
-        <div>{name || "Unknown Planet"}</div>
+        <div class="title">
+          {name || "Unknown Planet"}
+        </div>
+
+        {#if faction === "Super Earth"}
+          <svg height="18" width="18" viewBox="0 -960 960 960"><path fill="currentColor" d="M480-80q-139-35-229.5-159.5T160-516v-244l320-120 320 120v244q0 152-90.5 276.5T480-80Zm0-84q104-33 172-132t68-220v-189l-240-90-240 90v189q0 121 68 220t172 132Zm0-316Z"/></svg>
+        {/if}
+
         <small>{faction}</small>
       </h3>
 
@@ -56,7 +63,12 @@
         </div>
 
         <div class="info">
-          <span>{percentage ? percentage.toFixed(4) : 0}% Liberated</span>
+          {#if faction === "Super Earth"}
+            <span>Defend!</span>
+          {:else}
+            <span>{percentage ? percentage.toFixed(4) : 0}% Liberated</span>
+          {/if}
+
           <span>{players.toLocaleString()} Helldivers</span>
         </div>
       </div>
@@ -146,7 +158,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: $margin * 0.25;
+      gap: $margin * 0.15;
       margin: 0;
       background: var(--background-color);
       padding: $margin * 0.25;
@@ -158,7 +170,7 @@
         font-size: 1.15rem;
       }
 
-      div {
+      .title {
         display: -webkit-box;
         -webkit-line-clamp: 1;
         -webkit-box-orient: vertical;
@@ -171,21 +183,30 @@
         opacity: 0.75;
         color: var(--border-color);
         font-size: 0.65em;
+        text-align: right;
 
         .compact & {
           display: none;
         }
       }
+
+      svg {
+        display: inline-block;
+        height: 1em;
+        width: auto;
+        margin-right: auto;
+
+        .compact & {
+          margin: 0;
+        }
+      }
     }
 
-    &.terminids {
-      --border-color: #{$terminids};
-      --background-color: #{rgba($terminids, 0.25)};
-    }
-
-    &.automatons {
-      --border-color: #{$automatons};
-      --background-color: #{rgba($automatons, 0.25)};
+    @each $label, $color in(terminids: $terminids, automatons: $automatons, super-earth: $super-earth) {
+      &.#{$label} {
+        --border-color: #{$color};
+        --background-color: #{rgba($color, 0.25)};
+      }
     }
   }
 
