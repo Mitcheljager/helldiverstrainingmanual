@@ -83,7 +83,7 @@
 </div>
 
 <div class="tray">
-  <strong>{totalPlayerCount.toLocaleString()}</strong> Helldivers are currently fighting for Democracy. Join them!
+  <strong>{totalPlayerCount.toLocaleString()}</strong> Helldivers are currently fighting for Democracy. <em>Join them!</em>
 </div>
 
 <style lang="scss">
