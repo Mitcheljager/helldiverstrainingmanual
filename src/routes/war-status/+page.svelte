@@ -178,6 +178,7 @@
       background: var(--background-color);
       padding: $margin * 0.25;
       transition: font-size 200ms, padding 200ms;
+      word-break: break-word;
 
       .compact & {
         height: 100%;
