@@ -1,6 +1,7 @@
 <script>
 	import { browser } from "$app/environment"
 	import { outside } from "$lib/actions/outside"
+	import { scale } from "svelte/transition"
 
   export let planets = []
   export let campaigns = []
@@ -19,25 +20,25 @@
   }
 </script>
 
-<div class="map">
+<div class="map" style:--map-width="{mapWidth}px">
   {#if browser}
-    <div class="planets" style:--map-width="{mapWidth}px">
+    <div class="planets">
       {#each planets as planet}
         {#if getCampaign(planet.index)}
           <button
             use:outside
-            on:close={() => activeIndex = -1}
+            on:close={() => { if (activeIndex === planet.index) activeIndex = -1 }}
             on:click={() => toggle(planet.index)}
-            class="planet {getCampaign(planet.index)?.faction?.toLowerCase()}"
+            class="planet {getCampaign(planet.index)?.faction?.toLowerCase().replace(" ", "-")}"
             class:active={activeIndex === planet.index}
             style:--x={planet.position.x}
             style:--y={planet.position.y}
             style:--percentage="{getCampaign(planet.index)?.percentage}%">
             {#if activeIndex === planet.index}
-              <div class="popup">
+              <div class="popup" transition:scale={{ start: 0.85, duration: 150 }}>
                 <h5>{getCampaign(planet.index)?.name}</h5>
                 <p>{getCampaign(planet.index)?.faction}</p>
-                <p>{getCampaign(planet.index)?.percentage}% Liberated</p>
+                <p>{getCampaign(planet.index)?.percentage.toFixed(4)}% Liberated</p>
               </div>
             {/if}
           </button>
@@ -50,7 +51,10 @@
 
   <img class="sectors" src="/images/map/sectors.svg" alt="" />
   <img class="super-earth" src="/images/map/super-earth.png" alt="" />
-  <img class="blur" class:loaded src="/images/map/stars.jpg" alt="" on:load={() => loaded = true}>
+
+  {#if browser}
+    <img class="blur" class:loaded src="/images/map/stars.jpg" alt="" on:load={() => loaded = true}>
+  {/if}
 </div>
 
 <style lang="scss">
@@ -79,7 +83,7 @@
     position: absolute;
     left: 50%;
     top: 50%;
-    width: 5rem;
+    width: calc(var(--map-width) * 0.1);
     transform: translateX(-50%) translateY(-50%);
   }
 
@@ -93,7 +97,7 @@
 
   .planet {
     --color: #{$white};
-    --size: 1.5rem;
+    --size: calc(var(--map-width) * 0.035);
     appearance: none;
     position: absolute;
     left: calc(50% + (var(--map-width) / 2) * var(--x));
@@ -103,14 +107,14 @@
     height: var(--size);
     border: 0;
     border-radius: 50%;
-    background: $white conic-gradient($super-earth var(--percentage), 0, var(--color) calc(100% - var(--percentage)));
+    background: $white linear-gradient(to right, $super-earth var(--percentage), 0, var(--color) calc(100% - var(--percentage)));
     transition: width 100ms, height 100ms;
     cursor: pointer;
 
     &:hover,
     &.active {
-      --size: 3rem;
-      border: 2px solid $black;
+      --size: calc(var(--map-width) * 0.05);
+      box-shadow: 0 0 1rem rgba($black, 0.75);
       z-index: 3;
     }
 
@@ -121,6 +125,10 @@
     &.terminids {
       --color: #{$terminids};
     }
+
+    &.super-earth {
+      --color: #{$super-earth};
+    }
   }
 
   .popup {
@@ -129,11 +137,12 @@
     top: 50%;
     transform: translateY(-100%) translateX(-50%);
     width: 12rem;
-    height: 6.25rem;
+    height: 5.75rem;
     padding: $margin * 0.25;
-    background: rgba($black, 0.5);
-    border: 5px solid rgba($white, 0.25);
+    background: rgba(darken($super-earth, 40%), 0.25);
+    border: 1px solid rgba($super-earth, 0.25);
     backdrop-filter: blur(1rem);
+    box-shadow: 0 1rem 2rem rgba($black, 0.5);
     z-index: 5;
     color: $white;
     font-family: $font-family-alt;
