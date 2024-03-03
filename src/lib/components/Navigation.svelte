@@ -55,6 +55,7 @@
 </div>
 
 <div class="footer">
+  <a href="/api">API</a> <br>
   <a href="/disclaimer">Disclaimer</a> <br>
   Contact me on Discord: @mitsiee <br>
   Contribute on <a href="https://github.com/Mitcheljager/helldiverstrainingmanual" target="_blank" rel="noreferrer noopener">GitHub</a>
