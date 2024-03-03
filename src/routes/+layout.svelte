@@ -40,7 +40,7 @@
       display: grid;
       grid-template-columns: 25rem auto;
       grid-template-rows: 10rem auto;
-      height: 100vh;
+      height: 100dvh;
     }
   }
 
@@ -64,7 +64,7 @@
 
   .sidebar {
     position: fixed;
-    height: 100vh;
+    height: 100dvh;
     padding: $margin * 0.5;
     border-right: 5px solid $bg-dark;
     overflow-y: auto;
@@ -141,7 +141,7 @@
   .article {
     position: relative;
     padding: $margin * 0.75 $margin * 0.75 $margin * 1.5;
-    height: 100vh;
+    height: 100dvh;
     overflow-y: auto;
 
     @include breakpoint(lg) {
