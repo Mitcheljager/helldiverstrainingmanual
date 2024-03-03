@@ -14,7 +14,7 @@
 
 {#key stratagem.name}
   {#if category.category !== "Mission Stratagems"} <!-- Hacky solution to exclude stratagems without videos -->
-    <Hero video="/videos/stratagems/{toSlug(stratagem.name)}.mp4">
+    <Hero video="/videos/stratagems/{toSlug(stratagem.name)}.mp4" poster="/videos/stratagems/posters/{toSlug(stratagem.name)}.jpg">
       {stratagem.name}
     </Hero>
   {:else}

@@ -3,8 +3,9 @@
 	import { fly } from "svelte/transition"
 
   export let src = ""
-  export let video = ""
   export let alt = ""
+  export let video = ""
+  export let poster = ""
 
   let videoElement
   let videoPlaying = false
@@ -21,7 +22,7 @@
     <img {src} {alt}>
   {:else if video}
     <!-- svelte-ignore a11y-media-has-caption -->
-    <video src={video} muted playsinline loop bind:this={videoElement} on:click={playpause} on:playing={() => videoPlaying = true} on:pause={() => videoPlaying = false} />
+    <video src={video} {poster} muted playsinline loop preload="none" bind:this={videoElement} on:click={playpause} on:playing={() => videoPlaying = true} on:pause={() => videoPlaying = false} />
 
     <button class="play" on:click={playpause}>
       {#if videoPlaying}
@@ -45,9 +46,8 @@
 {#if browser}
   {#if src}
     <img class="blur" class:loaded {src} {alt} on:load={() => loaded = true}>
-  {:else if video}
-    <!-- svelte-ignore a11y-media-has-caption -->
-    <video class="blur" class:loaded src={video} muted on:loadeddata={() => loaded = true} />
+  {:else if video && poster}
+    <img class="blur" class:loaded src={poster} {alt} on:load={() => loaded = true}>
   {/if}
 {/if}
 
