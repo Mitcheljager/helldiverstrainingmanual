@@ -63,7 +63,7 @@ export const planetNames = {
   61: "Emorath",
   62: "Ilduna Prime",
   63: "Maw",
-  64: "",
+  64: "Meridia",
   65: "Borea",
   66: "Curia",
   67: "Tarsh",
