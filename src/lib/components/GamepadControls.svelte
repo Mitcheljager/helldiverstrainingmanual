@@ -18,13 +18,13 @@
     if (interval) clearInterval(interval)
   })
 
-  function connect(event) {
+  function connect() {
     gamepads = navigator.getGamepads()
 
     dispatch("connect")
   }
 
-  async function disconnect(event) {
+  async function disconnect() {
     await new Promise(res => setTimeout(res))
 
     gamepads = navigator.getGamepads()
@@ -40,6 +40,8 @@
     if (!gamepads?.length) return
 
     gamepads.forEach(gamepad => {
+      if (!gamepad) return
+
       const buttons = ["ga", "gb", "gx", "gy", "lb", "rb", "lt", "rt", "map", "menu", "lstick", "rstick", "du", "dd", "dl", "dr", "xbox"]
 
       gamepad.buttons.forEach((button, i) => {
