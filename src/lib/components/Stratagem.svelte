@@ -26,7 +26,7 @@
   $: extraOptions = [{ text: randomLabel, value: getRandomSequence() }]
   $: selectOptions = [...extraOptions, ...stratagemOptions]
   $: selectValue = selectOptions.find(i => i.text === stratagem)
-  $: randomize = stratagem === randomLabel
+  $: randomize = selectValue?.text === randomLabel
   $: sequence = selectValue?.value || []
 
   onDestroy(stopTimer)
