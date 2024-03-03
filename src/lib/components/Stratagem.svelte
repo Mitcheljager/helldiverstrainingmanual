@@ -7,6 +7,8 @@
 	import { stratagems } from "$lib/data/stratagems"
 	import GamepadControls from "$lib/components/GamepadControls.svelte"
 	import { browser } from "$app/environment"
+	import Switch from "$lib/components/Switch.svelte"
+	import QuestionMark from "./QuestionMark.svelte";
 
   export let stratagem = ""
 
@@ -21,6 +23,7 @@
   let bestTime = 0
   let interval = null
   let gamepadActive = false
+  let hideSequence = false
 
   $: stratagemOptions = stratagems.map(i => i.items).flat(1).map(i => ({ text: i.name, value: i.sequence }))
   $: extraOptions = [{ text: randomLabel, value: getRandomSequence() }]
@@ -131,9 +134,15 @@
   </div>
 
   <div class="codes" class:complete class:error>
-    {#each sequence as direction, i}
-      <Arrow {direction} filled={i < currentIndex} />
-    {/each}
+    {#if hideSequence && currentIndex !== sequence.length}
+      {#each { length: currentIndex + 1 } as _}
+        <QuestionMark />
+      {/each}
+    {:else}
+      {#each sequence as direction, i}
+        <Arrow {direction} filled={i < currentIndex} />
+      {/each}
+    {/if}
 
     {#if complete}
       <div class="confetti">
@@ -168,9 +177,14 @@
     </button>
   {/if}
 
+  <div class="switches mt-1/4">
+    <Switch bind:active={hideSequence}>
+      Hide sequence
+    </Switch>
+  </div>
+
   <em class="tip">Tip: Prefer the liberty of a controller? No problem! Press [A] to get started.</em>
 </section>
-
 
 <style lang="scss">
   .stratagem {
@@ -246,10 +260,13 @@
     }
   }
 
+  .switches {
+    display: flex;
+  }
+
   .tip {
     display: block;
     margin-top: $margin * 0.15;
-    text-align: center;
     font-size: 0.8rem;
     color: lighten($text-color-dark, 10%);
   }
