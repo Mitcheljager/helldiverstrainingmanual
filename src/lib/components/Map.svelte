@@ -109,6 +109,7 @@
     border-radius: 50%;
     background: $white linear-gradient(to right, $super-earth var(--percentage), 0, var(--color) calc(100% - var(--percentage)));
     transition: width 100ms, height 100ms;
+    font-size: 0;
     cursor: pointer;
 
     &:hover,
@@ -146,6 +147,7 @@
     z-index: 5;
     color: $white;
     font-family: $font-family-alt;
+    font-size: 0.85rem;
 
     h5 {
       margin: 0 0 $margin * 0.15;
