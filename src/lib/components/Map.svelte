@@ -13,6 +13,8 @@
   let mouseX = 0
   let mouseY = 0
 
+  $: totalPlayerCount = campaigns.reduce((total, c) => total + c.players, 0)
+
   function getCampaign(index) {
     return campaigns.find(c => c.planetIndex === index)
   }
@@ -80,12 +82,17 @@
   {/if}
 </div>
 
+<div class="tray">
+  <strong>{totalPlayerCount.toLocaleString()}</strong> Helldivers are currently fighting for Democracy. Join them!
+</div>
+
 <style lang="scss">
   .map {
     position: relative;
     max-width: $text-limit;
     padding: $margin * 0.5;
-    border: 5px solid $bg-dark;
+    border: 5px solid $super-earth;
+    border-bottom: 0;
     background: darken($bg-dark, 10%) url("/images/map/stars.jpg") no-repeat;
     background-position: calc(50% - var(--mouse-x, 0px) * -0.02) calc(50% - var(--mouse-y, 0px) * -0.02);
     background-size: auto 110%;
@@ -193,6 +200,17 @@
     p {
       margin: 0;
     }
+  }
+
+  .tray {
+    max-width: $text-limit;
+    padding: 5px;
+    background: $super-earth;
+    font-size: 0.75rem;
+    font-family: $font-family-alt;
+    color: $white;
+    text-align: center;
+    line-height: 1.35em;
   }
 
   .blur {
