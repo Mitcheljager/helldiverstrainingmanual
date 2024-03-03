@@ -43,6 +43,7 @@
     font-weight: bold;
     color: $black;
     pointer-events: all;
+    user-select: none;
 
     &:active,
     &:hover {
