@@ -89,7 +89,6 @@
 
   function reset() {
     if (randomize && currentIndex === sequence.length) {
-      console.log('set')
       selectValue = { text: randomLabel, value: getRandomSequence() }
     }
 

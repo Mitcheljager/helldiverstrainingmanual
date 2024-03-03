@@ -3,23 +3,26 @@
 
   const dispatch = createEventDispatcher()
 
-  let interval
-  let gamepads = navigator.getGamepads()
+  let poll
   let heldButtons = []
 
-  $: if (gamepads?.length) startPolling()
-  $: if (!gamepads?.length && interval) clearInterval(interval)
-
   onMount(() => {
-    if (gamepads?.length) dispatch("connect")
+    if (!getGamepads()?.length) return
+
+    dispatch("connect")
+    checkControls()
   })
 
   onDestroy(() => {
-    if (interval) clearInterval(interval)
+    if (poll) cancelAnimationFrame(poll)
   })
 
+  function getGamepads() {
+    return navigator.getGamepads()
+  }
+
   function connect() {
-    gamepads = navigator.getGamepads()
+    checkControls()
 
     dispatch("connect")
   }
@@ -27,22 +30,21 @@
   async function disconnect() {
     await new Promise(res => setTimeout(res))
 
-    gamepads = navigator.getGamepads()
+    if (getGamepads()?.length) return
 
-    if (!gamepads?.length) dispatch("disconnect")
-  }
-
-  function startPolling() {
-    setInterval(checkControls, 10)
+    dispatch("disconnect")
+    cancelAnimationFrame(poll)
   }
 
   function checkControls() {
+    const gamepads = getGamepads()
+
     if (!gamepads?.length) return
+
+    const buttons = ["ga", "gb", "gx", "gy", "lb", "rb", "lt", "rt", "map", "menu", "lstick", "rstick", "du", "dd", "dl", "dr", "xbox"]
 
     gamepads.forEach(gamepad => {
       if (!gamepad) return
-
-      const buttons = ["ga", "gb", "gx", "gy", "lb", "rb", "lt", "rt", "map", "menu", "lstick", "rstick", "du", "dd", "dl", "dr", "xbox"]
 
       gamepad.buttons.forEach((button, i) => {
         if (button.pressed === (heldButtons[i] || false)) return
@@ -55,6 +57,8 @@
         }
       })
     })
+
+    poll = requestAnimationFrame(checkControls)
   }
 </script>
 
