@@ -63,6 +63,7 @@
   }
 
   .sidebar {
+    $shadow: 0 0 0.75rem rgba($black, 0.5), 0 0 3rem rgba($black, 0.5), 0 0 5rem rgba($black, 0.75);
     position: fixed;
     height: 100dvh;
     padding: $margin * 0.5;
@@ -80,6 +81,7 @@
     @include breakpoint(lg) {
       position: relative;
       transform: none;
+      box-shadow: $shadow;
     }
 
     @include styled-scrollbar();
@@ -100,6 +102,7 @@
 
     &.active {
       transform: translateX(0);
+      box-shadow: $shadow;
     }
 
     img {
