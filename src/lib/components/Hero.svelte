@@ -17,7 +17,7 @@
   }
 </script>
 
-<div class="hero" in:fly={{ x: -20, duration: 400 }}>
+<div class="hero" in:fly|global={{ x: -20, duration: 400 }}>
   {#if src}
     <img {src} {alt}>
   {:else if video}
