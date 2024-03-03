@@ -4,11 +4,11 @@ import { planetNames } from "$lib/data/planets"
 export function formatCampaigns(campaigns, planetStatus, planetInfos, planetEvents) {
   if (!campaigns || !planetStatus || !planetInfos) return []
 
+  const zeroUnix = 1707313895 // Helldivers 2 server start time? No idea
+
   const mapped = (campaigns || []).map(campaign => {
     const { planetIndex } = campaign
-    const event = planetEvents.find(e => e.planetIndex === planetIndex)
-
-    console.log(event)
+    const event = planetEvents?.find(e => e.planetIndex === planetIndex)
 
     const name = planetNames[planetIndex]
     const currentStatus = planetStatus[planetIndex]
@@ -20,9 +20,9 @@ export function formatCampaigns(campaigns, planetStatus, planetInfos, planetEven
     const { players } = currentStatus
 
     const percentage = 100 - (100 / maxHealth * health)
-    const defense = currentStatus.owner === 1
+    const defense = event?.eventType === 1
 
-    console.log(currentStatus.owner === 1)
+    const expireDateTime = event?.expireTime ? zeroUnix + event?.expireTime : 0
 
     return {
       planetIndex,
@@ -31,6 +31,7 @@ export function formatCampaigns(campaigns, planetStatus, planetInfos, planetEven
       players,
       percentage,
       defense,
+      expireDateTime
     }
   })
 

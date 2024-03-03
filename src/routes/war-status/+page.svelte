@@ -4,20 +4,30 @@
 	import Map from "$lib/components/Map.svelte";
 	import Switch from "$lib/components/Switch.svelte";
 	import { formatCampaigns } from "$lib/utils/campaign.js"
+	import { timeFromNow } from "$lib/utils/datetime";
 	import { onDestroy, onMount } from "svelte"
 
   export let data
 
-  let interval
+  let dataInterval
+  let timeInterval
   let compact = true
+  let timeKey = 0
 
   $: ({ status, info } = data)
   $: ({ globalEvents, campaigns, planetStatus, planetEvents } = (status || {}))
   $: ({ planetInfos } = (info || {}))
   $: formattedCampaigns = formatCampaigns(campaigns, planetStatus, planetInfos, planetEvents)
 
-  onMount(() => interval = setInterval(invalidateAll, 10000) )
-  onDestroy(() => { if (interval) clearInterval(interval) })
+  onMount(() => {
+    dataInterval = setInterval(invalidateAll, 10000)
+    timeInterval = setInterval(() => timeKey = Math.random(), 1000)
+  })
+
+  onDestroy(() => {
+    if (dataInterval) clearInterval(dataInterval)
+    if (timeInterval) clearInterval(timeInterval)
+  })
 </script>
 
 <svelte:head>
@@ -43,7 +53,7 @@
 </h2>
 
 <div class="items" class:compact>
-  {#each formattedCampaigns as { planetIndex, name, faction, percentage, players, defense }}
+  {#each formattedCampaigns as { planetIndex, name, faction, percentage, players, defense, expireDateTime }}
     <div class="item {faction.toLowerCase().replace(" ", "-")}" data-index={planetIndex}>
       <h3>
         <div class="title">
@@ -66,6 +76,12 @@
           <span>
             {percentage ? percentage.toFixed(4) : 0}%
             {defense ? "Defend!" : "Liberated"}
+
+            {#if expireDateTime}
+              {#key timeKey}
+                {timeFromNow(expireDateTime)}
+              {/key}
+            {/if}
           </span>
 
           <span>{players.toLocaleString()} Helldivers</span>
@@ -261,6 +277,10 @@
 
     span:last-child {
       text-align: right;
+    }
+
+    p {
+      margin: $margin * 0.15 0 0;
     }
   }
 

@@ -5,10 +5,10 @@ export async function GET() {
   const headers = { 'Content-Type': 'application/json' }
   const status = await fetchStatus(fetch)
   const info = await fetchInfo(fetch)
-  const { campaigns, planetStatus } = status
+  const { campaigns, planetStatus, planetEvents } = status
   const { planetInfos } = info
 
-  const formatted = formatCampaigns(campaigns, planetStatus, planetInfos)
+  const formatted = formatCampaigns(campaigns, planetStatus, planetInfos, planetEvents)
 
   return new Response(JSON.stringify(formatted), { headers })
 }
