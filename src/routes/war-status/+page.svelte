@@ -12,9 +12,9 @@
   let compact = true
 
   $: ({ status, info } = data)
-  $: ({ globalEvents, campaigns, planetStatus } = (status || {}))
+  $: ({ globalEvents, campaigns, planetStatus, planetEvents } = (status || {}))
   $: ({ planetInfos } = (info || {}))
-  $: formattedCampaigns = formatCampaigns(campaigns, planetStatus, planetInfos)
+  $: formattedCampaigns = formatCampaigns(campaigns, planetStatus, planetInfos, planetEvents)
 
   onMount(() => interval = setInterval(invalidateAll, 10000) )
   onDestroy(() => { if (interval) clearInterval(interval) })
@@ -43,14 +43,14 @@
 </h2>
 
 <div class="items" class:compact>
-  {#each formattedCampaigns as { index, name, faction, percentage, players }}
-    <div class="item {faction.toLowerCase().replace(" ", "-")}" data-index={index}>
+  {#each formattedCampaigns as { planetIndex, name, faction, percentage, players, defense }}
+    <div class="item {faction.toLowerCase().replace(" ", "-")}" data-index={planetIndex}>
       <h3>
         <div class="title">
           {name || "Unknown Planet"}
         </div>
 
-        {#if faction === "Super Earth"}
+        {#if defense}
           <svg height="18" width="18" viewBox="0 -960 960 960"><path fill="currentColor" d="M480-80q-139-35-229.5-159.5T160-516v-244l320-120 320 120v244q0 152-90.5 276.5T480-80Zm0-84q104-33 172-132t68-220v-189l-240-90-240 90v189q0 121 68 220t172 132Zm0-316Z"/></svg>
         {/if}
 
@@ -63,11 +63,10 @@
         </div>
 
         <div class="info">
-          {#if faction === "Super Earth"}
-            <span>Defend!</span>
-          {:else}
-            <span>{percentage ? percentage.toFixed(4) : 0}% Liberated</span>
-          {/if}
+          <span>
+            {percentage ? percentage.toFixed(4) : 0}%
+            {defense ? "Defend!" : "Liberated"}
+          </span>
 
           <span>{players.toLocaleString()} Helldivers</span>
         </div>

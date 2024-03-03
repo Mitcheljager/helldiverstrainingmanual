@@ -1,27 +1,42 @@
 import { factions } from "$lib/data/factions"
 import { planetNames } from "$lib/data/planets"
 
-export function formatCampaigns(campaigns, planetStatus, planetInfos) {
+export function formatCampaigns(campaigns, planetStatus, planetInfos, planetEvents) {
   if (!campaigns || !planetStatus || !planetInfos) return []
 
   const mapped = (campaigns || []).map(campaign => {
     const { planetIndex } = campaign
+    const event = planetEvents.find(e => e.planetIndex === planetIndex)
+
+    console.log(event)
+
     const name = planetNames[planetIndex]
     const currentStatus = planetStatus[planetIndex]
     const planetInfo = planetInfos[planetIndex]
-    const faction = factions[currentStatus.owner]
-    const { health, players } = currentStatus
-    const maxHealth = planetInfo.maxHealth
-    const percentage = faction === "Super Earth" ? 100 : 100 - (100 / maxHealth * health)
+    const faction = factions[event?.race || currentStatus.owner]
+
+    const health = event?.health || currentStatus.health
+    const maxHealth = event?.maxHealth || planetInfo.maxHealth
+    const { players } = currentStatus
+
+    const percentage = 100 - (100 / maxHealth * health)
+    const defense = currentStatus.owner === 1
+
+    console.log(currentStatus.owner === 1)
 
     return {
-      index: planetIndex,
+      planetIndex,
       name,
       faction,
       players,
-      percentage
+      percentage,
+      defense,
     }
   })
 
-  return mapped.sort((a, b) => a > b ? -1 : 1).sort((a, b) => a.percentage > b.percentage ? -1 : 1)
+  return mapped.sort((a, b) => {
+    if (a.defense !== b.defense) return a.defense ? -1 : 1
+    if (a.percentage !== b.percentage) return b.percentage - a.percentage
+    return a.name.localeCompare(b.name)
+  })
 }
