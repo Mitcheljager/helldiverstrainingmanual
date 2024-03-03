@@ -167,7 +167,6 @@
     top: 50%;
     transform: translateY(-100%) translateX(-50%);
     width: 12rem;
-    height: 6.75rem;
     padding: $margin * 0.25;
     background: rgba(darken($super-earth, 40%), 0.25);
     border: 1px solid rgba($super-earth, 0.25);
