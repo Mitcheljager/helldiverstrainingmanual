@@ -156,8 +156,8 @@
   }
 
   .popup {
-    --background-color: rgba(darken($super-earth, 40%), 0.25);
-    --border-color: rgba($super-earth, 0.25);
+    --background-color: rgba(darken($white, 40%), 0.25);
+    --border-color: rgba($white, 0.25);
     position: absolute;
     left: 50%;
     top: 50%;
@@ -173,6 +173,13 @@
     font-family: $font-family-alt;
     font-size: 0.85rem;
 
+    @each $label, $color in $faction-colors {
+      .#{$label} & {
+        --border-color: #{rgba($color, 0.25)};
+        --background-color: #{rgba(darken($color, 30%), 0.25)};
+      }
+    }
+
     h5 {
       margin: 0 0 $margin * 0.15;
     }
@@ -185,13 +192,6 @@
 
     p {
       margin: 0;
-    }
-
-    @each $label, $color in $faction-colors {
-      .#{$label} & {
-        --border-color: #{rgba($color, 0.25)};
-        --background-color: #{rgba(darken($color, 30%), 0.25)};
-      }
     }
   }
 
