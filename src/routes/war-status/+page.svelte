@@ -74,7 +74,7 @@
   <div class="items">
     {#each globalEvents as { title, message }}
       <div class="item">
-        <h3>{title}</h3>
+        <h3>{title || "Unknown"}</h3>
         <p class="content">
           {#if message}
             {message}
