@@ -213,8 +213,7 @@ export const stratagems = [{
     cost: 4000,
     sequence: ["up", "right", "up", "down"],
     content: `
-      <p>The Eagle Smoke Strike unleashes a barrage of smoke grenades, enveloping the battlefield in a thick screen of smoke to obscure enemy vision and disrupt their plans. When called, the strike blankets the area with a haze of confusion, creating chaos among our adversaries and giving us the upper hand in combat.</p>
-      <p>With the Eagle Smoke Strike in our arsenal, victory is within reach. So when the enemy advances and the odds seem stacked against us, we call upon the power of smoke and mirrors to turn the tide in our favor. A literal fog of war.</p>
+      <p>The Eagle Smoke Strike unleashes a barrage of smoke grenades, enveloping the battlefield in a thick screen of smoke to obscure enemy vision and disrupt their plans. When called, the strike blankets the area with a haze of confusion, creating chaos among our adversaries and giving us the upper hand in combat. When the enemy advances and the odds seem stacked against us, we call upon the power of smoke and mirrors to turn the tide in our favor. A literal fog of war.</p>
     `
   }, {
     name: "Eagle 110MM Rocket Pods",
