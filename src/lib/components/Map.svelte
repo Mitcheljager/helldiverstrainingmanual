@@ -148,28 +148,24 @@
       --size: calc(var(--map-width) * 0.05)
     }
 
-    &.automatons {
-      --color: #{$automatons};
-    }
-
-    &.terminids {
-      --color: #{$terminids};
-    }
-
-    &.super-earth {
-      --color: #{$super-earth};
+    @each $label, $color in $faction-colors {
+      &.#{$label} {
+        --color: #{$color};
+      }
     }
   }
 
   .popup {
+    --background-color: rgba(darken($super-earth, 40%), 0.25);
+    --border-color: rgba($super-earth, 0.25);
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translateY(-100%) translateX(-50%);
     width: 12rem;
     padding: $margin * 0.25;
-    background: rgba(darken($super-earth, 40%), 0.25);
-    border: 1px solid rgba($super-earth, 0.25);
+    background: var(--background-color);
+    border: 1px solid var(--border-color);
     backdrop-filter: blur(1rem);
     box-shadow: 0 1rem 2rem rgba($black, 0.5);
     z-index: 5;
@@ -189,6 +185,13 @@
 
     p {
       margin: 0;
+    }
+
+    @each $label, $color in $faction-colors {
+      .#{$label} & {
+        --border-color: #{rgba($color, 0.25)};
+        --background-color: #{rgba(darken($color, 30%), 0.25)};
+      }
     }
   }
 

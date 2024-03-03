@@ -217,7 +217,7 @@
       }
     }
 
-    @each $label, $color in(terminids: $terminids, automatons: $automatons, super-earth: $super-earth) {
+    @each $label, $color in $faction-colors {
       &.#{$label} {
         --border-color: #{$color};
         --background-color: #{rgba($color, 0.25)};
