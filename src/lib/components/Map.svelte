@@ -6,21 +6,35 @@
   export let planets = []
   export let campaigns = []
 
+  let mapElement
   let mapWidth = 0
   let activeIndex = -1
   let loaded = false
+  let mouseX = 0
+  let mouseY = 0
 
   function getCampaign(index) {
     return campaigns.find(c => c.index === index)
   }
 
-  function toggle(index) {
+  function moveParallax(event) {
+    const containerRect = mapElement.getBoundingClientRect()
+    const containerCenterX = containerRect.left + mapElement.offsetWidth / 2
+    const containerCenterY = containerRect.top + mapElement.offsetHeight / 2
 
-    activeIndex = activeIndex === index ? -1 : index
+    mouseX = event.clientX - containerCenterX
+    mouseY = event.clientY - containerCenterY
   }
 </script>
 
-<div class="map" style:--map-width="{mapWidth}px">
+<!-- svelte-ignore a11y-no-static-element-interactions -->
+<div
+  class="map"
+  style:--map-width="{mapWidth}px"
+  style:--mouse-x="{mouseX}px"
+  style:--mouse-y="{mouseY}px"
+  bind:this={mapElement}
+  on:mousemove={moveParallax}>
   {#if browser}
     <div class="planets">
       {#each planets as planet}
@@ -28,7 +42,7 @@
           <button
             use:outside
             on:close={() => { if (activeIndex === planet.index) activeIndex = -1 }}
-            on:click={() => toggle(planet.index)}
+            on:click={() => activeIndex = activeIndex === planet.index ? -1 : planet.index}
             class="planet {getCampaign(planet.index)?.faction?.toLowerCase().replace(" ", "-")}"
             class:active={activeIndex === planet.index}
             style:--x={planet.position.x}
@@ -65,7 +79,8 @@
     padding: $margin * 0.5;
     border: 5px solid $bg-dark;
     background: darken($bg-dark, 10%) url("/images/map/stars.jpg") no-repeat;
-    background-size: cover;
+    background-position: calc(50% - var(--mouse-x, 0px) * -0.02) calc(50% - var(--mouse-y, 0px) * -0.02);
+    background-size: auto 110%;
     aspect-ratio: 1/1;
 
     img {
