@@ -169,7 +169,7 @@
     </button>
   {/if}
 
-  <em class="tip">Tip: Prefer the liberty of a controller? No problem! Press [A] to get start.</em>
+  <em class="tip">Tip: Prefer the liberty of a controller? No problem! Press [A] to get started.</em>
 </section>
 
 
