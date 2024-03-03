@@ -65,7 +65,7 @@
   <div class="scaler" bind:clientWidth={mapWidth} />
 
   <img class="sectors" src="/images/map/sectors.svg" alt="" />
-  <img class="super-earth" src="/images/map/super-earth.png" alt="" />
+  <img class="earth" src="/images/map/super-earth.png" alt="" />
 
   {#if browser}
     <img class="blur" class:loaded src="/images/map/stars.jpg" alt="" on:load={() => loaded = true}>
@@ -95,12 +95,13 @@
     mix-blend-mode: soft-light;
   }
 
-  .super-earth {
+  .earth {
     position: absolute;
     left: 50%;
     top: 50%;
     width: calc(var(--map-width) * 0.1);
     transform: translateX(-50%) translateY(-50%);
+    filter: drop-shadow(0 0 0.5rem black) drop-shadow(0 0 2rem black);
   }
 
   .planets {
