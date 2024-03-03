@@ -5,3 +5,11 @@
     "/>
   <rect x="134.475" y="277.996" width="49.968" height="40.297"/>
 </svg>
+
+<style lang="scss">
+  svg {
+    display: block;
+    width: clamp(40px, 10vw, 50px);
+    height: auto;
+  }
+</style>

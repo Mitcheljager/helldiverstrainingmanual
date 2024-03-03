@@ -1,14 +1,15 @@
 <script>
   import Confetti from "svelte-confetti"
 	import Arrow from "$lib/components/Arrow.svelte"
-	import { slide } from "svelte/transition"
+	import { fade, slide } from "svelte/transition"
 	import { onDestroy } from "svelte"
 	import Select from "$lib/components/Select.svelte"
 	import { stratagems } from "$lib/data/stratagems"
 	import GamepadControls from "$lib/components/GamepadControls.svelte"
 	import { browser } from "$app/environment"
 	import Switch from "$lib/components/Switch.svelte"
-	import QuestionMark from "./QuestionMark.svelte";
+	import QuestionMark from "./QuestionMark.svelte"
+	import OnScreenControls from "$lib/components/OnScreenControls.svelte"
 
   export let stratagem = ""
 
@@ -24,6 +25,7 @@
   let interval = null
   let gamepadActive = false
   let hideSequence = false
+  let showControls = false
 
   $: stratagemOptions = stratagems.map(i => i.items).flat(1).map(i => ({ text: i.name, value: i.sequence }))
   $: extraOptions = [{ text: randomLabel, value: getRandomSequence() }]
@@ -161,7 +163,7 @@
       {/if}
     </div>
 
-    <button class="button" class:active={active && !complete && !error} class:error class:complete on:click={() => active = false} transition:slide={{ duration: 200 }}>
+    <button class="button" class:active={active && !complete && !error} class:error class:complete on:click={reset} transition:slide={{ duration: 200 }}>
       Reset [R]
       {#if gamepadActive}
         - Gamepad [A]
@@ -181,14 +183,25 @@
     <Switch bind:active={hideSequence}>
       Hide sequence
     </Switch>
+
+    <Switch bind:active={showControls}>
+      Show on-screen controls
+    </Switch>
   </div>
 
   <em class="tip">Tip: Prefer the liberty of a controller? No problem! Press [A] to get started.</em>
 </section>
 
+{#if showControls}
+  <div transition:fade={{ duration: 100 }}>
+    <OnScreenControls on:click={({ detail }) => addGiven(detail)} />
+  </div>
+{/if}
+
 <style lang="scss">
   .stratagem {
     max-width: $text-limit;
+    margin-bottom: 7rem;
   }
 
   @keyframes pulse {
@@ -262,6 +275,9 @@
 
   .switches {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: $margin * 0.25 $margin * 0.5;
   }
 
   .tip {
@@ -269,5 +285,6 @@
     margin-top: $margin * 0.15;
     font-size: 0.8rem;
     color: lighten($text-color-dark, 10%);
+    text-align: center;
   }
 </style>
