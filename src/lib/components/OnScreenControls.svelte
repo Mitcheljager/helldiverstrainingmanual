@@ -17,12 +17,12 @@
   <div class="arrows">
     {#each Object.entries(arrows) as [direction, key]}
       <div class="arrow {direction}">
-        <button on:click={() => dispatch("click", { key })}>↑</button>
+        <button on:click|preventDefault={() => dispatch("click", { key })}>↑</button>
       </div>
     {/each}
   </div>
 
-  <button on:click={() => dispatch("click", { key: "r" })}>↻</button>
+  <button on:click|preventDefault={() => dispatch("click", { key: "r" })}>↻</button>
 </div>
 
 <div class="scaler" bind:clientWidth={availableWidth} />
