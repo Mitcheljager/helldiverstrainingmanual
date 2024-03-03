@@ -54,7 +54,11 @@
   More coming soon...
 </div>
 
-<a class="disclaimer" href="/disclaimer">Disclaimer</a>
+<div class="footer">
+  <a href="/disclaimer">Disclaimer</a> <br>
+  Contact me on Discord: @mitsiee <br>
+  Contribute on <a href="https://github.com/Mitcheljager/helldiverstrainingmanual" target="_blank" rel="noreferrer noopener">GitHub</a>
+</div>
 
 <style lang="scss">
   nav {
@@ -119,7 +123,21 @@
   }
 
   .disclaimer {
+    font-size: 0.85rem;
+  }
+
+  .footer {
     margin-top: $margin;
     font-size: 0.85rem;
+    line-height: 1.45em;
+
+    a {
+      display: inline-block;
+      color: $white;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 </style>
