@@ -51,6 +51,7 @@
     transform: translateX(-50%) translateY(-50%);
     width: var(--size);
     height: var(--size);
+    padding: 0;
     border: 0;
     border-radius: 50%;
     background: var(--color) linear-gradient(to right, $super-earth var(--percentage), 0, var(--color) calc(100% - var(--percentage)));
