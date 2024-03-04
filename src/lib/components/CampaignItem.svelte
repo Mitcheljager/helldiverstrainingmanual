@@ -4,6 +4,7 @@
 	import { LinkedChart, LinkedLabel, LinkedValue } from "svelte-tiny-linked-charts"
 	import { fetchHistory } from "$lib/api/history"
 	import Popup from "$lib/components/Popup.svelte"
+	import { slide } from "svelte/transition";
 
   export let planetIndex = ""
   export let name = ""
@@ -78,10 +79,10 @@
 
       <div slot="content" class="charts">
         {#await fetchHistory(planetIndex)}
-          Loading...
+          <span transition:slide|global={{ duration: 100 }}>Loading...</span>
         {:then data}
           {#each [{ header: "Liberation percentage", players: false }, { header: "Number of Helldivers", players: true }] as { header, players }}
-            <div class="chart">
+            <div class="chart" transition:slide|global={{ duration: 100 }}>
               <h5 class="mt-0 mb-1/4">{header}</h5>
 
               <LinkedChart
@@ -104,7 +105,7 @@
           {/each}
 
           {#if Object.entries(data).length < 200}
-            <em>This data is still populating</em>
+            <em transition:slide|global={{ duration: 100 }}>This data is still populating</em>
           {/if}
         {:catch}
           Something went wrong when fetching the analytics.
