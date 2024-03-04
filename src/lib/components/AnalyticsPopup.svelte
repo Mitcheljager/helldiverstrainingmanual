@@ -46,13 +46,15 @@
     </svg>
   </button>
 
-  <div slot="content" class="charts">
+  <!-- svelte-ignore a11y-click-events-have-key-events -->
+  <!-- svelte-ignore a11y-no-static-element-interactions -->
+  <div slot="content" class="charts" on:click|stopPropagation>
     {#await fetchHistory(index)}
       <span transition:slide|global={{ duration: 100 }}>Loading...</span>
     {:then data}
       {#if Object.entries(data).length !== 0}
         {#each [{ header: "Liberation percentage", players: false }, { header: "Number of Helldivers", players: true }] as { header, players }}
-          <div class="chart" transition:slide|global={{ duration: 100 }}>
+          <div class="chart" transition:slide|global={{ duration: 100 }} >
             <h5 class="mt-0 mb-1/4">{header}</h5>
 
             <LinkedChart
