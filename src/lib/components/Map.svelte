@@ -94,7 +94,7 @@
     border: 5px solid $super-earth;
     border-bottom: 0;
     background: darken($bg-dark, 10%) url("/images/map/stars.jpg") no-repeat;
-    background-position: calc(50% - var(--mouse-x, 0px) * -0.02) calc(50% - var(--mouse-y, 0px) * -0.02);
+    background-position: calc(50% - var(--mouse-x, 0px) * -0.01) calc(50% - var(--mouse-y, 0px) * -0.01);
     background-size: auto 110%;
     aspect-ratio: 1/1;
 
@@ -116,7 +116,7 @@
     top: 50%;
     width: calc(var(--map-width) * 0.1);
     transform: translateX(-50%) translateY(-50%);
-    filter: drop-shadow(0 0 0.5rem black) drop-shadow(0 0 2rem black);
+    filter: drop-shadow(0 0 0.5rem $black) drop-shadow(0 0 2rem $black) drop-shadow(0 0 5rem $super-earth);
   }
 
   .planets {
@@ -222,6 +222,7 @@
     opacity: 0;
     filter: blur(100px);
     z-index: -1;
+    transform: translateX(calc(var(--mouse-x, 0px) * 0.2)) translateY(calc(var(--mouse-y, 0px) * 0.2));
     transition: opacity 1500ms;
     pointer-events: none;
 
