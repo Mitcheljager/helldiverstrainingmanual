@@ -1,8 +1,8 @@
 <script>
 	import { invalidateAll } from "$app/navigation"
-	import CampaignItem from "$lib/components/CampaignItem.svelte";
+	import CampaignItem from "$lib/components/CampaignItem.svelte"
 	import Hero from "$lib/components/Hero.svelte"
-	import Map from "$lib/components/Map.svelte";
+	import Map from "$lib/components/Map.svelte"
 	import Switch from "$lib/components/Switch.svelte"
 	import { formatCampaigns } from "$lib/utils/campaign.js"
 	import { onDestroy, onMount } from "svelte"
@@ -50,7 +50,7 @@
 
 <div class="items" class:compact>
   {#each formattedCampaigns as campaign}
-    <CampaignItem {compact} {planetInfos} {...campaign} />
+    <CampaignItem {compact} {...campaign} />
   {/each}
 </div>
 

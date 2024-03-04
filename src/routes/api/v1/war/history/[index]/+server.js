@@ -1,10 +1,20 @@
-import { campaignStatusHistory } from '$lib/stores/data'
-import { get } from 'svelte/store'
+import { supabase } from '$lib/db'
 
 export async function GET({ params }) {
-  const headers = { 'Content-Type': 'application/json' }
+  const headers = { "Content-Type": "application/json" }
 
-  const data = get(campaignStatusHistory)[params.index]
+  try {
+    const { data, error } = await supabase
+      .from("history")
+      .select("created_at, planet_index, current_health, max_health, player_count")
+      .eq("planet_index", params.index)
+      .order("created_at", { ascending: false })
+      .range(0, 200)
 
-  return new Response(JSON.stringify(data), { headers })
+    if (error) throw new Error(error.message)
+
+    return new Response(JSON.stringify(data), { headers })
+  } catch (error) {
+    return new Response(JSON.stringify({ status: "Error" }), { headers, status: 500 })
+  }
 }
