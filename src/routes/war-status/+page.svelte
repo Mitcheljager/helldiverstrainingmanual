@@ -12,6 +12,8 @@
   let dataInterval
   let compact = true
 
+  $: console.log(info)
+
   $: ({ status, info } = data)
   $: ({ globalEvents, campaigns, planetStatus, planetEvents } = (status || {}))
   $: ({ planetInfos } = (info || {}))

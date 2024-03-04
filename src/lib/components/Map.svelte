@@ -10,7 +10,7 @@
   let mapElement
   let mapWidth = 0
   let activeIndex = -1
-  let showInactive = false
+  let showLiberated = false
   let loaded = false
   let mouseX = 0
   let mouseY = 0
@@ -49,14 +49,14 @@
   {#if browser}
     <div class="planets">
       {#each planets as planet}
-        {#if getCampaign(planet.index) || showInactive}
+        {#if getCampaign(planet.index) || showLiberated}
           <button
             on:click={() => activeIndex = activeIndex === planet.index ? -1 : planet.index}
             transition:fade={{ duration: 100, delay: planet.index }}
             data-index={planet.index}
             class="planet {getCampaign(planet.index)?.faction?.toLowerCase().replace(" ", "-")}"
             class:active={activeIndex === planet.index}
-            class:inactive={!getCampaign(planet.index)}
+            class:liberated={!getCampaign(planet.index)}
             style:--x={planet.position.x}
             style:--y={planet.position.y}
             style:--percentage="{getCampaign(planet.index)?.percentage || 0}%">
@@ -101,8 +101,8 @@
 </div>
 
 <div class="switches">
-  <Switch bind:active={showInactive}>
-    Show inactive planets
+  <Switch bind:active={showLiberated}>
+    Show liberated planets
   </Switch>
 </div>
 
@@ -148,7 +148,7 @@
   }
 
   .planet {
-    --color: #{$white};
+    --color: #{$super-earth};
     --size: calc(var(--map-width) * 0.035);
     appearance: none;
     position: absolute;
@@ -175,7 +175,7 @@
       --size: calc(var(--map-width) * 0.05);
     }
 
-    &.inactive {
+    &.liberated {
       --size: calc(var(--map-width) * 0.015);
     }
 
@@ -214,7 +214,7 @@
     h5 {
       margin: 0 0 $margin * 0.15;
 
-      .inactive & {
+      .liberated & {
         margin: 0;
       }
     }
