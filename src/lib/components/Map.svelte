@@ -1,9 +1,8 @@
 <script>
 	import { browser } from "$app/environment"
-	import { outside } from "$lib/actions/outside"
 	import { fade, scale } from "svelte/transition"
-	import Switch from "./Switch.svelte";
-	import { planetNames } from "$lib/data/planets";
+	import { planetNames } from "$lib/data/planets"
+	import Switch from "$lib/components/Switch.svelte"
 
   export let planets = []
   export let campaigns = []
