@@ -50,31 +50,39 @@
     {#await fetchHistory(index)}
       <span transition:slide|global={{ duration: 100 }}>Loading...</span>
     {:then data}
-      {#each [{ header: "Liberation percentage", players: false }, { header: "Number of Helldivers", players: true }] as { header, players }}
-        <div class="chart" transition:slide|global={{ duration: 100 }}>
-          <h5 class="mt-0 mb-1/4">{header}</h5>
+      {#if Object.entries(data).length !== 0}
+        {#each [{ header: "Liberation percentage", players: false }, { header: "Number of Helldivers", players: true }] as { header, players }}
+          <div class="chart" transition:slide|global={{ duration: 100 }}>
+            <h5 class="mt-0 mb-1/4">{header}</h5>
 
-          <LinkedChart
-            width={400}
-            height={150}
-            gap={0}
-            barMinHeight={2}
-            barMinWidth={2}
-            linked="planet"
-            uid={index + header}
-            lineColor="currentColor"
-            fill="var(--chart-color)"
-            {...getChartProps(data, players)} />
+            <LinkedChart
+              width={400}
+              height={150}
+              gap={0}
+              barMinHeight={2}
+              barMinWidth={2}
+              linked="planet"
+              uid={index + header}
+              lineColor="currentColor"
+              fill="var(--chart-color)"
+              {...getChartProps(data, players)} />
 
-          <div class="labels">
-            <div><LinkedValue uid={index + header} transform={(value) => value.toLocaleString() + (players ? "" : "%")} /></div>
-            <div><LinkedLabel linked="planet" /></div>
+            <div class="labels">
+              <div><LinkedValue uid={index + header} transform={(value) => value.toLocaleString() + (players ? "" : "%")} /></div>
+              <div><LinkedLabel linked="planet" /></div>
+            </div>
           </div>
-        </div>
-      {/each}
+        {/each}
+      {/if}
 
       {#if Object.entries(data).length < 200}
-        <em transition:slide|global={{ duration: 100 }}>This data is still populating</em>
+        <em transition:slide|global={{ duration: 100 }}>
+          {#if Object.entries(data).length === 0}
+            No activity has been recorded on this planet
+          {:else}
+            This data is still populating
+          {/if}
+        </em>
       {/if}
     {:catch}
       Something went wrong when fetching the analytics.
