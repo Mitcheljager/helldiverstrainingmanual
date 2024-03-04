@@ -27,7 +27,7 @@
 
   function getChartProps(history, players = false) {
     const data = {}
-    history.forEach((item) => {
+    history.reverse().forEach((item) => {
       const datetime = new Date(item.created_at)
       const options = {
         month: "short",
