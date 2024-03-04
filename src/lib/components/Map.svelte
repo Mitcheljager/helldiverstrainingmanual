@@ -1,7 +1,9 @@
 <script>
 	import { browser } from "$app/environment"
 	import { outside } from "$lib/actions/outside"
-	import { scale } from "svelte/transition"
+	import { fade, scale } from "svelte/transition"
+	import Switch from "./Switch.svelte";
+	import { planetNames } from "$lib/data/planets";
 
   export let planets = []
   export let campaigns = []
@@ -9,6 +11,7 @@
   let mapElement
   let mapWidth = 0
   let activeIndex = -1
+  let showInactive = false
   let loaded = false
   let mouseX = 0
   let mouseY = 0
@@ -27,43 +30,55 @@
     mouseX = event.clientX - containerCenterX
     mouseY = event.clientY - containerCenterY
   }
+
+  function closePopup(event) {
+    if (event.target.nodeName === "BUTTON") return
+    activeIndex = -1
+  }
 </script>
 
 <!-- svelte-ignore a11y-no-static-element-interactions -->
+<!-- svelte-ignore a11y-click-events-have-key-events -->
 <div
   class="map"
   style:--map-width="{mapWidth}px"
   style:--mouse-x="{mouseX}px"
   style:--mouse-y="{mouseY}px"
   bind:this={mapElement}
+  on:click={closePopup}
   on:mousemove={moveParallax}>
   {#if browser}
     <div class="planets">
       {#each planets as planet}
-        {#if getCampaign(planet.index)}
+        {#if getCampaign(planet.index) || showInactive}
           <button
-            use:outside
-            on:close={() => { if (activeIndex === planet.index) activeIndex = -1 }}
             on:click={() => activeIndex = activeIndex === planet.index ? -1 : planet.index}
+            transition:fade={{ duration: 100, delay: planet.index }}
+            data-index={planet.index}
             class="planet {getCampaign(planet.index)?.faction?.toLowerCase().replace(" ", "-")}"
             class:active={activeIndex === planet.index}
+            class:inactive={!getCampaign(planet.index)}
             style:--x={planet.position.x}
             style:--y={planet.position.y}
-            style:--percentage="{getCampaign(planet.index)?.percentage}%">
+            style:--percentage="{getCampaign(planet.index)?.percentage || 0}%">
             {#if activeIndex === planet.index}
               <div class="popup" transition:scale={{ start: 0.85, duration: 150 }}>
                 <h5>
-                  {getCampaign(planet.index)?.name}
+                  {getCampaign(planet.index)?.name || planetNames[planet.index] || "Unknown Planet"}
+
                   {#if getCampaign(planet.index)?.defense}
                     <svg height="18" width="18" viewBox="0 -960 960 960"><path fill="currentColor" d="M480-80q-139-35-229.5-159.5T160-516v-244l320-120 320 120v244q0 152-90.5 276.5T480-80Zm0-84q104-33 172-132t68-220v-189l-240-90-240 90v189q0 121 68 220t172 132Zm0-316Z"/></svg>
                   {/if}
                 </h5>
-                <p>{getCampaign(planet.index)?.faction}</p>
-                <p>
-                  {getCampaign(planet.index)?.percentage.toFixed(4)}%
-                  {getCampaign(planet.index)?.defense ? "Defend!" : "Liberated"}
-                </p>
-                <p>{getCampaign(planet.index)?.players.toLocaleString()} Helldivers</p>
+
+                {#if getCampaign(planet.index)}
+                  <p>{getCampaign(planet.index)?.faction}</p>
+                  <p>
+                    {getCampaign(planet.index)?.percentage.toFixed(4)}%
+                    {getCampaign(planet.index)?.defense ? "Defend!" : "Liberated"}
+                  </p>
+                  <p>{getCampaign(planet.index)?.players.toLocaleString()} Helldivers</p>
+                {/if}
               </div>
             {/if}
           </button>
@@ -84,6 +99,12 @@
 
 <div class="tray">
   <strong>{totalPlayerCount.toLocaleString()}</strong> Helldivers are currently fighting for Democracy. <em>Join them!</em>
+</div>
+
+<div class="switches">
+  <Switch bind:active={showInactive}>
+    Show inactive planets
+  </Switch>
 </div>
 
 <style lang="scss">
@@ -152,7 +173,11 @@
     }
 
     &.active {
-      --size: calc(var(--map-width) * 0.05)
+      --size: calc(var(--map-width) * 0.05);
+    }
+
+    &.inactive {
+      --size: calc(var(--map-width) * 0.015);
     }
 
     @each $label, $color in $faction-colors {
@@ -163,8 +188,8 @@
   }
 
   .popup {
-    --background-color: rgba(darken($white, 40%), 0.25);
-    --border-color: rgba($white, 0.25);
+    --background-color: #{rgba(darken($white, 40%), 0.25)};
+    --border-color: #{rgba($white, 0.25)};
     position: absolute;
     left: 50%;
     top: 50%;
@@ -189,6 +214,10 @@
 
     h5 {
       margin: 0 0 $margin * 0.15;
+
+      .inactive & {
+        margin: 0;
+      }
     }
 
     svg {
@@ -211,6 +240,15 @@
     color: $white;
     text-align: center;
     line-height: 1.35em;
+  }
+
+  .switches {
+    max-width: $text-limit;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: $margin * 0.5;
+    margin-top: $margin * 0.25;
   }
 
   .blur {
