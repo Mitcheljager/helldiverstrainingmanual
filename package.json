@@ -33,6 +33,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"svelte-confetti": "^1.3.2"
+		"svelte-confetti": "^1.3.2",
+		"svelte-tiny-linked-charts": "^1.5.0"
 	}
 }

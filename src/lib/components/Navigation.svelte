@@ -123,10 +123,6 @@
     font-family: $font-family-brand;
   }
 
-  .disclaimer {
-    font-size: 0.85rem;
-  }
-
   .footer {
     margin-top: $margin;
     font-size: 0.85rem;

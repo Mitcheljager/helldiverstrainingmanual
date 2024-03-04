@@ -1,18 +1,16 @@
 <script>
 	import { invalidateAll } from "$app/navigation"
+	import CampaignItem from "$lib/components/CampaignItem.svelte";
 	import Hero from "$lib/components/Hero.svelte"
 	import Map from "$lib/components/Map.svelte";
-	import Switch from "$lib/components/Switch.svelte";
+	import Switch from "$lib/components/Switch.svelte"
 	import { formatCampaigns } from "$lib/utils/campaign.js"
-	import { timeFromNow } from "$lib/utils/datetime";
 	import { onDestroy, onMount } from "svelte"
 
   export let data
 
   let dataInterval
-  let timeInterval
   let compact = true
-  let timeKey = 0
 
   $: ({ status, info } = data)
   $: ({ globalEvents, campaigns, planetStatus, planetEvents } = (status || {}))
@@ -21,12 +19,10 @@
 
   onMount(() => {
     dataInterval = setInterval(invalidateAll, 10000)
-    timeInterval = setInterval(() => timeKey = Math.random(), 1000)
   })
 
   onDestroy(() => {
     if (dataInterval) clearInterval(dataInterval)
-    if (timeInterval) clearInterval(timeInterval)
   })
 </script>
 
@@ -53,41 +49,8 @@
 </h2>
 
 <div class="items" class:compact>
-  {#each formattedCampaigns as { planetIndex, name, faction, percentage, players, defense, expireDateTime }}
-    <div class="item {faction.toLowerCase().replace(" ", "-")}" data-index={planetIndex}>
-      <h3>
-        <div class="title">
-          {name || "Unknown Planet"}
-        </div>
-
-        {#if defense}
-          <svg height="18" width="18" viewBox="0 -960 960 960"><path fill="currentColor" d="M480-80q-139-35-229.5-159.5T160-516v-244l320-120 320 120v244q0 152-90.5 276.5T480-80Zm0-84q104-33 172-132t68-220v-189l-240-90-240 90v189q0 121 68 220t172 132Zm0-316Z"/></svg>
-        {/if}
-
-        <small>{faction}</small>
-      </h3>
-
-      <div class="content">
-        <div class="bar">
-          <div class="progress" style:width="{percentage}%" />
-        </div>
-
-        <div class="info">
-          <span>
-            {percentage ? percentage.toFixed(4) : 0}%
-            {defense ? "Defend!" : "Liberated"}
-
-            {#if expireDateTime}
-              {#key timeKey}
-                {timeFromNow(expireDateTime)}
-              {/key}
-            {/if}
-          </span>
-
-          <span>{players.toLocaleString()} Helldivers</span>
-        </div>
-      </div>
-    </div>
+  {#each formattedCampaigns as campaign}
+    <CampaignItem {compact} {planetInfos} {...campaign} />
   {/each}
 </div>
 
@@ -138,74 +101,20 @@
   }
 
   .item {
-    --border-color: #{$bg-dark};
-    --background-color: #{lighten($bg-base, 5%)};
     max-width: $text-limit;
-    border: 5px solid var(--border-color);
-    transition: border 200ms;
-
-    .compact & {
-      display: grid;
-      grid-template-columns: 1fr 2fr;
-      align-items: center;
-      border: 0 solid transparent;
-      margin-top: $margin * 0.25;
-    }
+    border: 5px solid $bg-dark;
 
     h3 {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      flex-wrap: wrap;
       gap: $margin * 0.15;
       margin: 0;
-      background: var(--background-color);
+      background-color: lighten($bg-base, 5%);
       padding: $margin * 0.25;
       transition: font-size 200ms, padding 200ms;
       word-break: break-word;
-
-      .compact & {
-        height: 100%;
-        padding: $margin * 0.15 $margin * 0.25;
-        font-size: 1.15rem;
-      }
-
-      .title {
-        display: -webkit-box;
-        -webkit-line-clamp: 1;
-        -webkit-box-orient: vertical;
-        height: 1.15em;
-        overflow: hidden;
-        line-break: anywhere;
-      }
-
-      small {
-        opacity: 0.75;
-        color: var(--border-color);
-        font-size: 0.65em;
-        text-align: right;
-
-        .compact & {
-          display: none;
-        }
-      }
-
-      svg {
-        display: inline-block;
-        height: 1em;
-        width: auto;
-        margin-right: auto;
-
-        .compact & {
-          margin: 0;
-        }
-      }
-    }
-
-    @each $label, $color in $faction-colors {
-      &.#{$label} {
-        --border-color: #{$color};
-        --background-color: #{rgba($color, 0.25)};
-      }
     }
   }
 
@@ -215,56 +124,5 @@
     font-size: 1rem;
     line-height: 1.45em;
     transition: padding 200ms;
-
-    .compact & {
-      width: 100%;
-      padding: 0 0 0 $margin * 0.25;
-    }
-  }
-
-  .bar {
-    height: 2rem;
-    background: var(--border-color);
-    transition: height 200ms;
-
-    .compact & {
-      height: 1rem;
-    }
-  }
-
-  @keyframes progress {
-    from {
-      width: 0;
-    }
-  }
-
-  .progress {
-    background: $super-earth;
-    height: 100%;
-    animation: progress 1000ms forwards;
-  }
-
-  .info {
-    display: flex;
-    justify-content: space-between;
-    gap: $margin * 0.5;
-    margin-top: $margin * 0.25;
-    font-family: $font-family-alt;
-    font-weight: bold;
-    font-size: 0.85rem;
-    line-height: 1em;
-    transition: font-size 200ms;
-
-    .compact & {
-      font-size: 0.75rem;
-    }
-
-    span:last-child {
-      text-align: right;
-    }
-
-    p {
-      margin: $margin * 0.15 0 0;
-    }
   }
 </style>

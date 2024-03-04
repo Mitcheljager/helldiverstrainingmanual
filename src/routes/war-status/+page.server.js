@@ -1,4 +1,4 @@
-import { fetchInfo, fetchStatus } from '$lib/api/helldivers'
+import { fetchInfo, fetchStatus } from "$lib/api/helldivers"
 
 /** @type {import('./$types').PageLoad} */
 export async function load({ fetch }) {
