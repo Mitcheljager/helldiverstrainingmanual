@@ -2,6 +2,7 @@
 	import { browser } from "$app/environment"
 	import { fade, scale } from "svelte/transition"
 	import { planetNames } from "$lib/data/planets"
+	import { factions } from "$lib/data/factions"
 	import Switch from "$lib/components/Switch.svelte"
 
   export let planets = []
@@ -54,9 +55,9 @@
             on:click={() => activeIndex = activeIndex === planet.index ? -1 : planet.index}
             transition:fade={{ duration: 100, delay: planet.index }}
             data-index={planet.index}
-            class="planet {getCampaign(planet.index)?.faction?.toLowerCase().replace(" ", "-")}"
+            class="planet {(getCampaign(planet.index)?.faction || factions[planet.initialOwner])?.toLowerCase().replace(" ", "-")}"
             class:active={activeIndex === planet.index}
-            class:liberated={!getCampaign(planet.index)}
+            class:controlled={!getCampaign(planet.index)}
             style:--x={planet.position.x}
             style:--y={planet.position.y}
             style:--percentage="{getCampaign(planet.index)?.percentage || 0}%">
@@ -102,7 +103,7 @@
 
 <div class="switches">
   <Switch bind:active={showLiberated}>
-    Show liberated planets
+    Show controlled planets
   </Switch>
 </div>
 
@@ -159,7 +160,7 @@
     height: var(--size);
     border: 0;
     border-radius: 50%;
-    background: $white linear-gradient(to right, $super-earth var(--percentage), 0, var(--color) calc(100% - var(--percentage)));
+    background: var(--color) linear-gradient(to right, $super-earth var(--percentage), 0, var(--color) calc(100% - var(--percentage)));
     transition: width 100ms, height 100ms;
     font-size: 0;
     cursor: pointer;
@@ -175,7 +176,7 @@
       --size: calc(var(--map-width) * 0.05);
     }
 
-    &.liberated {
+    &.controlled {
       --size: calc(var(--map-width) * 0.015);
     }
 
