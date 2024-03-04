@@ -48,7 +48,7 @@
   {#if browser}
     <div class="planets">
       {#each planets as planet}
-        {#if getCampaign(planet.index) || showLiberated}
+        {#if getCampaign(planet.index) || planet.initialOwner !== 1 || showLiberated}
           <Planet {planet} campaign={getCampaign(planet.index)} active={activeIndex === planet.index} on:click={() => activeIndex = activeIndex === planet.index ? -1 : planet.index} />
         {/if}
       {/each}
@@ -71,7 +71,7 @@
 
 <div class="switches">
   <Switch bind:active={showLiberated}>
-    Show controlled planets
+    Show liberated planets
   </Switch>
 </div>
 
