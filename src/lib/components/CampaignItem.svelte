@@ -87,7 +87,7 @@
 
               <LinkedChart
                 width={400}
-                height={100}
+                height={150}
                 gap={0}
                 barMinHeight={2}
                 barMinWidth={2}
@@ -98,7 +98,7 @@
                 {...getChartProps(data, players)} />
 
               <div class="labels">
-                <div><LinkedValue uid={planetIndex + header} /></div>
+                <div><LinkedValue uid={planetIndex + header} transform={(value) => value.toLocaleString() + (players ? "" : "%")} /></div>
                 <div><LinkedLabel linked="planet" /></div>
               </div>
             </div>
