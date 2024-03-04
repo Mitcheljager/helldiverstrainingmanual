@@ -62,7 +62,7 @@ export async function fetchHistory(planetIndex) {
 
     const parsed = await response.json()
 
-    return parsed
+    return parsed || {}
   } catch (error) {
     console.error(error)
   }

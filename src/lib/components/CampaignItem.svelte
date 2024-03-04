@@ -71,48 +71,50 @@
       <svg height="18" width="18" viewBox="0 -960 960 960"><path fill="currentColor" d="M480-80q-139-35-229.5-159.5T160-516v-244l320-120 320 120v244q0 152-90.5 276.5T480-80Zm0-84q104-33 172-132t68-220v-189l-240-90-240 90v189q0 121 68 220t172 132Zm0-316Z"/></svg>
     {/if}
 
-    <Popup let:toggle>
-      <button on:click={toggle}>
-        <svg fill="currentColor" width="16px" height="16px" viewBox="0 0 1920 1920">
-          <path d="M746.667 106.667H1173.33V1493.33H746.667V106.667ZM533.333 533.333H106.667V1493.33H533.333V533.333ZM1920 1706.67H0V1824H1920V1706.67ZM1813.33 746.667H1386.67V1493.33H1813.33V746.667Z"/>
-        </svg>
-      </button>
+    {#if false}
+      <Popup let:toggle>
+        <button on:click={toggle}>
+          <svg fill="currentColor" width="16px" height="16px" viewBox="0 0 1920 1920">
+            <path d="M746.667 106.667H1173.33V1493.33H746.667V106.667ZM533.333 533.333H106.667V1493.33H533.333V533.333ZM1920 1706.67H0V1824H1920V1706.67ZM1813.33 746.667H1386.67V1493.33H1813.33V746.667Z"/>
+          </svg>
+        </button>
 
-      <div slot="content" class="charts">
-        {#await fetchHistory(planetIndex)}
-          Loading...
-        {:then data}
-          {#each [{ header: "Liberation percentage", players: false }, { header: "Number of Helldivers", players: true }] as { header, players }}
-            <div class="chart">
-              <h5 class="mt-0 mb-1/4">{header}</h5>
+        <div slot="content" class="charts">
+          {#await fetchHistory(planetIndex)}
+            Loading...
+          {:then data}
+            {#each [{ header: "Liberation percentage", players: false }, { header: "Number of Helldivers", players: true }] as { header, players }}
+              <div class="chart">
+                <h5 class="mt-0 mb-1/4">{header}</h5>
 
-              <LinkedChart
-                width={400}
-                height={100}
-                gap={0}
-                barMinHeight={2}
-                barMinWidth={2}
-                linked="planet"
-                uid={planetIndex + header}
-                lineColor="currentColor"
-                fill="var(--border-color)"
-                {...getChartProps(data, players)} />
+                <LinkedChart
+                  width={400}
+                  height={100}
+                  gap={0}
+                  barMinHeight={2}
+                  barMinWidth={2}
+                  linked="planet"
+                  uid={planetIndex + header}
+                  lineColor="currentColor"
+                  fill="var(--border-color)"
+                  {...getChartProps(data, players)} />
 
-              <div class="labels">
-                <div><LinkedValue uid={planetIndex + header} /></div>
-                <div><LinkedLabel linked="planet" /></div>
+                <div class="labels">
+                  <div><LinkedValue uid={planetIndex + header} /></div>
+                  <div><LinkedLabel linked="planet" /></div>
+                </div>
               </div>
-            </div>
-          {/each}
+            {/each}
 
-          {#if Object.entries(data).length < 200}
-            <em>This data is still populating</em>
-          {/if}
-        {:catch}
-          Something went wrong when fetching the analytics.
-        {/await}
-      </div>
-    </Popup>
+            {#if Object.entries(data).length < 200}
+              <em>This data is still populating</em>
+            {/if}
+          {:catch}
+            Something went wrong when fetching the analytics.
+          {/await}
+        </div>
+      </Popup>
+    {/if}
 
     <small>{faction}</small>
   </h3>
