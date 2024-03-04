@@ -67,7 +67,7 @@
 
 <h2>Galaxy Map</h2>
 
-<Map planets={planetInfos} campaigns={formattedCampaigns} />
+<Map planets={planetInfos} status={planetStatus} campaigns={formattedCampaigns} />
 
 <h2>Global Events</h2>
 

@@ -5,6 +5,7 @@
 
   export let planets = []
   export let campaigns = []
+  export let status = []
 
   let mapElement
   let mapWidth = 0
@@ -18,6 +19,10 @@
 
   function getCampaign(index) {
     return campaigns.find(c => c.planetIndex === index)
+  }
+
+  function getStatus(index) {
+    return status.find(s => s.index === index)
   }
 
   function moveParallax(event) {
@@ -48,8 +53,13 @@
   {#if browser}
     <div class="planets">
       {#each planets as planet}
-        {#if getCampaign(planet.index) || planet.initialOwner !== 1 || showLiberated}
-          <Planet {planet} campaign={getCampaign(planet.index)} active={activeIndex === planet.index} on:click={() => activeIndex = activeIndex === planet.index ? -1 : planet.index} />
+        {#if getCampaign(planet.index) || getStatus(planet.index)?.owner !== 1 || showLiberated}
+          <Planet
+            {planet}
+            campaign={getCampaign(planet.index)}
+            status={getStatus(planet.index)}
+            active={activeIndex === planet.index}
+            on:click={() => activeIndex = activeIndex === planet.index ? -1 : planet.index} />
         {/if}
       {/each}
     </div>

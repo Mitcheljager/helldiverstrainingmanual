@@ -4,6 +4,7 @@
 	import { fade, scale } from "svelte/transition"
 
   export let planet = {}
+  export let status = {}
   export let campaign = null
   export let active = false
 </script>
@@ -12,7 +13,7 @@
   on:click
   transition:fade={{ duration: 100, delay: planet.index }}
   data-index={planet.index}
-  class="planet {(campaign?.faction || factions[planet.initialOwner])?.toLowerCase().replace(" ", "-")}"
+  class="planet {(campaign?.faction || factions[status.owner])?.toLowerCase().replace(" ", "-")}"
   class:active
   class:controlled={!campaign}
   style:--x={planet.position.x}
