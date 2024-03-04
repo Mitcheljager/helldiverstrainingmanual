@@ -1,9 +1,10 @@
 import { fetchInfo, fetchStatus } from "$lib/api/helldivers"
 
+// @ts-ignore
 /** @type {import('./$types').PageLoad} */
 export async function load({ fetch }) {
-  const status = await fetchStatus(fetch)
-  const info = await fetchInfo(fetch)
+  const status = await fetchStatus(fetch) || {}
+  const info = await fetchInfo(fetch) || {}
 
   return {
     status,

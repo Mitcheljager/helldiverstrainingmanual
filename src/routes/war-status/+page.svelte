@@ -40,6 +40,13 @@
 
 <p><em><small>This section updates automatically</small></em></p>
 
+{#if !Object.keys(status).length || !Object.keys(info).length}
+  <div class="item no-connection mt-1">
+    <h3>Connections are down!</h3>
+    <p class="content">We could not connect to the outside world. No data was able to be retrieved.</p>
+  </div>
+{/if}
+
 <h2>
   <div>Active Efforts</div>
 
@@ -53,6 +60,10 @@
     <CampaignItem {compact} {...campaign} />
   {/each}
 </div>
+
+{#if Object.keys(status)?.length === 0}
+  <em>No data was found</em>
+{/if}
 
 <h2>Galaxy Map</h2>
 
@@ -76,7 +87,7 @@
     {/each}
   </div>
 {:else}
-  <p>Failed to retrieve global events</p>
+  <em>Failed to retrieve global events</em>
 {/if}
 
 <style lang="scss">
@@ -103,6 +114,14 @@
   .item {
     max-width: $text-limit;
     border: 5px solid $bg-dark;
+
+    &.no-connection {
+      border-color: $red;
+
+      h3 {
+        background-color: darken($red, 25%);
+      }
+    }
 
     h3 {
       display: flex;
