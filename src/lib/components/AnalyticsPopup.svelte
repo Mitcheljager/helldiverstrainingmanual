@@ -40,7 +40,7 @@
 </script>
 
 <Popup let:toggle>
-  <button on:click={toggle} aria-label="Analytics">
+  <button on:click|stopPropagation={toggle} aria-label="Analytics">
     <svg fill="currentColor" width="16px" height="16px" viewBox="0 0 1920 1920">
       <path d="M746.667 106.667H1173.33V1493.33H746.667V106.667ZM533.333 533.333H106.667V1493.33H533.333V533.333ZM1920 1706.67H0V1824H1920V1706.67ZM1813.33 746.667H1386.67V1493.33H1813.33V746.667Z"/>
     </svg>
@@ -63,7 +63,7 @@
             linked="planet"
             uid={index + header}
             lineColor="currentColor"
-            fill="var(--border-color)"
+            fill="var(--chart-color)"
             {...getChartProps(data, players)} />
 
           <div class="labels">

@@ -2,41 +2,49 @@
 	import { factions } from "$lib/data/factions"
 	import { planetNames } from "$lib/data/planets"
 	import { fade, scale } from "svelte/transition"
+	import AnalyticsPopup from "./AnalyticsPopup.svelte";
 
   export let planet = {}
   export let status = {}
   export let campaign = null
   export let active = false
+
+  $: ({ index, position } = planet)
+  $: ({ name, percentage, faction, defense, players } = campaign || {})
 </script>
 
 <button
   on:click
-  transition:fade={{ duration: 100, delay: planet.index }}
-  data-index={planet.index}
-  class="planet {(campaign?.faction || factions[status.owner])?.toLowerCase().replace(" ", "-")}"
+  transition:fade={{ duration: 100, delay: index }}
+  data-index={index}
+  class="planet {(faction || factions[status.owner])?.toLowerCase().replace(" ", "-")}"
   class:active
   class:controlled={!campaign}
-  style:--x={planet.position.x}
-  style:--y={planet.position.y}
-  style:--percentage="{campaign?.percentage || 0}%">
+  style:--x={position.x}
+  style:--y={position.y}
+  style:--percentage="{percentage || 0}%">
   {#if active}
     <div class="popup" transition:scale={{ start: 0.85, duration: 150 }}>
       <h5>
-        {campaign?.name || planetNames[planet.index] || "Unknown Planet"}
+        {name || planetNames[index] || "Unknown Planet"}
 
-        {#if campaign?.defense}
+        {#if defense}
           <svg height="18" width="18" viewBox="0 -960 960 960"><path fill="currentColor" d="M480-80q-139-35-229.5-159.5T160-516v-244l320-120 320 120v244q0 152-90.5 276.5T480-80Zm0-84q104-33 172-132t68-220v-189l-240-90-240 90v189q0 121 68 220t172 132Zm0-316Z"/></svg>
         {/if}
       </h5>
 
       {#if campaign}
-        <p>{campaign?.faction}</p>
+        <p>{faction}</p>
         <p>
-          {campaign?.percentage.toFixed(4)}%
-          {campaign?.defense ? "Defend!" : "Liberated"}
+
+          {percentage.toFixed(4)}%
+          {defense ? "Defend!" : "Liberated"}
         </p>
-        <p>{campaign?.players.toLocaleString()} Helldivers</p>
+
+        <p>{players.toLocaleString()} Helldivers</p>
       {/if}
+
+      <AnalyticsPopup {index} />
     </div>
   {/if}
 </button>
@@ -104,15 +112,12 @@
       .#{$label} & {
         --border-color: #{rgba($color, 0.25)};
         --background-color: #{rgba(darken($color, 30%), 0.25)};
+        --chart-color: #{$color};
       }
     }
 
     h5 {
       margin: 0 0 $margin * 0.15;
-
-      .controlled & {
-        margin: 0;
-      }
     }
 
     svg {
@@ -123,6 +128,10 @@
 
     p {
       margin: 0;
+
+      &:last-of-type {
+        margin-bottom: $margin * 0.15;
+      }
     }
   }
 </style>

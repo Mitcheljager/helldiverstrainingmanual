@@ -79,6 +79,7 @@
     @each $label, $color in $faction-colors {
       &.#{$label} {
         --border-color: #{$color};
+        --chart-color: #{$color};
         --background-color: #{rgba($color, 0.25)};
       }
     }
