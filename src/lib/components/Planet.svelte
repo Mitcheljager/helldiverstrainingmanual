@@ -109,7 +109,7 @@
     h5 {
       margin: 0 0 $margin * 0.15;
 
-      .liberated & {
+      .controlled & {
         margin: 0;
       }
     }
