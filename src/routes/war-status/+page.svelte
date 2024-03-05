@@ -69,7 +69,7 @@
 
 <Map planets={planetInfos} status={planetStatus} campaigns={formattedCampaigns} />
 
-<h2>Global Events</h2>
+<h2>Recent Events</h2>
 
 {#if globalEvents}
   <div class="items">
