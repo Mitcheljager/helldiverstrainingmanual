@@ -87,6 +87,7 @@
       font-size: 0.85em;
       font-family: $font-family-brand;
       font-weight: normal;
+      white-space: nowrap;
     }
   }
 
