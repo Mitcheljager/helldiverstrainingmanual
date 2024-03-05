@@ -3,6 +3,7 @@
   import { LinkedChart, LinkedLabel, LinkedValue } from "svelte-tiny-linked-charts"
 	import { fetchHistory } from "$lib/api/history"
 	import { slide } from "svelte/transition"
+	import { planetNames } from "$lib/data/planets";
 
   export let index
 
@@ -49,13 +50,15 @@
   <!-- svelte-ignore a11y-click-events-have-key-events -->
   <!-- svelte-ignore a11y-no-static-element-interactions -->
   <div slot="content" class="charts" on:click|stopPropagation>
+    <h4 class="mb-0">{planetNames[index]}</h4>
+
     {#await fetchHistory(index)}
       <span transition:slide|global={{ duration: 100 }}>Loading...</span>
     {:then data}
       {#if Object.entries(data).length !== 0}
         {#each [{ header: "Liberation percentage", players: false }, { header: "Number of Helldivers", players: true }] as { header, players }}
           <div class="chart" transition:slide|global={{ duration: 100 }} >
-            <h5 class="mt-0 mb-1/4">{header}</h5>
+            <h5>{header}</h5>
 
             <LinkedChart
               width={400}
@@ -108,12 +111,20 @@
     }
   }
 
+  h5 {
+    margin: 0 0 $margin * 0.15;
+    color: darken($text-color, 20%);
+    font-weight: normal;
+    font-size: 1rem;
+  }
+
   .charts {
     display: flex;
     flex-direction: column;
     gap: $margin * 0.25;
     width: min(20rem, 50vw);
     height: auto;
+    text-align: center;
 
     em {
       font-family: $font-family;
