@@ -66,7 +66,7 @@
   }
 </script>
 
-<div class="wrapper" class:enlarge bind:this={impetusElement} bind:clientWidth={wrapperWidth} style:--wrapper-width="{wrapperWidth}px">
+<div class="wrapper" class:enlarge class:loading={!browser} bind:this={impetusElement} bind:clientWidth={wrapperWidth} style:--wrapper-width="{wrapperWidth}px">
   <!-- svelte-ignore a11y-no-static-element-interactions -->
   <!-- svelte-ignore a11y-click-events-have-key-events -->
   <div
@@ -148,6 +148,10 @@
     background-size: auto calc(110% * (1 + var(--zoom) * 0.1));
     transition: max-width 200ms;
     overflow: hidden;
+
+    &.loading {
+      aspect-ratio: 1/1;
+    }
 
     &.enlarge {
       max-width: $text-limit * 1.5;
