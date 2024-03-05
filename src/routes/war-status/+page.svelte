@@ -65,7 +65,7 @@
   <em>No data was found</em>
 {/if}
 
-<h2>Galaxy Map</h2>
+<h2>Galactic Map</h2>
 
 <Map planets={planetInfos} status={planetStatus} campaigns={formattedCampaigns} />
 
