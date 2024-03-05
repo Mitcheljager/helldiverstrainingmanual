@@ -27,7 +27,7 @@
   let foundPlanetIndexes = []
 
   $: totalPlayerCount = campaigns.reduce((total, c) => total + c.players, 0)
-  $: if (browser && mapElement !== null) bindImpetus()
+  $: if (browser && mapElement !== null && mapWidth) bindImpetus()
 
   onDestroy(() => {
     if (impetus) impetus.destroy()
