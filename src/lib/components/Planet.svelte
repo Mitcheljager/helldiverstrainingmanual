@@ -80,7 +80,11 @@
     }
 
     &.controlled {
-      --size: calc(var(--map-width) * 0.02);
+      --size: calc(var(--map-width) * 0.025);
+
+      @include breakpoint(md) {
+        --size: calc(var(--map-width) * 0.02);
+      }
     }
 
     @each $label, $color in $faction-colors {

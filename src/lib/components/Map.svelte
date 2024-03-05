@@ -32,13 +32,13 @@
   }
 
   function setZoom(increase) {
-    zoom = Math.max(1, Math.min(2.5, zoom + increase))
+    zoom = Math.max(1, Math.min(3, zoom + increase))
   }
 
   async function bindImpetus() {
     const Impetus = (await import("impetus")).default
 
-    const bounds = mapWidth * 1.15
+    const bounds = mapWidth * 1.35
 
     new Impetus({
       source: mapElement,
