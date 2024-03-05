@@ -2,15 +2,19 @@
 	import { browser } from "$app/environment"
 	import Switch from "$lib/components/Switch.svelte"
 	import Planet from "$lib/components/Planet.svelte"
+	import { onDestroy } from "svelte";
 
   export let planets = []
   export let campaigns = []
   export let status = []
 
   let mapElement
+  let impetusElement
+  let impetus
   let mapWidth = 0
   let activeIndex = -1
   let showLiberated = false
+  let enlarge = false
   let loaded = false
   let zoom = 1
   let elementPositionX = 0
@@ -18,6 +22,10 @@
 
   $: totalPlayerCount = campaigns.reduce((total, c) => total + c.players, 0)
   $: if (browser && mapElement !== null) bindImpetus()
+
+  onDestroy(() => {
+    if (impetus) impetus.destroy()
+  })
 
   function getCampaign(index) {
     return campaigns.find(c => c.planetIndex === index)
@@ -40,8 +48,8 @@
 
     const bounds = mapWidth * 1.35
 
-    new Impetus({
-      source: mapElement,
+    impetus = new Impetus({
+      source: impetusElement,
       friction: 0.96,
       boundX: [-bounds, bounds],
       boundY: [-bounds, bounds],
@@ -53,18 +61,18 @@
   }
 </script>
 
-<!-- svelte-ignore a11y-no-static-element-interactions -->
-<!-- svelte-ignore a11y-click-events-have-key-events -->
-<div
-  class="map"
-  style:--map-width="{mapWidth}px"
-  style:--zoom={zoom}
-  style:--x="{elementPositionX}px"
-  style:--y="{elementPositionY}px"
-  bind:this={mapElement}
-  on:click={closePopup}>
+<div class="wrapper" class:enlarge bind:this={impetusElement}>
+  <!-- svelte-ignore a11y-no-static-element-interactions -->
+  <!-- svelte-ignore a11y-click-events-have-key-events -->
+  <div
+    class="map"
+    style:--map-width="{mapWidth}px"
+    style:--zoom={zoom}
+    style:--x="{elementPositionX}px"
+    style:--y="{elementPositionY}px"
+    bind:this={mapElement}
+    on:click={closePopup}>
 
-  <div class="impetus">
     {#if browser}
       <div class="planets">
         {#each planets as planet}
@@ -86,48 +94,65 @@
     <img class="earth" src="/images/map/super-earth.png" alt="" draggable="false" />
   </div>
 
-  {#if browser}
-    <img class="blur" class:loaded src="/images/map/stars.jpg" alt="" on:load={() => loaded = true}>
-  {/if}
-
   <div class="zoom">
     <button on:click={() => setZoom(0.5)}>+</button>
     <button on:click={() => setZoom(-0.5)}>-</button>
   </div>
+  {#if browser}
+    <img class="blur" class:loaded src="/images/map/stars.jpg" alt="" on:load={() => loaded = true}>
+  {/if}
 </div>
 
-<div class="tray">
-  <strong>{totalPlayerCount.toLocaleString()}</strong> Helldivers are currently fighting for Democracy. <em>Join them!</em>
-</div>
+<div class="footer" class:enlarge>
+  <div class="tray">
+    <strong>{totalPlayerCount.toLocaleString()}</strong> Helldivers are currently fighting for Democracy. <em>Join them!</em>
+  </div>
 
-<div class="switches">
-  <Switch bind:active={showLiberated}>
-    Show liberated planets
-  </Switch>
+  <div class="switches">
+    <Switch bind:active={showLiberated}>
+      Show liberated planets
+    </Switch>
+
+    <div class="desktop-only">
+      <Switch bind:active={enlarge}>
+        Enlarge
+      </Switch>
+    </div>
+  </div>
 </div>
 
 <style lang="scss">
-  .map {
+  .wrapper {
     position: relative;
     max-width: $text-limit;
-    padding: $margin * 0.5;
     border: 5px solid $super-earth;
     border-bottom: 0;
     background: darken($bg-dark, 10%) url("/images/map/stars.jpg") no-repeat;
     background-position: calc(50% - var(--x, 0px) * -0.015 * var(--zoom)) calc(50% - var(--y, 0px) * -0.015 * var(--zoom));
     background-size: auto calc(110% * (1 + var(--zoom) * 0.1));
-    aspect-ratio: 1/1;
+    transition: max-width 200ms;
     overflow: hidden;
-    transition: background-size 200ms;
+
+    &.enlarge {
+      max-width: $text-limit * 1.5;
+    }
+  }
+
+  .map {
+    padding: $margin * 0.5;
+    height: $text-limit;
+    width: $text-limit;
+    transform: translateX(var(--x)) translateY(var(--y));
+    transition: background-size 200ms, margin-left 200ms;
     touch-action: none;
+
+    .enlarge & {
+      margin-left: calc((100% - var(--map-width)) / 2);
+    }
 
     img {
       display: block;
     }
-  }
-
-  .impetus {
-    transform: translateX(var(--x)) translateY(var(--y));
   }
 
   .sectors {
@@ -156,8 +181,16 @@
     z-index: 5;
   }
 
-  .tray {
+  .footer {
     max-width: $text-limit;
+    transition: max-width 200ms;
+
+    &.enlarge {
+      max-width: $text-limit * 1.5;
+    }
+  }
+
+  .tray {
     padding: 5px;
     background: $super-earth;
     font-size: 0.75rem;
@@ -168,7 +201,6 @@
   }
 
   .switches {
-    max-width: $text-limit;
     display: flex;
     justify-content: flex-end;
     flex-wrap: wrap;
@@ -229,6 +261,14 @@
           color: $super-earth;
         }
       }
+    }
+  }
+
+  .desktop-only {
+    display: none;
+
+    @include breakpoint(1500px) {
+      display: block;
     }
   }
 </style>
