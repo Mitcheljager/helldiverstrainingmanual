@@ -1,12 +1,15 @@
 <script>
-	import { browser } from "$app/environment"
+  import { browser } from "$app/environment"
+	import { onDestroy } from "svelte"
 	import Switch from "$lib/components/Switch.svelte"
 	import Planet from "$lib/components/Planet.svelte"
-	import { onDestroy } from "svelte";
+	import SupplyLines from "$lib/components/SupplyLines.svelte"
+	import { fade } from "svelte/transition";
 
   export let planets = []
   export let campaigns = []
   export let status = []
+  export let attacks = []
 
   let mapElement
   let impetusElement
@@ -14,6 +17,7 @@
   let mapWidth = 0
   let activeIndex = -1
   let showLiberated = false
+  let showSupplyLines = false
   let enlarge = false
   let loaded = false
   let zoom = 1
@@ -34,6 +38,7 @@
   function getStatus(index) {
     return status.find(s => s.index === index)
   }
+
   function closePopup(event) {
     if (event.target.nodeName === "BUTTON") return
     activeIndex = -1
@@ -85,6 +90,12 @@
               on:click={() => activeIndex = activeIndex === planet.index ? -1 : planet.index} />
           {/if}
         {/each}
+
+        {#if showSupplyLines}
+          <div transition:fade={{ duration: 200 }}>
+            <SupplyLines {status} {planets} {attacks} />
+          </div>
+        {/if}
       </div>
     {/if}
 
@@ -98,6 +109,7 @@
     <button on:click={() => setZoom(0.5)}>+</button>
     <button on:click={() => setZoom(-0.5)}>-</button>
   </div>
+
   {#if browser}
     <img class="blur" class:loaded src="/images/map/stars.jpg" alt="" on:load={() => loaded = true}>
   {/if}
@@ -109,6 +121,10 @@
   </div>
 
   <div class="switches">
+    <Switch bind:active={showSupplyLines}>
+      Show supply lines
+    </Switch>
+
     <Switch bind:active={showLiberated}>
       Show liberated planets
     </Switch>
@@ -204,7 +220,7 @@
     display: flex;
     justify-content: flex-end;
     flex-wrap: wrap;
-    gap: $margin * 0.5;
+    gap: $margin * 0.25 $margin * 0.5;
     margin-top: $margin * 0.25;
   }
 

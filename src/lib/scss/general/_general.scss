@@ -22,6 +22,10 @@ body {
   font-family: $font-family;
   line-height: 1.45em;
 	overflow-x: hidden;
+
+	@each $label, $color in $faction-colors {
+		--#{$label}: #{$color};
+	}
 }
 
 a {
