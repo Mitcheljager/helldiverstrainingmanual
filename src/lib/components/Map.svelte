@@ -92,7 +92,7 @@
         {/each}
 
         {#if showSupplyLines}
-          <div transition:fade={{ duration: 200 }}>
+          <div class="supply-lines" transition:fade={{ duration: 200 }}>
             <SupplyLines {status} {planets} />
           </div>
         {/if}
@@ -204,6 +204,11 @@
     top: 50%;
     transform: translateX(-50%) translateY(-50%);
     z-index: 5;
+  }
+
+  .supply-lines {
+    position: relative;
+    z-index: -1;
   }
 
   .footer {
