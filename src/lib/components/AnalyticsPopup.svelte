@@ -61,7 +61,7 @@
             <h5>{header}</h5>
 
             <LinkedChart
-              width={400}
+              width={576}
               height={150}
               gap={0}
               barMinHeight={2}
