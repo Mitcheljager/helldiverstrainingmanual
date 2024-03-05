@@ -112,7 +112,7 @@
     display: flex;
     flex-direction: column;
     gap: $margin * 0.25;
-    width: min(20rem, 60vw);
+    width: min(20rem, 50vw);
     height: auto;
 
     em {
@@ -135,7 +135,12 @@
       display: block;
       width: 100%;
       height: auto;
+      max-height: 80px;
       background: $bg-base;
+
+      @include breakpoint(sm) {
+        max-height: 100vh;
+      }
     }
   }
 
