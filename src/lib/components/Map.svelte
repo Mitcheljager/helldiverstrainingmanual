@@ -92,9 +92,7 @@
         {/each}
 
         {#if showSupplyLines}
-          <div transition:fade={{ duration: 200 }}>
-            <SupplyLines {status} {planets} />
-          </div>
+          <SupplyLines {status} {planets} />
         {/if}
       </div>
     {/if}
@@ -141,12 +139,12 @@
   .wrapper {
     position: relative;
     max-width: $text-limit;
-    border: 5px solid $super-earth;
+    box-shadow: inset 0 0 0 5px $super-earth;
     border-bottom: 0;
     background: darken($bg-dark, 10%) url("/images/map/stars.jpg") no-repeat;
     background-position: calc(50% - var(--x, 0px) * -0.015 * var(--zoom)) calc(50% - var(--y, 0px) * -0.015 * var(--zoom));
     background-size: auto calc(110% * (1 + var(--zoom) * 0.1));
-    transition: max-width 200ms;
+    transition: max-width 200ms, margin 200ms;
     overflow: hidden;
 
     &.loading {
@@ -154,7 +152,10 @@
     }
 
     &.enlarge {
-      max-width: $text-limit * 1.5;
+      @include breakpoint(1500px) {
+        max-width: $text-limit * 1.5;
+        margin: 0 $margin * -0.5;
+      }
     }
   }
 
@@ -205,15 +206,18 @@
 
   .footer {
     max-width: $text-limit;
-    transition: max-width 200ms;
+    transition: max-width 200ms, margin 200ms;
 
     &.enlarge {
-      max-width: $text-limit * 1.5;
+      @include breakpoint(1500px) {
+        max-width: $text-limit * 1.5;
+        margin: 0 $margin * -0.5;
+      }
     }
   }
 
   .tray {
-    padding: 5px;
+    padding: 0 5px 5px;
     background: $super-earth;
     font-size: 0.75rem;
     font-family: $font-family-alt;
