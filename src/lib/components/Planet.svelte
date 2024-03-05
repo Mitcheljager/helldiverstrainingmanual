@@ -2,7 +2,8 @@
 	import { factions } from "$lib/data/factions"
 	import { planetNames } from "$lib/data/planets"
 	import { fade, scale } from "svelte/transition"
-	import AnalyticsPopup from "./AnalyticsPopup.svelte";
+	import AnalyticsPopup from "$lib/components/AnalyticsPopup.svelte"
+	import IconDefense from "$lib/components/icons/IconDefense.svelte"
 
   export let planet = {}
   export let status = {}
@@ -25,20 +26,23 @@
   style:--x={position.x}
   style:--y={position.y}
   style:--percentage="{percentage || 0}%">
+
+  {#if defense}
+    <div class="icon">
+      <IconDefense />
+    </div>
+  {/if}
+
   {#if active}
     <div class="popup" transition:scale={{ start: 0.85, duration: 150 }}>
       <h5>
         {name || planetNames[index] || "Unknown Planet"}
-
-        {#if defense}
-          <svg height="18" width="18" viewBox="0 -960 960 960"><path fill="currentColor" d="M480-80q-139-35-229.5-159.5T160-516v-244l320-120 320 120v244q0 152-90.5 276.5T480-80Zm0-84q104-33 172-132t68-220v-189l-240-90-240 90v189q0 121 68 220t172 132Zm0-316Z"/></svg>
-        {/if}
       </h5>
 
       {#if campaign}
         <p>{faction}</p>
-        <p>
 
+        <p>
           {percentage.toFixed(4)}%
           {defense ? "Defend!" : "Liberated"}
         </p>
@@ -101,6 +105,21 @@
     }
   }
 
+  .icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    color: $white;
+    pointer-events: none;
+
+    :global(svg) {
+      height: calc(1.5rem * var(--zoom));
+      width: auto;
+      transition: height 200ms;
+    }
+  }
+
   .popup {
     --background-color: #{rgba(darken($white, 40%), 0.25)};
     --border-color: #{rgba($white, 0.25)};
@@ -129,12 +148,6 @@
 
     h5 {
       margin: 0 0 $margin * 0.15;
-    }
-
-    svg {
-      display: inline-block;
-      height: 0.75em;
-      width: auto;
     }
 
     p {
