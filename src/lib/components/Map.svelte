@@ -13,6 +13,7 @@
   let mapElement
   let impetusElement
   let impetus
+  let wrapperWidth = 0
   let mapWidth = 0
   let activeIndex = -1
   let showLiberated = false
@@ -65,7 +66,7 @@
   }
 </script>
 
-<div class="wrapper" class:enlarge bind:this={impetusElement}>
+<div class="wrapper" class:enlarge bind:this={impetusElement} bind:clientWidth={wrapperWidth} style:--wrapper-width="{wrapperWidth}px">
   <!-- svelte-ignore a11y-no-static-element-interactions -->
   <!-- svelte-ignore a11y-click-events-have-key-events -->
   <div
@@ -157,6 +158,8 @@
     padding: $margin * 0.5;
     height: $text-limit;
     width: $text-limit;
+    max-width: var(--wrapper-width);
+    max-height: var(--wrapper-width);
     transform: translateX(var(--x)) translateY(var(--y));
     transition: background-size 200ms, margin-left 200ms;
     touch-action: none;
