@@ -11,7 +11,7 @@
 </script>
 
 <div class="layout">
-  <aside class="sidebar" class:active={sidebarActive}>
+  <aside class="sidebar" class:active={sidebarActive} id="navigation">
     <a href="/" class="header">
       <img src="/images/helldivers-2-logo.png" alt="Helldivers 2" height="200" />
 
@@ -21,7 +21,13 @@
     <Navigation />
   </aside>
 
-  <button class="sidebar-toggle" on:click={() => sidebarActive = !sidebarActive}>
+  <button
+    on:click={() => sidebarActive = !sidebarActive}
+    class="sidebar-toggle"
+    aria-label="Toggle navigation"
+    aria-controls="navigation"
+    aria-expanded={sidebarActive}>
+
     <svg width="40px" height="40px" viewBox="0 0 24 24">
       <path d="M4 18L20 18" stroke-width="2" stroke-linecap="round"/>
       <path d="M4 12L20 12" stroke-width="2" stroke-linecap="round"/>
