@@ -29,6 +29,8 @@ export function formatCampaigns(campaigns, planetStatus, planetInfos, planetEven
       name,
       faction,
       players,
+      health,
+      maxHealth,
       percentage,
       defense,
       expireDateTime

@@ -16,26 +16,16 @@ export async function fetchHistory(planetIndex) {
   }
 }
 
-export async function saveCampaignStatusHistory(status, info) {
-  if (!status?.planetStatus?.length) return
-  if (!status?.campaigns?.length) return
-
-
-  const { planetStatus, campaigns } = status
+export async function saveCampaignStatusHistory(formattedCampaigns) {
   const now = Date.now()
 
   if ((now - lastCampaignEntry) / 1000 < 300) return // Only add a new entry every 5 minutes
 
   const requests = []
 
-  campaigns.forEach(campaign => {
-    const planet = planetStatus.find(p => p.index === campaign.planetIndex)
-
-    const { health, players, index } = planet
-    const { maxHealth } = info.planetInfos.find(p => p.index === index)
-
+  formattedCampaigns.forEach(({ planetIndex, health, maxHealth, players, }) => {
     requests.push({
-      planet_index: index,
+      planet_index: planetIndex,
       current_health: health,
       max_health: maxHealth,
       player_count: players
