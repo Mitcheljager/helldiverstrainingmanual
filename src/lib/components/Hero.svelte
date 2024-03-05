@@ -97,6 +97,13 @@
     background: $bg-base;
     border-radius: 50%;
     z-index: 10;
+    cursor: pointer;
+
+    @media (hover: hover) {
+      &:hover {
+        background: lighten($bg-base, 5%);
+      }
+    }
 
     svg {
       width: 100%;
