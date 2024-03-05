@@ -7,6 +7,8 @@
   export let name = ""
   export let faction = ""
   export let percentage = 0
+  export let health = 0
+  export let maxHealth = 0
   export let players = 0
   export let defense = false
   export let expireDateTime = 0
@@ -14,6 +16,8 @@
 
   let timeInterval
   let timeKey = 0
+
+  $: normalizedHealth = 1 - (1 / maxHealth * health) // This is used purely to shut up the compiler about missing props
 
   onMount(() => {
     timeInterval = setInterval(() => timeKey = Math.random(), 1000)
@@ -24,7 +28,7 @@
   })
 </script>
 
-<div class="item {faction.toLowerCase().replace(" ", "-")}" class:compact data-index={planetIndex}>
+<div class="item {faction.toLowerCase().replace(" ", "-")}" class:compact data-index={planetIndex} data-normalized={normalizedHealth}>
   <h3>
     <div class="title">
       {name || "Unknown Planet"}
