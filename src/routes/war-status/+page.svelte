@@ -13,7 +13,7 @@
   let compact = true
 
   $: ({ status, info } = data)
-  $: ({ globalEvents, campaigns, planetStatus, planetEvents, planetAttacks } = (status || {}))
+  $: ({ globalEvents, campaigns, planetStatus, planetEvents } = (status || {}))
   $: ({ planetInfos } = (info || {}))
   $: formattedCampaigns = formatCampaigns(campaigns, planetStatus, planetInfos, planetEvents)
 
@@ -67,7 +67,7 @@
 
 <h2>Galaxy Map</h2>
 
-<Map planets={planetInfos} status={planetStatus} campaigns={formattedCampaigns} attacks={planetAttacks} />
+<Map planets={planetInfos} status={planetStatus} campaigns={formattedCampaigns} />
 
 <h2>Global Events</h2>
 

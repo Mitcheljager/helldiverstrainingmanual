@@ -9,7 +9,6 @@
   export let planets = []
   export let campaigns = []
   export let status = []
-  export let attacks = []
 
   let mapElement
   let impetusElement
@@ -93,7 +92,7 @@
 
         {#if showSupplyLines}
           <div transition:fade={{ duration: 200 }}>
-            <SupplyLines {status} {planets} {attacks} />
+            <SupplyLines {status} {planets} />
           </div>
         {/if}
       </div>
