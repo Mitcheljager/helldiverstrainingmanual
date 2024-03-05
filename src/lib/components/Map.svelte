@@ -211,12 +211,17 @@
       border: 0;
       padding: 0;
       margin: 0;
-      width: 2rem;
-      height: 2rem;
+      width: 2.5rem;
+      height: 2.5rem;
       color: $white;
       font-family: $font-family-alt;
       font-size: 2rem;
       cursor: pointer;
+
+      @include breakpoint(sm) {
+        width: 2rem;
+        height: 2rem;
+      }
 
       &:hover {
         background: $white;
