@@ -1,10 +1,11 @@
 <script>
   import { browser } from "$app/environment"
 	import { onDestroy } from "svelte"
+	import { fade } from "svelte/transition"
 	import Switch from "$lib/components/Switch.svelte"
 	import Planet from "$lib/components/Planet.svelte"
 	import SupplyLines from "$lib/components/SupplyLines.svelte"
-	import { fade } from "svelte/transition";
+	import PlanetSearch from "$lib/components/PlanetSearch.svelte"
 
   export let planets = []
   export let campaigns = []
@@ -23,6 +24,7 @@
   let zoom = 1
   let elementPositionX = 0
 	let elementPositionY = 0
+  let foundPlanetIndexes = []
 
   $: totalPlayerCount = campaigns.reduce((total, c) => total + c.players, 0)
   $: if (browser && mapElement !== null) bindImpetus()
@@ -81,9 +83,10 @@
     {#if browser}
       <div class="planets">
         {#each planets as planet}
-          {#if getCampaign(planet.index) || getStatus(planet.index)?.owner !== 1 || showLiberated}
+          {#if getCampaign(planet.index) || getStatus(planet.index)?.owner !== 1 || showLiberated || foundPlanetIndexes.includes(planet.index)}
             <Planet
               {planet}
+              highlight={foundPlanetIndexes.includes(planet.index)}
               campaign={getCampaign(planet.index)}
               status={getStatus(planet.index)}
               active={activeIndex === planet.index}
@@ -103,6 +106,10 @@
 
     <img class="sectors" src="/images/map/sectors.svg" alt="" draggable="false" />
     <img class="earth" src="/images/map/super-earth.png" alt="" draggable="false" />
+  </div>
+
+  <div class="search">
+    <PlanetSearch bind:foundPlanetIndexes />
   </div>
 
   <div class="zoom">
@@ -263,7 +270,7 @@
     display: flex;
     flex-direction: column;
     position: absolute;
-    gap: $margin * 0.25;
+    gap: calc($margin * 0.25 - 5px);
     bottom: $margin * 0.25;
     right: $margin * 0.25;
 
@@ -295,6 +302,12 @@
         }
       }
     }
+  }
+
+  .search {
+    position: absolute;
+    bottom: $margin * 0.25;
+    left: $margin * 0.25;
   }
 
   .desktop-only {

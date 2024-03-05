@@ -8,6 +8,7 @@
   export let status = {}
   export let campaign = null
   export let active = false
+  export let highlight = false
 
   $: ({ index, position } = planet)
   $: ({ name, percentage, faction, defense, players } = campaign || {})
@@ -19,6 +20,7 @@
   data-index={index}
   class="planet {(faction || factions[status.owner])?.toLowerCase().replace(" ", "-")}"
   class:active
+  class:highlight
   class:controlled={!campaign}
   style:--x={position.x}
   style:--y={position.y}
@@ -64,7 +66,7 @@
     border: 0;
     border-radius: 50%;
     background: var(--color) linear-gradient(to right, $super-earth var(--percentage), 0, var(--color) calc(100% - var(--percentage)));
-    transition: width 100ms, height 100ms, top 200ms, left 200ms;
+    transition: width 100ms, height 100ms, top 200ms, left 200ms, outline-offset 200ms;
     font-size: 0;
     cursor: pointer;
 
@@ -85,6 +87,11 @@
       @include breakpoint(md) {
         --size: calc(var(--map-width) * 0.02);
       }
+    }
+
+    &.highlight {
+      outline: 2px solid $white;
+      outline-offset: 2px;
     }
 
     @each $label, $color in $faction-colors {
