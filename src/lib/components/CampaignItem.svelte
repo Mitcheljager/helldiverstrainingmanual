@@ -2,6 +2,7 @@
 	import { timeFromNow } from "$lib/utils/datetime"
 	import { onDestroy, onMount } from "svelte"
 	import AnalyticsPopup from "$lib/components/AnalyticsPopup.svelte"
+	import IconDefense from "$lib/components/icons/IconDefense.svelte"
 
   export let planetIndex = ""
   export let name = ""
@@ -34,10 +35,6 @@
       {name || "Unknown Planet"}
     </div>
 
-    {#if defense}
-      <svg height="18" width="18" viewBox="0 -960 960 960"><path fill="currentColor" d="M480-80q-139-35-229.5-159.5T160-516v-244l320-120 320 120v244q0 152-90.5 276.5T480-80Zm0-84q104-33 172-132t68-220v-189l-240-90-240 90v189q0 121 68 220t172 132Zm0-316Z"/></svg>
-    {/if}
-
     <AnalyticsPopup index={planetIndex} />
 
     <small>{faction}</small>
@@ -46,6 +43,12 @@
   <div class="content">
     <div class="bar">
       <div class="progress" style:width="{percentage}%" />
+
+      {#if defense}
+        <div class="icon">
+          <IconDefense />
+        </div>
+      {/if}
     </div>
 
     <div class="info">
@@ -126,16 +129,6 @@
         display: none;
       }
     }
-
-    svg {
-      display: inline-block;
-      height: 1em;
-      width: auto;
-
-      .compact & {
-        margin: 0;
-      }
-    }
   }
 
   .content {
@@ -152,13 +145,22 @@
   }
 
   .bar {
+    position: relative;
     height: 2rem;
     background: var(--border-color);
     transition: height 200ms;
+    color: $white;
 
     .compact & {
       height: 1rem;
     }
+  }
+
+  .icon {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
   }
 
   @keyframes progress {
