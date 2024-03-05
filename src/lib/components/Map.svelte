@@ -223,9 +223,11 @@
         height: 2rem;
       }
 
-      &:hover {
-        background: $white;
-        color: $super-earth;
+      @media (hover: hover) {
+        &:hover {
+          background: $white;
+          color: $super-earth;
+        }
       }
     }
   }
