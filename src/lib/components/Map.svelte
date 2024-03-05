@@ -92,7 +92,9 @@
         {/each}
 
         {#if showSupplyLines}
-          <SupplyLines {status} {planets} />
+          <div transition:fade={{ duration: 200 }}>
+            <SupplyLines {status} {planets} />
+          </div>
         {/if}
       </div>
     {/if}
