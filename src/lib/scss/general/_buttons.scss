@@ -26,6 +26,10 @@
     }
   }
 
+  &:active {
+    color: $primary;
+  }
+
   &::before {
     content: "";
     position: absolute;
