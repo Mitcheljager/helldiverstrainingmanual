@@ -142,6 +142,11 @@
         max-height: 100vh;
       }
     }
+
+    :global(svg *:focus) {
+      outline: none;
+      box-shadow: none;
+    }
   }
 
   .labels {
