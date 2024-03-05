@@ -23,6 +23,7 @@
 <style lang="scss">
   polyline {
     stroke: $white;
+    stroke-width: max(1px, calc(1px * (2.5 - var(--zoom))));
     marker-mid: url(#arrow-base);
 
     @each $label, $color in $faction-colors {
