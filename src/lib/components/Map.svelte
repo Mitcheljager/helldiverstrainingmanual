@@ -12,10 +12,12 @@
   let activeIndex = -1
   let showLiberated = false
   let loaded = false
-  let mouseX = 0
-  let mouseY = 0
+  let zoom = 1
+  let elementPositionX = 0
+	let elementPositionY = 0
 
   $: totalPlayerCount = campaigns.reduce((total, c) => total + c.players, 0)
+  $: if (browser && mapElement !== null) bindImpetus()
 
   function getCampaign(index) {
     return campaigns.find(c => c.planetIndex === index)
@@ -24,19 +26,30 @@
   function getStatus(index) {
     return status.find(s => s.index === index)
   }
-
-  function moveParallax(event) {
-    const containerRect = mapElement.getBoundingClientRect()
-    const containerCenterX = containerRect.left + mapElement.offsetWidth / 2
-    const containerCenterY = containerRect.top + mapElement.offsetHeight / 2
-
-    mouseX = event.clientX - containerCenterX
-    mouseY = event.clientY - containerCenterY
-  }
-
   function closePopup(event) {
     if (event.target.nodeName === "BUTTON") return
     activeIndex = -1
+  }
+
+  function setZoom(increase) {
+    zoom = Math.max(1, Math.min(2, zoom + increase))
+  }
+
+  async function bindImpetus() {
+    const Impetus = (await import("impetus")).default
+
+    const bounds = mapWidth * 0.85
+
+    new Impetus({
+      source: mapElement,
+      friction: 0.96,
+      boundX: [-bounds, bounds],
+      boundY: [-bounds, bounds],
+			update (x, y) {
+				elementPositionX = x
+				elementPositionY = y
+			}
+		})
   }
 </script>
 
@@ -45,34 +58,42 @@
 <div
   class="map"
   style:--map-width="{mapWidth}px"
-  style:--mouse-x="{mouseX}px"
-  style:--mouse-y="{mouseY}px"
+  style:--zoom={zoom}
+  style:--x="{elementPositionX}px"
+  style:--y="{elementPositionY}px"
   bind:this={mapElement}
-  on:click={closePopup}
-  on:mousemove={moveParallax}>
-  {#if browser}
-    <div class="planets">
-      {#each planets as planet}
-        {#if getCampaign(planet.index) || getStatus(planet.index)?.owner !== 1 || showLiberated}
-          <Planet
-            {planet}
-            campaign={getCampaign(planet.index)}
-            status={getStatus(planet.index)}
-            active={activeIndex === planet.index}
-            on:click={() => activeIndex = activeIndex === planet.index ? -1 : planet.index} />
-        {/if}
-      {/each}
-    </div>
-  {/if}
+  on:click={closePopup}>
 
-  <div class="scaler" bind:clientWidth={mapWidth} />
+  <div class="impetus">
+    {#if browser}
+      <div class="planets">
+        {#each planets as planet}
+          {#if getCampaign(planet.index) || getStatus(planet.index)?.owner !== 1 || showLiberated}
+            <Planet
+              {planet}
+              campaign={getCampaign(planet.index)}
+              status={getStatus(planet.index)}
+              active={activeIndex === planet.index}
+              on:click={() => activeIndex = activeIndex === planet.index ? -1 : planet.index} />
+          {/if}
+        {/each}
+      </div>
+    {/if}
 
-  <img class="sectors" src="/images/map/sectors.svg" alt="" />
-  <img class="earth" src="/images/map/super-earth.png" alt="" />
+    <div class="scaler" bind:clientWidth={mapWidth} />
+
+    <img class="sectors" src="/images/map/sectors.svg" alt="" draggable="false" />
+    <img class="earth" src="/images/map/super-earth.png" alt="" draggable="false" />
+  </div>
 
   {#if browser}
     <img class="blur" class:loaded src="/images/map/stars.jpg" alt="" on:load={() => loaded = true}>
   {/if}
+
+  <div class="zoom">
+    <button on:click={() => setZoom(0.5)}>+</button>
+    <button on:click={() => setZoom(-0.5)}>-</button>
+  </div>
 </div>
 
 <div class="tray">
@@ -93,20 +114,29 @@
     border: 5px solid $super-earth;
     border-bottom: 0;
     background: darken($bg-dark, 10%) url("/images/map/stars.jpg") no-repeat;
-    background-position: calc(50% - var(--mouse-x, 0px) * -0.01) calc(50% - var(--mouse-y, 0px) * -0.01);
-    background-size: auto 110%;
+    background-position: calc(50% - var(--x, 0px) * -0.015 * var(--zoom)) calc(50% - var(--y, 0px) * -0.015 * var(--zoom));
+    background-size: auto calc(110% * (1 + var(--zoom) * 0.1));
     aspect-ratio: 1/1;
+    overflow: hidden;
+    transition: background-size 200ms;
+    touch-action: none;
 
     img {
       display: block;
     }
   }
 
+  .impetus {
+    transform: translateX(var(--x)) translateY(var(--y));
+  }
+
   .sectors {
     display: block;
     width: 100%;
     height: auto;
-    mix-blend-mode: soft-light;
+    opacity: 0.65;
+    transform: scale(var(--zoom));
+    transition: transform 200ms;
   }
 
   .earth {
@@ -161,6 +191,37 @@
 
     &.loaded {
       opacity: 0.5;
+    }
+  }
+
+  .zoom {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    gap: $margin * 0.25;
+    bottom: $margin * 0.25;
+    right: $margin * 0.25;
+
+    button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      appearance: none;
+      background: $super-earth;
+      border: 0;
+      padding: 0;
+      margin: 0;
+      width: 2rem;
+      height: 2rem;
+      color: $white;
+      font-family: $font-family-alt;
+      font-size: 2rem;
+      cursor: pointer;
+
+      &:hover {
+        background: $white;
+        color: $super-earth;
+      }
     }
   }
 </style>

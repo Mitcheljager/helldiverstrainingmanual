@@ -55,16 +55,16 @@
     --size: calc(var(--map-width) * 0.035);
     appearance: none;
     position: absolute;
-    left: calc(50% + (var(--map-width) / 2) * var(--x));
-    top: calc(50% + (var(--map-width) / 2) * var(--y) * -1);
+    left: calc(50% + (var(--map-width) / 2) * var(--x) * var(--zoom));
+    top: calc(50% + (var(--map-width) / 2) * var(--y) * var(--zoom) * -1);
     transform: translateX(-50%) translateY(-50%);
-    width: var(--size);
-    height: var(--size);
+    width: calc(var(--size) * var(--zoom));
+    height: calc(var(--size) * var(--zoom));
     padding: 0;
     border: 0;
     border-radius: 50%;
     background: var(--color) linear-gradient(to right, $super-earth var(--percentage), 0, var(--color) calc(100% - var(--percentage)));
-    transition: width 100ms, height 100ms;
+    transition: width 100ms, height 100ms, top 200ms, left 200ms;
     font-size: 0;
     cursor: pointer;
 
@@ -80,7 +80,7 @@
     }
 
     &.controlled {
-      --size: calc(var(--map-width) * 0.015);
+      --size: calc(var(--map-width) * 0.02);
     }
 
     @each $label, $color in $faction-colors {
