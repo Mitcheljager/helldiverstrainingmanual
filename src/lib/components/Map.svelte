@@ -25,6 +25,7 @@
   let zoom = 1
   let elementPositionX = 0
 	let elementPositionY = 0
+  let dragStartPosition = {}
   let foundPlanetIndexes = []
 
   $: totalPlayerCount = campaigns.reduce((total, c) => total + c.players, 0)
@@ -42,8 +43,22 @@
     return status.find(s => s.index === index)
   }
 
+  function startDrag({ pageX, pageY }) {
+    if (!pageX || !pageY) return
+
+    dragStartPosition = { x: pageX, y: pageY }
+  }
+
   function closePopup(event) {
-    if (event.target.nodeName === "BUTTON") return
+    if (event.pageX || event.pageY) {
+      const dragDelta = 5
+      const dragDifferenceX = Math.abs(event.pageX - dragStartPosition.x)
+      const dragDifferenceY = Math.abs(event.pageY - dragStartPosition.y)
+
+      if (dragDifferenceX > dragDelta || dragDifferenceY > dragDelta) return
+    }
+
+    if (event.target.nodeName === "BUTTON" || event.target.closest("button")) return
     activeIndex = -1
   }
 
@@ -89,7 +104,8 @@
     bind:this={impetusElement}
     bind:clientWidth={mapWidth}
     bind:clientHeight={mapHeight}
-    on:click={closePopup}>
+    on:mousedown={startDrag}
+    on:mouseup={closePopup}>
 
     <div class="inner" bind:this={innerElement}>
       {#if browser}

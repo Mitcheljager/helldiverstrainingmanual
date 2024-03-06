@@ -1,18 +1,34 @@
 export function outside(node) {
-  function click(event) {
+  let dragStartPosition = {}
+
+  function down(event) {
     if (node.contains(event.target)) return
+    if (!event.pageX || !event.pageY) return
+
+    dragStartPosition = { x: event.pageX, y: event.pageY }
+  }
+
+  function up(event) {
+    if (node.contains(event.target)) return
+
+    if (event.pageX || event.pageY) {
+      const dragDelta = 5
+      const dragDifferenceX = Math.abs(event.pageX - dragStartPosition.x)
+      const dragDifferenceY = Math.abs(event.pageY - dragStartPosition.y)
+
+      if (dragDifferenceX > dragDelta || dragDifferenceY > dragDelta) return
+    }
 
     node.dispatchEvent(new CustomEvent("close"))
   }
 
-  window.addEventListener("click", click, {
-    passive: true,
-    capture: true // needed so the event fires before other event handlers prevent it from doing so
-  })
+  window.addEventListener("mouseup", up, { passive: true })
+  window.addEventListener("mousedown", down, { passive: true })
 
   return {
     destroy() {
-      window.removeEventListener("click", click)
+      window.removeEventListener("mousedown", down)
+      window.removeEventListener("mouseup", up)
     }
   }
 }
