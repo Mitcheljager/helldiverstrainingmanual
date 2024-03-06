@@ -15,6 +15,7 @@
   let impetusElement
   let impetus
   let mapWidth = 0
+  let mapHeight = 0
   let innerWidth = 0
   let activeIndex = -1
   let showLiberated = false
@@ -73,6 +74,7 @@
 <div
   class="wrapper"
   class:enlarge
+  style:--map-height="{mapHeight}px"
   style:--map-width="{mapWidth}px"
   style:--inner-map-width="{innerWidth}px"
   style:--zoom={zoom}
@@ -86,6 +88,7 @@
     class:loading={!browser}
     bind:this={impetusElement}
     bind:clientWidth={mapWidth}
+    bind:clientHeight={mapHeight}
     on:click={closePopup}>
 
     <div class="inner" bind:this={innerElement}>
@@ -214,7 +217,7 @@
     position: absolute;
     left: 50%;
     top: 50%;
-    width: calc(var(--map-width) * 0.1);
+    width: calc(var(--map-height) * 0.1);
     transform: translateX(-50%) translateY(-50%);
     filter: drop-shadow(0 0 0.5rem $black) drop-shadow(0 0 2rem $black) drop-shadow(0 0 5rem $super-earth);
   }
