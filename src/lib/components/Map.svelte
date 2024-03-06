@@ -141,16 +141,16 @@
   </div>
 
   <div class="switches">
-    <Switch bind:active={showSupplyLines}>
+    <Switch remember key="map-supply-lines" bind:active={showSupplyLines}>
       Show supply lines
     </Switch>
 
-    <Switch bind:active={showLiberated}>
+    <Switch remember key="map-liberated-planets" bind:active={showLiberated}>
       Show liberated planets
     </Switch>
 
     <div class="desktop-only">
-      <Switch bind:active={enlarge}>
+      <Switch remember key="map-enlarge" bind:active={enlarge}>
         Enlarge
       </Switch>
     </div>
@@ -196,7 +196,9 @@
     touch-action: none;
 
     .enlarge & {
-      margin-left: calc((100% - var(--inner-map-width)) / 2);
+      @include breakpoint(1500px) {
+        margin-left: calc((100% - var(--inner-map-width)) / 2);
+      }
     }
 
     img {

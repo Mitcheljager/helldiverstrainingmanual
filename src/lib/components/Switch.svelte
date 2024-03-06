@@ -1,8 +1,32 @@
 <script>
+	import { browser } from "$app/environment"
+	import { onMount } from "svelte"
+
   export let active = false
+  export let remember = false
+  export let key = ""
+
+  onMount(() => {
+    if (browser && remember) getStateFromLocalStorage()
+  })
+
+  function getStateFromLocalStorage() {
+    console.log("get")
+    active = window.localStorage.getItem(key) === "true"
+  }
+
+  function setStateToLocalStorage() {
+    window.localStorage.setItem(key, active.toString())
+  }
+
+  function toggle() {
+    active = !active
+
+    setStateToLocalStorage()
+  }
 </script>
 
-<button class:active on:click={() => active = !active}>
+<button class:active on:click={toggle}>
   <div class="label"><slot /></div>
   <div class="switch">
     <div class="knob" />
