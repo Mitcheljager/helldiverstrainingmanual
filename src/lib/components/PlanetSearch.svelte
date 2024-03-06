@@ -24,8 +24,8 @@
     background: rgba($black, 0.5);
     border: 2px solid $super-earth;
     padding: $margin * 0.15;
-    font-family: $font-family-alt;
-    font-size: 1rem;
+    font-family: $font-family;
+    font-size: 0.85rem;
     color: $white;
 
     &::placeholder {
@@ -37,6 +37,10 @@
       outline: 0;
       box-shadow: none;
       border-color: $white;
+
+      &::placeholder {
+        color: $white;
+      }
     }
   }
 </style>
