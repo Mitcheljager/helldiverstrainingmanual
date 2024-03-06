@@ -1,6 +1,6 @@
 <script>
   import { browser } from "$app/environment"
-	import { onDestroy } from "svelte"
+	import { createEventDispatcher, onDestroy } from "svelte"
 	import { fade } from "svelte/transition"
 	import Switch from "$lib/components/Switch.svelte"
 	import Planet from "$lib/components/Planet.svelte"
@@ -10,12 +10,16 @@
   export let planets = []
   export let campaigns = []
   export let status = []
+  export let fullscreen = false
+
+  const dispatch = createEventDispatcher()
 
   let innerElement
   let impetusElement
   let impetus
   let mapWidth = 0
   let mapHeight = 0
+  let footerHeight = 0
   let innerWidth = 0
   let activeIndex = -1
   let showLiberated = false
@@ -89,9 +93,11 @@
 <div
   class="wrapper"
   class:enlarge
+  class:fullscreen
   style:--map-height="{mapHeight}px"
   style:--map-width="{mapWidth}px"
   style:--inner-map-width="{innerWidth}px"
+  style:--footer-height="{footerHeight}px"
   style:--zoom={zoom}
   style:--x="{elementPositionX}px"
   style:--y="{elementPositionY}px">
@@ -141,6 +147,7 @@
     </div>
 
     <div class="zoom">
+      <button on:click={() => dispatch("fullscreen")}>⛶</button>
       <button on:click={() => setZoom(0.5)}>+</button>
       <button on:click={() => setZoom(-0.5)}>-</button>
     </div>
@@ -151,7 +158,7 @@
   {/if}
 </div>
 
-<div class="footer" class:enlarge>
+<div class="footer" class:enlarge class:fullscreen bind:clientHeight={footerHeight}>
   <div class="tray">
     <strong>{totalPlayerCount.toLocaleString()}</strong> Helldivers are currently fighting for Democracy. <em>Join them!</em>
   </div>
@@ -165,11 +172,13 @@
       Show liberated planets
     </Switch>
 
-    <div class="desktop-only">
-      <Switch remember key="map-enlarge" bind:active={enlarge}>
-        Enlarge
-      </Switch>
-    </div>
+    {#if !fullscreen}
+      <div class="desktop-only">
+        <Switch remember key="map-enlarge" bind:active={enlarge}>
+          Enlarge
+        </Switch>
+      </div>
+    {/if}
   </div>
 </div>
 
@@ -185,10 +194,19 @@
         margin: 0 $margin * -0.5;
       }
     }
+
+    &.fullscreen {
+      height: calc(100% - var(--footer-height));
+      width: 100%;
+      max-width: 100vw;
+    }
   }
 
   .map {
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     box-shadow: inset 0 0 0 5px $super-earth;
     border-bottom: 0;
     background: darken($bg-dark, 10%) url("/images/map/stars.jpg") no-repeat;
@@ -198,6 +216,11 @@
 
     &.loading {
       aspect-ratio: 1/1;
+    }
+
+    .fullscreen & {
+      height: 100%;
+      background: transparent;
     }
   }
 
@@ -210,12 +233,6 @@
     transform: translateX(var(--x)) translateY(var(--y));
     transition: background-size 200ms, margin-left 200ms;
     touch-action: none;
-
-    .enlarge & {
-      @include breakpoint(1500px) {
-        margin-left: calc((100% - var(--inner-map-width)) / 2);
-      }
-    }
 
     img {
       display: block;
@@ -235,7 +252,7 @@
     position: absolute;
     left: 50%;
     top: 50%;
-    width: calc(var(--map-height) * 0.1);
+    width: min(calc(var(--map-height) * 0.1), 5rem);
     transform: translateX(-50%) translateY(-50%);
     filter: drop-shadow(0 0 0.5rem $black) drop-shadow(0 0 2rem $black) drop-shadow(0 0 5rem $super-earth);
   }
@@ -263,6 +280,11 @@
         margin: 0 $margin * -0.5;
       }
     }
+
+    &.fullscreen {
+      max-width: 100%;
+      padding-bottom: $margin * 0.25;
+    }
   }
 
   .tray {
@@ -281,6 +303,10 @@
     flex-wrap: wrap;
     gap: $margin * 0.25 $margin * 0.5;
     margin-top: $margin * 0.25;
+
+    .fullscreen & {
+      padding: 0 $margin * 0.25;
+    }
   }
 
   .blur {

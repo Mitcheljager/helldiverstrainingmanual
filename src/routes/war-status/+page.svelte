@@ -1,17 +1,18 @@
 <script>
 	import { invalidateAll } from "$app/navigation"
-	import Campaign from "$lib/components/Campaign.svelte";
-	import CampaignItem from "$lib/components/CampaignItem.svelte"
+	import { formatCampaigns } from "$lib/utils/campaign.js"
+	import { onDestroy, onMount } from "svelte"
 	import Hero from "$lib/components/Hero.svelte"
 	import Map from "$lib/components/Map.svelte"
 	import Switch from "$lib/components/Switch.svelte"
-	import { formatCampaigns } from "$lib/utils/campaign.js"
-	import { onDestroy, onMount } from "svelte"
+	import Campaign from "$lib/components/Campaign.svelte"
+	import FullscreenMap from "$lib/components/FullscreenMap.svelte"
 
   export let data
 
   let dataInterval
   let compact = true
+  let fullscreen = false
 
   $: ({ status, info } = data)
   $: ({ globalEvents, campaigns, planetStatus, planetEvents } = (status || {}))
@@ -64,7 +65,7 @@
 
 <h2>Galactic Map</h2>
 
-<Map planets={planetInfos} status={planetStatus} campaigns={formattedCampaigns} />
+<Map planets={planetInfos} status={planetStatus} campaigns={formattedCampaigns} on:fullscreen={() => fullscreen = !fullscreen} />
 
 <h2>Recent Events</h2>
 
@@ -85,6 +86,10 @@
   </div>
 {:else}
   <em>Failed to retrieve global events</em>
+{/if}
+
+{#if fullscreen}
+  <FullscreenMap {planetInfos} {planetStatus} {formattedCampaigns} on:fullscreen={() => fullscreen = !fullscreen} />
 {/if}
 
 <style lang="scss">

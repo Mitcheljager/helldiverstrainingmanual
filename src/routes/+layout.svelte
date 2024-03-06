@@ -1,5 +1,5 @@
 <script>
-	import { afterNavigate } from "$app/navigation";
+	import { afterNavigate } from "$app/navigation"
   import Navigation from "$lib/components/Navigation.svelte"
 
   import "$lib/scss/app.scss"
