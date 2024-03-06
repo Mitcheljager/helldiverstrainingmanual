@@ -1,5 +1,6 @@
 <script>
 	import { invalidateAll } from "$app/navigation"
+	import Campaign from "$lib/components/Campaign.svelte";
 	import CampaignItem from "$lib/components/CampaignItem.svelte"
 	import Hero from "$lib/components/Hero.svelte"
 	import Map from "$lib/components/Map.svelte"
@@ -55,11 +56,7 @@
   </Switch>
 </h2>
 
-<div class="items" class:compact>
-  {#each formattedCampaigns as campaign}
-    <CampaignItem {compact} {...campaign} />
-  {/each}
-</div>
+<Campaign {formattedCampaigns} />
 
 {#if Object.keys(status)?.length === 0}
   <em>No data was found</em>
@@ -99,16 +96,6 @@
     gap: $margin * 0.25;
     width: 100%;
     margin: $margin 0 $margin * 0.25;
-  }
-
-  .items {
-    display: flex;
-    flex-direction: column;
-    gap: $margin * 0.5;
-
-    &.compact {
-      display: block;
-    }
   }
 
   .item {
