@@ -58,11 +58,11 @@
 <style lang="scss">
   .planet {
     --color: #{$super-earth};
-    --size: calc(var(--map-width) * 0.035);
+    --size: calc(var(--inner-map-width) * 0.035);
     appearance: none;
     position: absolute;
-    left: calc(50% + (var(--map-width) / 2) * var(--x) * var(--zoom));
-    top: calc(50% + (var(--map-width) / 2) * var(--y) * var(--zoom) * -1);
+    left: calc(50% + (var(--inner-map-width) / 2) * var(--x) * var(--zoom));
+    top: calc(50% + (var(--inner-map-width) / 2) * var(--y) * var(--zoom) * -1);
     transform: translateX(-50%) translateY(-50%);
     width: calc(var(--size) * var(--zoom));
     height: calc(var(--size) * var(--zoom));
@@ -76,20 +76,20 @@
 
     &:hover,
     &.active {
-      --size: calc(var(--map-width) * 0.045);
+      --size: calc(var(--inner-map-width) * 0.045);
       box-shadow: 0 0 1rem rgba($black, 0.75);
       z-index: 3;
     }
 
     &.active {
-      --size: calc(var(--map-width) * 0.05);
+      --size: calc(var(--inner-map-width) * 0.05);
     }
 
     &.controlled {
-      --size: calc(var(--map-width) * 0.025);
+      --size: calc(var(--inner-map-width) * 0.025);
 
       @include breakpoint(md) {
-        --size: calc(var(--map-width) * 0.02);
+        --size: calc(var(--inner-map-width) * 0.02);
       }
     }
 

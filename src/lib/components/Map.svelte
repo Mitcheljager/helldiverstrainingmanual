@@ -11,11 +11,11 @@
   export let campaigns = []
   export let status = []
 
-  let mapElement
+  let innerElement
   let impetusElement
   let impetus
-  let wrapperWidth = 0
   let mapWidth = 0
+  let innerWidth = 0
   let activeIndex = -1
   let showLiberated = false
   let showSupplyLines = false
@@ -27,7 +27,7 @@
   let foundPlanetIndexes = []
 
   $: totalPlayerCount = campaigns.reduce((total, c) => total + c.players, 0)
-  $: if (browser && mapElement !== null && mapWidth) bindImpetus()
+  $: if (browser && innerElement !== null && innerWidth) bindImpetus()
 
   onDestroy(() => {
     if (impetus) impetus.destroy()
@@ -51,9 +51,11 @@
   }
 
   async function bindImpetus() {
+    if (impetus) return
+
     const Impetus = (await import("impetus")).default
 
-    const bounds = mapWidth * 1.35
+    const bounds = innerWidth * 1.35
 
     impetus = new Impetus({
       source: impetusElement,
@@ -68,53 +70,61 @@
   }
 </script>
 
-<div class="wrapper" class:enlarge class:loading={!browser} bind:this={impetusElement} bind:clientWidth={wrapperWidth} style:--wrapper-width="{wrapperWidth}px">
+<div
+  class="wrapper"
+  class:enlarge
+  style:--map-width="{mapWidth}px"
+  style:--inner-map-width="{innerWidth}px"
+  style:--zoom={zoom}
+  style:--x="{elementPositionX}px"
+  style:--y="{elementPositionY}px">
+
   <!-- svelte-ignore a11y-no-static-element-interactions -->
   <!-- svelte-ignore a11y-click-events-have-key-events -->
   <div
     class="map"
-    style:--map-width="{mapWidth}px"
-    style:--zoom={zoom}
-    style:--x="{elementPositionX}px"
-    style:--y="{elementPositionY}px"
-    bind:this={mapElement}
+    class:loading={!browser}
+    bind:this={impetusElement}
+    bind:clientWidth={mapWidth}
     on:click={closePopup}>
 
-    {#if browser}
-      <div class="planets">
-        {#each planets as planet}
-          {#if getCampaign(planet.index) || getStatus(planet.index)?.owner !== 1 || showLiberated || foundPlanetIndexes.includes(planet.index)}
-            <Planet
-              {planet}
-              highlight={foundPlanetIndexes.includes(planet.index)}
-              campaign={getCampaign(planet.index)}
-              status={getStatus(planet.index)}
-              active={activeIndex === planet.index}
-              on:click={() => activeIndex = activeIndex === planet.index ? -1 : planet.index} />
+    <div class="inner" bind:this={innerElement}>
+      {#if browser}
+        <div class="planets">
+          {#each planets as planet}
+            {#if getCampaign(planet.index) || getStatus(planet.index)?.owner !== 1 || showLiberated || foundPlanetIndexes.includes(planet.index)}
+              <Planet
+                {planet}
+                highlight={foundPlanetIndexes.includes(planet.index)}
+                campaign={getCampaign(planet.index)}
+                status={getStatus(planet.index)}
+                active={activeIndex === planet.index}
+                on:click={() => activeIndex = activeIndex === planet.index ? -1 : planet.index} />
+            {/if}
+          {/each}
+
+          {#if showSupplyLines}
+            <div class="supply-lines" transition:fade={{ duration: 200 }}>
+              <SupplyLines {status} {planets} />
+            </div>
           {/if}
-        {/each}
+        </div>
+      {/if}
 
-        {#if showSupplyLines}
-          <div class="supply-lines" transition:fade={{ duration: 200 }}>
-            <SupplyLines {status} {planets} />
-          </div>
-        {/if}
-      </div>
-    {/if}
+      <div class="scaler" bind:clientWidth={innerWidth} />
 
-    <div class="scaler" bind:clientWidth={mapWidth} />
+      <img class="sectors" src="/images/map/sectors.svg" alt="" draggable="false" />
+      <img class="earth" src="/images/map/super-earth.png" alt="" draggable="false" />
+    </div>
 
-    <img class="sectors" src="/images/map/sectors.svg" alt="" draggable="false" />
-    <img class="earth" src="/images/map/super-earth.png" alt="" draggable="false" />
-  </div>
+    <div class="search">
+      <PlanetSearch bind:foundPlanetIndexes />
+    </div>
 
-  <div class="search">
-    <PlanetSearch bind:foundPlanetIndexes />
-  </div>
-
-  <div class="zoom">
-    <button on:click={() => setZoom(0.5)}>+</button>
-    <button on:click={() => setZoom(-0.5)}>-</button>
+    <div class="zoom">
+      <button on:click={() => setZoom(0.5)}>+</button>
+      <button on:click={() => setZoom(-0.5)}>-</button>
+    </div>
   </div>
 
   {#if browser}
@@ -148,17 +158,7 @@
   .wrapper {
     position: relative;
     max-width: $text-limit;
-    box-shadow: inset 0 0 0 5px $super-earth;
-    border-bottom: 0;
-    background: darken($bg-dark, 10%) url("/images/map/stars.jpg") no-repeat;
-    background-position: calc(50% - var(--x, 0px) * -0.015 * var(--zoom)) calc(50% - var(--y, 0px) * -0.015 * var(--zoom));
-    background-size: auto calc(110% * (1 + var(--zoom) * 0.1));
     transition: max-width 200ms, margin 200ms;
-    overflow: hidden;
-
-    &.loading {
-      aspect-ratio: 1/1;
-    }
 
     &.enlarge {
       @include breakpoint(1500px) {
@@ -169,17 +169,31 @@
   }
 
   .map {
+    position: relative;
+    box-shadow: inset 0 0 0 5px $super-earth;
+    border-bottom: 0;
+    background: darken($bg-dark, 10%) url("/images/map/stars.jpg") no-repeat;
+    background-position: calc(50% - var(--x, 0px) * -0.015 * var(--zoom)) calc(50% - var(--y, 0px) * -0.015 * var(--zoom));
+    background-size: auto calc(110% * (1 + var(--zoom) * 0.1));
+    overflow: hidden;
+
+    &.loading {
+      aspect-ratio: 1/1;
+    }
+  }
+
+  .inner {
     padding: $margin * 0.5;
     height: $text-limit;
     width: $text-limit;
-    max-width: var(--wrapper-width);
-    max-height: var(--wrapper-width);
+    max-width: var(--map-width);
+    max-height: var(--map-width);
     transform: translateX(var(--x)) translateY(var(--y));
     transition: background-size 200ms, margin-left 200ms;
     touch-action: none;
 
     .enlarge & {
-      margin-left: calc((100% - var(--map-width)) / 2);
+      margin-left: calc((100% - var(--inner-map-width)) / 2);
     }
 
     img {
@@ -257,7 +271,7 @@
     opacity: 0;
     filter: blur(100px);
     z-index: -1;
-    transform: translateX(calc(var(--mouse-x, 0px) * 0.2)) translateY(calc(var(--mouse-y, 0px) * 0.2));
+    transform: translateX(calc(var(--x, 0px) * 0.2)) translateY(calc(var(--y, 0px) * 0.2));
     transition: opacity 1500ms;
     pointer-events: none;
 

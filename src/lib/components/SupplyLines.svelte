@@ -48,8 +48,8 @@
 <style lang="scss">
   svg {
     --color: #{$white};
-    width: calc(var(--map-width) * var(--zoom));
-    height: calc(var(--map-width) * var(--zoom));
+    width: calc(var(--inner-map-width) * var(--zoom));
+    height: calc(var(--inner-map-width) * var(--zoom));
     transition: width 200ms, height 200ms;
   }
 </style>
