@@ -152,6 +152,7 @@
     padding: $margin * 0.75 $margin * 0.75 $margin * 1.5;
     height: 100dvh;
     overflow-y: auto;
+    overflow-x: hidden;
 
     @include breakpoint(lg) {
       padding: $margin * 2;
