@@ -57,7 +57,7 @@
   </Switch>
 </h2>
 
-<Campaign {formattedCampaigns} />
+<Campaign {formattedCampaigns} {compact} />
 
 {#if Object.keys(status)?.length === 0}
   <em>No data was found</em>

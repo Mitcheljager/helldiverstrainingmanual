@@ -75,7 +75,7 @@
 
 {#if showAnalytics}
   <div transition:slide={{ duration: 200 }}>
-    <div class="analytics {faction.toLowerCase().replace(" ", "-")}">
+    <div class="analytics {faction.toLowerCase().replace(" ", "-")}" class:compact>
       <PlanetAnalytics row index={planetIndex} />
     </div>
   </div>
@@ -219,9 +219,12 @@
   .analytics {
     max-width: $text-limit;
     padding: $margin * 0.25;
-    margin-top: $margin * 0.25;
     background: lighten($bg-base, 10%);
     border: 5px solid $bg-dark;
+
+    &.compact {
+      margin-top: $margin * 0.25;
+    }
 
     @each $label, $color in $faction-colors {
       &.#{$label} {
