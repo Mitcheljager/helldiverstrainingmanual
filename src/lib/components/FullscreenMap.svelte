@@ -35,7 +35,7 @@
     </button>
 
     <div class="scroll">
-      <Campaign {formattedCampaigns} />
+      <Campaign stacked {formattedCampaigns} />
     </div>
   </div>
 </div>
@@ -73,8 +73,8 @@
     padding: $margin $margin * 0.5 $margin * 0.5;
     transform: translateX(100%);
     background: $bg-base;
-    transition: transform 200ms;
     box-shadow: inset 0 0 0 5px $super-earth;
+    transition: transform 200ms;
 
     @include breakpoint(sm) {
       padding-top: $margin * 0.25;
@@ -93,6 +93,7 @@
   .scroll {
     height: 100%;
     overflow-y: auto;
+    overflow-x: hidden;
   }
 
   .toggle {

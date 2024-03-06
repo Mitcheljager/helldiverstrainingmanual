@@ -1,5 +1,5 @@
 const WarId = 801
-const CacheTimeout = 20000
+const CacheTimeout = 10000
 
 const statusCache = { datetime: Date.now(), result: null }
 const infoCache = { datetime: Date.now(), result: null }

@@ -20,7 +20,7 @@
   $: formattedCampaigns = formatCampaigns(campaigns, planetStatus, planetInfos, planetEvents)
 
   onMount(() => {
-    dataInterval = setInterval(invalidateAll, 10000)
+    dataInterval = setInterval(invalidateAll, 5000)
   })
 
   onDestroy(() => {

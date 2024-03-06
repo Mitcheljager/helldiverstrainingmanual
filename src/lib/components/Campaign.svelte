@@ -3,11 +3,12 @@
 
   export let formattedCampaigns = []
   export let compact = true
+  export let stacked = false
 </script>
 
 <div class="items" class:compact>
   {#each formattedCampaigns as campaign}
-    <CampaignItem {compact} {...campaign} />
+    <CampaignItem {compact} {stacked} {...campaign} />
   {/each}
 </div>
 

@@ -1,7 +1,7 @@
 <script>
 	import { timeFromNow } from "$lib/utils/datetime"
-	import { onDestroy, onMount } from "svelte"
-	import { slide } from "svelte/transition"
+	import { onDestroy, onMount, afterUpdate } from "svelte"
+	import { slide, fade } from "svelte/transition"
 	import IconDefense from "$lib/components/icons/IconDefense.svelte"
 	import IconAnalytics from "$lib/components/icons/IconAnalytics.svelte"
 	import PlanetAnalytics from "$lib/components/PlanetAnalytics.svelte"
@@ -16,10 +16,13 @@
   export let defense = false
   export let expireDateTime = 0
   export let compact = true
+  export let stacked = false
 
   let timeInterval
   let timeKey = 0
   let showAnalytics = false
+  let previousPercentage = percentage
+  let rateDirection = 0 // -1, 0, 1
 
   $: normalizedHealth = 1 - (1 / maxHealth * health) // This is used purely to shut up the compiler about missing props
 
@@ -30,9 +33,16 @@
   onDestroy(() => {
     if (timeInterval) clearInterval(timeInterval)
   })
+
+  afterUpdate(() => {
+    if (percentage === 0 || percentage === 100) rateDirection = 0
+    if (previousPercentage === percentage) return
+
+    rateDirection = percentage > previousPercentage ? 1 : -1
+  })
 </script>
 
-<div class="item {faction.toLowerCase().replace(" ", "-")}" class:compact data-index={planetIndex} data-normalized={normalizedHealth}>
+<div class="item {faction.toLowerCase().replace(" ", "-")}" class:compact class:stacked data-index={planetIndex} data-normalized={normalizedHealth}>
   <h3>
     <div class="title">
       {name || "Unknown Planet"}
@@ -65,6 +75,16 @@
           {#key timeKey}
             {timeFromNow(expireDateTime)}
           {/key}
+        {/if}
+
+        {#if rateDirection}
+          <svg
+            class="rate-direction {rateDirection === 1 ? "positive" : "negative" }"
+            width="20px"
+            height="20px"
+            viewBox="0 0 24 24">
+            <path fill="currentColor" d="M4.788 17.444A.5.5 0 0 1 4 17.035V6.965a.5.5 0 0 1 .788-.409l7.133 5.036a.5.5 0 0 1 0 .816l-7.133 5.036zM13 6.965a.5.5 0 0 1 .788-.409l7.133 5.036a.5.5 0 0 1 0 .816l-7.133 5.036a.5.5 0 0 1-.788-.409V6.965z"/>
+          </svg>
         {/if}
       </span>
 
@@ -174,7 +194,7 @@
     color: $white;
 
     .compact & {
-      height: 1rem;
+      height: 1.25rem;
     }
   }
 
@@ -183,6 +203,27 @@
     left: 50%;
     top: 50%;
     transform: translateX(-50%) translateY(-50%);
+  }
+
+  .rate-direction {
+    display: inline-block;
+    top: 0;
+    height: 0.75em;
+    margin-right: 2px;
+    width: auto;
+    scale: 2;
+
+    &.positive path {
+      fill: $green;
+    }
+
+    &.negative {
+      rotate: 180deg;
+
+      path {
+        fill: $red;
+      }
+    }
   }
 
   @keyframes progress {
@@ -199,8 +240,8 @@
 
   .info {
     display: flex;
-    justify-content: space-between;
-    gap: $margin * 0.5;
+    flex-direction: column;
+    gap: $margin * 0.15;
     margin-top: $margin * 0.25;
     font-family: $font-family-alt;
     font-weight: bold;
@@ -208,12 +249,38 @@
     line-height: 1em;
     transition: font-size 200ms;
 
+    @include breakpoint(sm) {
+      justify-content: space-between;
+      flex-direction: row;
+      gap: $margin * 0.5;
+    }
+
+    .stacked & {
+      flex-direction: column;
+      gap: $margin * 0.15;
+    }
+
     .compact & {
       font-size: 0.75rem;
     }
 
+    span {
+      display: flex;
+      justify-content: space-between;
+
+      @include breakpoint(sm) {
+        display: inline;
+      }
+
+      .stacked & {
+        display: flex;
+      }
+    }
+
     span:last-child {
-      text-align: right;
+      @include breakpoint(sm) {
+        text-align: right;
+      }
     }
   }
 
