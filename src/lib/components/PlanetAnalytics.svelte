@@ -5,6 +5,7 @@
 	import { planetNames } from "$lib/data/planets"
 
   export let index
+  export let row = false
 
   function getChartProps(history, players = false) {
     const data = {}
@@ -39,52 +40,58 @@
   }
 </script>
 
-<div class="charts">
-  <h4 class="mb-0">{planetNames[index]}</h4>
+<div>
+  <h4 class="mb-1/4">{planetNames[index]}</h4>
 
   {#await fetchHistory(index)}
-    <span transition:slide|global={{ duration: 100 }}>Loading...</span>
+    <span>Loading...</span>
   {:then data}
-    {#if Object.entries(data).length !== 0}
-      {#each [{ header: "Liberation percentage", players: false }, { header: "Number of Helldivers", players: true }] as { header, players }}
-        <div class="chart" transition:slide|global={{ duration: 100 }} >
-          <h5>{header}</h5>
+    <div class="charts" class:row>
+      {#if Object.entries(data).length !== 0}
+        {#each [{ header: "Liberation percentage", players: false }, { header: "Number of Helldivers", players: true }] as { header, players }}
+          <div class="chart" transition:slide|global={{ duration: 100 }} >
+            <h5>{header}</h5>
 
-          <LinkedChart
-            width={576}
-            height={150}
-            gap={0}
-            barMinHeight={2}
-            barMinWidth={2}
-            linked="planet"
-            uid={index + header}
-            lineColor="currentColor"
-            fill="var(--chart-color)"
-            {...getChartProps(data, players)} />
+            <LinkedChart
+              width={576}
+              height={150}
+              gap={0}
+              barMinHeight={2}
+              barMinWidth={2}
+              linked="planet{index}"
+              uid={index + header}
+              lineColor="currentColor"
+              fill="var(--chart-color)"
+              {...getChartProps(data, players)} />
 
-          <div class="labels">
-            <div><LinkedValue uid={index + header} transform={(value) => value.toLocaleString() + (players ? "" : "%")} /></div>
-            <div><LinkedLabel linked="planet" /></div>
+            <div class="labels">
+              <div><LinkedValue uid={index + header} transform={(value) => value.toLocaleString() + (players ? "" : "%")} /></div>
+              <div><LinkedLabel linked="planet{index}" /></div>
+            </div>
           </div>
-        </div>
-      {/each}
-    {/if}
+        {/each}
+      {/if}
 
-    {#if Object.entries(data).length < 200}
-      <em transition:slide|global={{ duration: 100 }}>
-        {#if Object.entries(data).length === 0}
-          No activity has been recorded on this planet
-        {:else}
-          This data is still populating
-        {/if}
-      </em>
-    {/if}
+      {#if Object.entries(data).length < 200}
+        <em transition:slide|global={{ duration: 100 }}>
+          {#if Object.entries(data).length === 0}
+            No activity has been recorded on this planet
+          {:else}
+            This data is still populating
+          {/if}
+        </em>
+      {/if}
+    </div>
   {:catch}
     Something went wrong when fetching the analytics.
   {/await}
 </div>
 
 <style lang="scss">
+  h4 {
+    text-align: center;
+  }
+
   h5 {
     margin: 0 0 $margin * 0.15;
     color: darken($text-color, 20%);
@@ -96,9 +103,17 @@
     display: flex;
     flex-direction: column;
     gap: $margin * 0.25;
-    width: min(20rem, 50vw);
+    width: 100%;
+    min-width: 15rem;
     height: auto;
     text-align: center;
+
+    &.row {
+      @include breakpoint(sm) {
+        flex-direction: row;
+        width: 100%;
+      }
+    }
 
     em {
       font-family: $font-family;

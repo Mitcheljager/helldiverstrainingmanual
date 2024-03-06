@@ -3,6 +3,9 @@
 	import { onDestroy, onMount } from "svelte"
 	import AnalyticsPopup from "$lib/components/AnalyticsPopup.svelte"
 	import IconDefense from "$lib/components/icons/IconDefense.svelte"
+	import IconAnalytics from "$lib/components/icons/IconAnalytics.svelte"
+	import PlanetAnalytics from "$lib/components/PlanetAnalytics.svelte"
+	import { slide } from "svelte/transition";
 
   export let planetIndex = ""
   export let name = ""
@@ -17,6 +20,7 @@
 
   let timeInterval
   let timeKey = 0
+  let showAnalytics = false
 
   $: normalizedHealth = 1 - (1 / maxHealth * health) // This is used purely to shut up the compiler about missing props
 
@@ -35,7 +39,9 @@
       {name || "Unknown Planet"}
     </div>
 
-    <AnalyticsPopup index={planetIndex} />
+    <button on:click={() => showAnalytics = !showAnalytics}>
+      <IconAnalytics />
+    </button>
 
     <small>{faction}</small>
   </h3>
@@ -68,6 +74,14 @@
   </div>
 </div>
 
+{#if showAnalytics}
+  <div transition:slide={{ duration: 200 }}>
+    <div class="analytics {faction.toLowerCase().replace(" ", "-")}">
+      <PlanetAnalytics row index={planetIndex} />
+    </div>
+  </div>
+{/if}
+
 <style lang="scss">
   .item {
     --border-color: #{$bg-dark};
@@ -86,10 +100,18 @@
     @each $label, $color in $faction-colors {
       &.#{$label} {
         --border-color: #{$color};
-        --chart-color: #{$color};
         --background-color: #{rgba($color, 0.25)};
       }
     }
+  }
+
+  button {
+    appearance: none;
+    background: transparent;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    color: $white;
   }
 
   h3 {
@@ -192,6 +214,20 @@
 
     span:last-child {
       text-align: right;
+    }
+  }
+
+  .analytics {
+    max-width: $text-limit;
+    padding: $margin * 0.25;
+    margin-top: $margin * 0.25;
+    background: lighten($bg-base, 10%);
+    border: 5px solid $bg-dark;
+
+    @each $label, $color in $faction-colors {
+      &.#{$label} {
+        --chart-color: #{$color};
+      }
     }
   }
 </style>

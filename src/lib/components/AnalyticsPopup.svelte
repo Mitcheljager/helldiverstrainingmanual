@@ -1,15 +1,14 @@
 <script>
 	import Popup from "$lib/components/Popup.svelte"
 	import PlanetAnalytics from "$lib/components/PlanetAnalytics.svelte"
+	import IconAnalytics from "$lib/components//icons/IconAnalytics.svelte"
 
   export let index
 </script>
 
 <Popup let:toggle>
   <button on:click|stopPropagation={toggle} aria-label="Analytics">
-    <svg fill="currentColor" width="16px" height="16px" viewBox="0 0 1920 1920">
-      <path d="M746.667 106.667H1173.33V1493.33H746.667V106.667ZM533.333 533.333H106.667V1493.33H533.333V533.333ZM1920 1706.67H0V1824H1920V1706.67ZM1813.33 746.667H1386.67V1493.33H1813.33V746.667Z"/>
-    </svg>
+    <IconAnalytics />
   </button>
 
   <!-- svelte-ignore a11y-click-events-have-key-events -->
