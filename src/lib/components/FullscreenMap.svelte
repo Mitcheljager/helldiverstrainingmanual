@@ -47,7 +47,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    height: 100dvh;
+    height: 100vh;
     width: 100vw;
     z-index: 100;
     background: $bg-base;
