@@ -11,7 +11,6 @@
   })
 
   function getStateFromLocalStorage() {
-    console.log("get")
     active = window.localStorage.getItem(key) === "true"
   }
 
