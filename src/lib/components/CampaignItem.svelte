@@ -1,7 +1,7 @@
 <script>
 	import { timeFromNow } from "$lib/utils/datetime"
 	import { onDestroy, onMount, afterUpdate } from "svelte"
-	import { slide, fade } from "svelte/transition"
+	import { slide } from "svelte/transition"
 	import IconDefense from "$lib/components/icons/IconDefense.svelte"
 	import IconAnalytics from "$lib/components/icons/IconAnalytics.svelte"
 	import PlanetAnalytics from "$lib/components/PlanetAnalytics.svelte"
@@ -15,7 +15,6 @@
   export let players = 0
   export let defense = false
   export let expireDateTime = 0
-  export let compact = true
   export let stacked = false
 
   let timeInterval
@@ -42,7 +41,7 @@
   })
 </script>
 
-<div class="item {faction.toLowerCase().replace(" ", "-")}" class:compact class:stacked data-index={planetIndex} data-normalized={normalizedHealth}>
+<div class="item {faction.toLowerCase().replace(" ", "-")}" class:stacked data-index={planetIndex} data-normalized={normalizedHealth}>
   <h3>
     <div class="title">
       {name || "Unknown Planet"}
@@ -51,8 +50,6 @@
     <button on:click={() => showAnalytics = !showAnalytics}>
       <IconAnalytics />
     </button>
-
-    <small>{faction}</small>
   </h3>
 
   <div class="content">
@@ -95,7 +92,7 @@
 
 {#if showAnalytics}
   <div transition:slide={{ duration: 200 }}>
-    <div class="analytics {faction.toLowerCase().replace(" ", "-")}" class:compact>
+    <div class="analytics {faction.toLowerCase().replace(" ", "-")}">
       <PlanetAnalytics row index={planetIndex} />
     </div>
   </div>
@@ -105,16 +102,10 @@
   .item {
     --border-color: #{$bg-dark};
     --background-color: #{lighten($bg-base, 5%)};
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin-top: $margin * 0.25;
     max-width: $text-limit;
-    border: 5px solid var(--border-color);
-    transition: border 200ms;
-
-    &.compact {
-      display: grid;
-      grid-template-columns: 1fr 2fr;
-      border: 0 solid transparent;
-      margin-top: $margin * 0.25;
-    }
 
     @each $label, $color in $faction-colors {
       &.#{$label} {
@@ -139,17 +130,13 @@
     align-items: center;
     justify-content: space-between;
     gap: $margin * 0.15;
+    height: 100%;
+    padding: $margin * 0.15 $margin * 0.25;
     margin: 0;
     background: var(--background-color);
-    padding: $margin * 0.25;
     transition: font-size 200ms, padding 200ms;
+    font-size: 1.15rem;
     word-break: break-word;
-
-    .compact & {
-      height: 100%;
-      padding: $margin * 0.15 $margin * 0.25;
-      font-size: 1.15rem;
-    }
 
     .title {
       display: -webkit-box;
@@ -160,42 +147,23 @@
       line-break: anywhere;
       margin-right: auto;
     }
-
-    small {
-      opacity: 0.75;
-      color: var(--border-color);
-      font-size: 0.65em;
-      text-align: right;
-
-      .compact & {
-        display: none;
-      }
-    }
   }
 
   .content {
+    width: 100%;
     margin: 0;
-    padding: $margin * 0.25;
+    padding: 0 0 0 $margin * 0.25;
     font-size: 1rem;
     line-height: 1.45em;
     transition: padding 200ms;
-
-    .compact & {
-      width: 100%;
-      padding: 0 0 0 $margin * 0.25;
-    }
   }
 
   .bar {
     position: relative;
-    height: 2rem;
+    height: 1.25rem;
     background: var(--border-color);
     transition: height 200ms;
     color: $white;
-
-    .compact & {
-      height: 1.25rem;
-    }
   }
 
   .icon {
@@ -245,7 +213,7 @@
     margin-top: $margin * 0.25;
     font-family: $font-family-alt;
     font-weight: bold;
-    font-size: 0.85rem;
+    font-size: 0.75rem;
     line-height: 1em;
     transition: font-size 200ms;
 
@@ -258,10 +226,6 @@
     .stacked & {
       flex-direction: column;
       gap: $margin * 0.15;
-    }
-
-    .compact & {
-      font-size: 0.75rem;
     }
 
     span {
@@ -287,12 +251,9 @@
   .analytics {
     max-width: $text-limit;
     padding: $margin * 0.25;
-    background: lighten($bg-base, 10%);
+    margin-top: $margin * 0.25;
     border: 5px solid $bg-dark;
-
-    &.compact {
-      margin-top: $margin * 0.25;
-    }
+    background: lighten($bg-base, 10%);
 
     @each $label, $color in $faction-colors {
       &.#{$label} {

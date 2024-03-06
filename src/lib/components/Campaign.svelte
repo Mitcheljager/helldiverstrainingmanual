@@ -2,24 +2,17 @@
 	import CampaignItem from "$lib/components/CampaignItem.svelte"
 
   export let formattedCampaigns = []
-  export let compact = true
   export let stacked = false
 </script>
 
-<div class="items" class:compact>
+<div class="items">
   {#each formattedCampaigns as campaign}
-    <CampaignItem {compact} {stacked} {...campaign} />
+    <CampaignItem {stacked} {...campaign} />
   {/each}
 </div>
 
 <style lang="scss">
   .items {
-    display: flex;
-    flex-direction: column;
-    gap: $margin * 0.5;
-
-    &.compact {
-      display: block;
-    }
+    display: block;
   }
 </style>

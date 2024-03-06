@@ -11,7 +11,6 @@
   export let data
 
   let dataInterval
-  let compact = true
   let fullscreen = false
 
   $: ({ status, info } = data)
@@ -49,15 +48,9 @@
   </div>
 {/if}
 
-<h2>
-  <div>Active Efforts</div>
+<h2>Active Efforts</h2>
 
-  <Switch bind:active={compact}>
-    Compact view
-  </Switch>
-</h2>
-
-<Campaign {formattedCampaigns} {compact} />
+<Campaign {formattedCampaigns} />
 
 {#if Object.keys(status)?.length === 0}
   <em>No data was found</em>
