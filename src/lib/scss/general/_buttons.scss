@@ -24,6 +24,10 @@
     &::before {
       opacity: 1;
     }
+
+    &:active {
+      color: $bg-base;
+    }
   }
 
   &:active {
