@@ -64,17 +64,8 @@
     </div>
 
     <div class="info">
-      <span>
-        {percentage ? percentage.toFixed(4) : 0}%
-        {defense ? "Defend!" : "Liberated"}
-
-        {#if expireDateTime}
-          {#key timeKey}
-            {timeFromNow(expireDateTime)}
-          {/key}
-        {/if}
-
-        {#if rateDirection}
+      <span class="percentage">
+        {#if rateDirection || percentage != 0}
           <svg
             class="rate-direction {rateDirection === 1 ? "positive" : "negative" }"
             width="20px"
@@ -82,6 +73,15 @@
             viewBox="0 0 24 24">
             <path fill="currentColor" d="M4.788 17.444A.5.5 0 0 1 4 17.035V6.965a.5.5 0 0 1 .788-.409l7.133 5.036a.5.5 0 0 1 0 .816l-7.133 5.036zM13 6.965a.5.5 0 0 1 .788-.409l7.133 5.036a.5.5 0 0 1 0 .816l-7.133 5.036a.5.5 0 0 1-.788-.409V6.965z"/>
           </svg>
+        {/if}
+
+        {percentage ? percentage.toFixed(4) : 0}%
+        {defense ? "Defend!" : "Liberated"}
+
+        {#if expireDateTime}
+          {#key timeKey}
+            {timeFromNow(expireDateTime)}
+          {/key}
         {/if}
       </span>
 
@@ -228,23 +228,24 @@
       gap: $margin * 0.15;
     }
 
-    span {
-      display: flex;
-      justify-content: space-between;
-
-      @include breakpoint(sm) {
-        display: inline;
-      }
-
-      .stacked & {
-        display: flex;
-      }
-    }
-
     span:last-child {
       @include breakpoint(sm) {
         text-align: right;
       }
+    }
+  }
+
+  .percentage {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+
+    @include breakpoint(sm) {
+      display: inline;
+    }
+
+    .stacked & {
+      display: flex;
     }
   }
 
