@@ -173,7 +173,7 @@
     box-shadow: inset 0 0 0 5px $super-earth;
     border-bottom: 0;
     background: darken($bg-dark, 10%) url("/images/map/stars.jpg") no-repeat;
-    background-position: calc(50% - var(--x, 0px) * -0.015 * var(--zoom)) calc(50% - var(--y, 0px) * -0.015 * var(--zoom));
+    background-position: calc(50% - var(--x, 0px) * -0.025 * var(--zoom)) calc(50% - var(--y, 0px) * -0.025 * var(--zoom));
     background-size: auto calc(110% * (1 + var(--zoom) * 0.1));
     overflow: hidden;
 
