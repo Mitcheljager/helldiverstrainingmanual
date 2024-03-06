@@ -4,7 +4,6 @@
 	import { onDestroy, onMount } from "svelte"
 	import Hero from "$lib/components/Hero.svelte"
 	import Map from "$lib/components/Map.svelte"
-	import Switch from "$lib/components/Switch.svelte"
 	import Campaign from "$lib/components/Campaign.svelte"
 	import FullscreenMap from "$lib/components/FullscreenMap.svelte"
 

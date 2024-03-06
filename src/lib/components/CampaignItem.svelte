@@ -1,6 +1,6 @@
 <script>
-	import { timeFromNow } from "$lib/utils/datetime"
-	import { onDestroy, onMount, afterUpdate } from "svelte"
+	import { hoursDifference, timeFromNow } from "$lib/utils/datetime"
+	import { onDestroy, onMount, beforeUpdate } from "svelte"
 	import { slide } from "svelte/transition"
 	import IconDefense from "$lib/components/icons/IconDefense.svelte"
 	import IconAnalytics from "$lib/components/icons/IconAnalytics.svelte"
@@ -21,9 +21,13 @@
   let timeKey = 0
   let showAnalytics = false
   let previousPercentage = percentage
-  let rateDirection = 0 // -1, 0, 1
+  let estimatedEnd = 0
+  let now = Date.now()
 
   $: normalizedHealth = 1 - (1 / maxHealth * health) // This is used purely to shut up the compiler about missing props
+  $: steady = percentage === 0 || percentage === 100 || percentage === previousPercentage
+  $: rateDirection = steady ? 0 : percentage > previousPercentage ? 1 : -1
+  $: if (percentage && previousPercentage) estimatedEnd = calculateTimeTo100()
 
   onMount(() => {
     timeInterval = setInterval(() => timeKey = Math.random(), 1000)
@@ -33,12 +37,21 @@
     if (timeInterval) clearInterval(timeInterval)
   })
 
-  afterUpdate(() => {
-    if (percentage === 0 || percentage === 100) rateDirection = 0
-    if (previousPercentage === percentage) return
-
-    rateDirection = percentage > previousPercentage ? 1 : -1
+  beforeUpdate(() => {
+    previousPercentage = percentage
+    now = Date.now()
   })
+
+  function calculateTimeTo100() {
+    const rateOfChange = (percentage - previousPercentage) / 10
+    const remainingPercentage = 100 - percentage;
+    const timeTo100InSeconds = remainingPercentage / rateOfChange
+
+    const currentTimeInMillis = Date.now()
+    const timeTo100InMillis = currentTimeInMillis + timeTo100InSeconds * 1000;
+
+    return Math.floor(timeTo100InMillis / 1000)
+  }
 </script>
 
 <div class="item {faction.toLowerCase().replace(" ", "-")}" class:stacked data-index={planetIndex} data-normalized={normalizedHealth}>
@@ -64,7 +77,7 @@
     </div>
 
     <div class="info">
-      <span class="percentage">
+      <span class="percentage" class:has-icon={rateDirection}>
         {#if rateDirection}
           <svg
             class="rate-direction {rateDirection === 1 ? "positive" : "negative" }"
@@ -86,6 +99,16 @@
       </span>
 
       <span>{players.toLocaleString()} Helldivers</span>
+    </div>
+
+    <div class="info dark">
+      {#if estimatedEnd === Infinity}
+        Predicting results...
+      {:else if percentage === 0 && previousPercentage === 0}
+        Overwhelming forces await
+      {:else}
+        {estimatedEnd > (now / 1000) ? "Victory" : "Loss"} in about {hoursDifference(estimatedEnd)} hrs
+      {/if}
     </div>
   </div>
 </div>
@@ -158,14 +181,6 @@
     transition: padding 200ms;
   }
 
-  .bar {
-    position: relative;
-    height: 1.25rem;
-    background: var(--border-color);
-    transition: height 200ms;
-    color: $white;
-  }
-
   .icon {
     position: absolute;
     left: 50%;
@@ -194,6 +209,15 @@
     }
   }
 
+  .bar {
+    position: relative;
+    height: 1.25rem;
+    background: var(--border-color);
+    transition: height 200ms;
+    color: $white;
+    margin-bottom: $margin * 0.25;
+  }
+
   @keyframes progress {
     from {
       width: 0;
@@ -210,7 +234,7 @@
     display: flex;
     flex-direction: column;
     gap: $margin * 0.15;
-    margin-top: $margin * 0.25;
+    margin-top: $margin * 0.1;
     font-family: $font-family-alt;
     font-weight: bold;
     font-size: 0.75rem;
@@ -223,6 +247,10 @@
       gap: $margin * 0.5;
     }
 
+    &.dark {
+      color: $text-color-dark;
+    }
+
     .stacked & {
       flex-direction: column;
       gap: $margin * 0.15;
@@ -232,16 +260,23 @@
       @include breakpoint(sm) {
         text-align: right;
       }
+
+      .stacked & {
+        text-align: left;
+      }
     }
   }
 
   .percentage {
     display: flex;
-    flex-direction: row-reverse;
     justify-content: space-between;
 
     @include breakpoint(sm) {
       display: inline;
+    }
+
+    &.has-icon {
+      flex-direction: row-reverse;
     }
 
     .stacked & {
