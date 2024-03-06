@@ -65,7 +65,7 @@ export const stratagems = [{
   }, {
     name: "Autocannon",
     cost: 7000,
-    sequence: ["down", "right", "left", "down", "down", "up", "up", "right"],
+    sequence: ["down", "left", "down", "up", "up", "right"],
     content: `
     <p>The AC-8 Autocannon is a fully-automatic cannon designed to rain destruction upon light vehicle armor with ruthless efficiency. With its rapid-fire capability, this weapon turns enemy vehicles into scrap metal faster than you can say "reload."</p>
     <p>The AC-8 comes equipped with a support backpack, allowing your trusty teammates to lend a hand and make reloading a breeze. With their help, you'll be back in action and ready to unleash another barrage of bullets in no time.</p>
@@ -75,7 +75,7 @@ export const stratagems = [{
   }, {
     name: "Railgun",
     cost: 10000,
-    sequence: ["down", "right", "left", "down", "down", "up", "left", "down", "right"],
+    sequence: ["down", "right", "down", "up", "left", "right"],
     content: `
       <p>The RS-422 Railgun isn't your grandpa's pea shooter - it's a cutting-edge piece of experimental tech that's so hot, it makes the sun jealous. This baby is all about one thing and one thing only: blasting through armor like it's going out of style.</p>
       <p>But hold your horses, soldier - each shot needs a little love and care, so make sure you're cozy with that trigger before you pull it. Remember, precision is key - we're talking about turning enemy armor into modern art here. This bad boy fires a single, supercharged shot at a time, cutting through armor plates like a hot knife through butter. It's like playing a game of "pin the tail on the donkey," except the donkey is an enemy tank and the tail is a high-velocity projectile.</p>
@@ -118,7 +118,7 @@ export const stratagems = [{
   }, {
     name: "Orbital 120mm HE Barrage",
     cost: 4000,
-    sequence: ["right", "down", "down", "left", "down", "right", "down", "down"],
+    sequence: ["right", "right", "down", "left", "right", "down"],
     content: `
       <p>The Orbital 120mm HE Barrage is like a symphony of destruction for the discerning Helldiver - a precision artillery salvo that transforms the battlefield into a chaotic dance of devastation and mayhem. With bombs the size of small cars raining down from the heavens, this Strategem is perfect for dispersing concentrated enemy units and turning the tide of battle in our favor.</p>
       <p>But don't expect surgical precision from this bad boy - oh no! These bombs land in random locations, creating a deadly game of chance where the only guaranteed winner is freedom itself. Sure, it may not be the most accurate airstrike in the book, but when you're dealing with a large area, who needs pinpoint accuracy anyway?</p>
@@ -127,7 +127,7 @@ export const stratagems = [{
   }, {
     name: "Orbital 380mm HE Barrage",
     cost: 7500,
-    sequence: ["right", "down", "down", "up", "up", "left", "down", "down", "down"],
+    sequence: ["right", "down", "up", "up", "left", "down", "down"],
     content: `
       <p>The 380mm HE Barrage is the big brother of destruction, a prolonged onslaught of devastation that blankets the battlefield in chaos and carnage. With bombs the size of small houses raining down from the heavens, this Strategem is not for the faint of heart - when one of these bad boys is pulled out, you'd better take cover or kiss your behind goodbye!</p>
       <p>Just when you thought things couldn't get any crazier, along comes the 380mm HE Barrage, wreaking extended havoc over a larger area than your average battleground. Communication with teammates is advised - not because it's particularly helpful, but because it's always good to have someone to share your impending doom with.</p>
@@ -144,14 +144,14 @@ export const stratagems = [{
   }, {
     name: "Orbital Laser",
     cost: 10000,
-    sequence: ["right", "up", "left", "up", "right", "left"],
+    sequence: ["right", "down", "up", "right", "down"],
     content: `
       <p>The Orbital Laser is the Destroyer's answer to all our problems - a blazing beam of destruction that sweeps over the designated area like the fiery wrath of the gods, vaporizing everything in its path with ruthless efficiency. This isn't your run-of-the-mill laser pointer, folks - this is a laser cannon so powerful, it makes the sun jealous! Anything caught in its path is destined to become a crispy critter faster than you can say "well done."</p>
     `
   }, {
     name: "Orbital Railcannon Strike",
     cost: 10000,
-    sequence: ["right", "down", "up", "down", "left"],
+    sequence: ["right", "up", "down", "down", "right"],
     content: `
       <p>The Orbital Railcannon Strike is like a sniper's dream come true - a high-velocity railcannon round fired from the heavens, zeroing in on the largest target in close proximity to the beacon and obliterating it in one fell swoop. It's like playing a game of cosmic whack-a-mole, except instead of moles, you're squashing enemy forces with extreme prejudice.</p>
       <p>Targeting is automatic, meaning you don't have to lift a finger - just plant the beacon and let the railcannon do the rest. With the power of the railcannon at your command, victory is assured - or at least, very, very satisfying.</p>
@@ -184,7 +184,7 @@ export const stratagems = [{
   }, {
     name: "Eagle Cluster Bomb",
     cost: 4000,
-    sequence: ["up", "right", "down", "down", "right", "down"],
+    sequence: ["up", "right", "down", "down", "right"],
     content: `
       <p>A targeted air strike designed to rain down a barrage of explosive projectiles, clearing smaller targets with ruthless efficiency. While it may not have the power to level buildings, it excels at decimating enemy forces and turning the tide of battle in our favor. When called, the strike will be perpendicular from the direction you were facing when thrown, saturating the area with a deadly rain of bombs.</p>
       <p>The Eagle Cluster Bomb isn't a one-trick pony. It can be deployed a total of four times before it needs to reload its payload back at base, giving you ample opportunities to unleash devastation upon our enemies and pave the way for victory.</p>
@@ -218,7 +218,7 @@ export const stratagems = [{
   }, {
     name: "Eagle 110MM Rocket Pods",
     cost: 7500,
-    sequence: ["up", "down", "up", "left"],
+    sequence: ["up", "right", "up", "left"],
     content: `
       <p>The Eagle 110mm Rocket Pods unleash a relentless barrage of explosive rockets, raining destruction upon the largest target near the stratagem beacon. This deadly payload seeks out its target with unerring accuracy, striking with devastating force and dealing massive amounts of damage to even the toughest adversaries.</p>
       <p>With each rocket finding its mark, the Eagle 110mm Rocket Pods leave a trail of devastation in their wake, decimating enemy armor and turning the tide of battle in our favor. Whether it's a towering behemoth or a heavily fortified position, no foe can withstand the onslaught of firepower unleashed by these potent munitions.</p>
@@ -226,7 +226,7 @@ export const stratagems = [{
   }, {
     name: "Eagle 500KG Bomb",
     cost: 10000,
-    sequence: ["up", "left", "down", "down", "down"],
+    sequence: ["up", "right", "down", "down", "down"],
     content: `
       <p>The Eagle 500kg Bomb is a weapon of unparalleled devastation, a titanic force of destruction that strikes fear into the hearts of our enemies and leaves the battlefield scorched and smoldering in its wake. When called upon, this behemoth of annihilation descends upon the battlefield with the weight of a thousand thunderclaps, heralding its arrival with a deafening roar that echoes across the land.</p>
       <p>As the bomb hurtles towards its target, time seems to slow, every second stretching into an eternity as anticipation builds and tension mounts. Then, with a blinding flash of light and an earth-shattering explosion, the bomb detonates, unleashing a cataclysmic wave of destruction that engulfs everything in its path. The shockwave ripples outward, tearing through the earth and rending the very fabric of reality asunder. Buildings crumble like sandcastles in a hurricane, reduced to rubble and dust in the blink of an eye. Vehicles are tossed aside like toys, their twisted wreckage scattered across the landscape like discarded playthings. Those unfortunate enough to be caught within the blast radius are subjected to a maelstrom of destruction unlike anything they've ever experienced. The intense heat sears flesh from bone, leaving nothing but charred husks in its wake. The force of the explosion hurls bodies through the air like rag dolls, their screams lost amidst the cacophony of destruction.</p>
@@ -270,14 +270,14 @@ export const stratagems = [{
   }, {
     name: "HMG Emplacement",
     cost: 10000,
-    sequence: ["up", "down", "left", "right", "right", "left"],
+    sequence: ["down", "up", "left", "right", "right", "left"],
     content: `
       <p>A formidable fortification that transforms any battlefield into a bastion of liberty. Manned by courageous Helldivers, this turret delivers unparalleled firepower against lightly armored targets, serving as a steadfast guardian against the encroaching forces of tyranny. Though slow to turn, its strategic placement is paramount, ensuring maximum coverage and efficacy on the front lines of democracy's defense. With the HMG Emplacement at your disposal, you become the stalwart sentinel of freedom, standing firm against all who dare to oppose our righteous cause.</p>
     `
   }, {
     name: "Shield Generator Relay",
     cost: 9000,
-    sequence: ["down", "up", "left", "right", "left", "down"],
+    sequence: ["down", "up", "left", "down", "right", "right"],
     content: `
       <p>Enter the Shield Generator Relay, a beacon of protection that erects a steadfast energy shield, providing resolute cover against the relentless barrage of projectiles unleashed by our adversaries. Stationary yet stalwart, this shield generator serves as a bulwark against tyranny, offering a temporary sanctuary for Helldivers in the heat of battle. However, its lifespan is finite once deployed, requiring judicious placement and timely activation to maximize its defensive capabilities. With the Shield Generator Relay in play, you become the guardian of democracy, ensuring the safety and security of our righteous cause amid the chaos of conflict.</p>
     `
@@ -297,7 +297,7 @@ export const stratagems = [{
   items: [{
     name: "Anti-Personnel Minefield",
     cost: 1500,
-    sequence: ["down", "left", "down", "up", "right"],
+    sequence: ["down", "left", "up", "right"],
     content: `
       <p>This formidable stratagem deploys a tower that swiftly saturates the surrounding area with a deluge of landmines, creating a perilous barrier that halts enemy progress in its tracks. As these explosive guardians lay in wait, poised to detonate upon contact with any intruder, they serve as a formidable deterrent against the encroaching forces of tyranny. With the Anti-Personnel Minefield at your disposal, you command a lethal arsenal of democracy's defense, ensuring that our enemies tread cautiously on the path to their inevitable defeat.</p>
     `
@@ -311,7 +311,7 @@ export const stratagems = [{
   }, {
     name: "Grenade Launcher",
     cost: 6000,
-    sequence: ["down", "left", "down", "up", "left", "down", "down"],
+    sequence: ["down", "left", "up", "left", "down"],
     content: `
       <p>This formidable weapon launches grenades with devastating force, unleashing chaos and destruction upon our adversaries with each explosive payload. As the battlefield erupts in a symphony of detonations, the Grenade Launcher stands as a symbol of our unwavering resolve to combat tyranny and oppression. With its explosive projectiles raining down upon our enemies, Helldivers pave the way for liberty and democracy to triumph over the forces of darkness.</p>
     `
@@ -332,7 +332,7 @@ export const stratagems = [{
   }, {
     name: "Guard Dog Rover",
     cost: 7500,
-    sequence: ["down", "left", "down", "up", "left", "down", "down"],
+    sequence: ["down", "up", "left", "up", "right", "right"],
     content: `
       <p>An autonomous enforcer armed to the teeth with a laser rifle and itching for a fight. This formidable drone serves as a relentless harbinger of destruction, prowling the battlefield with lethal intent and unleashing a torrent of laser fire upon any who dare to oppose the cause of liberty. With its 360-degree coverage, the Guard Dog Rover ensures that no enemy can escape its relentless barrage, leaving a trail of scorched earth in its wake. However, such unrestrained firepower comes at a cost, as even the Helldiver who commands it must tread cautiously to avoid being caught in the crossfire.</p>
     `
@@ -353,7 +353,7 @@ export const stratagems = [{
   }, {
     name: "Shield Generator Pack",
     cost: 10000,
-    sequence: ["down", "up", "left", "down", "right", "right"],
+    sequence: ["down", "up", "left", "right", "left", "right"],
     content: `
       <p>A groundbreaking innovation designed to safeguard Helldivers amidst the chaos of enemy territory. This remarkable device encases the wearer in a protective spherical shield, offering unparalleled defense against the onslaught of high-speed projectiles and enemy assaults. With its formidable protection, Helldivers can confidently navigate through hostile environments, shielded from harm and empowered to confront the forces of tyranny head-on. Although its deployment is temporary, the Shield Generator Pack ensures that Helldivers remain unscathed amidst the relentless barrage of enemy fire, providing a vital lifeline in the heat of battle.</p>
     `
@@ -374,7 +374,7 @@ export const stratagems = [{
   }, {
     name: "Gatling Sentry",
     cost: 4000,
-    sequence: ["down", "up", "right", "left", "down"],
+    sequence: ["down", "up", "right", "left"],
     content: `
       <p>Prepare for a symphony of destruction with the Gatling Sentry, an awe-inspiring addition to our arsenal that unleashes a relentless storm of bullets upon our foes. This fearsome turret stands as a formidable bulwark against the forces of tyranny, its spinning barrels serving as a testament to the unyielding resolve of Helldivers in the pursuit of liberty. With its unparalleled rate of fire and unerring accuracy, the Gatling Sentry sweeps aside all who oppose the march of democracy, leaving a trail of destruction in its wake.</p>
 
@@ -433,6 +433,12 @@ export const stratagems = [{
     sequence: ["up", "down", "right", "up"],
     content: `
       <p>In the heat of battle, when the shadows of adversity loom large, there emerges a beacon of hope – the SOS Beacon, a lifeline to reinforcements in our darkest hour. With each pulse of its signal, we rally the brave and the bold to stand alongside us in the relentless fight for liberty, igniting a flame of courage amidst the encroaching darkness. As its signal pierces the heavens, it serves as a testament to the unyielding spirit of Helldivers, reaffirming our commitment to confront tyranny head-on and triumph against all odds. Together, united in purpose, we stand resolute, knowing that in the unity of our ranks lies the strength to overcome any obstacle and emerge victorious in the pursuit of freedom.</p>
+    `
+  }, {
+    name: "Resupply",
+    sequence: ["down", "down", "up", "right"],
+    content: `
+
     `
   }, {
     name: "Super Earth Flag",
