@@ -111,6 +111,7 @@
     margin: 0;
     padding: 0;
     color: $white;
+    cursor: pointer;
   }
 
   h3 {
