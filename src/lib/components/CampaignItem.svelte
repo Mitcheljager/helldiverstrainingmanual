@@ -65,7 +65,7 @@
 
     <div class="info">
       <span class="percentage">
-        {#if rateDirection || percentage != 0}
+        {#if rateDirection}
           <svg
             class="rate-direction {rateDirection === 1 ? "positive" : "negative" }"
             width="20px"
