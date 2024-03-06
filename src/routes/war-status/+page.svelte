@@ -95,6 +95,12 @@
     margin: $margin 0 $margin * 0.25;
   }
 
+  .items {
+    display: flex;
+    flex-direction: column;
+    gap: $margin * 0.25;
+  }
+
   .item {
     max-width: $text-limit;
     border: 5px solid $bg-dark;
