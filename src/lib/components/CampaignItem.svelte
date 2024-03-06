@@ -1,11 +1,10 @@
 <script>
 	import { timeFromNow } from "$lib/utils/datetime"
 	import { onDestroy, onMount } from "svelte"
-	import AnalyticsPopup from "$lib/components/AnalyticsPopup.svelte"
+	import { slide } from "svelte/transition"
 	import IconDefense from "$lib/components/icons/IconDefense.svelte"
 	import IconAnalytics from "$lib/components/icons/IconAnalytics.svelte"
 	import PlanetAnalytics from "$lib/components/PlanetAnalytics.svelte"
-	import { slide } from "svelte/transition";
 
   export let planetIndex = ""
   export let name = ""
