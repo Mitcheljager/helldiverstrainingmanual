@@ -143,6 +143,7 @@
 
       @include breakpoint(sm) {
         max-height: 100vh;
+        min-height: 5rem;
       }
     }
 

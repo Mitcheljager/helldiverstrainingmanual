@@ -126,7 +126,7 @@
 {#if showAnalytics}
   <div transition:slide={{ duration: 200 }}>
     <div class="analytics {faction.toLowerCase().replace(" ", "-")}">
-      <PlanetAnalytics row index={planetIndex} />
+      <PlanetAnalytics row={!stacked} index={planetIndex} />
     </div>
   </div>
 {/if}
