@@ -36,8 +36,6 @@
   let dragStartPosition = {}
   let foundPlanetIndexes = []
 
-  $: console.log(foundPlanetIndexes)
-
   $: totalPlayerCount = campaigns.reduce((total, c) => total + c.players, 0)
   $: if (browser && innerElement !== null && innerWidth) bindImpetus()
 
