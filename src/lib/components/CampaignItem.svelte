@@ -5,6 +5,7 @@
 	import IconDefense from "$lib/components/icons/IconDefense.svelte"
 	import IconAnalytics from "$lib/components/icons/IconAnalytics.svelte"
 	import PlanetAnalytics from "$lib/components/PlanetAnalytics.svelte"
+	import RollingNumber from "./RollingNumber.svelte";
 
   export let planetIndex = ""
   export let name = ""
@@ -90,8 +91,10 @@
           </svg>
         {/if}
 
-        {percentage ? percentage.toFixed(4) : 0}%
-        {defense ? "Defend!" : "Liberated"}
+        <span>
+          <RollingNumber number={(percentage ? percentage.toFixed(4) : 0).toString()} />%
+          {defense ? "Defend!" : "Liberated"}
+        </span>
 
         {#if expireDateTime}
           {#key timeKey}
@@ -100,7 +103,7 @@
         {/if}
       </span>
 
-      <span>{players.toLocaleString()} Helldivers</span>
+      <span><RollingNumber number={players.toLocaleString()} /> Helldivers</span>
     </div>
 
     <div class="info dark">
