@@ -27,8 +27,8 @@
 
     return {
       data,
-      scaleMax: Math.max(...Object.values(data)) + 0.00001,
-      scaleMin: Math.min(...Object.values(data))
+      scaleMax: players ? Math.max(...Object.values(data)) + 0.00001 : 100,
+      scaleMin: players ? Math.min(...Object.values(data)) : 0
     }
   }
 
