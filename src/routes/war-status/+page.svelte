@@ -31,7 +31,7 @@
 </svelte:head>
 
 <Hero src="/images/content/war-status.jpg">
-  War Status: Helldiver's War Efforts
+  War Status: Helldivers' War Efforts
 </Hero>
 
 <p>In the unyielding crucible of battle, every engagement shapes the destiny of our war effort. Here, amidst the chaos of conflict, we track the pulse of victory, monitoring our progress, celebrating our triumphs, and confronting our challenges head-on.</p>
