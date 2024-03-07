@@ -53,3 +53,13 @@
     }
   }
 }
+
+@mixin reset-button() {
+  appearance: none;
+  background: transparent;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  color: $white;
+  cursor: pointer;
+}

@@ -69,6 +69,7 @@
     right: 0;
     top: 0;
     height: 100%;
+    width: 100%;
     max-width: $sidebar-width;
     padding: $margin $margin * 0.5 $margin * 0.5;
     transform: translateX(100%);

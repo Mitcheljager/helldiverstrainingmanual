@@ -1,4 +1,6 @@
 <script>
+  // @ts-nocheck
+
   import { browser } from "$app/environment"
 	import { createEventDispatcher, onDestroy } from "svelte"
 	import { fade } from "svelte/transition"
@@ -6,6 +8,7 @@
 	import Planet from "$lib/components/Planet.svelte"
 	import SupplyLines from "$lib/components/SupplyLines.svelte"
 	import PlanetSearch from "$lib/components/PlanetSearch.svelte"
+	import { getScrollParent } from "$lib/utils/scroll";
 
   export let planets = []
   export let campaigns = []
@@ -14,6 +17,7 @@
 
   const dispatch = createEventDispatcher()
 
+  let wrapperElement
   let innerElement
   let impetusElement
   let impetus
@@ -31,6 +35,8 @@
 	let elementPositionY = 0
   let dragStartPosition = {}
   let foundPlanetIndexes = []
+
+  $: console.log(foundPlanetIndexes)
 
   $: totalPlayerCount = campaigns.reduce((total, c) => total + c.players, 0)
   $: if (browser && innerElement !== null && innerWidth) bindImpetus()
@@ -88,7 +94,24 @@
 			}
 		})
   }
+
+  function locate({ detail }) {
+    zoom = 1
+    elementPositionX = 0
+    elementPositionY = 0
+
+    activeIndex = detail
+
+    if (fullscreen) return
+
+    const scrollParent = getScrollParent(wrapperElement)
+    if (!scrollParent) return
+
+    wrapperElement.scrollIntoView({ behavior: "smooth", block: "center" })
+  }
 </script>
+
+<svelte:window on:locate={locate} />
 
 <div
   class="wrapper"
@@ -100,7 +123,8 @@
   style:--footer-height="{footerHeight}px"
   style:--zoom={zoom}
   style:--x="{elementPositionX}px"
-  style:--y="{elementPositionY}px">
+  style:--y="{elementPositionY}px"
+  bind:this={wrapperElement}>
 
   <!-- svelte-ignore a11y-no-static-element-interactions -->
   <!-- svelte-ignore a11y-click-events-have-key-events -->

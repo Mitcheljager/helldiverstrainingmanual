@@ -6,6 +6,7 @@
 	import IconAnalytics from "$lib/components/icons/IconAnalytics.svelte"
 	import PlanetAnalytics from "$lib/components/PlanetAnalytics.svelte"
 	import RollingNumber from "./RollingNumber.svelte";
+	import LocateOnMap from "./LocateOnMap.svelte";
 
   export let planetIndex = ""
   export let name = ""
@@ -58,15 +59,19 @@
 </script>
 
 <div class="item {faction.toLowerCase().replace(" ", "-")}" class:stacked data-index={planetIndex} data-normalized={normalizedHealth}>
-  <h3>
-    <div class="title">
+  <div class="title">
+    <h3>
       {name || "Unknown Planet"}
-    </div>
+    </h3>
 
-    <button on:click={() => showAnalytics = !showAnalytics}>
-      <IconAnalytics />
-    </button>
-  </h3>
+    <div class="actions">
+      <button on:click={() => showAnalytics = !showAnalytics}>
+        <IconAnalytics />
+      </button>
+
+      <LocateOnMap {planetIndex} />
+    </div>
+  </div>
 
   <div class="content">
     <div class="bar">
@@ -144,37 +149,41 @@
   }
 
   button {
-    appearance: none;
-    background: transparent;
-    border: 0;
-    margin: 0;
-    padding: 0;
-    color: $white;
-    cursor: pointer;
+    @include reset-button();
+
+    &:hover {
+      background: rgba($black, 0.25);
+      box-shadow: 0 0 0 3px rgba($black, 0.25);
+    }
   }
 
-  h3 {
+  .title {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: $margin * 0.15;
+    flex-direction: column;
+    gap: $margin * 0.05;
     height: 100%;
-    padding: $margin * 0.15 $margin * 0.25;
+    padding: $margin * 0.2 $margin * 0.25;
     margin: 0;
     background: var(--background-color);
     transition: font-size 200ms, padding 200ms;
-    font-size: 1.15rem;
-    word-break: break-word;
 
-    .title {
+    h3 {
       display: -webkit-box;
       -webkit-line-clamp: 1;
       -webkit-box-orient: vertical;
-      height: 1.15em;
+      height: 1.1em;
+      margin: 0;
+      font-size: 1.1rem;
       overflow: hidden;
       line-break: anywhere;
       margin-right: auto;
     }
+  }
+
+  .actions {
+    display: flex;
+    gap: $margin * 0.15;
+    margin-top: auto;
   }
 
   .content {
