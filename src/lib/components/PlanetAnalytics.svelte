@@ -71,17 +71,17 @@
           </div>
         {/each}
       {/if}
-
-      {#if Object.entries(data).length < 200}
-        <em transition:slide|global={{ duration: 100 }}>
-          {#if Object.entries(data).length === 0}
-            No activity has been recorded on this planet
-          {:else}
-            This data is still populating
-          {/if}
-        </em>
-      {/if}
     </div>
+
+    {#if Object.entries(data).length < 200}
+      <em class="mt-1/4" transition:slide|global={{ duration: 100 }}>
+        {#if Object.entries(data).length === 0}
+          No activity has been recorded on this planet
+        {:else}
+          This data is still populating
+        {/if}
+      </em>
+    {/if}
   {:catch}
     Something went wrong when fetching the analytics.
   {/await}
@@ -99,6 +99,17 @@
     font-size: 1rem;
   }
 
+  em {
+    display: block;
+    width: 100%;
+    font-family: $font-family;
+    font-size: 0.75rem;
+    font-weight: normal;
+    color: darken($text-color, 20%);
+    line-height: 1em;
+    text-align: center;
+  }
+
   .charts {
     display: flex;
     flex-direction: column;
@@ -113,14 +124,6 @@
         flex-direction: row;
         width: 100%;
       }
-    }
-
-    em {
-      font-family: $font-family;
-      font-size: 0.75rem;
-      font-weight: normal;
-      color: $text-color;
-      line-height: 1em;
     }
   }
 
