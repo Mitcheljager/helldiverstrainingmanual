@@ -43,14 +43,16 @@
   })
 
   function calculateTimeTo100() {
-    const rateOfChange = (percentage - previousPercentage) / 10
-    const remainingPercentage = 100 - percentage;
-    const timeTo100InSeconds = remainingPercentage / rateOfChange
+    const interval = 5
 
-    const currentTimeInMillis = Date.now()
-    const timeTo100InMillis = currentTimeInMillis + timeTo100InSeconds * 1000;
+    const rateOfChange = (percentage - previousPercentage) / interval
+    const remainingPercentage = 100 - percentage
+    const timeToFilledInSeconds = remainingPercentage / rateOfChange
 
-    return Math.floor(timeTo100InMillis / 1000)
+    const currentTimeInMilliseconds = Date.now()
+    const timeToFilledInMilliseconds = currentTimeInMilliseconds + timeToFilledInSeconds * 1000
+
+    return Math.floor(timeToFilledInMilliseconds / 1000)
   }
 </script>
 
