@@ -69,17 +69,19 @@
 
 <p class="mb-1">This archive serves as a chronicle of the ever-shifting control over the planets, documenting the ebb and flow of the ongoing conflict. Explore the records to witness the fierce battles and strategic maneuvers that determine the fate of each world in this relentless tug of war. May these records serve as a testament to the bravery and sacrifice of all those who fight for their faction's cause in the unforgiving depths of space.</p>
 
-<Map planets={planetInfos} status={planetStatusByDate} />
+<Map planets={planetInfos} status={planetStatusByDate} allowControls={false}>
+  <div class="date-selector" slot="tray">
+    <h5 class="m-0">View by date</h5>
 
-<h3 class="mb-1/4 mt-1/2">View by date</h3>
-
-<Range min={numberOfDays * -1 - 1} max={0} bind:value={daysAgo}>
-  {#if new Date(endDate) < startOfRecordingDate}
-    <em>Pre recordings</em>
-  {:else}
-    {new Date(endDate).toLocaleDateString(undefined, { month: "long", day: "numeric" })}
-  {/if}
-</Range>
+    <Range min={numberOfDays * -1 - 1} max={0} bind:value={daysAgo}>
+      {#if new Date(endDate) < startOfRecordingDate}
+        <em>Pre recordings</em>
+      {:else}
+        {new Date(endDate).toLocaleDateString(undefined, { month: "long", day: "numeric" })}
+      {/if}
+    </Range>
+  </div>
+</Map>
 
 <div class="mt-1">
   <em>Data recording started {startOfRecordingDate.toLocaleDateString(undefined, { month: "long", day: "numeric" })}</em>
@@ -109,6 +111,12 @@
 <style lang="scss">
   strong {
     color: $white;
+
+    @each $label, $color in $faction-colors {
+      &.#{$label} {
+        color: #{$color};
+      }
+    }
   }
 
   .items {
@@ -125,9 +133,11 @@
     background: lighten($bg-base, 5%);
   }
 
-  @each $label, $color in $faction-colors {
-    .#{$label} {
-      color: #{$color};
-    }
+  .date-selector {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $margin * 0.15;
+    width: 100%;
   }
 </style>

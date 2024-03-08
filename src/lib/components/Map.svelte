@@ -14,6 +14,7 @@
   export let campaigns = []
   export let status = []
   export let fullscreen = false
+  export let allowControls = true
 
   const dispatch = createEventDispatcher()
 
@@ -76,6 +77,7 @@
 
   async function bindImpetus() {
     if (impetus) return
+    if (!allowControls) return
 
     const Impetus = (await import("impetus")).default
 
@@ -168,11 +170,13 @@
       <PlanetSearch bind:foundPlanetIndexes />
     </div>
 
-    <div class="zoom">
-      <button on:click={() => dispatch("fullscreen")}>⛶</button>
-      <button on:click={() => setZoom(0.5)}>+</button>
-      <button on:click={() => setZoom(-0.5)}>-</button>
-    </div>
+    {#if allowControls}
+      <div class="zoom">
+        <button on:click={() => dispatch("fullscreen")}>⛶</button>
+        <button on:click={() => setZoom(0.5)}>+</button>
+        <button on:click={() => setZoom(-0.5)}>-</button>
+      </div>
+    {/if}
   </div>
 
   {#if browser}
@@ -182,7 +186,9 @@
 
 <div class="footer" class:enlarge class:fullscreen bind:clientHeight={footerHeight}>
   <div class="tray">
-    <strong>{totalPlayerCount.toLocaleString()}</strong> Helldivers are currently fighting for Democracy. <em>Join them!</em>
+    <slot name="tray">
+      <strong>{totalPlayerCount.toLocaleString()}</strong> Helldivers are currently fighting for Democracy. <em>Join them!</em>
+    </slot>
   </div>
 
   <div class="switches">
