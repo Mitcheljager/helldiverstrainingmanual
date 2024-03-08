@@ -17,7 +17,7 @@ export async function GET({ url }) {
     const ownership = await fetchOwnership()
 
     planetStatus.forEach(planet => {
-      const data = [...ownership].reverse().find(o => o.planet_index === planet.index)
+      const data = ownership.find(o => o.planet_index === planet.index)
 
       if (!data) return
       if (data.current_owner === planet.owner) return
