@@ -5,8 +5,8 @@
 	import IconDefense from "$lib/components/icons/IconDefense.svelte"
 	import IconAnalytics from "$lib/components/icons/IconAnalytics.svelte"
 	import PlanetAnalytics from "$lib/components/PlanetAnalytics.svelte"
-	import RollingNumber from "./RollingNumber.svelte";
-	import LocateOnMap from "./LocateOnMap.svelte";
+	import RollingNumber from "$lib/components/RollingNumber.svelte"
+	import LocateOnMap from "$lib/components/LocateOnMap.svelte"
 
   export let planetIndex = ""
   export let name = ""
