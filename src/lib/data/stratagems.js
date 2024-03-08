@@ -417,6 +417,13 @@ export const stratagems = [{
     content: `
       <p>An electrifying turret armed with static field generators that disrupt enemy advances with the fervor of democracy itself. This mighty guardian stands as a bastion of liberty, its pulsating fields of electromagnetic fury casting a net of confusion upon the enemy ranks, leaving tyranny quaking in its boots. With each thunderous pulse, the EMS Mortar Sentry proclaims the triumph of freedom's champions, striking fear into the hearts of all who dare oppose the righteous march of democracy.</p>
     `
+  }, {
+    name: "Patriot Exosuit",
+    cost: 20000,
+    sequence: ["left", "down", "right", "up", "left", "down", "down"],
+    content: `
+      <p>Introducing the latest addition to the Helldivers' arsenal: the "Patriot Exosuit." This formidable drivable bipedal mech stands as a beacon of freedom and firepower on the battlefield. With its sleek design and cutting-edge technology, the Patriot Exosuit is a symbol of Super Earth's unwavering resolve against the alien threats that seek to engulf humanity. Equipped with a devastating rocket launcher and a rapid-firing machine gun, this mechanical behemoth brings the heat to any hostile encounter. Whether raining down explosive ordinance from above or laying down suppressive fire against advancing enemies, the Patriot Exosuit is a force to be reckoned with. Pilots will find themselves in the driver's seat of sheer power and versatility, ready to turn the tide of battle in the name of liberty and justice.</p>
+    `
   }]
 }, {
   category: "Mission Stratagems",
