@@ -67,7 +67,7 @@
   Planetary Ownership Records
 </Hero>
 
-<p class="mb-1">This archive serves as a chronicle of the ever-shifting control over the planets, documenting the ebb and flow of the ongoing conflict. Explore the records to witness the fierce battles and strategic maneuvers that determine the fate of each world in this relentless tug of war. May these records serve as a testament to the bravery and sacrifice of all those who fight for their faction's cause in the unforgiving depths of space.</p>
+<p class="mb-1">This archive serves as a chronicle of the ever-shifting control over the planets, documenting the ebb and flow of the ongoing conflict. Explore the records to witness the fierce battles and strategic maneuvers that determine the fate of each world in this relentless tug of war. May these records serve as a testament to the bravery and sacrifice of all those who fight for Democracy and Liberty in the unforgiving depths of space.</p>
 
 <Map planets={planetInfos} status={planetStatusByDate} allowControls={false}>
   <div class="date-selector" slot="tray">
