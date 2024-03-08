@@ -6,7 +6,7 @@ import { fetchOwnership } from "$lib/api/ownership"
 export async function load({ fetch }) {
   const status = await fetchStatus(fetch)
   const info = await fetchInfo(fetch)
-  const records = await fetchOwnership()
+  const records = (await fetchOwnership() || []).filter(i => i.current_owner !== i.previous_owner)
 
   return {
     records,

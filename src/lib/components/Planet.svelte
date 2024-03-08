@@ -19,6 +19,7 @@
   on:click
   transition:fade={{ duration: 100, delay: index }}
   data-index={index}
+  data-owner={status.owner}
   class="planet {(faction || factions[status.owner])?.toLowerCase().replace(" ", "-")}"
   class:active
   class:highlight

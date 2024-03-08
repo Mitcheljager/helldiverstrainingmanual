@@ -5,9 +5,9 @@ export async function fetchOwnership() {
     .from("ownership")
     .select("created_at, planet_index, current_owner, previous_owner")
     .order("created_at", { ascending: false })
-    .range(0, 500)
+    .range(0, 1000)
 
   if (error) throw new Error(error.message)
 
-  return data.filter(i => i.current_owner !== i.previous_owner)
+  return data
 }

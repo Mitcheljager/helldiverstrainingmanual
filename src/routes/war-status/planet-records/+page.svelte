@@ -70,13 +70,13 @@
   {/if}
 </Range>
 
-<div class="mt-1 mb-1">
+<div class="mt-1">
   <em>Data recording started {startOfRecordingDate.toLocaleDateString(undefined, { month: "long", day: "numeric" })}</em>
 </div>
 
 <div class="items">
   {#each groupedRecords as { datetime, records }}
-    <h3 class="mb-0">
+    <h3 class="mt-1/4 mb-0">
       {#if new Date(datetime) < startOfRecordingDate}
         Initial recording <br>
       {:else}
@@ -105,7 +105,7 @@
     flex-direction: column;
     gap: $margin * 0.25;
     max-width: $text-limit;
-    margin-top: $margin * 1;
+    margin-top: $margin * 0.75;
   }
 
   .item {
