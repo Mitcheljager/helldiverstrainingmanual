@@ -1,6 +1,6 @@
 <script>
 	import { invalidateAll } from "$app/navigation"
-	import { formatCampaigns } from "$lib/utils/campaign.js"
+	import { formatCampaigns } from "$lib/utils/campaign"
 	import { onDestroy, onMount } from "svelte"
 	import Hero from "$lib/components/Hero.svelte"
 	import Map from "$lib/components/Map.svelte"

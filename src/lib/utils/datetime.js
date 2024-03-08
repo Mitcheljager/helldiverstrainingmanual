@@ -15,3 +15,14 @@ export function hoursDifference(unixTimestamp) {
 
   return Math.abs(Math.floor(totalSeconds / 3600))
 }
+
+export function daysSinceDate(date) {
+  const startDate = new Date(date);
+  const currentDate = new Date();
+
+  // @ts-ignore
+  const differenceInMs = currentDate - startDate;
+
+  const millisecondsInDay = 1000 * 60 * 60 * 24
+  return Math.floor(differenceInMs / millisecondsInDay)
+}

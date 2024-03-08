@@ -4,11 +4,11 @@
   import { browser } from "$app/environment"
 	import { createEventDispatcher, onDestroy } from "svelte"
 	import { fade } from "svelte/transition"
+	import { getScrollParent } from "$lib/utils/scroll"
 	import Switch from "$lib/components/Switch.svelte"
 	import Planet from "$lib/components/Planet.svelte"
 	import SupplyLines from "$lib/components/SupplyLines.svelte"
 	import PlanetSearch from "$lib/components/PlanetSearch.svelte"
-	import { getScrollParent } from "$lib/utils/scroll";
 
   export let planets = []
   export let campaigns = []
@@ -138,13 +138,13 @@
     <div class="inner" bind:this={innerElement}>
       {#if browser}
         <div class="planets">
-          {#each planets as planet}
-            {#if getCampaign(planet.index) || getStatus(planet.index)?.owner !== 1 || showLiberated || foundPlanetIndexes.includes(planet.index)}
+          {#each planets as planet (planet.index)}
+            {#if status && (getCampaign(planet.index) || getStatus(planet.index)?.owner !== 1 || showLiberated || foundPlanetIndexes.includes(planet.index))}
               <Planet
                 {planet}
                 highlight={foundPlanetIndexes.includes(planet.index)}
                 campaign={getCampaign(planet.index)}
-                status={getStatus(planet.index)}
+                status={status && getStatus(planet.index)}
                 active={activeIndex === planet.index}
                 on:click={() => activeIndex = activeIndex === planet.index ? -1 : planet.index} />
             {/if}
