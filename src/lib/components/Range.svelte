@@ -13,7 +13,7 @@
     display: flex;
     flex-direction: column;
     gap: $margin * 0.25;
-    max-width: $text-limit / 2;
+    max-width: $text-limit * 0.5;
   }
 
   input {
