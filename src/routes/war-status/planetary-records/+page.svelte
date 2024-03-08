@@ -90,7 +90,7 @@
 <div class="items">
   {#each groupedRecords as { datetime, records }}
     <h3 class="mt-1/4 mb-0">
-      {#if new Date(datetime) < startOfRecordingDate}
+      {#if new Date(datetime - dayInMilliseconds) < startOfRecordingDate}
         Initial recording <br>
       {:else}
         {new Date(datetime).toLocaleDateString(undefined, { month: "long", day: "numeric" })} <br>
