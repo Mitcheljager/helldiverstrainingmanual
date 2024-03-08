@@ -3,8 +3,15 @@ import { formatCampaigns } from '$lib/utils/campaign'
 
 export async function GET() {
   const headers = { 'Content-Type': 'application/json' }
-  const status = await fetchStatus(fetch)
-  const info = await fetchInfo(fetch)
+
+  const [status, info] = (
+    await Promise.allSettled([
+      fetchStatus(fetch).then(r => r || {}),
+      fetchInfo(fetch).then(r => r || {})
+    ])
+  // @ts-ignore
+  ).map(promise => promise.value)
+
   const { campaigns, planetStatus, planetEvents } = status
   const { planetInfos } = info
 

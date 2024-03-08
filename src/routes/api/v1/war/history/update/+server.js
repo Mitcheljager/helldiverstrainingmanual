@@ -10,8 +10,13 @@ export async function GET({ url }) {
 
     if (token !== import.meta.env.VITE_HISTORY_API_TOKEN) throw new Error("Incorrect token")
 
-    const status = await fetchStatus(fetch)
-    const info = await fetchInfo(fetch)
+    const [status, info] = (
+      await Promise.allSettled([
+        fetchStatus(fetch).then(r => r || {}),
+        fetchInfo(fetch).then(r => r || {})
+      ])
+    // @ts-ignore
+    ).map(promise => promise.value)
 
     const { campaigns, planetStatus, planetEvents } = (status || {})
     const { planetInfos } = (info || {})
