@@ -12,7 +12,7 @@
   let endDate = Date.now()
   let daysAgo = 0
 
-  const startOfRecordingDate = new Date("8 March 2024")
+  const startOfRecordingDate = new Date("7 March 2024")
   const dayInMilliseconds = 24 * 60 * 60 * 1000
 
   $: ({ records, info, status } = data)
@@ -84,7 +84,7 @@
 </Map>
 
 <div class="mt-1">
-  <em>Data recording started {startOfRecordingDate.toLocaleDateString(undefined, { month: "long", day: "numeric" })}</em>
+  <em>Data recording started {startOfRecordingDate.toLocaleDateString(undefined, { year: "numeric", month: "long", day: "numeric" })}</em>
 </div>
 
 <div class="items">
