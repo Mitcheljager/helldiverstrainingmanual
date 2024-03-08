@@ -31,6 +31,6 @@ export async function GET({ url }) {
 
     return new Response(JSON.stringify({ status: "Done" }), { headers, status: 200 })
   } catch (error) {
-    return new Response(JSON.stringify({ status: error }), { headers, status: 500 })
+    return new Response(JSON.stringify({ status: "Error: " + error }), { headers, status: 500 })
   }
 }
