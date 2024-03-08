@@ -4,6 +4,7 @@
 	import { daysSinceDate } from "$lib/utils/datetime"
 	import Map from "$lib/components/Map.svelte"
 	import Range from "$lib/components/Range.svelte"
+	import { toSlug } from "$lib/utils/route.js";
 
   export let data
 
@@ -87,8 +88,8 @@
 
       <div class="item">
         <strong>{planetNames[record.planet_index]}</strong>
-        was taken by <strong>{factions[record.current_owner]}</strong>,
-        previously owned by <strong>{factions[record.previous_owner]}</strong>
+        was taken by <strong class={toSlug(factions[record.current_owner])}>{factions[record.current_owner]}</strong>,
+        previously owned by <strong class={toSlug(factions[record.previous_owner])}>{factions[record.previous_owner]}</strong>
       </div>
     {/each}
   {/each}
@@ -111,5 +112,11 @@
     padding: $margin * 0.25;
     border: 5px solid $bg-dark;
     background: lighten($bg-base, 5%);
+  }
+
+  @each $label, $color in $faction-colors {
+    .#{$label} {
+      color: #{$color};
+    }
   }
 </style>
