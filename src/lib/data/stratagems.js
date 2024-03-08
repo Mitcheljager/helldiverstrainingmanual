@@ -432,7 +432,7 @@ export const stratagems = [{
     name: "SOS Beacon",
     sequence: ["up", "down", "right", "up"],
     content: `
-      <p>In the heat of battle, when the shadows of adversity loom large, there emerges a beacon of hope – the SOS Beacon, a lifeline to reinforcements in our darkest hour. With each pulse of its signal, we rally the brave and the bold to stand alongside us in the relentless fight for liberty, igniting a flame of courage amidst the encroaching darkness. As its signal pierces the heavens, it serves as a testament to the unyielding spirit of Helldivers, reaffirming our commitment to confront tyranny head-on and triumph against all odds. Together, united in purpose, we stand resolute, knowing that in the unity of our ranks lies the strength to overcome any obstacle and emerge victorious in the pursuit of freedom.</p>
+      <p>The SOS Beacon is used to signal the needs for reinforcements, allow other Helldivers to join your cause. As its signal pierces the heavens, it serves as a testament to the unyielding spirit of Helldivers, reaffirming our commitment to confront tyranny head-on and triumph against all odds, together.</p>
     `
   }, {
     name: "Resupply",
