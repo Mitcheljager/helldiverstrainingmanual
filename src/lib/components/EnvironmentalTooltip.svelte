@@ -5,7 +5,9 @@
   export let full = false
 </script>
 
-<div class="environmental" class:full>
+<!-- svelte-ignore a11y-no-static-element-interactions -->
+<!-- svelte-ignore a11y-click-events-have-key-events -->
+<div class="environmental" class:full on:click|preventDefault>
   <img src="/images/environmentals/{toSlug(environmental.name)}.png" alt={environmental.name} />
 
   <div class="tooltip">
