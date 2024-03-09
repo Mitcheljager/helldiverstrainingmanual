@@ -1,11 +1,9 @@
 <script>
-  import { factions } from "$lib/data/factions"
-	import { planetData } from "$lib/data/planets"
 	import { daysSinceDate } from "$lib/utils/datetime"
 	import Map from "$lib/components/Map.svelte"
 	import Range from "$lib/components/Range.svelte"
-	import { toSlug } from "$lib/utils/route.js";
-	import Hero from "$lib/components/Hero.svelte";
+	import Hero from "$lib/components/Hero.svelte"
+	import OwnershipRecord from "$lib/components/OwnershipRecord.svelte"
 
   export let data
 
@@ -98,38 +96,18 @@
     </h3>
 
     {#each records as record}
-      <div class="item">
-        <strong>{planetData[record.planet_index].name}</strong>
-        was taken by <strong class={toSlug(factions[record.current_owner])}>{factions[record.current_owner]}</strong>,
-        previously owned by <strong class={toSlug(factions[record.previous_owner])}>{factions[record.previous_owner]}</strong>
-      </div>
+      <OwnershipRecord {record} />
     {/each}
   {/each}
 </div>
 
 <style lang="scss">
-  strong {
-    color: $white;
-
-    @each $label, $color in $faction-colors {
-      &.#{$label} {
-        color: #{$color};
-      }
-    }
-  }
-
   .items {
     display: flex;
     flex-direction: column;
     gap: $margin * 0.25;
     max-width: $text-limit;
     margin-top: $margin * 0.75;
-  }
-
-  .item {
-    padding: $margin * 0.25;
-    border: 5px solid $bg-dark;
-    background: lighten($bg-base, 5%);
   }
 
   .date-selector {

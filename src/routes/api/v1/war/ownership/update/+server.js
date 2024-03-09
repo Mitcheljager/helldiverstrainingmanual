@@ -25,19 +25,6 @@ export async function GET({ url }) {
       requests.push({ planet_index: planet.index, previous_owner: data.current_owner, current_owner: planet.owner })
     })
 
-    // await Promise.all(planetStatus.map(async planet => {
-    //   const { data } = await supabase
-    //     .from("ownership")
-    //     .select("planet_index, current_owner, previous_owner")
-    //     .eq("planet_index", planet.index)
-    //     .order("created_at", { ascending: false })
-    //     .single()
-
-    //   if (!data) return
-
-    //   if (planet.owner !== data.previous_owner) requests.push({ planet_index: planet.index, previous_owner: data.current_owner, current_owner: planet.owner })
-    // }))
-
     if (requests.length) {
       const { error } = await supabase.from("ownership").insert(requests).select()
       if (error) throw new Error(error.message)

@@ -6,6 +6,7 @@
 
   export let index
   export let row = false
+  export let inline = false
 
   function getChartProps(history, players = false) {
     const data = {}
@@ -41,12 +42,14 @@
 </script>
 
 <div>
-  <h4 class="mb-1/4">{planetData[index].name}</h4>
+  {#if !inline}
+    <h4 class="mb-1/4">{planetData[index].name}</h4>
+  {/if}
 
   {#await fetchHistory(index)}
     <span>Loading...</span>
   {:then data}
-    <div class="charts" class:row>
+    <div class="charts" class:row class:inline>
       {#if Object.entries(data).length !== 0}
         {#each [{ header: "Liberation percentage", players: false }, { header: "Number of Helldivers", players: true }] as { header, players }}
           <div class="chart" transition:slide|global={{ duration: 100 }} >
@@ -107,7 +110,6 @@
     font-weight: normal;
     color: darken($text-color, 20%);
     line-height: 1em;
-    text-align: center;
   }
 
   .charts {
@@ -125,6 +127,10 @@
         width: 100%;
       }
     }
+
+    &.inline {
+      text-align: left;
+    }
   }
 
   .chart {
@@ -139,7 +145,7 @@
       width: 100%;
       height: auto;
       max-height: 80px;
-      background: $bg-base;
+      background: var(--chart-background, #{$bg-base});
 
       @include breakpoint(sm) {
         max-height: 100vh;

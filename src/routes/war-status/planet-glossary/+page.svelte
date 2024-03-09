@@ -2,6 +2,7 @@
   import EnvironmentalTooltip from "$lib/components/EnvironmentalTooltip.svelte"
   import Hero from "$lib/components/Hero.svelte"
   import { planetData } from "$lib/data/planets"
+	import { toSlug } from "$lib/utils/route"
 
   function groupPlanetsBySector() {
     const groupedBySector = {}
@@ -32,7 +33,7 @@
     <h3 class="mt-1/4 mb-0">{sector}</h3>
 
     {#each planets.sort((a, b) => a.name > b.name ? 1 : -1) as planet}
-      <a class="item" href="">
+      <a class="item" href="/war-status/planet-glossary/{toSlug(planet.name)}">
         <div class="content">
           <div class="name">{planet.name}</div>
 
