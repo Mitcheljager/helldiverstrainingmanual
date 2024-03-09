@@ -272,7 +272,7 @@
     width: 100%;
     height: auto;
     opacity: 0.65;
-    transform: scale(var(--zoom));
+    transform: scale(calc(1.02 * var(--zoom)));
     transition: transform 200ms;
   }
 
