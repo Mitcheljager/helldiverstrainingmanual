@@ -1,15 +1,21 @@
 <script>
+	import { createEventDispatcher } from "svelte"
 	import { factions } from "$lib/data/factions"
 	import { planetData } from "$lib/data/planets"
 	import { fade, scale } from "svelte/transition"
 	import AnalyticsPopup from "$lib/components/AnalyticsPopup.svelte"
 	import IconDefense from "$lib/components/icons/IconDefense.svelte"
+  import Modal from "$lib/components/Modal.svelte"
+  import PlanetGlossaryPage from '../../routes/war-status/planet-glossary/[name]/+page.svelte'
+	import { pushState } from "$app/navigation"
 
   export let planet = {}
   export let status = {}
   export let campaign = null
   export let active = false
   export let highlight = false
+
+  const dispatch = createEventDispatcher()
 
   $: ({ index, position } = planet)
   $: ({ name, percentage, faction, defense, players } = campaign || {})
@@ -57,6 +63,8 @@
       {/if}
 
       <AnalyticsPopup {index} />
+
+      <button class="details" on:click={() => dispatch("details")}>Planet details</button>
     </div>
   {/if}
 </button>
@@ -172,6 +180,24 @@
       height: auto;
       margin: $margin * -0.25 $margin * -0.25 $margin * -0.5;
       mask-image: linear-gradient(to bottom, white, transparent);
+    }
+  }
+
+  .details {
+    appearance: none;
+    padding: 0;
+    margin: $margin * 0.25 0 0;
+    border: 0;
+    border-bottom: 2px solid $white;
+    background: transparent;
+    color: $white;
+    font-family: $font-family-alt;
+    font-size: 0.75rem;
+    cursor: pointer;
+
+    &:hover {
+      background: rgba($black, 0.25);
+      box-shadow: 0 0 0 0.25rem rgba($black, 0.25);
     }
   }
 </style>

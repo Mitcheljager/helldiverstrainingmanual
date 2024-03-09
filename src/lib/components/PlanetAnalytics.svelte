@@ -52,7 +52,7 @@
     <div class="charts" class:row class:inline>
       {#if Object.entries(data).length !== 0}
         {#each [{ header: "Liberation percentage", players: false }, { header: "Number of Helldivers", players: true }] as { header, players }}
-          <div class="chart" transition:slide|global={{ duration: 100 }} >
+          <div class="chart" in:slide|global={{ duration: 100 }} >
             <h5>{header}</h5>
 
             <LinkedChart
@@ -77,7 +77,7 @@
     </div>
 
     {#if Object.entries(data).length < 200}
-      <em class="mt-1/4" transition:slide|global={{ duration: 100 }}>
+      <em class="mt-1/4" in:slide|global={{ duration: 100 }}>
         {#if Object.entries(data).length === 0}
           No activity has been recorded on this planet
         {:else}

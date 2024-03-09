@@ -9,6 +9,10 @@
 	import Planet from "$lib/components/Planet.svelte"
 	import SupplyLines from "$lib/components/SupplyLines.svelte"
 	import PlanetSearch from "$lib/components/PlanetSearch.svelte"
+	import Modal from "$lib/components/Modal.svelte"
+  import PlanetGlossaryPage from '../../routes/war-status/planet-glossary/[name]/+page.svelte'
+	import { planetData } from "$lib/data/planets"
+	import { page } from "$app/stores"
 
   export let planets = []
   export let campaigns = []
@@ -36,6 +40,7 @@
 	let elementPositionY = 0
   let dragStartPosition = {}
   let foundPlanetIndexes = []
+  let modalIndex = null
 
   $: totalPlayerCount = campaigns.reduce((total, c) => total + c.players, 0)
   $: if (browser && innerElement !== null && innerWidth) bindImpetus()
@@ -148,6 +153,7 @@
                 campaign={getCampaign(planet.index)}
                 status={status && getStatus(planet.index)}
                 active={activeIndex === planet.index}
+                on:details={() => modalIndex = planet.index}
                 on:click={() => activeIndex = activeIndex === planet.index ? -1 : planet.index} />
             {/if}
           {/each}
@@ -209,6 +215,12 @@
     {/if}
   </div>
 </div>
+
+{#if modalIndex !== null}
+  <Modal on:close={() => modalIndex = null}>
+    <PlanetGlossaryPage data={{ index: modalIndex, planet: planetData[modalIndex] }} showBackRoute={false} />
+  </Modal>
+{/if}
 
 <style lang="scss">
   .wrapper {

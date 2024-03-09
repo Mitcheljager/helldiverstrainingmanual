@@ -7,6 +7,7 @@
 	import PlanetAnalytics from "$lib/components/PlanetAnalytics.svelte"
 
   export let data
+  export let showBackRoute = true
 
   $: ({ index, planet } = data)
   $: ({ name, sector, biome, environmentals } = planet)
@@ -16,7 +17,9 @@
   <title>{name} | Helldivers Training Manual</title>
 </svelte:head>
 
-<a class="return" href="/war-status/planet-glossary">← Return to Planet Glossary</a>
+{#if showBackRoute}
+  <a class="return" href="/war-status/planet-glossary">← Return to Planet Glossary</a>
+{/if}
 
 {#key name}
   {#if biome}
@@ -27,9 +30,11 @@
     <h1>{name}</h1>
   {/if}
 
-  <p class="description">
-    {biome?.description || "Planet details unknown"}
-  </p>
+  {#if biome?.description}
+    <p class="description">
+      {biome.description}
+    </p>
+  {/if}
 
   <p class="mt-1/2">
     Part of the <strong>{sector} Sector</strong>
@@ -41,6 +46,10 @@
     {#each environmentals as environmental}
       <EnvironmentalTooltip full {environmental} />
     {/each}
+
+    {#if !environmentals.length}
+      <em>This planet has no environmental effects</em>
+    {/if}
   </div>
 
   <h3 class="mt-1 mb-1/4">Recent Activity</h3>
