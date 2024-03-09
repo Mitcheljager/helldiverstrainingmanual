@@ -1,12 +1,13 @@
 <script>
-	import { hoursDifference, timeFromNow } from "$lib/utils/datetime"
-	import { onDestroy, onMount, beforeUpdate } from "svelte"
+	import { timeFromNow } from "$lib/utils/datetime"
+	import { onDestroy, onMount } from "svelte"
 	import { slide } from "svelte/transition"
 	import IconDefense from "$lib/components/icons/IconDefense.svelte"
 	import IconAnalytics from "$lib/components/icons/IconAnalytics.svelte"
 	import PlanetAnalytics from "$lib/components/PlanetAnalytics.svelte"
 	import RollingNumber from "$lib/components/RollingNumber.svelte"
 	import LocateOnMap from "$lib/components/LocateOnMap.svelte"
+	import PredictResults from "$lib/components/PredictResults.svelte"
 
   export let planetIndex = ""
   export let name = ""
@@ -22,14 +23,9 @@
   let timeInterval
   let timeKey = 0
   let showAnalytics = false
-  let previousPercentage = percentage
-  let estimatedEnd = 0
-  let now = Date.now()
+  let rateDirection
 
   $: normalizedHealth = 1 - (1 / maxHealth * health) // This is used purely to shut up the compiler about missing props
-  $: steady = percentage === 0 || percentage === 100 || percentage === previousPercentage
-  $: rateDirection = steady ? 0 : percentage > previousPercentage ? 1 : -1
-  $: if (percentage && previousPercentage) estimatedEnd = calculateTimeTo100()
 
   onMount(() => {
     timeInterval = setInterval(() => timeKey = Math.random(), 1000)
@@ -38,24 +34,6 @@
   onDestroy(() => {
     if (timeInterval) clearInterval(timeInterval)
   })
-
-  beforeUpdate(() => {
-    previousPercentage = percentage
-    now = Date.now()
-  })
-
-  function calculateTimeTo100() {
-    const interval = 5
-
-    const rateOfChange = (percentage - previousPercentage) / interval
-    const remainingPercentage = 100 - percentage
-    const timeToFilledInSeconds = remainingPercentage / rateOfChange
-
-    const currentTimeInMilliseconds = Date.now()
-    const timeToFilledInMilliseconds = currentTimeInMilliseconds + timeToFilledInSeconds * 1000
-
-    return Math.floor(timeToFilledInMilliseconds / 1000)
-  }
 </script>
 
 <div class="item {faction.toLowerCase().replace(" ", "-")}" class:stacked data-index={planetIndex} data-normalized={normalizedHealth}>
@@ -86,7 +64,7 @@
 
     <div class="info">
       <span class="percentage" class:has-icon={rateDirection}>
-        {#if rateDirection}
+        {#if rateDirection !== 0}
           <svg
             class="rate-direction {rateDirection === 1 ? "positive" : "negative" }"
             width="20px"
@@ -112,13 +90,7 @@
     </div>
 
     <div class="info dark">
-      {#if estimatedEnd === Infinity}
-        Predicting results...
-      {:else if percentage === 0 && previousPercentage === 0}
-        Overwhelming forces await
-      {:else}
-        {estimatedEnd > (now / 1000) ? "Victory" : "Loss"} in about {hoursDifference(estimatedEnd)} hrs
-      {/if}
+      <PredictResults {planetIndex} {percentage} bind:rateDirection />
     </div>
   </div>
 </div>

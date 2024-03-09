@@ -2,9 +2,9 @@ import { supabase } from "$lib/db"
 
 let lastCampaignEntry = 0
 
-export async function fetchHistory(planetIndex) {
+export async function fetchHistory(planetIndex, { limit = 288 } = {}) {
   try {
-    const response = await fetch(`/api/v1/war/history/${planetIndex}`)
+    const response = await fetch(`/api/v1/war/history/${planetIndex}?limit=${limit}`)
 
     if (!response.ok) throw new Error("Network response was not ok")
 
