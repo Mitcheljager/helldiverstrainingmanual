@@ -17,6 +17,8 @@
   <div class="backdrop" on:click={() => dispatch("close")} />
 </div>
 
+<button class="close" on:click={() => dispatch("close")}>X</button>
+
 <style lang="scss">
   .modal {
     position: fixed;
@@ -56,5 +58,25 @@
     height: 100%;
     width: 100%;
     z-index: -1;
+  }
+
+  .close {
+    appearance: none;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    border: 0;
+    width: 3rem;
+    height: 3rem;
+    background: $bg-dark;
+    z-index: 200;
+    color: $white;
+    font-family: $font-family-alt;
+    font-size: 1.5rem;
+    cursor: pointer;
+
+    @include breakpoint(lg) {
+      display: none;
+    }
   }
 </style>
