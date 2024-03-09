@@ -81,8 +81,13 @@
     align-items: center;
     gap: $margin * 0.5;
     position: relative;
+    min-height: 2rem;
     font-weight: bold;
     font-size: 1.15rem;
+
+    @include breakpoint(sm) {
+      min-height: 3rem;
+    }
   }
 
   .name {
