@@ -108,9 +108,10 @@
   .biome {
     width: 50%;
     height: auto;
+    min-height: 100%;
     opacity: 0.5;
     mask-image: linear-gradient(to right, white, transparent);
-
+    object-fit: cover;
 
     .item:hover & {
       opacity: 0.75;
