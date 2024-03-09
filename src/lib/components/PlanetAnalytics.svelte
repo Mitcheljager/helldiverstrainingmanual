@@ -2,7 +2,7 @@
   import { LinkedChart, LinkedLabel, LinkedValue } from "svelte-tiny-linked-charts"
 	import { fetchHistory } from "$lib/api/history"
 	import { slide } from "svelte/transition"
-	import { planetNames } from "$lib/data/planets"
+	import { planetData } from "$lib/data/planets"
 
   export let index
   export let row = false
@@ -41,7 +41,7 @@
 </script>
 
 <div>
-  <h4 class="mb-1/4">{planetNames[index]}</h4>
+  <h4 class="mb-1/4">{planetData[index].name}</h4>
 
   {#await fetchHistory(index)}
     <span>Loading...</span>

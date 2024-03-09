@@ -1,263 +1,1310 @@
-export const planetNames = {
-  0: "Super Earth",
-  1: "Klen Dahth II",
-  2: "Pathfinder V",
-  3: "Widow's Harbor",
-  4: "New Haven",
-  5: "Pilen V",
-  6: "Hydrofall Prime",
-  7: "Zea Rugosia",
-  8: "Darrowsport",
-  9: "Fornskogur II",
-  10: "Midasburg",
-  11: "Cerberus Iiic",
-  12: "Prosperity Falls",
-  13: "Okul VI",
-  14: "Martyr's Bay",
-  15: "Freedom Peak",
-  16: "Fort Union",
-  17: "Kelvinor",
-  18: "Wraith",
-  19: "Igla",
-  20: "New Kiruna",
-  21: "Fort Justice",
-  22: "Zegema Paradise",
-  23: "Providence",
-  24: "Primordia",
-  25: "Sulfura",
-  26: "Nublaria I",
-  27: "Krakatwo",
-  28: "Volterra",
-  29: "Crucible",
-  30: "Veil",
-  31: "Marre IV",
-  32: "Fort Sanctuary",
-  33: "Seyshel Beach",
-  34: "Hellmire",
-  35: "Effluvia",
-  36: "Solghast",
-  37: "Diluvia",
-  38: "Viridia Prime",
-  39: "Obari",
-  40: "Myradesh",
-  41: "Atrama",
-  42: "Emeria",
-  43: "Barabos",
-  44: "Fenmire",
-  45: "Mastia",
-  46: "Shallus",
-  47: "Krakabos",
-  48: "Iridica",
-  49: "Azterra",
-  50: "Azur Secundus",
-  51: "Ivis",
-  52: "Slif",
-  53: "Caramoor",
-  54: "Kharst",
-  55: "Eukoria",
-  56: "Myrium",
-  57: "Kerth Secundus",
-  58: "Parsh",
-  59: "Reaf",
-  60: "Irulta",
-  61: "Emorath",
-  62: "Ilduna Prime",
-  63: "Maw",
-  64: "Meridia",
-  65: "Borea",
-  66: "Curia",
-  67: "Tarsh",
-  68: "Shelt",
-  69: "Imber",
-  70: "Blistica",
-  71: "Ratch",
-  72: "Julheim",
-  73: "Valgaard",
-  74: "Arkturus",
-  75: "Esker",
-  76: "Terrek",
-  77: "Cirrus",
-  78: "Crimsica",
-  79: "Heeth",
-  80: "Veld",
-  81: "Alta V",
-  82: "Ursica XI",
-  83: "Inari",
-  84: "Skaash",
-  85: "Moradesh",
-  86: "Rasp",
-  87: "Bashyr",
-  88: "Regnus",
-  89: "Mog",
-  90: "Valmox",
-  91: "Iro",
-  92: "Grafmere",
-  93: "New Stockholm",
-  94: "Oasis",
-  95: "Genesis Prime",
-  96: "Outpost 32",
-  97: "Calypso",
-  98: "Elysian Meadows",
-  99: "Alderidge Cove",
-  100: "Trandor",
-  101: "East Iridium Trading Bay",
-  102: "Liberty Ridge",
-  103: "Baldrick Prime",
-  104: "The Weir",
-  105: "Kuper",
-  106: "Oslo Station",
-  107: "Pöpli IX",
-  108: "Gunvald",
-  109: "Dolph",
-  110: "Bekvam III",
-  111: "Duma Tyr",
-  112: "Vernen Wells",
-  113: "Aesir Pass",
-  114: "Aurora Bay",
-  115: "Penta",
-  116: "Gaellivare",
-  117: "Vog-sojoth",
-  118: "Kirrik",
-  119: "Mortax Prime",
-  120: "Wilford Station",
-  121: "Pioneer II",
-  122: "Erson Sands",
-  123: "Socorro III",
-  124: "Bore Rock",
-  125: "Fenrir III",
-  126: "Turing",
-  127: "Angel's Venture",
-  128: "Darius II",
-  129: "Acamar IV",
-  130: "Achernar Secundus",
-  131: "Achird III",
-  132: "Acrab XI",
-  133: "Acrux IX",
-  134: "Acubens Prime",
-  135: "Adhara",
-  136: "Afoyay Bay",
-  137: "Ain-5",
-  138: "Alairt III",
-  139: "Alamak VII",
-  140: "Alaraph",
-  141: "Alathfar XI",
-  142: "Andar",
-  143: "Asperoth Prime",
-  144: "Bellatrix",
-  145: "Botein",
-  146: "Osupsam",
-  147: "Brink-2",
-  148: "Bunda Secundus",
-  149: "Canopus",
-  150: "Caph",
-  151: "Castor",
-  152: "Durgen",
-  153: "Draupnir",
-  154: "Mort",
-  155: "Ingmar",
-  156: "Charbal-VII",
-  157: "Charon Prime",
-  158: "Choepessa IV",
-  159: "Choohe",
-  160: "Chort Bay",
-  161: "Claorell",
-  162: "Clasa",
-  163: "Demiurg",
-  164: "Deneb Secundus",
-  165: "Electra Bay",
-  166: "Enuliale",
-  167: "Epsilon Phoencis VI",
-  168: "Erata Prime",
-  169: "Estanu",
-  170: "Fori Prime",
-  171: "Gacrux",
-  172: "Gar Haren",
-  173: "Gatria",
-  174: "Gemma",
-  175: "Grand Errant",
-  176: "Hadar",
-  177: "Haka",
-  178: "Haldus",
-  179: "Halies Port",
-  180: "Herthon Secundus",
-  181: "Hesoe Prime",
-  182: "Heze Bay",
-  183: "Hort",
-  184: "Hydrobius",
-  185: "Karlia",
-  186: "Keid",
-  187: "Khandark",
-  188: "Klaka 5",
-  189: "Kneth Port",
-  190: "Kraz",
-  191: "Kuma",
-  192: "Lastofe",
-  193: "Leng Secundus",
-  194: "Lesath",
-  195: "Maia",
-  196: "Malevelon Creek",
-  197: "Mantes",
-  198: "Marfark",
-  199: "Martale",
-  200: "Matar Bay",
-  201: "Meissa",
-  202: "Mekbuda",
-  203: "Menkent",
-  204: "Merak",
-  205: "Merga IV",
-  206: "Minchir",
-  207: "Mintoria",
-  208: "Mordia 9",
-  209: "Nabatea Secundus",
-  210: "Navi VII",
-  211: "Nivel 43",
-  212: "Oshaune",
-  213: "Overgoe Prime",
-  214: "Pandion-XXIV",
-  215: "Partion",
-  216: "Peacock",
-  217: "Phact Bay",
-  218: "Pherkad Secundus",
-  219: "Polaris Prime",
-  220: "Pollux 31",
-  221: "Prasa",
-  222: "Propus",
-  223: "Ras Algethi",
-  224: "Rd-4",
-  225: "Rogue 5",
-  226: "Rirga Bay",
-  227: "Seasse",
-  228: "Senge 23",
-  229: "Setia",
-  230: "Shete",
-  231: "Siemnot",
-  232: "Sirius",
-  233: "Skat Bay",
-  234: "Spherion",
-  235: "Stor Tha Prime",
-  236: "Stout",
-  237: "Termadon",
-  238: "Tibit",
-  239: "Tien Kwan",
-  240: "Troost",
-  241: "Ubanea",
-  242: "Ustotu",
-  243: "Vandalon IV",
-  244: "Varylia 5",
-  245: "Wasat",
-  246: "Vega Bay",
-  247: "Wezen",
-  248: "Vindemitarix Prime",
-  249: "X-45",
-  250: "Yed Prior",
-  251: "Zefia",
-  252: "Zosma",
-  253: "Zzaniah Prime",
-  254: "Skitter",
-  255: "Euphoria III",
-  256: "Diaspora X",
-  257: "Gemstone Bluffs",
-  258: "Zagon Prime",
-  259: "Omicron",
-  260: "Cyberstan"
+import { Environmental } from "$lib/data/environmental"
+import { Biome } from "$lib/data/biome"
+
+export const planetData = {
+  0: {
+    name: "Super Earth",
+    biome: null,
+    environmentals: []
+  },
+  1: {
+    name: "Klen Dahth II",
+    biome: null,
+    environmentals: [Environmental.IntenseHeat, Environmental.Sandstorms]
+  },
+  2: {
+    name: "Pathfinder V",
+    biome: null,
+    environmentals: [Environmental.ThickFog, Environmental.Rainstorms]
+  },
+  3: {
+    name: "Widow's Harbor",
+    biome: null,
+    environmentals: [Environmental.ExtremeCold, Environmental.MeteorStorms]
+  },
+  4: {
+    name: "New Haven",
+    biome: null,
+    environmentals: [Environmental.IonStorms]
+  },
+  5: {
+    name: "Pilen V",
+    biome: null,
+    environmentals: [Environmental.IntenseHeat, Environmental.Tremors]
+  },
+  6: {
+    name: "Hydrofall Prime",
+    biome: null,
+    environmentals: [Environmental.Tremors]
+  },
+  7: {
+    name: "Zea Rugosia",
+    biome: null,
+    environmentals: [Environmental.IntenseHeat, Environmental.Tremors]
+  },
+  8: {
+    name: "Darrowsport",
+    biome: null,
+    environmentals: [Environmental.IntenseHeat, Environmental.AcidStorms]
+  },
+  9: {
+    name: "Fornskogur II",
+    biome: null,
+    environmentals: [Environmental.VolcanicActivity, Environmental.Rainstorms]
+  },
+  10: {
+    name: "Midasburg",
+    biome: null,
+    environmentals: []
+  },
+  11: {
+    name: "Cerberus Iiic",
+    biome: null,
+    environmentals: [Environmental.IntenseHeat, Environmental.Tremors]
+  },
+  12: {
+    name: "Prosperity Falls",
+    biome: null,
+    environmentals: [Environmental.IonStorms]
+  },
+  13: {
+    name: "Okul VI",
+    biome: null,
+    environmentals: [Environmental.ExtremeCold, Environmental.Blizzards]
+  },
+  14: {
+    name: "Martyr's Bay",
+    biome: null,
+    environmentals: [Environmental.ExtremeCold]
+  },
+  15: {
+    name: "Freedom Peak",
+    biome: null,
+    environmentals: [Environmental.IonStorms]
+  },
+  16: {
+    name: "Fort Union",
+    biome: null,
+    environmentals: [Environmental.ThickFog, Environmental.Rainstorms]
+  },
+  17: {
+    name: "Kelvinor",
+    biome: null,
+    environmentals: [Environmental.ExtremeCold, Environmental.Blizzards]
+  },
+  18: {
+    name: "Wraith",
+    biome: null,
+    environmentals: [Environmental.IntenseHeat, Environmental.AcidStorms]
+  },
+  19: {
+    name: "Igla",
+    biome: null,
+    environmentals: [Environmental.ExtremeCold]
+  },
+  20: {
+    name: "New Kiruna",
+    biome: null,
+    environmentals: [Environmental.ExtremeCold, Environmental.Blizzards]
+  },
+  21: {
+    name: "Fort Justice",
+    biome: null,
+    environmentals: []
+  },
+  22: {
+    name: "Zegema Paradise",
+    biome: null,
+    environmentals: [Environmental.VolcanicActivity, Environmental.Rainstorms]
+  },
+  23: {
+    name: "Providence",
+    biome: null,
+    environmentals: [Environmental.IonStorms]
+  },
+  24: {
+    name: "Primordia",
+    biome: null,
+    environmentals: [Environmental.VolcanicActivity, Environmental.Rainstorms]
+  },
+  25: {
+    name: "Sulfura",
+    biome: null,
+    environmentals: []
+  },
+  26: {
+    name: "Nublaria I",
+    biome: null,
+    environmentals: [Environmental.VolcanicActivity, Environmental.Rainstorms]
+  },
+  27: {
+    name: "Krakatwo",
+    biome: null,
+    environmentals: [Environmental.ExtremeCold]
+  },
+  28: {
+    name: "Volterra",
+    biome: null,
+    environmentals: [Environmental.ThickFog, Environmental.Rainstorms]
+  },
+  29: {
+    name: "Crucible",
+    biome: null,
+    environmentals: []
+  },
+  30: {
+    name: "Veil",
+    biome: null,
+    environmentals: [Environmental.ThickFog]
+  },
+  31: {
+    name: "Marre IV",
+    biome: null,
+    environmentals: [Environmental.IntenseHeat, Environmental.FireTornadoes]
+  },
+  32: {
+    name: "Fort Sanctuary",
+    biome: null,
+    environmentals: [Environmental.IonStorms]
+  },
+  33: {
+    name: "Seyshel Beach",
+    biome: null,
+    environmentals: []
+  },
+  34: {
+    name: "Hellmire",
+    biome: null,
+    environmentals: [Environmental.IntenseHeat, Environmental.FireTornadoes]
+  },
+  35: {
+    name: "Effluvia",
+    biome: null,
+    environmentals: [Environmental.Tremors]
+  },
+  36: {
+    name: "Solghast",
+    biome: null,
+    environmentals: [Environmental.ThickFog]
+  },
+  37: {
+    name: "Diluvia",
+    biome: null,
+    environmentals: []
+  },
+  38: {
+    name: "Viridia Prime",
+    biome: null,
+    environmentals: [Environmental.IntenseHeat, Environmental.Sandstorms]
+  },
+  39: {
+    name: "Obari",
+    biome: null,
+    environmentals: [Environmental.ThickFog, Environmental.Rainstorms]
+  },
+  40: {
+    name: "Myradesh",
+    biome: Biome.Desert,
+    environmentals: [Environmental.IntenseHeat, Environmental.Tremors]
+  },
+  41: {
+    name: "Atrama",
+    biome: null,
+    environmentals: [Environmental.IonStorms]
+  },
+  42: {
+    name: "Emeria",
+    biome: null,
+    environmentals: [Environmental.Tremors]
+  },
+  43: {
+    name: "Barabos",
+    biome: null,
+    environmentals: [Environmental.ExtremeCold]
+  },
+  44: {
+    name: "Fenmire",
+    biome: null,
+    environmentals: [Environmental.ThickFog, Environmental.Rainstorms]
+  },
+  45: {
+    name: "Mastia",
+    biome: null,
+    environmentals: [Environmental.IntenseHeat, Environmental.Sandstorms]
+  },
+  46: {
+    name: "Shallus",
+    biome: null,
+    environmentals: []
+  },
+  47: {
+    name: "Krakabos",
+    biome: null,
+    environmentals: [Environmental.ExtremeCold]
+  },
+  48: {
+    name: "Iridica",
+    biome: null,
+    environmentals: []
+  },
+  49: {
+    name: "Azterra",
+    biome: null,
+    environmentals: [Environmental.Tremors]
+  },
+  50: {
+    name: "Azur Secundus",
+    biome: Biome.Desert,
+    environmentals: [Environmental.IntenseHeat, Environmental.Tremors]
+  },
+  51: {
+    name: "Ivis",
+    biome: null,
+    environmentals: [Environmental.ExtremeCold, Environmental.Blizzards]
+  },
+  52: {
+    name: "Slif",
+    biome: null,
+    environmentals: [Environmental.IntenseHeat, Environmental.AcidStorms]
+  },
+  53: {
+    name: "Caramoor",
+    biome: null,
+    environmentals: [Environmental.IntenseHeat, Environmental.Sandstorms]
+  },
+  54: {
+    name: "Kharst",
+    biome: null,
+    environmentals: [Environmental.IonStorms]
+  },
+  55: {
+    name: "Eukoria",
+    biome: null,
+    environmentals: [Environmental.ExtremeCold]
+  },
+  56: {
+    name: "Myrium",
+    biome: null,
+    environmentals: [Environmental.Tremors]
+  },
+  57: {
+    name: "Kerth Secundus",
+    biome: null,
+    environmentals: []
+  },
+  58: {
+    name: "Parsh",
+    biome: null,
+    environmentals: [Environmental.ExtremeCold, Environmental.Blizzards]
+  },
+  59: {
+    name: "Reaf",
+    biome: null,
+    environmentals: [Environmental.ThickFog, Environmental.Rainstorms]
+  },
+  60: {
+    name: "Irulta",
+    biome: null,
+    environmentals: [Environmental.VolcanicActivity, Environmental.Rainstorms]
+  },
+  61: {
+    name: "Emorath",
+    biome: null,
+    environmentals: []
+  },
+  62: {
+    name: "Ilduna Prime",
+    biome: null,
+    environmentals: []
+  },
+  63: {
+    name: "Maw",
+    biome: null,
+    environmentals: [Environmental.IntenseHeat]
+  },
+  64: {
+    name: "Meridia",
+    biome: Biome.Jungle,
+    environmentals: [Environmental.FireTornadoes]
+  },
+  65: {
+    name: "Borea",
+    biome: null,
+    environmentals: [Environmental.ExtremeCold, Environmental.Blizzards]
+  },
+  66: {
+    name: "Curia",
+    biome: null,
+    environmentals: [Environmental.ExtremeCold, Environmental.MeteorStorms]
+  },
+  67: {
+    name: "Tarsh",
+    biome: null,
+    environmentals: [Environmental.ExtremeCold, Environmental.Blizzards]
+  },
+  68: {
+    name: "Shelt",
+    biome: null,
+    environmentals: []
+  },
+  69: {
+    name: "Imber",
+    biome: null,
+    environmentals: [Environmental.IntenseHeat, Environmental.FireTornadoes]
+  },
+  70: {
+    name: "Blistica",
+    biome: null,
+    environmentals: [Environmental.IntenseHeat, Environmental.FireTornadoes]
+  },
+  71: {
+    name: "Ratch",
+    biome: null,
+    environmentals: [Environmental.IntenseHeat, Environmental.Sandstorms]
+  },
+  72: {
+    name: "Julheim",
+    biome: null,
+    environmentals: [Environmental.ExtremeCold, Environmental.Blizzards]
+  },
+  73: {
+    name: "Valgaard",
+    biome: null,
+    environmentals: [Environmental.IonStorms]
+  },
+  74: {
+    name: "Arkturus",
+    biome: null,
+    environmentals: [Environmental.ExtremeCold, Environmental.Blizzards]
+  },
+  75: {
+    name: "Esker",
+    biome: null,
+    environmentals: [Environmental.IntenseHeat, Environmental.AcidStorms]
+  },
+  76: {
+    name: "Terrek",
+    biome: null,
+    environmentals: [Environmental.ExtremeCold, Environmental.MeteorStorms]
+  },
+  77: {
+    name: "Cirrus",
+    biome: null,
+    environmentals: [Environmental.ThickFog]
+  },
+  78: {
+    name: "Crimsica",
+    biome: null,
+    environmentals: [Environmental.IonStorms]
+  },
+  79: {
+    name: "Heeth",
+    biome: null,
+    environmentals: [Environmental.ExtremeCold, Environmental.Blizzards]
+  },
+  80: {
+    name: "Veld",
+    biome: Biome.RainForest,
+    environmentals: [Environmental.IonStorms]
+  },
+  81: {
+    name: "Alta V",
+    biome: null,
+    environmentals: [Environmental.VolcanicActivity, Environmental.Rainstorms]
+  },
+  82: {
+    name: "Ursica XI",
+    biome: null,
+    environmentals: []
+  },
+  83: {
+    name: "Inari",
+    biome: null,
+    environmentals: [Environmental.ExtremeCold]
+  },
+  84: {
+    name: "Skaash",
+    biome: null,
+    environmentals: [Environmental.IntenseHeat, Environmental.AcidStorms]
+  },
+  85: {
+    name: "Moradesh",
+    biome: null,
+    environmentals: [Environmental.IntenseHeat, Environmental.Sandstorms]
+  },
+  86: {
+    name: "Rasp",
+    biome: null,
+    environmentals: [Environmental.ExtremeCold, Environmental.MeteorStorms]
+  },
+  87: {
+    name: "Bashyr",
+    biome: null,
+    environmentals: [Environmental.ThickFog]
+  },
+  88: {
+    name: "Regnus",
+    biome: null,
+    environmentals: [Environmental.VolcanicActivity, Environmental.Rainstorms]
+  },
+  89: {
+    name: "Mog",
+    biome: null,
+    environmentals: [Environmental.ExtremeCold, Environmental.Blizzards]
+  },
+  90: {
+    name: "Valmox",
+    biome: null,
+    environmentals: [Environmental.IonStorms]
+  },
+  91: {
+    name: "Iro",
+    biome: null,
+    environmentals: [Environmental.ThickFog, Environmental.Rainstorms]
+  },
+  92: {
+    name: "Grafmere",
+    biome: null,
+    environmentals: [Environmental.ExtremeCold]
+  },
+  93: {
+    name: "New Stockholm",
+    biome: null,
+    environmentals: [Environmental.ExtremeCold, Environmental.Blizzards]
+  },
+  94: {
+    name: "Oasis",
+    biome: null,
+    environmentals: [Environmental.VolcanicActivity, Environmental.Rainstorms]
+  },
+  95: {
+    name: "Genesis Prime",
+    biome: null,
+    environmentals: [Environmental.IonStorms]
+  },
+  96: {
+    name: "Outpost 32",
+    biome: null,
+    environmentals: [Environmental.IntenseHeat, Environmental.Sandstorms]
+  },
+  97: {
+    name: "Calypso",
+    biome: null,
+    environmentals: [Environmental.Tremors]
+  },
+  98: {
+    name: "Elysian Meadows",
+    biome: null,
+    environmentals: [Environmental.IonStorms]
+  },
+  99: {
+    name: "Alderidge Cove",
+    biome: null,
+    environmentals: [Environmental.ThickFog]
+  },
+  100: {
+    name: "Trandor",
+    biome: null,
+    environmentals: []
+  },
+  101: {
+    name: "East Iridium Trading Bay",
+    biome: null,
+    environmentals: [Environmental.VolcanicActivity, Environmental.Rainstorms]
+  },
+  102: {
+    name: "Liberty Ridge",
+    biome: null,
+    environmentals: [Environmental.IonStorms]
+  },
+  103: {
+    name: "Baldrick Prime",
+    biome: null,
+    environmentals: [Environmental.VolcanicActivity, Environmental.Rainstorms]
+  },
+  104: {
+    name: "The Weir",
+    biome: null,
+    environmentals: [Environmental.ThickFog, Environmental.Rainstorms]
+  },
+  105: {
+    name: "Kuper",
+    biome: null,
+    environmentals: [Environmental.IonStorms]
+  },
+  106: {
+    name: "Oslo Station",
+    biome: null,
+    environmentals: [Environmental.ExtremeCold]
+  },
+  107: {
+    name: "Pöpli IX",
+    biome: null,
+    environmentals: [Environmental.IntenseHeat, Environmental.FireTornadoes]
+  },
+  108: {
+    name: "Gunvald",
+    biome: null,
+    environmentals: [Environmental.IonStorms]
+  },
+  109: {
+    name: "Dolph",
+    biome: null,
+    environmentals: [Environmental.ExtremeCold, Environmental.MeteorStorms]
+  },
+  110: {
+    name: "Bekvam III",
+    biome: null,
+    environmentals: []
+  },
+  111: {
+    name: "Duma Tyr",
+    biome: null,
+    environmentals: []
+  },
+  112: {
+    name: "Vernen Wells",
+    biome: null,
+    environmentals: [Environmental.IntenseHeat, Environmental.AcidStorms]
+  },
+  113: {
+    name: "Aesir Pass",
+    biome: null,
+    environmentals: [Environmental.ThickFog]
+  },
+  114: {
+    name: "Aurora Bay",
+    biome: null,
+    environmentals: []
+  },
+  115: {
+    name: "Penta",
+    biome: null,
+    environmentals: [Environmental.ThickFog]
+  },
+  116: {
+    name: "Gaellivare",
+    biome: null,
+    environmentals: [Environmental.VolcanicActivity, Environmental.Rainstorms]
+  },
+  117: {
+    name: "Vog-sojoth",
+    biome: null,
+    environmentals: [Environmental.ExtremeCold, Environmental.Blizzards]
+  },
+  118: {
+    name: "Kirrik",
+    biome: null,
+    environmentals: [Environmental.VolcanicActivity, Environmental.Rainstorms]
+  },
+  119: {
+    name: "Mortax Prime",
+    biome: Biome.Desert,
+    environmentals: [Environmental.IntenseHeat, Environmental.Tremors]
+  },
+  120: {
+    name: "Wilford Station",
+    biome: null,
+    environmentals: [Environmental.IntenseHeat, Environmental.AcidStorms]
+  },
+  121: {
+    name: "Pioneer II",
+    biome: null,
+    environmentals: [Environmental.Tremors]
+  },
+  122: {
+    name: "Erson Sands",
+    biome: Biome.Desert,
+    environmentals: [Environmental.IntenseHeat, Environmental.Tremors]
+  },
+  123: {
+    name: "Socorro III",
+    biome: null,
+    environmentals: []
+  },
+  124: {
+    name: "Bore Rock",
+    biome: null,
+    environmentals: [Environmental.IntenseHeat, Environmental.FireTornadoes]
+  },
+  125: {
+    name: "Fenrir III",
+    biome: Biome.Moon,
+    environmentals: [Environmental.ExtremeCold, Environmental.MeteorStorms]
+  },
+  126: {
+    name: "Turing",
+    biome: Biome.Ethereal,
+    environmentals: []
+  },
+  127: {
+    name: "Angel's Venture",
+    biome: Biome.Tundra,
+    environmentals: []
+  },
+  128: {
+    name: "Darius II",
+    biome: null,
+    environmentals: [Environmental.IntenseHeat, Environmental.AcidStorms]
+  },
+  129: {
+    name: "Acamar IV",
+    biome: null,
+    environmentals: [Environmental.ThickFog, Environmental.Rainstorms]
+  },
+  130: {
+    name: "Achernar Secundus",
+    biome: null,
+    environmentals: [Environmental.ThickFog, Environmental.Rainstorms]
+  },
+  131: {
+    name: "Achird III",
+    biome: null,
+    environmentals: [Environmental.Tremors]
+  },
+  132: {
+    name: "Acrab XI",
+    biome: null,
+    environmentals: [Environmental.IonStorms]
+  },
+  133: {
+    name: "Acrux IX",
+    biome: null,
+    environmentals: [Environmental.ExtremeCold]
+  },
+  134: {
+    name: "Acubens Prime",
+    biome: null,
+    environmentals: []
+  },
+  135: {
+    name: "Adhara",
+    biome: null,
+    environmentals: [Environmental.IntenseHeat, Environmental.FireTornadoes]
+  },
+  136: {
+    name: "Afoyay Bay",
+    biome: null,
+    environmentals: [Environmental.ThickFog, Environmental.Rainstorms]
+  },
+  137: {
+    name: "Ain-5",
+    biome: null,
+    environmentals: [Environmental.ThickFog]
+  },
+  138: {
+    name: "Alairt III",
+    biome: null,
+    environmentals: [Environmental.IonStorms]
+  },
+  139: {
+    name: "Alamak VII",
+    biome: null,
+    environmentals: []
+  },
+  140: {
+    name: "Alaraph",
+    biome: null,
+    environmentals: [Environmental.ThickFog]
+  },
+  141: {
+    name: "Alathfar XI",
+    biome: null,
+    environmentals: [Environmental.ExtremeCold, Environmental.Blizzards]
+  },
+  142: {
+    name: "Andar",
+    biome: null,
+    environmentals: []
+  },
+  143: {
+    name: "Asperoth Prime",
+    biome: null,
+    environmentals: [Environmental.IntenseHeat, Environmental.FireTornadoes]
+  },
+  144: {
+    name: "Bellatrix",
+    biome: null,
+    environmentals: [Environmental.ThickFog, Environmental.Rainstorms]
+  },
+  145: {
+    name: "Botein",
+    biome: null,
+    environmentals: [Environmental.IntenseHeat, Environmental.AcidStorms]
+  },
+  146: {
+    name: "Osupsam",
+    biome: null,
+    environmentals: [Environmental.IntenseHeat, Environmental.Sandstorms]
+  },
+  147: {
+    name: "Brink-2",
+    biome: null,
+    environmentals: [Environmental.IonStorms]
+  },
+  148: {
+    name: "Bunda Secundus",
+    biome: null,
+    environmentals: []
+  },
+  149: {
+    name: "Canopus",
+    biome: Biome.Desert,
+    environmentals: [Environmental.IntenseHeat, Environmental.Tremors]
+  },
+  150: {
+    name: "Caph",
+    biome: null,
+    environmentals: [Environmental.VolcanicActivity, Environmental.Rainstorms]
+  },
+  151: {
+    name: "Castor",
+    biome: null,
+    environmentals: [Environmental.Tremors]
+  },
+  152: {
+    name: "Durgen",
+    biome: null,
+    environmentals: [Environmental.IntenseHeat, Environmental.Sandstorms]
+  },
+  153: {
+    name: "Draupnir",
+    biome: Biome.Highlands,
+    environmentals: [Environmental.ThickFog, Environmental.Rainstorms]
+  },
+  154: {
+    name: "Mort",
+    biome: null,
+    environmentals: [Environmental.ThickFog]
+  },
+  155: {
+    name: "Ingmar",
+    biome: null,
+    environmentals: [Environmental.IonStorms]
+  },
+  156: {
+    name: "Charbal-VII",
+    biome: null,
+    environmentals: [Environmental.IntenseHeat, Environmental.AcidStorms]
+  },
+  157: {
+    name: "Charon Prime",
+    biome: null,
+    environmentals: [Environmental.IntenseHeat]
+  },
+  158: {
+    name: "Choepessa IV",
+    biome: null,
+    environmentals: [Environmental.ExtremeCold]
+  },
+  159: {
+    name: "Choohe",
+    biome: null,
+    environmentals: [Environmental.IntenseHeat, Environmental.Tremors]
+  },
+  160: {
+    name: "Chort Bay",
+    biome: null,
+    environmentals: [Environmental.IonStorms]
+  },
+  161: {
+    name: "Claorell",
+    biome: null,
+    environmentals: [Environmental.ExtremeCold, Environmental.MeteorStorms]
+  },
+  162: {
+    name: "Clasa",
+    biome: null,
+    environmentals: [Environmental.VolcanicActivity, Environmental.Rainstorms]
+  },
+  163: {
+    name: "Demiurg",
+    biome: null,
+    environmentals: []
+  },
+  164: {
+    name: "Deneb Secundus",
+    biome: null,
+    environmentals: [Environmental.ExtremeCold]
+  },
+  165: {
+    name: "Electra Bay",
+    biome: null,
+    environmentals: [Environmental.ThickFog, Environmental.Rainstorms]
+  },
+  166: {
+    name: "Enuliale",
+    biome: null,
+    environmentals: [Environmental.IonStorms]
+  },
+  167: {
+    name: "Epsilon Phoencis VI",
+    biome: null,
+    environmentals: [Environmental.ExtremeCold, Environmental.Blizzards]
+  },
+  168: {
+    name: "Erata Prime",
+    biome: Biome.Desert,
+    environmentals: [Environmental.IntenseHeat, Environmental.Tremors]
+  },
+  169: {
+    name: "Estanu",
+    biome: null,
+    environmentals: [Environmental.ExtremeCold]
+  },
+  170: {
+    name: "Fori Prime",
+    biome: null,
+    environmentals: [Environmental.Tremors]
+  },
+  171: {
+    name: "Gacrux",
+    biome: null,
+    environmentals: []
+  },
+  172: {
+    name: "Gar Haren",
+    biome: null,
+    environmentals: [Environmental.VolcanicActivity, Environmental.Rainstorms]
+  },
+  173: {
+    name: "Gatria",
+    biome: null,
+    environmentals: [Environmental.IonStorms]
+  },
+  174: {
+    name: "Gemma",
+    biome: null,
+    environmentals: [Environmental.IonStorms]
+  },
+  175: {
+    name: "Grand Errant",
+    biome: null,
+    environmentals: [Environmental.IntenseHeat, Environmental.FireTornadoes]
+  },
+  176: {
+    name: "Hadar",
+    biome: null,
+    environmentals: [Environmental.ExtremeCold, Environmental.Blizzards]
+  },
+  177: {
+    name: "Haka",
+    biome: null,
+    environmentals: [Environmental.ThickFog]
+  },
+  178: {
+    name: "Haldus",
+    biome: null,
+    environmentals: [Environmental.ExtremeCold, Environmental.MeteorStorms]
+  },
+  179: {
+    name: "Halies Port",
+    biome: null,
+    environmentals: [Environmental.ExtremeCold]
+  },
+  180: {
+    name: "Herthon Secundus",
+    biome: null,
+    environmentals: [Environmental.IntenseHeat, Environmental.FireTornadoes]
+  },
+  181: {
+    name: "Hesoe Prime",
+    biome: null,
+    environmentals: [Environmental.ExtremeCold, Environmental.Blizzards]
+  },
+  182: {
+    name: "Heze Bay",
+    biome: null,
+    environmentals: [Environmental.IntenseHeat, Environmental.Sandstorms]
+  },
+  183: {
+    name: "Hort",
+    biome: null,
+    environmentals: [Environmental.ThickFog, Environmental.Rainstorms]
+  },
+  184: {
+    name: "Hydrobius",
+    biome: Biome.Desert,
+    environmentals: [Environmental.IntenseHeat, Environmental.Tremors]
+  },
+  185: {
+    name: "Karlia",
+    biome: null,
+    environmentals: [Environmental.IntenseHeat, Environmental.FireTornadoes]
+  },
+  186: {
+    name: "Keid",
+    biome: null,
+    environmentals: [Environmental.IntenseHeat, Environmental.Sandstorms]
+  },
+  187: {
+    name: "Khandark",
+    biome: null,
+    environmentals: [Environmental.ExtremeCold, Environmental.Blizzards]
+  },
+  188: {
+    name: "Klaka 5",
+    biome: null,
+    environmentals: [Environmental.VolcanicActivity, Environmental.Rainstorms]
+  },
+  189: {
+    name: "Kneth Port",
+    biome: null,
+    environmentals: [Environmental.IntenseHeat, Environmental.FireTornadoes]
+  },
+  190: {
+    name: "Kraz",
+    biome: null,
+    environmentals: [Environmental.Tremors]
+  },
+  191: {
+    name: "Kuma",
+    biome: null,
+    environmentals: [Environmental.Tremors]
+  },
+  192: {
+    name: "Lastofe",
+    biome: null,
+    environmentals: [Environmental.IntenseHeat, Environmental.Sandstorms]
+  },
+  193: {
+    name: "Leng Secundus",
+    biome: null,
+    environmentals: [Environmental.IntenseHeat, Environmental.AcidStorms]
+  },
+  194: {
+    name: "Lesath",
+    biome: null,
+    environmentals: [Environmental.ExtremeCold]
+  },
+  195: {
+    name: "Maia",
+    biome: null,
+    environmentals: [Environmental.ExtremeCold, Environmental.MeteorStorms]
+  },
+  196: {
+    name: "Malevelon Creek",
+    biome: Biome.RainForest,
+    environmentals: [Environmental.IonStorms]
+  },
+  197: {
+    name: "Mantes",
+    biome: null,
+    environmentals: [Environmental.VolcanicActivity, Environmental.Rainstorms]
+  },
+  198: {
+    name: "Marfark",
+    biome: null,
+    environmentals: [Environmental.ExtremeCold, Environmental.Blizzards]
+  },
+  199: {
+    name: "Martale",
+    biome: null,
+    environmentals: []
+  },
+  200: {
+    name: "Matar Bay",
+    biome: null,
+    environmentals: [Environmental.ThickFog, Environmental.Rainstorms]
+  },
+  201: {
+    name: "Meissa",
+    biome: null,
+    environmentals: [Environmental.VolcanicActivity, Environmental.Rainstorms]
+  },
+  202: {
+    name: "Mekbuda",
+    biome: null,
+    environmentals: [Environmental.ExtremeCold]
+  },
+  203: {
+    name: "Menkent",
+    biome: null,
+    environmentals: [Environmental.IntenseHeat, Environmental.FireTornadoes]
+  },
+  204: {
+    name: "Merak",
+    biome: null,
+    environmentals: [Environmental.IntenseHeat, Environmental.AcidStorms]
+  },
+  205: {
+    name: "Merga IV",
+    biome: null,
+    environmentals: [Environmental.ExtremeCold, Environmental.Blizzards]
+  },
+  206: {
+    name: "Minchir",
+    biome: null,
+    environmentals: [Environmental.IonStorms]
+  },
+  207: {
+    name: "Mintoria",
+    biome: Biome.Highlands,
+    environmentals: [Environmental.ThickFog, Environmental.Rainstorms]
+  },
+  208: {
+    name: "Mordia 9",
+    biome: null,
+    environmentals: []
+  },
+  209: {
+    name: "Nabatea Secundus",
+    biome: Biome.RainForest,
+    environmentals: [Environmental.IonStorms]
+  },
+  210: {
+    name: "Navi VII",
+    biome: null,
+    environmentals: [Environmental.VolcanicActivity, Environmental.Rainstorms]
+  },
+  211: {
+    name: "Nivel 43",
+    biome: null,
+    environmentals: [Environmental.ThickFog]
+  },
+  212: {
+    name: "Oshaune",
+    biome: Biome.Highlands,
+    environmentals: [Environmental.ThickFog, Environmental.Rainstorms]
+  },
+  213: {
+    name: "Overgoe Prime",
+    biome: null,
+    environmentals: [Environmental.IonStorms]
+  },
+  214: {
+    name: "Pandion-XXIV",
+    biome: null,
+    environmentals: [Environmental.ThickFog]
+  },
+  215: {
+    name: "Partion",
+    biome: null,
+    environmentals: [Environmental.IntenseHeat, Environmental.FireTornadoes]
+  },
+  216: {
+    name: "Peacock",
+    biome: Biome.RainForest,
+    environmentals: [Environmental.IonStorms]
+  },
+  217: {
+    name: "Phact Bay",
+    biome: null,
+    environmentals: [Environmental.IntenseHeat, Environmental.Sandstorms]
+  },
+  218: {
+    name: "Pherkad Secundus",
+    biome: Biome.Highlands,
+    environmentals: [Environmental.ThickFog, Environmental.Rainstorms]
+  },
+  219: {
+    name: "Polaris Prime",
+    biome: Biome.Desert,
+    environmentals: [Environmental.IntenseHeat, Environmental.Tremors]
+  },
+  220: {
+    name: "Pollux 31",
+    biome: null,
+    environmentals: [Environmental.VolcanicActivity, Environmental.Rainstorms]
+  },
+  221: {
+    name: "Prasa",
+    biome: null,
+    environmentals: [Environmental.Tremors]
+  },
+  222: {
+    name: "Propus",
+    biome: null,
+    environmentals: [Environmental.IntenseHeat, Environmental.Sandstorms]
+  },
+  223: {
+    name: "Ras Algethi",
+    biome: null,
+    environmentals: []
+  },
+  224: {
+    name: "Rd-4",
+    biome: Biome.Moon,
+    environmentals: [Environmental.ExtremeCold, Environmental.MeteorStorms]
+  },
+  225: {
+    name: "Rogue 5",
+    biome: null,
+    environmentals: [Environmental.VolcanicActivity, Environmental.Rainstorms]
+  },
+  226: {
+    name: "Rirga Bay",
+    biome: null,
+    environmentals: [Environmental.IntenseHeat, Environmental.AcidStorms]
+  },
+  227: {
+    name: "Seasse",
+    biome: Biome.RainForest,
+    environmentals: [Environmental.IonStorms]
+  },
+  228: {
+    name: "Senge 23",
+    biome: null,
+    environmentals: [Environmental.Tremors]
+  },
+  229: {
+    name: "Setia",
+    biome: null,
+    environmentals: [Environmental.IntenseHeat, Environmental.Sandstorms]
+  },
+  230: {
+    name: "Shete",
+    biome: null,
+    environmentals: [Environmental.IntenseHeat, Environmental.AcidStorms]
+  },
+  231: {
+    name: "Siemnot",
+    biome: Biome.RainForest,
+    environmentals: [Environmental.IonStorms]
+  },
+  232: {
+    name: "Sirius",
+    biome: Biome.Moon,
+    environmentals: [Environmental.ExtremeCold, Environmental.MeteorStorms]
+  },
+  233: {
+    name: "Skat Bay",
+    biome: null,
+    environmentals: [Environmental.ThickFog]
+  },
+  234: {
+    name: "Spherion",
+    biome: null,
+    environmentals: [Environmental.VolcanicActivity, Environmental.Rainstorms]
+  },
+  235: {
+    name: "Stor Tha Prime",
+    biome: null,
+    environmentals: [Environmental.ExtremeCold]
+  },
+  236: {
+    name: "Stout",
+    biome: null,
+    environmentals: [Environmental.IonStorms]
+  },
+  237: {
+    name: "Termadon",
+    biome: Biome.Highlands,
+    environmentals: [Environmental.ThickFog, Environmental.Rainstorms]
+  },
+  238: {
+    name: "Tibit",
+    biome: null,
+    environmentals: []
+  },
+  239: {
+    name: "Tien Kwan",
+    biome: Biome.IceMoss,
+    environmentals: [Environmental.ExtremeCold, Environmental.MeteorStorms]
+  },
+  240: {
+    name: "Troost",
+    biome: null,
+    environmentals: [Environmental.ThickFog]
+  },
+  241: {
+    name: "Ubanea",
+    biome: null,
+    environmentals: [Environmental.IonStorms]
+  },
+  242: {
+    name: "Ustotu",
+    biome: Biome.Desert,
+    environmentals: [Environmental.IntenseHeat, Environmental.Tremors]
+  },
+  243: {
+    name: "Vandalon IV",
+    biome: Biome.Moon,
+    environmentals: [Environmental.ExtremeCold, Environmental.Blizzards]
+  },
+  244: {
+    name: "Varylia 5",
+    biome: null,
+    environmentals: [Environmental.ThickFog, Environmental.Rainstorms]
+  },
+  245: {
+    name: "Wasat",
+    biome: null,
+    environmentals: [Environmental.IntenseHeat, Environmental.AcidStorms]
+  },
+  246: {
+    name: "Vega Bay",
+    biome: null,
+    environmentals: [Environmental.ExtremeCold, Environmental.Blizzards]
+  },
+  247: {
+    name: "Wezen",
+    biome: null,
+    environmentals: [Environmental.IntenseHeat, Environmental.FireTornadoes]
+  },
+  248: {
+    name: "Vindemitarix Prime",
+    biome: null,
+    environmentals: []
+  },
+  249: {
+    name: "X-45",
+    biome: null,
+    environmentals: [Environmental.ThickFog]
+  },
+  250: {
+    name: "Yed Prior",
+    biome: null,
+    environmentals: [Environmental.IonStorms]
+  },
+  251: {
+    name: "Zefia",
+    biome: null,
+    environmentals: []
+  },
+  252: {
+    name: "Zosma",
+    biome: Biome.Moon,
+    environmentals: [Environmental.ExtremeCold, Environmental.MeteorStorms]
+  },
+  253: {
+    name: "Zzaniah Prime",
+    biome: null,
+    environmentals: [Environmental.IntenseHeat, Environmental.Sandstorms]
+  },
+  254: {
+    name: "Skitter",
+    biome: Biome.Highlands,
+    environmentals: [Environmental.ThickFog, Environmental.Rainstorms]
+  },
+  255: {
+    name: "Euphoria III",
+    biome: Biome.Moon,
+    environmentals: [Environmental.ExtremeCold, Environmental.MeteorStorms]
+  },
+  256: {
+    name: "Diaspora X",
+    biome: null,
+    environmentals: [Environmental.IntenseHeat, Environmental.Sandstorms]
+  },
+  257: {
+    name: "Gemstone Bluffs",
+    biome: Biome.Highlands,
+    environmentals: [Environmental.ThickFog, Environmental.Rainstorms]
+  },
+  258: {
+    name: "Zagon Prime",
+    biome: null,
+    environmentals: [Environmental.IntenseHeat, Environmental.Sandstorms]
+  },
+  259: {
+    name: "Omicron",
+    biome: null,
+    environmentals: []
+  },
+  260: {
+    name: "Cyberstan",
+    biome: null,
+    environmentals: [Environmental.Tremors]
+  }
 }

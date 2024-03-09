@@ -1,6 +1,6 @@
 <script>
   import { factions } from "$lib/data/factions"
-	import { planetNames } from "$lib/data/planets"
+	import { planetData } from "$lib/data/planets"
 	import { daysSinceDate } from "$lib/utils/datetime"
 	import Map from "$lib/components/Map.svelte"
 	import Range from "$lib/components/Range.svelte"
@@ -100,7 +100,7 @@
     {#each records as record}
 
       <div class="item">
-        <strong>{planetNames[record.planet_index]}</strong>
+        <strong>{planetData[record.planet_index]}</strong>
         was taken by <strong class={toSlug(factions[record.current_owner])}>{factions[record.current_owner]}</strong>,
         previously owned by <strong class={toSlug(factions[record.previous_owner])}>{factions[record.previous_owner]}</strong>
       </div>

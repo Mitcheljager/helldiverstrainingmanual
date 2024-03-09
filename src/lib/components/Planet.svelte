@@ -1,6 +1,6 @@
 <script>
 	import { factions } from "$lib/data/factions"
-	import { planetNames } from "$lib/data/planets"
+	import { planetData } from "$lib/data/planets"
 	import { fade, scale } from "svelte/transition"
 	import AnalyticsPopup from "$lib/components/AnalyticsPopup.svelte"
 	import IconDefense from "$lib/components/icons/IconDefense.svelte"
@@ -13,6 +13,7 @@
 
   $: ({ index, position } = planet)
   $: ({ name, percentage, faction, defense, players } = campaign || {})
+  $: data = planetData[index]
 </script>
 
 <button
@@ -36,8 +37,12 @@
 
   {#if active}
     <div class="popup" transition:scale={{ start: 0.85, duration: 150 }}>
+      {#if data.biome}
+        <img src="/images/biomes/{data.biome.slug}.jpg" alt="{data.biome.slug} biome" height="128" width="400" />
+      {/if}
+
       <h5>
-        {name || planetNames[index] || "Unknown Planet"}
+        {name || data.name || "Unknown Planet"}
       </h5>
 
       {#if campaign}
@@ -149,6 +154,7 @@
     }
 
     h5 {
+      position: relative;
       margin: 0 0 $margin * 0.15;
     }
 
@@ -158,6 +164,14 @@
       &:last-of-type {
         margin-bottom: $margin * 0.15;
       }
+    }
+
+    img {
+      display: block;
+      width: calc(100% + $margin * 0.5);
+      height: auto;
+      margin: $margin * -0.25 $margin * -0.25 $margin * -0.5;
+      mask-image: linear-gradient(to bottom, white, transparent);
     }
   }
 </style>
