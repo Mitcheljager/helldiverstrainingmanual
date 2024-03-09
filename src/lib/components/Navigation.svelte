@@ -16,6 +16,10 @@
   }, {
     text: "Live War Status",
     route: "war-status",
+    subroutes: [{
+      text: "Planetary Ownership Records",
+      route: "planetary-records"
+    }]
   }, {
     text: "Stratagems",
     subroutes: [{
@@ -37,11 +41,11 @@
 
       {#if route.subroutes}
         {#each route.subroutes as subroute, j}
-          <a class="subroute" class:active={isActive([route.text, subroute.text])} href={toPath([route.text, subroute.text])}><span>{i}{alphabet[j]}.</span> {subroute.text}</a>
+          <a class="subroute" class:active={isActive([route.route || route.text, subroute.route || subroute.text])} href={toPath([route.route || route.text, subroute.route || subroute.text])}><span>{i}{alphabet[j]}.</span> {subroute.text}</a>
 
           {#if subroute.subroutes}
             {#each subroute.subroutes as subsubroute, k}
-              <a class="subsubroute" class:active={isActive([route.text, subroute.text, subsubroute.text])} href={toPath([route.text, subroute.text, subsubroute.text])}><span>{i}{alphabet[j]}-{k}.</span> {subsubroute.text}</a>
+              <a class="subsubroute" class:active={isActive([route.route || route.text, route.route || subroute.text, subsubroute.text])} href={toPath([route.route || route.text, subroute.route || subroute.text, subsubroute.text])}><span>{i}{alphabet[j]}-{k}.</span> {subsubroute.text}</a>
             {/each}
           {/if}
         {/each}

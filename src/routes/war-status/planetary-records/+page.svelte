@@ -100,7 +100,7 @@
     {#each records as record}
 
       <div class="item">
-        <strong>{planetData[record.planet_index]}</strong>
+        <strong>{planetData[record.planet_index].name}</strong>
         was taken by <strong class={toSlug(factions[record.current_owner])}>{factions[record.current_owner]}</strong>,
         previously owned by <strong class={toSlug(factions[record.previous_owner])}>{factions[record.previous_owner]}</strong>
       </div>
