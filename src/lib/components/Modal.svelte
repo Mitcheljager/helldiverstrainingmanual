@@ -24,21 +24,29 @@
     left: 0;
     height: 100%;
     width: 100%;
-    padding: $margin * 2 $margin;
+    padding: $margin * 2 $margin * 0.25;
     background: rgba($black, 0.75);
     backdrop-filter: blur(2rem);
     overflow-y: auto;
     z-index: 200;
+
+    @include breakpoint(sm) {
+      padding: $margin * 2 $margin;
+    }
   }
 
   .dialog {
     position: relative;
     margin: 0 auto;
-    padding: $margin;
+    padding: $margin * 0.5;
     border: 5px solid $bg-dark;
     box-shadow: 0 2rem 4rem $black, 0 4rem 8rem $black;
     max-width: $text-limit;
     background: $bg-base;
+
+    @include breakpoint(sm) {
+      padding: $margin;
+    }
   }
 
   .backdrop {
