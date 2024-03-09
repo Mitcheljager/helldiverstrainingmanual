@@ -19,6 +19,8 @@
     subroutes: [{
       text: "Planetary Ownership Records",
       route: "planetary-records"
+    }, {
+      text: "Planet Glossary"
     }]
   }, {
     text: "Stratagems",

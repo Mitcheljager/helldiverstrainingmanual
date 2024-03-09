@@ -98,7 +98,6 @@
     </h3>
 
     {#each records as record}
-
       <div class="item">
         <strong>{planetData[record.planet_index].name}</strong>
         was taken by <strong class={toSlug(factions[record.current_owner])}>{factions[record.current_owner]}</strong>,
