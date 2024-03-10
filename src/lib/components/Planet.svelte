@@ -140,7 +140,7 @@
     --border-color: #{rgba($white, 0.25)};
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: $margin * -0.1;
     transform: translateY(-100%) translateX(-50%);
     width: 12rem;
     padding: $margin * 0.25;
