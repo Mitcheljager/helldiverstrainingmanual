@@ -1,19 +1,24 @@
 <script>
   import { toSlug } from "$lib/utils/route"
+	import { fly } from "svelte/transition"
 
   export let environmental
   export let full = false
+
+  let active = false
 </script>
 
 <!-- svelte-ignore a11y-no-static-element-interactions -->
 <!-- svelte-ignore a11y-click-events-have-key-events -->
-<div class="environmental" class:full on:click|preventDefault>
+<div class="environmental" class:full on:click|preventDefault on:mouseenter={() => active = true} on:mouseleave={() => active = false}>
   <img loading="lazy" src="/images/environmentals/{toSlug(environmental.name)}.png" alt={environmental.name} />
 
-  <div class="tooltip">
-    <strong>{environmental.name}</strong><br>
-    {environmental.description}
-  </div>
+  {#if active || full}
+    <div class="tooltip" transition:fly={{ y: 10, duration: 100 }}>
+      <strong>{environmental.name}</strong><br>
+      {environmental.description}
+    </div>
+  {/if}
 </div>
 
 <style lang="scss">
@@ -45,7 +50,7 @@
   }
 
   .tooltip {
-    display: none;
+    display: block;
     position: absolute;
     right: 0;
     bottom: $margin * -0.25;
@@ -61,7 +66,6 @@
     z-index: 5;
 
     .full & {
-      display: block;
       position: relative;
       bottom: 0;
       padding: 0;
@@ -70,10 +74,6 @@
       box-shadow: none;
       border: 0;
       background: transparent;
-    }
-
-    .environmental:hover & {
-      display: block;
     }
 
     strong {
