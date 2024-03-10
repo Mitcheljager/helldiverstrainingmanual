@@ -20,6 +20,11 @@
   }
 </script>
 
+<svelte:head>
+  <title>Planet Glossary | Helldivers Training Manual</title>
+</svelte:head>
+
+
 <Hero src="/images/content/planet-glossary.jpg">
   Planet Glossary
 </Hero>
