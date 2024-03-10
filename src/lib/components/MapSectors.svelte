@@ -38,14 +38,15 @@
   }
 
   path {
-    fill: rgba($white, 0.25);
-    stroke: rgba($white, 0.25);
+    fill: $white;
+    stroke: $white;
     stroke-width: 2px;
+    opacity: 0.25;
 
     @each $label, $color in $faction-colors {
       &.#{$label} {
-        fill: rgba($color, 0.25);
-        stroke: rgba($color, 0.25);
+        fill: $color;
+        stroke: $color;
       }
     }
   }
