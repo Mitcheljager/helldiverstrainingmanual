@@ -3,6 +3,14 @@
   import Hero from "$lib/components/Hero.svelte"
   import { planetData } from "$lib/data/planets"
 	import { toSlug } from "$lib/utils/route"
+  import { flip } from "svelte/animate"
+	import { fade, slide } from "svelte/transition";
+
+  let query = ""
+  let filteredSectors = []
+  let filteredPlanets = []
+
+  $: filterPlanets(query)
 
   function groupPlanetsBySector() {
     const groupedBySector = {}
@@ -10,20 +18,25 @@
     for (const planetId in planetData) {
       const planet = planetData[planetId]
       const sector = planet.sector
-      if (!groupedBySector[sector]) {
-        groupedBySector[sector] = []
-      }
+
+      if (!groupedBySector[sector]) groupedBySector[sector] = []
       groupedBySector[sector].push(planet)
     }
 
     return groupedBySector
+  }
+
+  function filterPlanets(query) {
+    if (!query) return
+
+    filteredPlanets = Object.values(planetData).filter(({ name, sector }) => name.toLowerCase().includes(query.toLowerCase()) || sector.toLowerCase().includes(query.toLowerCase()))
+    filteredSectors = [... new Set(filteredPlanets.map(p => p.sector))]
   }
 </script>
 
 <svelte:head>
   <title>Planet Glossary | Helldivers Training Manual</title>
 </svelte:head>
-
 
 <Hero src="/images/content/planet-glossary.jpg">
   Planet Glossary
@@ -33,40 +46,71 @@
 
 <h2 class="mb-1/2">Planets and Sectors</h2>
 
+<input class="search" type="text" bind:value={query} placeholder="Search by Planet or Sector" />
+
 <div class="items">
   {#each Object.entries(groupPlanetsBySector()).sort((a, b) => a[0] > b[0] ? 1 : -1) as [sector, planets]}
-    <h3 class="mt-1/4 mb-0">{sector} Sector</h3>
+    {#if !query || filteredSectors.includes(sector)}
+      <h3 class="mt-1/4 mb-0">{sector} Sector</h3>
 
-    {#each planets.sort((a, b) => a.name > b.name ? 1 : -1) as planet}
-      <a class="item" href="/war-status/planet-glossary/{toSlug(planet.name)}">
-        <div class="content">
-          <div class="name">{planet.name}</div>
+      {#each planets.sort((a, b) => a.name > b.name ? 1 : -1) as planet (planet.name)}
+        {#if !query || filteredPlanets.map(p => p.name).includes(planet.name)}
+          <a class="item" href="/war-status/planet-glossary/{toSlug(planet.name)}">
+            <div class="content">
+              <div class="name">{planet.name}</div>
 
-          <div class="environmentals">
-            {#each planet.environmentals as environmental}
-              <EnvironmentalTooltip {environmental} />
-            {/each}
-          </div>
-        </div>
+              <div class="environmentals">
+                {#each planet.environmentals as environmental}
+                  <EnvironmentalTooltip {environmental} />
+                {/each}
+              </div>
+            </div>
 
-        {#if planet.biome}
-          <div class="background">
-            <img
-              class="biome"
-              loading="lazy"
-              src="/images/biomes/small/{planet.biome.slug}.jpg"
-              srcset="/images/biomes/small/{planet.biome.slug}.jpg 1x, /images/biomes/{planet.biome.slug}.jpg 2x"
-              alt="{planet.biome.slug} biome"
-              height="128"
-              width="400" />
-          </div>
+            {#if planet.biome}
+              <div class="background">
+                <img
+                  class="biome"
+                  loading="lazy"
+                  src="/images/biomes/small/{planet.biome.slug}.jpg"
+                  srcset="/images/biomes/small/{planet.biome.slug}.jpg 1x, /images/biomes/{planet.biome.slug}.jpg 2x"
+                  alt="{planet.biome.slug} biome"
+                  height="128"
+                  width="400" />
+              </div>
+            {/if}
+          </a>
         {/if}
-      </a>
-    {/each}
+      {/each}
+    {/if}
   {/each}
 </div>
 
 <style lang="scss">
+  .search {
+    appearance: none;
+    width: 100%;
+    max-width: $text-limit;
+    padding: $margin * 0.25;
+    margin-bottom: $margin * 0.25;
+    border: 0;
+    background: lighten($bg-base, 10%);
+    color: $white;
+    font-size: 1em;
+    font-family: $font-family;
+
+    &:focus {
+      box-shadow: none;
+      outline: 2px solid $bg-dark;
+      background: lighten($bg-base, 15%);
+    }
+
+    &::placeholder {
+      opacity: 1;
+      color: $text-color-dark;
+      font-style: italic;
+    }
+  }
+
   .items {
     display: flex;
     flex-direction: column;
