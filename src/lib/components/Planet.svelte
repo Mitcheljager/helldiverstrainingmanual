@@ -62,9 +62,11 @@
         <p>{players.toLocaleString()} Helldivers</p>
       {/if}
 
-      <AnalyticsPopup {index} />
+      <div class="actions">
+        <AnalyticsPopup {index} />
 
-      <button class="details" on:click={() => dispatch("details")}>Planet details</button>
+        <button class="details" on:click={() => dispatch("details")}>Planet details</button>
+      </div>
     </div>
   {/if}
 </button>
@@ -185,12 +187,20 @@
     }
   }
 
+  .actions {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: $margin * 0.25;
+    margin: $margin * 0.25 0 0;
+  }
+
   .details {
     appearance: none;
     padding: 0;
-    margin: $margin * 0.25 0 0;
+    margin: 0;
     border: 0;
-    border-bottom: 2px solid $white;
+    border-bottom: 1px solid rgba($white, 0.5);
     background: transparent;
     color: $white;
     font-family: $font-family-alt;
@@ -198,6 +208,7 @@
     cursor: pointer;
 
     &:hover {
+      border-color: $white;
       background: rgba($black, 0.25);
       box-shadow: 0 0 0 0.25rem rgba($black, 0.25);
     }
