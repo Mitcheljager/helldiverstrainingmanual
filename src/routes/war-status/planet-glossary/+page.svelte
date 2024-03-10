@@ -31,11 +31,11 @@
 
 <p class="mb-1">Welcome to the Planet Glossary, within these pages you'll find information on each planet caught in the crossfire of this interstellar conflict. Each world holds its own secrets, challenges, and strategic significance. Explore the cosmic tapestry of war as you delve into the unique characteristics and histories of these celestial bodies. May this glossary serve as your guide through the turbulent seas of space, offering insights into the ever-shifting tides of fortune in the ongoing battle for Democracy.</p>
 
-<h2 class="mb-1/2">Planets by sector</h2>
+<h2 class="mb-1/2">Planets and Sectors</h2>
 
 <div class="items">
   {#each Object.entries(groupPlanetsBySector()).sort((a, b) => a[0] > b[0] ? 1 : -1) as [sector, planets]}
-    <h3 class="mt-1/4 mb-0">{sector}</h3>
+    <h3 class="mt-1/4 mb-0">{sector} Sector</h3>
 
     {#each planets.sort((a, b) => a.name > b.name ? 1 : -1) as planet}
       <a class="item" href="/war-status/planet-glossary/{toSlug(planet.name)}">
