@@ -23,6 +23,10 @@
 
 <div class="layout">
   <aside class="sidebar" class:active={sidebarActive} id="navigation">
+    <div class="skip-links">
+      <a href="#main">Skip to main content</a>
+    </div>
+
     <a href="/" class="header">
       <img src="/images/helldivers-2-logo.png" alt="Helldivers 2" height="200" />
 
@@ -46,7 +50,7 @@
     </svg>
   </button>
 
-  <main class="main" class:no-scroll={sidebarActive} bind:this={main}>
+  <main class="main" id="main" class:no-scroll={sidebarActive} bind:this={main}>
     <slot />
   </main>
 </div>
@@ -177,6 +181,32 @@
       @include breakpoint(lg) {
         overflow-y: auto;
       }
+    }
+  }
+
+  .skip-links {
+    position: absolute;
+    top: $margin;
+    left: $margin;
+    height: 0;
+    width: 0;
+    opacity: 0;
+    pointer-events: none;
+
+    &:focus-within {
+      height: auto;
+      width: calc(100% - $margin * 2);
+      opacity: 1;
+      z-index: 5;
+    }
+
+    a {
+      display: block;
+      background: $bg-base;
+      color: $white;
+      text-decoration: none;
+
+      @include focus-visible-outline();
     }
   }
 </style>
