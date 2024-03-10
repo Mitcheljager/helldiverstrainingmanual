@@ -176,9 +176,11 @@
 
     img {
       display: block;
-      width: calc(100% + $margin * 0.5);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
       height: auto;
-      margin: $margin * -0.25 $margin * -0.25 $margin * -0.5;
       mask-image: linear-gradient(to bottom, white, transparent);
     }
   }
