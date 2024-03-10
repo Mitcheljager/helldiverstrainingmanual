@@ -1,5 +1,5 @@
 <script>
-	import { afterNavigate } from "$app/navigation"
+	import { afterNavigate, beforeNavigate } from "$app/navigation"
   import Navigation from "$lib/components/Navigation.svelte"
 
   import "$lib/scss/app.scss"
@@ -7,11 +7,17 @@
 
   let main
   let sidebarActive = false
+  let scrollPositions = {}
+
+  beforeNavigate(event => {
+    if (main && !("delta" in event)) scrollPositions[event.from] = main.scrollTop
+  })
 
   afterNavigate(event => {
     sidebarActive = false
 
-  if (main && !("delta" in event)) main.scrollTo({ top: 0 })
+    if (main && !("delta" in event)) main.scrollTo({ top: 0 })
+    else if (main) main.scrollTo({ top: scrollPositions[event.to] || 0 })
   })
 </script>
 
