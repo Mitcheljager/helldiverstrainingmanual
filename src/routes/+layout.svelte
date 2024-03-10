@@ -46,7 +46,7 @@
     </svg>
   </button>
 
-  <main class="main" bind:this={main}>
+  <main class="main" class:no-scroll={sidebarActive} bind:this={main}>
     <slot />
   </main>
 </div>
@@ -165,10 +165,18 @@
     overflow-y: auto;
     overflow-x: hidden;
 
+    @include styled-scrollbar(thick);
+
     @include breakpoint(lg) {
       padding: $margin * 2;
     }
 
-    @include styled-scrollbar(thick);
+    &.no-scroll {
+      overflow-y: hidden;
+
+      @include breakpoint(lg) {
+        overflow-y: auto;
+      }
+    }
   }
 </style>
