@@ -5,9 +5,14 @@
   import "$lib/scss/app.scss"
   import "$lib/scss/fonts.scss"
 
+  let main
   let sidebarActive = false
 
-  afterNavigate(() => sidebarActive = false)
+  afterNavigate(event => {
+    sidebarActive = false
+
+  if (main && !("delta" in event)) main.scrollTo({ top: 0 })
+  })
 </script>
 
 <div class="layout">
@@ -35,9 +40,9 @@
     </svg>
   </button>
 
-  <article class="article">
+  <main class="main" bind:this={main}>
     <slot />
-  </article>
+  </main>
 </div>
 
 <style lang="scss">
@@ -147,7 +152,7 @@
     }
   }
 
-  .article {
+  .main {
     position: relative;
     padding: $margin * 0.75 $margin * 0.75 $margin * 1.5;
     height: 100dvh;
