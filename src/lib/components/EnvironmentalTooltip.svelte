@@ -8,7 +8,7 @@
 <!-- svelte-ignore a11y-no-static-element-interactions -->
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <div class="environmental" class:full on:click|preventDefault>
-  <img src="/images/environmentals/{toSlug(environmental.name)}.png" alt={environmental.name} />
+  <img loading="lazy" src="/images/environmentals/{toSlug(environmental.name)}.png" alt={environmental.name} />
 
   <div class="tooltip">
     <strong>{environmental.name}</strong><br>

@@ -46,7 +46,14 @@
 
         {#if planet.biome}
           <div class="background">
-            <img class="biome" src="/images/biomes/{planet.biome.slug}.jpg" alt="{planet.biome.slug} biome" height="128" width="400" />
+            <img
+              class="biome"
+              loading="lazy"
+              src="/images/biomes/small/{planet.biome.slug}.jpg"
+              srcset="/images/biomes/small/{planet.biome.slug}.jpg 1x, /images/biomes/{planet.biome.slug}.jpg 2x"
+              alt="{planet.biome.slug} biome"
+              height="128"
+              width="400" />
           </div>
         {/if}
       </a>
