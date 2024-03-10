@@ -53,5 +53,5 @@ export const Sector = {
   Valdis: "Valdis",
   XiTauri: "Xi Tauri",
   Xzar: "Xzar",
-  Ymir: "Ymir",
+  Ymir: "Ymir"
 }

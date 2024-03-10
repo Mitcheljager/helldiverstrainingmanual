@@ -5,14 +5,14 @@
 	import { createEventDispatcher, onDestroy } from "svelte"
 	import { fade } from "svelte/transition"
 	import { getScrollParent } from "$lib/utils/scroll"
+	import { planetData } from "$lib/data/planets"
 	import Switch from "$lib/components/Switch.svelte"
 	import Planet from "$lib/components/Planet.svelte"
 	import SupplyLines from "$lib/components/SupplyLines.svelte"
 	import PlanetSearch from "$lib/components/PlanetSearch.svelte"
 	import Modal from "$lib/components/Modal.svelte"
+  import MapSectors from "$lib/components/MapSectors.svelte"
   import PlanetGlossaryPage from '../../routes/war-status/planet-glossary/[name]/+page.svelte'
-	import { planetData } from "$lib/data/planets"
-	import { page } from "$app/stores"
 
   export let planets = []
   export let campaigns = []
@@ -168,7 +168,12 @@
 
       <div class="scaler" bind:clientWidth={innerWidth} />
 
-      <img class="sectors" src="/images/map/sectors.svg" alt="" draggable="false" />
+      <div class="sectors">
+        <MapSectors {status} />
+
+        <img class="outline" src="/images/map/outline.svg" alt="" draggable="false" />
+      </div>
+
       <img class="earth" src="/images/map/super-earth.png" alt="" draggable="false" />
     </div>
 
@@ -292,12 +297,24 @@
   }
 
   .sectors {
+    position: relative;
+    transform: scale(calc(1.02 * var(--zoom)));
+    transition: transform 200ms;
+
+    :global(svg) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .outline {
     display: block;
     width: 100%;
     height: auto;
     opacity: 0.65;
-    transform: scale(calc(1.02 * var(--zoom)));
-    transition: transform 200ms;
   }
 
   .earth {

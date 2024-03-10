@@ -1,0 +1,52 @@
+<script>
+	import { factions } from "$lib/data/factions"
+  import { planetData } from "$lib/data/planets"
+	import { sectorPaths } from "$lib/data/sectorPaths"
+	import { toSlug } from "$lib/utils/route"
+
+  export let status
+
+  $: activeSectors = status && findActiveSectors()
+
+  function findActiveSectors() {
+    const activePlanets = status.filter(p => p.owner !== 1)
+    const sectorsForPlanets = []
+
+    activePlanets.forEach(({ index, owner }) => {
+      const sector = planetData[index].sector
+
+      if (sectorsForPlanets.find(({ name }) => name === sector)) return
+
+      sectorsForPlanets.push({ name: sector, path: sectorPaths[sector], owner })
+    })
+
+    return sectorsForPlanets
+  }
+</script>
+
+<svg width="1000px" height="1000px" viewBox="0 0 1000 1000">
+  {#each activeSectors as { path, owner }}
+    <path class="{toSlug(factions[owner])}" d={path} />
+  {/each}
+</svg>
+
+<style lang="scss">
+  svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  path {
+    fill: rgba($white, 0.25);
+    stroke: rgba($white, 0.25);
+    stroke-width: 2px;
+
+    @each $label, $color in $faction-colors {
+      &.#{$label} {
+        fill: rgba($color, 0.25);
+        stroke: rgba($color, 0.25);
+      }
+    }
+  }
+</style>
