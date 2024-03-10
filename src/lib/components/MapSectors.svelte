@@ -3,6 +3,7 @@
   import { planetData } from "$lib/data/planets"
 	import { sectorPaths } from "$lib/data/sectorPaths"
 	import { toSlug } from "$lib/utils/route"
+	import { fade } from "svelte/transition";
 
   export let status
 
@@ -25,8 +26,8 @@
 </script>
 
 <svg width="1000px" height="1000px" viewBox="0 0 1000 1000">
-  {#each activeSectors as { path, owner }}
-    <path class="{toSlug(factions[owner])}" d={path} />
+  {#each activeSectors as { name, path, owner } (name)}
+    <path transition:fade={{ duration: 200 }} class="{toSlug(factions[owner])}" d={path} />
   {/each}
 </svg>
 
