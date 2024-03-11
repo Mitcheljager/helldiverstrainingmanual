@@ -60,7 +60,7 @@
 {:else if estimatedEnd === Infinity || estimatedEnd > 9e+9}
   We're in a stalemate
 {:else}
-  {estimatedEnd > (now / 1000) ? "Liberty" : "Rout"} in
+  {estimatedEnd > (now / 1000) ? "Liberty" : "Withdrawal"} in
   {#if hoursToGo < 1}
     less than 1 hr
   {:else}
