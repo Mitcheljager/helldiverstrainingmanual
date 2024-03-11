@@ -2,12 +2,18 @@
 	import { stratagems } from "$lib/data/stratagems"
   import { page } from "$app/stores"
 	import { toPath } from "$lib/utils/route";
+	import { bestiary } from "$lib/data/bestiary";
 
   const alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
 
   const stratagemRoutes = stratagems.map(s => ({
     text: s.category,
     subroutes: s.items.map(i => ({ text: i.name }))
+  }))
+
+  const bestiaryRoutes = bestiary.map(b => ({
+    text: b.faction,
+    subroutes: b.enemies.map(i => ({ text: i.name }))
   }))
 
   const routes = [{
@@ -28,6 +34,11 @@
         text: "Interactive Practice",
       },
       ...stratagemRoutes
+    ]
+  }, {
+    text: "Bestiary",
+    subroutes: [
+      ...bestiaryRoutes
     ]
   }]
 
