@@ -2,10 +2,11 @@
   import { LinkedChart, LinkedLabel, LinkedValue } from "svelte-tiny-linked-charts"
 	import { fetchHistory } from "$lib/api/history"
 	import { slide } from "svelte/transition"
-	import { planetNames } from "$lib/data/planets"
+	import { planetData } from "$lib/data/planets"
 
   export let index
   export let row = false
+  export let inline = false
 
   function getChartProps(history, players = false) {
     const data = {}
@@ -41,15 +42,17 @@
 </script>
 
 <div>
-  <h4 class="mb-1/4">{planetNames[index]}</h4>
+  {#if !inline}
+    <h4 class="mb-1/4">{planetData[index].name}</h4>
+  {/if}
 
   {#await fetchHistory(index)}
     <span>Loading...</span>
   {:then data}
-    <div class="charts" class:row>
+    <div class="charts" class:row class:inline>
       {#if Object.entries(data).length !== 0}
         {#each [{ header: "Liberation percentage", players: false }, { header: "Number of Helldivers", players: true }] as { header, players }}
-          <div class="chart" transition:slide|global={{ duration: 100 }} >
+          <div class="chart" in:slide|global={{ duration: 100 }} >
             <h5>{header}</h5>
 
             <LinkedChart
@@ -74,7 +77,7 @@
     </div>
 
     {#if Object.entries(data).length < 200}
-      <em class="mt-1/4" transition:slide|global={{ duration: 100 }}>
+      <em class="mt-1/4" in:slide|global={{ duration: 100 }}>
         {#if Object.entries(data).length === 0}
           No activity has been recorded on this planet
         {:else}
@@ -107,7 +110,6 @@
     font-weight: normal;
     color: darken($text-color, 20%);
     line-height: 1em;
-    text-align: center;
   }
 
   .charts {
@@ -125,6 +127,10 @@
         width: 100%;
       }
     }
+
+    &.inline {
+      text-align: left;
+    }
   }
 
   .chart {
@@ -139,7 +145,7 @@
       width: 100%;
       height: auto;
       max-height: 80px;
-      background: $bg-base;
+      background: var(--chart-background, #{$bg-base});
 
       @include breakpoint(sm) {
         max-height: 100vh;

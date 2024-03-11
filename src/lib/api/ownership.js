@@ -11,3 +11,16 @@ export async function fetchOwnership() {
 
   return data
 }
+
+export async function fetchOwnershipForPlanet(index) {
+  const { data, error } = await supabase
+    .from("ownership")
+    .select("created_at, planet_index, current_owner, previous_owner")
+    .order("created_at", { ascending: false })
+    .eq("planet_index", index)
+    .range(0, 1000)
+
+  if (error) throw new Error(error.message)
+
+  return data
+}

@@ -2,6 +2,7 @@
 	import { stratagems } from "$lib/data/stratagems"
   import { page } from "$app/stores"
 	import { toPath } from "$lib/utils/route";
+	import { bestiary } from "$lib/data/bestiary";
 
   const alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
 
@@ -10,18 +11,34 @@
     subroutes: s.items.map(i => ({ text: i.name }))
   }))
 
+  const bestiaryRoutes = bestiary.map(b => ({
+    text: b.faction,
+    subroutes: b.enemies.map(i => ({ text: i.name }))
+  }))
+
   const routes = [{
     text: "Introduction",
     route: "",
   }, {
     text: "Live War Status",
     route: "war-status",
+    subroutes: [{
+      text: "Planetary Ownership Records",
+      route: "planetary-records"
+    }, {
+      text: "Planet Glossary"
+    }]
   }, {
     text: "Stratagems",
     subroutes: [{
         text: "Interactive Practice",
       },
       ...stratagemRoutes
+    ]
+  }, {
+    text: "Bestiary",
+    subroutes: [
+      ...bestiaryRoutes
     ]
   }]
 
@@ -37,11 +54,11 @@
 
       {#if route.subroutes}
         {#each route.subroutes as subroute, j}
-          <a class="subroute" class:active={isActive([route.text, subroute.text])} href={toPath([route.text, subroute.text])}><span>{i}{alphabet[j]}.</span> {subroute.text}</a>
+          <a class="subroute" class:active={isActive([route.route || route.text, subroute.route || subroute.text])} href={toPath([route.route || route.text, subroute.route || subroute.text])}><span>{i}{alphabet[j]}.</span> {subroute.text}</a>
 
           {#if subroute.subroutes}
             {#each subroute.subroutes as subsubroute, k}
-              <a class="subsubroute" class:active={isActive([route.text, subroute.text, subsubroute.text])} href={toPath([route.text, subroute.text, subsubroute.text])}><span>{i}{alphabet[j]}-{k}.</span> {subsubroute.text}</a>
+              <a class="subsubroute" class:active={isActive([route.route || route.text, route.route || subroute.text, subsubroute.text])} href={toPath([route.route || route.text, subroute.route || subroute.text, subsubroute.text])}><span>{i}{alphabet[j]}-{k}.</span> {subsubroute.text}</a>
             {/each}
           {/if}
         {/each}

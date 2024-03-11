@@ -1,6 +1,6 @@
 <script>
 	import { browser } from "$app/environment"
-	import { planetNames } from "$lib/data/planets";
+	import { planetData } from "$lib/data/planets";
 
   export let foundPlanetIndexes = []
 
@@ -11,8 +11,8 @@
   function findPlanets(value) {
     if (!value) return []
 
-    return Object.entries(planetNames)
-      .filter(([_, name]) => name.toLowerCase().includes(value.toLowerCase()))
+    return Object.entries(planetData)
+      .filter(([_, { name }]) => name.toLowerCase().includes(value.toLowerCase()))
       .map(([index]) => parseInt(index))
   }
 </script>

@@ -5,10 +5,14 @@
 	import { createEventDispatcher, onDestroy } from "svelte"
 	import { fade } from "svelte/transition"
 	import { getScrollParent } from "$lib/utils/scroll"
+	import { planetData } from "$lib/data/planets"
 	import Switch from "$lib/components/Switch.svelte"
 	import Planet from "$lib/components/Planet.svelte"
 	import SupplyLines from "$lib/components/SupplyLines.svelte"
 	import PlanetSearch from "$lib/components/PlanetSearch.svelte"
+	import Modal from "$lib/components/Modal.svelte"
+  import MapSectors from "$lib/components/MapSectors.svelte"
+  import PlanetGlossaryPage from '../../routes/war-status/planet-glossary/[name]/+page.svelte'
 
   export let planets = []
   export let campaigns = []
@@ -36,6 +40,7 @@
 	let elementPositionY = 0
   let dragStartPosition = {}
   let foundPlanetIndexes = []
+  let modalIndex = null
 
   $: totalPlayerCount = campaigns.reduce((total, c) => total + c.players, 0)
   $: if (browser && innerElement !== null && innerWidth) bindImpetus()
@@ -148,6 +153,7 @@
                 campaign={getCampaign(planet.index)}
                 status={status && getStatus(planet.index)}
                 active={activeIndex === planet.index}
+                on:details={() => modalIndex = planet.index}
                 on:click={() => activeIndex = activeIndex === planet.index ? -1 : planet.index} />
             {/if}
           {/each}
@@ -162,7 +168,12 @@
 
       <div class="scaler" bind:clientWidth={innerWidth} />
 
-      <img class="sectors" src="/images/map/sectors.svg" alt="" draggable="false" />
+      <div class="sectors">
+        <MapSectors {status} />
+
+        <img class="outline" src="/images/map/outline.svg" alt="" draggable="false" />
+      </div>
+
       <img class="earth" src="/images/map/super-earth.png" alt="" draggable="false" />
     </div>
 
@@ -210,6 +221,12 @@
   </div>
 </div>
 
+{#if modalIndex !== null}
+  <Modal on:close={() => modalIndex = null}>
+    <PlanetGlossaryPage data={{ index: modalIndex, planet: planetData[modalIndex] }} showBackRoute={false} />
+  </Modal>
+{/if}
+
 <style lang="scss">
   .wrapper {
     position: relative;
@@ -235,12 +252,24 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: inset 0 0 0 5px $super-earth;
     border-bottom: 0;
     background: darken($bg-dark, 10%) url("/images/map/stars.jpg") no-repeat;
     background-position: calc(50% - var(--x, 0px) * -0.025 * var(--zoom)) calc(50% - var(--y, 0px) * -0.025 * var(--zoom));
     background-size: auto calc(110% * (1 + var(--zoom) * 0.1));
     overflow: hidden;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      box-shadow: inset 0 0 0 5px $super-earth;
+      z-index: 1;
+      pointer-events: none;
+    }
 
     &.loading {
       aspect-ratio: 1/1;
@@ -268,12 +297,24 @@
   }
 
   .sectors {
+    position: relative;
+    transform: scale(calc(1.02 * var(--zoom)));
+    transition: transform 200ms;
+
+    :global(svg) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .outline {
     display: block;
     width: 100%;
     height: auto;
     opacity: 0.65;
-    transform: scale(var(--zoom));
-    transition: transform 200ms;
   }
 
   .earth {

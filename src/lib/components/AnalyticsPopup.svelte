@@ -21,6 +21,7 @@
 <style lang="scss">
   button {
     appearance: none;
+    display: block;
     border: 0;
     padding: 0;
     height: auto;

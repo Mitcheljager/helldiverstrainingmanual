@@ -1,9 +1,13 @@
 <script>
+	import { createEventDispatcher } from "svelte"
 	import { factions } from "$lib/data/factions"
-	import { planetNames } from "$lib/data/planets"
+	import { planetData } from "$lib/data/planets"
 	import { fade, scale } from "svelte/transition"
 	import AnalyticsPopup from "$lib/components/AnalyticsPopup.svelte"
 	import IconDefense from "$lib/components/icons/IconDefense.svelte"
+  import Modal from "$lib/components/Modal.svelte"
+  import PlanetGlossaryPage from '../../routes/war-status/planet-glossary/[name]/+page.svelte'
+	import { pushState } from "$app/navigation"
 
   export let planet = {}
   export let status = {}
@@ -11,8 +15,11 @@
   export let active = false
   export let highlight = false
 
+  const dispatch = createEventDispatcher()
+
   $: ({ index, position } = planet)
   $: ({ name, percentage, faction, defense, players } = campaign || {})
+  $: data = planetData[index]
 </script>
 
 <button
@@ -36,8 +43,12 @@
 
   {#if active}
     <div class="popup" transition:scale={{ start: 0.85, duration: 150 }}>
+      {#if data.biome}
+        <img src="/images/biomes/{data.biome.slug}.jpg" alt="{data.biome.slug} biome" height="128" width="400" />
+      {/if}
+
       <h5>
-        {name || planetNames[index] || "Unknown Planet"}
+        {name || data.name || "Unknown Planet"}
       </h5>
 
       {#if campaign}
@@ -51,7 +62,11 @@
         <p>{players.toLocaleString()} Helldivers</p>
       {/if}
 
-      <AnalyticsPopup {index} />
+      <div class="actions">
+        <AnalyticsPopup {index} />
+
+        <button class="details" on:click={() => dispatch("details")}>Planet details</button>
+      </div>
     </div>
   {/if}
 </button>
@@ -127,7 +142,7 @@
     --border-color: #{rgba($white, 0.25)};
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: $margin * -0.1;
     transform: translateY(-100%) translateX(-50%);
     width: 12rem;
     padding: $margin * 0.25;
@@ -149,6 +164,7 @@
     }
 
     h5 {
+      position: relative;
       margin: 0 0 $margin * 0.15;
     }
 
@@ -158,6 +174,44 @@
       &:last-of-type {
         margin-bottom: $margin * 0.15;
       }
+    }
+
+    img {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: auto;
+      mask-image: linear-gradient(to bottom, white, transparent);
+    }
+  }
+
+  .actions {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: $margin * 0.25;
+    margin: $margin * 0.25 0 0;
+  }
+
+  .details {
+    appearance: none;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    border-bottom: 1px solid rgba($white, 0.5);
+    background: transparent;
+    color: $white;
+    font-family: $font-family-alt;
+    font-size: 0.75rem;
+    cursor: pointer;
+
+    &:hover {
+      border-color: $white;
+      background: rgba($black, 0.25);
+      box-shadow: 0 0 0 0.25rem rgba($black, 0.25);
     }
   }
 </style>

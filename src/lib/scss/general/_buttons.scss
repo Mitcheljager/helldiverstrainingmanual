@@ -1,3 +1,7 @@
+button {
+  @include focus-visible-outline();
+}
+
 .button {
   --color: #{$primary};
   --gradient-color: #{rgba($primary, 0.25)};

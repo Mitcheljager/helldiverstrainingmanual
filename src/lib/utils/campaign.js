@@ -1,5 +1,5 @@
 import { factions } from "$lib/data/factions"
-import { planetNames } from "$lib/data/planets"
+import { planetData } from "$lib/data/planets"
 
 export function formatCampaigns(campaigns, planetStatus, planetInfos, planetEvents) {
   if (!campaigns || !planetStatus || !planetInfos) return []
@@ -10,7 +10,7 @@ export function formatCampaigns(campaigns, planetStatus, planetInfos, planetEven
     const { planetIndex } = campaign
     const event = planetEvents?.find(e => e.planetIndex === planetIndex)
 
-    const name = planetNames[planetIndex]
+    const name = planetData[planetIndex].name
     const currentStatus = planetStatus[planetIndex]
     const planetInfo = planetInfos[planetIndex]
     const faction = factions[event?.race || currentStatus.owner]

@@ -1,17 +1,32 @@
 <script>
-	import { afterNavigate } from "$app/navigation"
+	import { afterNavigate, beforeNavigate } from "$app/navigation"
   import Navigation from "$lib/components/Navigation.svelte"
 
   import "$lib/scss/app.scss"
   import "$lib/scss/fonts.scss"
 
+  let main
   let sidebarActive = false
+  let scrollPositions = {}
 
-  afterNavigate(() => sidebarActive = false)
+  beforeNavigate(event => {
+    if (main && !("delta" in event)) scrollPositions[event.from] = main.scrollTop
+  })
+
+  afterNavigate(event => {
+    sidebarActive = false
+
+    if (main && !("delta" in event)) main.scrollTo({ top: 0 })
+    else if (main) main.scrollTo({ top: scrollPositions[event.to] || 0 })
+  })
 </script>
 
 <div class="layout">
   <aside class="sidebar" class:active={sidebarActive} id="navigation">
+    <div class="skip-links">
+      <a href="#main">Skip to main content</a>
+    </div>
+
     <a href="/" class="header">
       <img src="/images/helldivers-2-logo.png" alt="Helldivers 2" height="200" />
 
@@ -35,9 +50,9 @@
     </svg>
   </button>
 
-  <article class="article">
+  <main class="main" id="main" class:no-scroll={sidebarActive} bind:this={main}>
     <slot />
-  </article>
+  </main>
 </div>
 
 <style lang="scss">
@@ -72,12 +87,14 @@
     $shadow: 0 0 0.75rem rgba($black, 0.5), 0 0 3rem rgba($black, 0.5), 0 0 5rem rgba($black, 0.75);
     position: fixed;
     height: 100dvh;
+    max-width: 90vw;
     padding: $margin * 0.5;
     border-right: 5px solid $bg-dark;
-    overflow-y: auto;
     background: $bg-base;
-    z-index: 100;
     transform: translateX(-100%);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    z-index: 100;
     transition: transform 200ms;
 
     @include breakpoint(xxs) {
@@ -147,17 +164,51 @@
     }
   }
 
-  .article {
+  .main {
     position: relative;
     padding: $margin * 0.75 $margin * 0.75 $margin * 1.5;
     height: 100dvh;
     overflow-y: auto;
     overflow-x: hidden;
 
+    @include styled-scrollbar(thick);
+
     @include breakpoint(lg) {
       padding: $margin * 2;
     }
 
-    @include styled-scrollbar(thick);
+    &.no-scroll {
+      overflow-y: hidden;
+
+      @include breakpoint(lg) {
+        overflow-y: auto;
+      }
+    }
+  }
+
+  .skip-links {
+    position: absolute;
+    top: $margin;
+    left: $margin;
+    height: 0;
+    width: 0;
+    opacity: 0;
+    pointer-events: none;
+
+    &:focus-within {
+      height: auto;
+      width: calc(100% - $margin * 2);
+      opacity: 1;
+      z-index: 5;
+    }
+
+    a {
+      display: block;
+      background: $bg-base;
+      color: $white;
+      text-decoration: none;
+
+      @include focus-visible-outline();
+    }
   }
 </style>

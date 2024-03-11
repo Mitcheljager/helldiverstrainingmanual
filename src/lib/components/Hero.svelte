@@ -6,6 +6,7 @@
   export let alt = ""
   export let video = ""
   export let poster = ""
+  export let small = false
 
   let videoElement
   let videoPlaying = false
@@ -17,7 +18,7 @@
   }
 </script>
 
-<div class="hero" in:fly|global={{ x: -20, duration: 400 }}>
+<div class="hero" class:small in:fly|global={{ x: -20, duration: 400 }}>
   {#if src}
     <img {src} {alt}>
   {:else if video}
@@ -37,10 +38,16 @@
       {/if}
     </button>
   {/if}
+
+  {#if $$slots["content"]}
+    <div class="content">
+      <slot name="content" />
+    </div>
+  {/if}
 </div>
 
 {#if $$slots.default}
-  <h1 in:fly|global={{ y: 20, duration: 400 }}><slot /></h1>
+  <h1 class:small in:fly|global={{ y: 20, duration: 400 }}><slot /></h1>
 {/if}
 
 {#if browser}
@@ -59,6 +66,12 @@
     @include breakpoint(md) {
       margin: calc(-1em + $margin * -0.5) 0 $margin;
     }
+
+    &.small {
+      @include breakpoint(md) {
+        margin: calc(-1em + $margin * -0.5) $margin * 0.5 $margin;
+      }
+    }
   }
 
   .hero {
@@ -69,6 +82,12 @@
     border: 5px solid $primary;
     background: lighten($bg-base, 5%);
     overflow: hidden;
+
+    &.small {
+      height: clamp(12rem, 20vw, 17rem);
+      max-width: $text-limit;
+      margin: 0;
+    }
 
     img,
     video {
@@ -113,6 +132,14 @@
         fill: $white;
       }
     }
+  }
+
+  .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
 
   .blur {

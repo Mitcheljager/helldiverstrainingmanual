@@ -63,3 +63,21 @@
   color: $white;
   cursor: pointer;
 }
+
+@mixin focus-visible-outline() {
+  outline-offset: 0;
+
+  &:focus-visible {
+    outline: 3px solid $white;
+
+    &:not(:active) {
+      outline-offset: 3px;
+    }
+
+    @content;
+
+    @media (prefers-reduced-motion: no-preference) {
+      transition: outline-offset 150ms;
+    }
+  }
+}
