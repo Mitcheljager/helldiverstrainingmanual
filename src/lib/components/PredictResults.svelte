@@ -38,12 +38,12 @@
     const timeToFilledInSeconds = remainingPercentage / rateOfChange
 
     const currentTimeInMilliseconds = Date.now()
-    const timeToFilledInMilliseconds = currentTimeInMilliseconds + timeToFilledInSeconds * 1000
+    const unixTimeToFilled = currentTimeInMilliseconds + timeToFilledInSeconds * 1000
 
     const roundedPercentage = parseFloat(percentage.toFixed(4))
     const roundedAverage = parseFloat(average.toFixed(4))
 
-    estimatedEnd = Math.floor(timeToFilledInMilliseconds / 1000)
+    estimatedEnd = Math.floor(unixTimeToFilled / 1000)
     rateDirection = roundedAverage === roundedPercentage ? 0 : roundedPercentage > roundedAverage ? 1 : -1
   }
 
