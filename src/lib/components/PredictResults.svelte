@@ -63,17 +63,17 @@
   Predicting results...
 {:else if percentage === 0 && average === 0}
   Overwhelming forces await
-{:else if estimatedEnd === Infinity || estimatedEnd > 9e+9}
+{:else if estimatedEnd === Infinity || hoursToGo > 1000}
   We're in a stalemate
 {:else}
   {estimatedEnd > (now / 1000) ? "Liberty" : "Withdrawal"} in
   {#if hoursToGo < 1}
     less than 1 hr
   {:else}
-    {#if hoursDifference(estimatedEnd) > 72}
-      about {Math.round(hoursDifference(estimatedEnd) / 24)} days
+    {#if hoursToGo > 72}
+      about {Math.round(hoursToGo / 24)} days
     {:else}
-      about {hoursDifference(estimatedEnd)} hrs
+      about {hoursToGo} hrs
     {/if}
   {/if}
 {/if}
