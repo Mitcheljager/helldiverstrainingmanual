@@ -48,6 +48,12 @@
   }
 
   async function predictResults() {
+    if (percentage === 0) {
+      average = 0
+      estimatedEnd = 0
+      return
+    }
+
     const history = await fetchHistory(planetIndex, { limit: 2 })
     calculateTimeTo100(history)
   }
