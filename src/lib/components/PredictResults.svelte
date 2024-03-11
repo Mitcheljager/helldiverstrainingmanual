@@ -64,6 +64,10 @@
   {#if hoursToGo < 1}
     less than 1 hr
   {:else}
-    about {hoursDifference(estimatedEnd)} hrs
+    {#if hoursDifference(estimatedEnd) > 72}
+      about {Math.round(hoursDifference(estimatedEnd) / 24)} days
+    {:else}
+      about {hoursDifference(estimatedEnd)} hrs
+    {/if}
   {/if}
 {/if}
