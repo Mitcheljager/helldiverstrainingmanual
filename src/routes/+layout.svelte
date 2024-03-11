@@ -87,12 +87,14 @@
     $shadow: 0 0 0.75rem rgba($black, 0.5), 0 0 3rem rgba($black, 0.5), 0 0 5rem rgba($black, 0.75);
     position: fixed;
     height: 100dvh;
+    max-width: 90vw;
     padding: $margin * 0.5;
     border-right: 5px solid $bg-dark;
-    overflow-y: auto;
     background: $bg-base;
-    z-index: 100;
     transform: translateX(-100%);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    z-index: 100;
     transition: transform 200ms;
 
     @include breakpoint(xxs) {
