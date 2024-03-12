@@ -6,7 +6,7 @@ export async function redirects({ event, resolve }) {
 
   let url
   if (pathname.startsWith('/war-status/planet-glossary')) url = origin + '/planet-glossary'
-  if (pathname.startsWith('/war-status/planetary-records')) url = origin + '/planet-glossary'
+  if (pathname.startsWith('/war-status/planetary-records')) url = origin + '/planetary-records'
 
   if (url) return Response.redirect(url, 301)
 
