@@ -149,7 +149,7 @@
     position: relative;
     height: 100%;
     padding: $margin * 0.2 $margin * 0.25;
-    box-shadow: inset 0 0 0 3px var(--border-color);
+    box-shadow: inset 0 0 0 2px var(--border-color);
     margin: 0;
     background: var(--background-color);
     transition: font-size 200ms, padding 200ms;
