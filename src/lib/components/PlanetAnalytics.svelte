@@ -3,6 +3,7 @@
 	import { fetchHistory } from "$lib/api/history"
 	import { slide } from "svelte/transition"
 	import { planetData } from "$lib/data/planets"
+	import { browser } from "$app/environment";
 
   export let index
   export let row = false
@@ -46,48 +47,52 @@
     <h4 class="mb-1/4">{planetData[index].name}</h4>
   {/if}
 
-  {#await fetchHistory(index)}
+  {#if !browser}
     <span>Loading...</span>
-  {:then data}
-    <div class="charts" class:row class:inline>
-      {#if Object.entries(data).length !== 0}
-        {#each [{ header: "Liberation percentage", players: false }, { header: "Number of Helldivers", players: true }] as { header, players }}
-          <div class="chart" in:slide|global={{ duration: 100 }} >
-            <h5>{header}</h5>
+  {:else}
+    {#await fetchHistory(index)}
+      <span>Loading...</span>
+    {:then data}
+      <div class="charts" class:row class:inline>
+        {#if Object.entries(data).length !== 0}
+          {#each [{ header: "Liberation percentage", players: false }, { header: "Number of Helldivers", players: true }] as { header, players }}
+            <div class="chart" in:slide|global={{ duration: 100 }} >
+              <h5>{header}</h5>
 
-            <LinkedChart
-              width={576}
-              height={150}
-              gap={0}
-              barMinHeight={2}
-              barMinWidth={2}
-              linked="planet{index}"
-              uid={index + header}
-              lineColor="currentColor"
-              fill="var(--chart-color)"
-              {...getChartProps(data, players)} />
+              <LinkedChart
+                width={576}
+                height={150}
+                gap={0}
+                barMinHeight={2}
+                barMinWidth={2}
+                linked="planet{index}"
+                uid={index + header}
+                lineColor="currentColor"
+                fill="var(--chart-color)"
+                {...getChartProps(data, players)} />
 
-            <div class="labels">
-              <div><LinkedValue uid={index + header} transform={(value) => value.toLocaleString() + (players ? "" : "%")} /></div>
-              <div><LinkedLabel linked="planet{index}" /></div>
+              <div class="labels">
+                <div><LinkedValue uid={index + header} transform={(value) => value.toLocaleString() + (players ? "" : "%")} /></div>
+                <div><LinkedLabel linked="planet{index}" /></div>
+              </div>
             </div>
-          </div>
-        {/each}
-      {/if}
-    </div>
-
-    {#if Object.entries(data).length < 200}
-      <em class="mt-1/4" in:slide|global={{ duration: 100 }}>
-        {#if Object.entries(data).length === 0}
-          No activity has been recorded on this planet
-        {:else}
-          This data is still populating
+          {/each}
         {/if}
-      </em>
-    {/if}
-  {:catch}
-    Something went wrong when fetching the analytics.
-  {/await}
+      </div>
+
+      {#if Object.entries(data).length < 200}
+        <em class="mt-1/4" in:slide|global={{ duration: 100 }}>
+          {#if Object.entries(data).length === 0}
+            No activity has been recorded on this planet
+          {:else}
+            This data is still populating
+          {/if}
+        </em>
+      {/if}
+    {:catch}
+      Something went wrong when fetching the analytics.
+    {/await}
+  {/if}
 </div>
 
 <style lang="scss">
