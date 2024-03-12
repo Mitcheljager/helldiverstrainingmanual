@@ -186,7 +186,7 @@ export const planetData = {
   30: {
     name: "Veil",
     sector: Sector.Barnard,
-    biome: null,
+    biome: Biome.Swamp,
     environmentals: [Environmental.ThickFog]
   },
   31: {
@@ -222,7 +222,7 @@ export const planetData = {
   36: {
     name: "Solghast",
     sector: Sector.Gothmar,
-    biome: null,
+    biome: Biome.Swamp,
     environmentals: [Environmental.ThickFog]
   },
   37: {
@@ -468,7 +468,7 @@ export const planetData = {
   77: {
     name: "Cirrus",
     sector: Sector.Orion,
-    biome: null,
+    biome: Biome.Swamp,
     environmentals: [Environmental.ThickFog]
   },
   78: {
@@ -528,7 +528,7 @@ export const planetData = {
   87: {
     name: "Bashyr",
     sector: Sector.Gallux,
-    biome: null,
+    biome: Biome.Swamp,
     environmentals: [Environmental.ThickFog]
   },
   88: {
@@ -600,7 +600,7 @@ export const planetData = {
   99: {
     name: "Alderidge Cove",
     sector: Sector.Guang,
-    biome: null,
+    biome: Biome.Swamp,
     environmentals: [Environmental.ThickFog]
   },
   100: {
@@ -684,7 +684,7 @@ export const planetData = {
   113: {
     name: "Aesir Pass",
     sector: Sector.Hydra,
-    biome: null,
+    biome: Biome.Swamp,
     environmentals: [Environmental.ThickFog]
   },
   114: {
@@ -696,7 +696,7 @@ export const planetData = {
   115: {
     name: "Penta",
     sector: Sector.Lacaille,
-    biome: null,
+    biome: Biome.Swamp,
     environmentals: [Environmental.ThickFog]
   },
   116: {
@@ -828,7 +828,7 @@ export const planetData = {
   137: {
     name: "Ain-5",
     sector: Sector.Hanzo,
-    biome: null,
+    biome: Biome.Swamp,
     environmentals: [Environmental.ThickFog]
   },
   138: {
@@ -846,7 +846,7 @@ export const planetData = {
   140: {
     name: "Alaraph",
     sector: Sector.Akira,
-    biome: null,
+    biome: Biome.Swamp,
     environmentals: [Environmental.ThickFog]
   },
   141: {
@@ -930,7 +930,7 @@ export const planetData = {
   154: {
     name: "Mort",
     sector: Sector.Xzar,
-    biome: null,
+    biome: Biome.Swamp,
     environmentals: [Environmental.ThickFog]
   },
   155: {
@@ -1068,7 +1068,7 @@ export const planetData = {
   177: {
     name: "Haka",
     sector: Sector.Leo,
-    biome: null,
+    biome: Biome.Swamp,
     environmentals: [Environmental.ThickFog]
   },
   178: {
@@ -1272,7 +1272,7 @@ export const planetData = {
   211: {
     name: "Nivel 43",
     sector: Sector.Mirin,
-    biome: null,
+    biome: Biome.Swamp,
     environmentals: [Environmental.ThickFog]
   },
   212: {
@@ -1290,7 +1290,7 @@ export const planetData = {
   214: {
     name: "Pandion-XXIV",
     sector: Sector.JinXi,
-    biome: null,
+    biome: Biome.Swamp,
     environmentals: [Environmental.ThickFog]
   },
   215: {
@@ -1404,7 +1404,7 @@ export const planetData = {
   233: {
     name: "Skat Bay",
     sector: Sector.XiTauri,
-    biome: null,
+    biome: Biome.Swamp,
     environmentals: [Environmental.ThickFog]
   },
   234: {
@@ -1446,7 +1446,7 @@ export const planetData = {
   240: {
     name: "Troost",
     sector: Sector.Trigon,
-    biome: null,
+    biome: Biome.Swamp,
     environmentals: [Environmental.ThickFog]
   },
   241: {
@@ -1500,7 +1500,7 @@ export const planetData = {
   249: {
     name: "X-45",
     sector: Sector.Ymir,
-    biome: null,
+    biome: Biome.Swamp,
     environmentals: [Environmental.ThickFog]
   },
   250: {

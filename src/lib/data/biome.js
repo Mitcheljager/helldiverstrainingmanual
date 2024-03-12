@@ -34,5 +34,9 @@ export const Biome = {
   Tundra: {
     slug: "tundra",
     description: "A perenially chilly climate has allowed short, colourful shrubs to flourish across this planet's surface."
+  },
+  Swamp: {
+    slug: "swamp",
+    description: "The lifeless grey of this planet is interrupted only by the violet flowers that grow from strange, parasitic outcroppings."
   }
 }
