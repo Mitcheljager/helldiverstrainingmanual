@@ -98,6 +98,12 @@ export const bestiary = [{
       </ul>
       <p>As for targeting the Titan's weak spots, aim for its mouth and the vulnerable sacs beneath its body. These are the points where its armor is thinnest, making them prime targets for your firepower. Utilize anti-tank weapons, explosives, and precision stratagems to maximize your damage and bring the Titan to its knees.</p>
     `
+  }, {
+    name: "Shrieker",
+    appearance: `<p>Little is known about these flying monstrosities. Yes, you heard that right, they fly!`,
+    tactics: `
+      <p>More research is necessary before we can provide essential strategies. For now, do your duty, and document their behaviour.</p>
+    `
   }]
 }, {
   faction: factions[3],
