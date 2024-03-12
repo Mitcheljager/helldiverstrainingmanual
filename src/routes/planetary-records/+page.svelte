@@ -61,7 +61,7 @@
   <title>Planetary Ownership Records | Helldivers Training Manual</title>
 </svelte:head>
 
-<Hero src="/images/content/planetary-records.jpg">
+<Hero basepath="/images/content" filename="planetary-records">
   Planetary Ownership Records
 </Hero>
 

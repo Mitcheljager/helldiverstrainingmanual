@@ -6,7 +6,7 @@
   <title>Stratagems | Helldivers Training Manual</title>
 </svelte:head>
 
-<Hero src="/images/content/stratagems.jpg">
+<Hero basepath="/images/content" filename="stratagems">
   Stratagems: Unleashing Tactical Madness
 </Hero>
 

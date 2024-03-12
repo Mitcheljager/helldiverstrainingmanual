@@ -2,7 +2,8 @@
 	import { browser } from "$app/environment"
 	import { fly } from "svelte/transition"
 
-  export let src = ""
+  export let basepath = ""
+  export let filename = ""
   export let alt = ""
   export let video = ""
   export let poster = ""
@@ -19,8 +20,12 @@
 </script>
 
 <div class="hero" class:small in:fly|global={{ x: -20, duration: 400 }}>
-  {#if src}
-    <img {src} {alt}>
+  {#if basepath && filename}
+    <picture>
+      <source type="image/webp" srcset="{basepath}/webp/{filename + ".webp"}"  />
+      <source type="image/jpg" srcset="{basepath}/{filename + ".jpg"}">
+      <img src="{basepath}/{filename}.jpg" {alt}>
+    </picture>
   {:else if video}
     <!-- svelte-ignore a11y-media-has-caption -->
     <video src={video} {poster} muted playsinline loop preload="none" bind:this={videoElement} on:click={playpause} on:playing={() => videoPlaying = true} on:pause={() => videoPlaying = false} />
@@ -51,8 +56,12 @@
 {/if}
 
 {#if browser}
-  {#if src}
-    <img class="blur" class:loaded {src} {alt} on:load={() => loaded = true}>
+  {#if basepath && filename}
+    <picture>
+      <source type="image/webp" srcset="{basepath}/webp/{filename + ".webp"}"  />
+      <source type="image/jpg" srcset="{basepath}/{filename + ".jpg"}">
+      <img src="{basepath}/{filename}.jpg" class="blur" class:loaded {alt} on:load={() => loaded = true}>
+    </picture>
   {:else if video && poster}
     <img class="blur" class:loaded src={poster} {alt} on:load={() => loaded = true}>
   {/if}

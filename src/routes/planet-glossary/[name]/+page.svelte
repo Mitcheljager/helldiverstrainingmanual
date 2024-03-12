@@ -23,7 +23,7 @@
 
 {#key name}
   {#if biome}
-    <Hero small src="/images/biomes/{biome.slug}.jpg">
+    <Hero small basepath="/images/biomes" filename="{biome.slug}">
       {name}
     </Hero>
   {:else}

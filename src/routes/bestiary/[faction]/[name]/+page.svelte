@@ -13,11 +13,15 @@
 </svelte:head>
 
 {#key name}
-  <Hero src="/images/biomes/{faction.biome.slug}.jpg">
+  <Hero basepath="/images/biomes" filename={faction.biome.slug}>
     {faction.faction.substring(0, faction.faction.length - 1)} {name}
 
     <div slot="content" class="image">
-      <img src="/images/bestiary/{toSlug(name)}.png" alt={name} />
+      <picture>
+        <source type="image/webp" srcset="/images/bestiary/webp/{toSlug(name)}.webp"  />
+        <source type="image/png" srcset="/images/bestiary/{toSlug(name)}.png">
+        <img src="/images/bestiary/{toSlug(name)}.png" alt={name} />
+      </picture>
     </div>
   </Hero>
 

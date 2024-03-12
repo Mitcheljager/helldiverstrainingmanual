@@ -38,7 +38,7 @@
   <title>Planet Glossary | Helldivers Training Manual</title>
 </svelte:head>
 
-<Hero src="/images/content/planet-glossary.jpg">
+<Hero basepath="/images/content" filename="planet-glossary">
   Planet Glossary
 </Hero>
 
@@ -68,14 +68,24 @@
 
             {#if planet.biome}
               <div class="background">
-                <img
-                  class="biome"
-                  loading="lazy"
-                  src="/images/biomes/small/{planet.biome.slug}.jpg"
-                  srcset="/images/biomes/small/{planet.biome.slug}.jpg 1x, /images/biomes/{planet.biome.slug}.jpg 2x"
-                  alt="{planet.biome.slug} biome"
-                  height="128"
-                  width="400" />
+                <picture>
+                  <source
+                    type="image/webp"
+                    srcset="/images/biomes/small/webp/{planet.biome.slug}.webp 1x, /images/biomes/webp/{planet.biome.slug}.webp 2x" />
+
+                  <source
+                    type="image/jpg"
+                    srcset="/images/biomes/small/{planet.biome.slug}.jpg 1x, /images/biomes/{planet.biome.slug}.jpg 2x" />
+
+                  <img
+                    class="biome"
+                    loading="lazy"
+                    src="/images/biomes/small/{planet.biome.slug}.jpg"
+                    srcset="/images/biomes/small/{planet.biome.slug}.jpg 1x, /images/biomes/{planet.biome.slug}.jpg 2x"
+                    alt="{planet.biome.slug} biome"
+                    height="128"
+                    width="400" />
+                </picture>
               </div>
             {/if}
           </a>

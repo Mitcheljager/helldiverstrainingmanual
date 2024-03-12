@@ -197,7 +197,7 @@
   {/if}
 
   {#if browser}
-    <img class="blur" class:loaded src="/images/map/stars.jpg" alt="" on:load={() => loaded = true}>
+    <img class="blur" class:loaded src="/images/map/stars.webp" alt="" on:load={() => loaded = true}>
   {/if}
 </div>
 
@@ -259,7 +259,7 @@
     justify-content: center;
     align-items: center;
     border-bottom: 0;
-    background: darken($bg-dark, 10%) url("/images/map/stars.jpg") no-repeat;
+    background: darken($bg-dark, 10%) url("/images/map/stars.webp") no-repeat;
     background-position: calc(50% - var(--x, 0px) * -0.025 * var(--zoom)) calc(50% - var(--y, 0px) * -0.025 * var(--zoom));
     background-size: auto calc(110% * (1 + var(--zoom) * 0.1));
     overflow: hidden;

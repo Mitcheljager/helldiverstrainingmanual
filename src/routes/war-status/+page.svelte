@@ -30,7 +30,7 @@
   <title>Live War Status | Helldivers Training Manual</title>
 </svelte:head>
 
-<Hero src="/images/content/war-status.jpg">
+<Hero basepath="/images/content" filename="war-status">
   War Status: Helldivers' War Efforts
 </Hero>
 

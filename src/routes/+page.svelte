@@ -2,7 +2,7 @@
 	import Hero from "$lib/components/Hero.svelte"
 </script>
 
-<Hero src="/images/content/introduction.jpg">
+<Hero basepath="/images/content" filename="introduction">
   An introductory guide to becoming a victorious <span class="text-primary">Helldiver</span>.
 </Hero>
 
