@@ -34,7 +34,7 @@
 
     const rateOfChange = interval > 0 ? (percentage - average) / interval : 0
 
-    const remainingPercentage = 100 - percentage
+    const remainingPercentage = rateOfChange > 0 ? 100 - percentage : 0 + percentage
     const timeToFilledInSeconds = remainingPercentage / rateOfChange
 
     const currentTimeInMilliseconds = Date.now()
