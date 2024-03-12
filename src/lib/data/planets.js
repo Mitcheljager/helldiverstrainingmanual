@@ -192,7 +192,7 @@ export const planetData = {
   31: {
     name: "Marre IV",
     sector: Sector.Barnard,
-    biome: null,
+    biome: Biome.Desolate,
     environmentals: [Environmental.IntenseHeat, Environmental.FireTornadoes]
   },
   32: {
@@ -210,7 +210,7 @@ export const planetData = {
   34: {
     name: "Hellmire",
     sector: Sector.Mirin,
-    biome: null,
+    biome: Biome.Desolate,
     environmentals: [Environmental.IntenseHeat, Environmental.FireTornadoes]
   },
   35: {
@@ -420,13 +420,13 @@ export const planetData = {
   69: {
     name: "Imber",
     sector: Sector.Talus,
-    biome: null,
+    biome: Biome.Desolate,
     environmentals: [Environmental.IntenseHeat, Environmental.FireTornadoes]
   },
   70: {
     name: "Blistica",
     sector: Sector.Gellert,
-    biome: null,
+    biome: Biome.Desolate,
     environmentals: [Environmental.IntenseHeat, Environmental.FireTornadoes]
   },
   71: {
@@ -648,7 +648,7 @@ export const planetData = {
   107: {
     name: "Pöpli IX",
     sector: Sector.Xzar,
-    biome: null,
+    biome: Biome.Desolate,
     environmentals: [Environmental.IntenseHeat, Environmental.FireTornadoes]
   },
   108: {
@@ -750,7 +750,7 @@ export const planetData = {
   124: {
     name: "Bore Rock",
     sector: Sector.Falstaff,
-    biome: null,
+    biome: Biome.Desolate,
     environmentals: [Environmental.IntenseHeat, Environmental.FireTornadoes]
   },
   125: {
@@ -816,7 +816,7 @@ export const planetData = {
   135: {
     name: "Adhara",
     sector: Sector.Gallux,
-    biome: null,
+    biome: Biome.Desolate,
     environmentals: [Environmental.IntenseHeat, Environmental.FireTornadoes]
   },
   136: {
@@ -864,7 +864,7 @@ export const planetData = {
   143: {
     name: "Asperoth Prime",
     sector: Sector.Akira,
-    biome: null,
+    biome: Biome.Desolate,
     environmentals: [Environmental.IntenseHeat, Environmental.FireTornadoes]
   },
   144: {
@@ -1056,7 +1056,7 @@ export const planetData = {
   175: {
     name: "Grand Errant",
     sector: Sector.Farsight,
-    biome: null,
+    biome: Biome.Desolate,
     environmentals: [Environmental.IntenseHeat, Environmental.FireTornadoes]
   },
   176: {
@@ -1086,7 +1086,7 @@ export const planetData = {
   180: {
     name: "Herthon Secundus",
     sector: Sector.Ferris,
-    biome: null,
+    biome: Biome.Desolate,
     environmentals: [Environmental.IntenseHeat, Environmental.FireTornadoes]
   },
   181: {
@@ -1116,7 +1116,7 @@ export const planetData = {
   185: {
     name: "Karlia",
     sector: Sector.Omega,
-    biome: null,
+    biome: Biome.Desolate,
     environmentals: [Environmental.IntenseHeat, Environmental.FireTornadoes]
   },
   186: {
@@ -1140,7 +1140,7 @@ export const planetData = {
   189: {
     name: "Kneth Port",
     sector: Sector.Alstrad,
-    biome: null,
+    biome: Biome.Desolate,
     environmentals: [Environmental.IntenseHeat, Environmental.FireTornadoes]
   },
   190: {
@@ -1224,7 +1224,7 @@ export const planetData = {
   203: {
     name: "Menkent",
     sector: Sector.Hydra,
-    biome: null,
+    biome: Biome.Desolate,
     environmentals: [Environmental.IntenseHeat, Environmental.FireTornadoes]
   },
   204: {
@@ -1296,7 +1296,7 @@ export const planetData = {
   215: {
     name: "Partion",
     sector: Sector.Sten,
-    biome: null,
+    biome: Biome.Desolate,
     environmentals: [Environmental.IntenseHeat, Environmental.FireTornadoes]
   },
   216: {
@@ -1488,7 +1488,7 @@ export const planetData = {
   247: {
     name: "Wezen",
     sector: Sector.Ymir,
-    biome: null,
+    biome: Biome.Desolate,
     environmentals: [Environmental.IntenseHeat, Environmental.FireTornadoes]
   },
   248: {

@@ -38,5 +38,9 @@ export const Biome = {
   Swamp: {
     slug: "swamp",
     description: "The lifeless grey of this planet is interrupted only by the violet flowers that grow from strange, parasitic outcroppings."
+  },
+  Desolate: {
+    slug: "desolate",
+    description: "Scorching temperatures, high winds, and low precipitation cause a near-constant cycle of fires to sweep this planet, punctuated by short bursts of lush rebirth between infernos."
   }
 }
