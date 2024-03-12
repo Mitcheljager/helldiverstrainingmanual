@@ -22,12 +22,11 @@
   }, {
     text: "Live War Status",
     route: "war-status",
-    subroutes: [{
-      text: "Planetary Ownership Records",
-      route: "planetary-records"
-    }, {
-      text: "Planet Glossary"
-    }]
+  }, {
+    text: "Planetary Ownership Records",
+    route: "planetary-records"
+  }, {
+    text: "Planet Glossary"
   }, {
     text: "Stratagems",
     subroutes: [{

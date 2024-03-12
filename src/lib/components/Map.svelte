@@ -12,7 +12,7 @@
 	import PlanetSearch from "$lib/components/PlanetSearch.svelte"
 	import Modal from "$lib/components/Modal.svelte"
   import MapSectors from "$lib/components/MapSectors.svelte"
-  import PlanetGlossaryPage from '../../routes/war-status/planet-glossary/[name]/+page.svelte'
+  import PlanetGlossaryPage from "../../routes/planet-glossary/[name]/+page.svelte"
 
   export let planets = []
   export let campaigns = []

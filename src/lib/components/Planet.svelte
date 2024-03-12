@@ -5,9 +5,6 @@
 	import { fade, scale } from "svelte/transition"
 	import AnalyticsPopup from "$lib/components/AnalyticsPopup.svelte"
 	import IconDefense from "$lib/components/icons/IconDefense.svelte"
-  import Modal from "$lib/components/Modal.svelte"
-  import PlanetGlossaryPage from '../../routes/war-status/planet-glossary/[name]/+page.svelte'
-	import { pushState } from "$app/navigation"
 
   export let planet = {}
   export let status = {}
