@@ -6,6 +6,7 @@
 	import { fade } from "svelte/transition";
 
   export let status
+  export let hoveringSector = null
 
   $: activeSectors = status && findActiveSectors()
 
@@ -27,7 +28,13 @@
 
 <svg width="1000px" height="1000px" viewBox="0 0 1000 1000">
   {#each activeSectors as { name, path, owner } (name)}
-    <path transition:fade={{ duration: 200 }} class="{toSlug(factions[owner])}" d={path} />
+    <!-- svelte-ignore a11y-no-static-element-interactions -->
+    <path
+      class="{toSlug(factions[owner])}" d={path}
+      class:active={hoveringSector === name}
+      on:mouseenter={() => hoveringSector = name}
+      on:mouseleave={() => hoveringSector = null}
+      transition:fade={{ duration: 200 }} />
   {/each}
 </svg>
 
@@ -49,6 +56,10 @@
         fill: $color;
         stroke: $color;
       }
+    }
+
+    &.active {
+      opacity: 0.4;
     }
   }
 </style>

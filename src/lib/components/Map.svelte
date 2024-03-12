@@ -41,6 +41,7 @@
   let dragStartPosition = {}
   let foundPlanetIndexes = []
   let modalIndex = null
+  let hoveringSector = null
 
   $: totalPlayerCount = campaigns.reduce((total, c) => total + c.players, 0)
   $: if (browser && innerElement !== null && innerWidth) bindImpetus()
@@ -154,7 +155,8 @@
                 status={status && getStatus(planet.index)}
                 active={activeIndex === planet.index}
                 on:details={() => modalIndex = planet.index}
-                on:click={() => activeIndex = activeIndex === planet.index ? -1 : planet.index} />
+                on:click={() => activeIndex = activeIndex === planet.index ? -1 : planet.index}
+                on:mouseenter={() => hoveringSector = planetData[planet.index].sector} />
             {/if}
           {/each}
 
@@ -169,7 +171,7 @@
       <div class="scaler" bind:clientWidth={innerWidth} />
 
       <div class="sectors">
-        <MapSectors {status} />
+        <MapSectors {status} bind:hoveringSector />
 
         <img class="outline" src="/images/map/outline.svg" alt="" draggable="false" />
       </div>
@@ -189,6 +191,10 @@
       </div>
     {/if}
   </div>
+
+  {#if hoveringSector}
+    <div class="sector">{hoveringSector} Sector</div>
+  {/if}
 
   {#if browser}
     <img class="blur" class:loaded src="/images/map/stars.jpg" alt="" on:load={() => loaded = true}>
@@ -310,11 +316,24 @@
     }
   }
 
+  .sector {
+    position: absolute;
+    left: 50%;
+    bottom: $margin;
+    transform: translateX(-50%);
+    padding: $margin * 0.15;
+    color: $white;
+    font-family: $font-family-brand;
+    font-size: 1.25rem;
+    line-height: 1em;
+  }
+
   .outline {
     display: block;
     width: 100%;
     height: auto;
     opacity: 0.65;
+    pointer-events: none;
   }
 
   .earth {

@@ -24,6 +24,7 @@
 
 <button
   on:click
+  on:mouseenter
   transition:fade={{ duration: 100, delay: index }}
   data-index={index}
   data-owner={status.owner}
