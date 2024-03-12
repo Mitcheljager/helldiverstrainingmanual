@@ -10,7 +10,8 @@ export function formatCampaigns(campaigns, planetStatus, planetInfos, planetEven
     const { planetIndex } = campaign
     const event = planetEvents?.find(e => e.planetIndex === planetIndex)
 
-    const name = planetData[planetIndex].name
+    const { name, biome } = planetData[planetIndex]
+
     const currentStatus = planetStatus[planetIndex]
     const planetInfo = planetInfos[planetIndex]
     const faction = factions[event?.race || currentStatus.owner]
@@ -21,6 +22,7 @@ export function formatCampaigns(campaigns, planetStatus, planetInfos, planetEven
 
     const percentage = 100 - (100 / maxHealth * health)
     const defense = event?.eventType === 1
+
 
     const expireDateTime = event?.expireTime ? zeroUnix + event?.expireTime : 0
 
@@ -33,6 +35,7 @@ export function formatCampaigns(campaigns, planetStatus, planetInfos, planetEven
       maxHealth,
       percentage,
       defense,
+      biome,
       expireDateTime
     }
   })

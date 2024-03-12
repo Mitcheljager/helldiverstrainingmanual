@@ -11,6 +11,7 @@
 
   export let planetIndex = ""
   export let name = ""
+  export let biome = null
   export let faction = ""
   export let percentage = 0
   export let health = 0
@@ -49,6 +50,18 @@
 
       <LocateOnMap {planetIndex} />
     </div>
+
+    {#if biome}
+      <div class="background">
+        <img
+          class="biome"
+          loading="lazy"
+          src="/images/biomes/small/{biome.slug}.jpg"
+          alt="{biome.slug} biome"
+          height="128"
+          width="400" />
+      </div>
+    {/if}
   </div>
 
   <div class="content">
@@ -133,13 +146,16 @@
     display: flex;
     flex-direction: column;
     gap: $margin * 0.05;
+    position: relative;
     height: 100%;
     padding: $margin * 0.2 $margin * 0.25;
+    box-shadow: inset 0 0 0 3px var(--border-color);
     margin: 0;
     background: var(--background-color);
     transition: font-size 200ms, padding 200ms;
 
     h3 {
+      position: relative;
       display: -webkit-box;
       -webkit-line-clamp: 1;
       -webkit-box-orient: vertical;
@@ -149,13 +165,36 @@
       overflow: hidden;
       line-break: anywhere;
       margin-right: auto;
+      z-index: 1;
     }
   }
 
   .actions {
+    position: relative;
     display: flex;
     gap: $margin * 0.15;
     margin-top: auto;
+    z-index: 1;
+  }
+
+  .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+  }
+
+  .biome {
+    width: calc(100% + 2px);
+    height: auto;
+    min-height: calc(100% + 2px);
+    margin: -2px -2px 0 0;
+    opacity: 1;
+    mask-image: linear-gradient(to left, white 10%, transparent 80%);
+    object-fit: cover;
   }
 
   .content {
