@@ -18,7 +18,7 @@
 </svelte:head>
 
 {#if showBackRoute}
-  <a class="return" href="/war-status/planet-glossary">← Return to Planet Glossary</a>
+  <a class="return" href="/planet-glossary">← Return to Planet Glossary</a>
 {/if}
 
 {#key name}
