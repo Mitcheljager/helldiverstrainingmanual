@@ -55,7 +55,7 @@
 
       {#each planets.sort((a, b) => a.name > b.name ? 1 : -1) as planet (planet.name)}
         {#if !query || filteredPlanets.map(p => p.name).includes(planet.name)}
-          <a class="item" href="/war-status/planet-glossary/{toSlug(planet.name)}">
+          <a class="item" href="/planet-glossary/{toSlug(planet.name)}">
             <div class="content">
               <div class="name">{planet.name}</div>
 
