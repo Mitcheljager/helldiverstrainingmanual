@@ -11,25 +11,27 @@
   <title>{faction.faction} | Helldivers Training Manual</title>
 </svelte:head>
 
-<Hero basepath="/images/content" filename={toSlug(faction.faction)}>
-  {faction.faction}
-</Hero>
+{#key faction.faction}
+  <Hero basepath="/images/content" filename={toSlug(faction.faction)}>
+    {faction.faction}
+  </Hero>
 
-{@html faction.description || ""}
+  {@html faction.description || ""}
 
-<h2 class="mt-1 mb-1/2">Enemy types</h2>
+  <h2 class="mt-1 mb-1/2">Enemy types</h2>
 
-<div class="items">
-  {#each faction.enemies as { name }}
-    <a href="/bestiary/{toSlug(faction.faction)}/{toSlug(name)}" class="item">
-      <div class="image">
-        <img src="/images/bestiary/{toSlug(name)}.png" alt={name} />
-      </div>
+  <div class="items">
+    {#each faction.enemies as { name }}
+      <a href="/bestiary/{toSlug(faction.faction)}/{toSlug(name)}" class="item">
+        <div class="image">
+          <img src="/images/bestiary/{toSlug(name)}.png" alt={name} />
+        </div>
 
-      {name}
-    </a>
-  {/each}
-</div>
+        {name}
+      </a>
+    {/each}
+  </div>
+{/key}
 
 <style lang="scss">
   .items {
