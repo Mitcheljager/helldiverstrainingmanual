@@ -44,7 +44,7 @@
     const roundedAverage = parseFloat(average.toFixed(4))
 
     estimatedEnd = Math.floor(unixTimeToFilled / 1000)
-    rateDirection = roundedAverage === roundedPercentage ? 0 : roundedPercentage > roundedAverage ? 1 : -1
+    rateDirection = roundedAverage === roundedPercentage || roundedPercentage === 0 ? 0 : roundedPercentage > roundedAverage ? 1 : -1
   }
 
   async function predictResults() {
