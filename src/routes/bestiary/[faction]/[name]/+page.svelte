@@ -17,11 +17,7 @@
     {faction.faction.substring(0, faction.faction.length - 1)} {name}
 
     <div slot="content" class="image">
-      <picture>
-        <source type="image/webp" srcset="/images/bestiary/webp/{toSlug(name)}.webp"  />
-        <source type="image/png" srcset="/images/bestiary/{toSlug(name)}.png">
-        <img src="/images/bestiary/{toSlug(name)}.png" alt={name} />
-      </picture>
+      <img src="/images/bestiary/{toSlug(name)}.png" alt={name} />
     </div>
   </Hero>
 
