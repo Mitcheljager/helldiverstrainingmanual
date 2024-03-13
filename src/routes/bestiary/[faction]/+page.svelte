@@ -1,4 +1,5 @@
 <script>
+	import Hero from "$lib/components/Hero.svelte";
 	import { toSlug } from "$lib/utils/route"
 
   export let data
@@ -10,7 +11,9 @@
   <title>{faction.faction} | Helldivers Training Manual</title>
 </svelte:head>
 
-<h1>{faction.faction}</h1>
+<Hero basepath="/images/content" filename={toSlug(faction.faction)}>
+  {faction.faction}
+</Hero>
 
 {@html faction.description || ""}
 
