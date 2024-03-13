@@ -1,11 +1,12 @@
 <script>
 	import Hero from "$lib/components/Hero.svelte"
+	import StratagemLink from "$lib/components/StratagemLink.svelte";
 	import { toSlug } from "$lib/utils/route"
 
   export let data
 
   $: ({ faction, enemy } = data)
-  $: ({ name, appearance, tactics, quicktip } = enemy)
+  $: ({ name, appearance, tactics, quicktip, stratagems } = enemy)
 </script>
 
 <svelte:head>
@@ -34,6 +35,16 @@
 
     {@html tactics || ""}
   </div>
+
+  {#if stratagems?.length}
+    <h2 class="mt-1 mb-1/2">Recommended Stratagems</h2>
+
+    <div class="stratagems">
+      {#each stratagems as stratagem}
+        <StratagemLink {stratagem} />
+      {/each}
+    </div>
+  {/if}
 {/key}
 
 <style lang="scss">
@@ -55,5 +66,12 @@
     :global(h3) {
       margin: $margin 0 $margin * 0.25;
     }
+  }
+
+  .stratagems {
+    display: flex;
+    flex-direction: column;
+    gap: $margin * 0.25;
+    max-width: $text-limit;
   }
 </style>
