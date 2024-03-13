@@ -96,7 +96,7 @@ export const planetData = {
   15: {
     name: "Freedom Peak",
     sector: Sector.Cantolus,
-    biome: null,
+    biome: Biome.CrimsonMoor,
     environmentals: [Environmental.IonStorms]
   },
   16: {
@@ -144,7 +144,7 @@ export const planetData = {
   23: {
     name: "Providence",
     sector: Sector.Iptus,
-    biome: null,
+    biome: Biome.CrimsonMoor,
     environmentals: [Environmental.IonStorms]
   },
   24: {
@@ -198,7 +198,7 @@ export const planetData = {
   32: {
     name: "Fort Sanctuary",
     sector: Sector.Cancri,
-    biome: null,
+    biome: Biome.CrimsonMoor,
     environmentals: [Environmental.IonStorms]
   },
   33: {
@@ -330,7 +330,7 @@ export const planetData = {
   54: {
     name: "Kharst",
     sector: Sector.Gallux,
-    biome: null,
+    biome: Biome.CrimsonMoor,
     environmentals: [Environmental.IonStorms]
   },
   55: {
@@ -444,7 +444,7 @@ export const planetData = {
   73: {
     name: "Valgaard",
     sector: Sector.Iptus,
-    biome: null,
+    biome: Biome.CrimsonMoor,
     environmentals: [Environmental.IonStorms]
   },
   74: {
@@ -474,7 +474,7 @@ export const planetData = {
   78: {
     name: "Crimsica",
     sector: Sector.Draco,
-    biome: null,
+    biome: Biome.CrimsonMoor,
     environmentals: [Environmental.IonStorms]
   },
   79: {
@@ -546,7 +546,7 @@ export const planetData = {
   90: {
     name: "Valmox",
     sector: Sector.Rictus,
-    biome: null,
+    biome: Biome.CrimsonMoor,
     environmentals: [Environmental.IonStorms]
   },
   91: {
@@ -576,7 +576,7 @@ export const planetData = {
   95: {
     name: "Genesis Prime",
     sector: Sector.Rictus,
-    biome: null,
+    biome: Biome.CrimsonMoor,
     environmentals: [Environmental.IonStorms]
   },
   96: {
@@ -594,7 +594,7 @@ export const planetData = {
   98: {
     name: "Elysian Meadows",
     sector: Sector.Guang,
-    biome: null,
+    biome: Biome.CrimsonMoor,
     environmentals: [Environmental.IonStorms]
   },
   99: {
@@ -618,7 +618,7 @@ export const planetData = {
   102: {
     name: "Liberty Ridge",
     sector: Sector.Meridian,
-    biome: null,
+    biome: Biome.CrimsonMoor,
     environmentals: [Environmental.IonStorms]
   },
   103: {
@@ -636,7 +636,7 @@ export const planetData = {
   105: {
     name: "Kuper",
     sector: Sector.Theseus,
-    biome: null,
+    biome: Biome.CrimsonMoor,
     environmentals: [Environmental.IonStorms]
   },
   106: {
@@ -654,7 +654,7 @@ export const planetData = {
   108: {
     name: "Gunvald",
     sector: Sector.Sagan,
-    biome: null,
+    biome: Biome.CrimsonMoor,
     environmentals: [Environmental.IonStorms]
   },
   109: {
@@ -798,7 +798,7 @@ export const planetData = {
   132: {
     name: "Acrab XI",
     sector: Sector.Ursa,
-    biome: null,
+    biome: Biome.CrimsonMoor,
     environmentals: [Environmental.IonStorms]
   },
   133: {
@@ -936,7 +936,7 @@ export const planetData = {
   155: {
     name: "Ingmar",
     sector: Sector.Xzar,
-    biome: null,
+    biome: Biome.CrimsonMoor,
     environmentals: [Environmental.IonStorms]
   },
   156: {
@@ -1002,7 +1002,7 @@ export const planetData = {
   166: {
     name: "Enuliale",
     sector: Sector.Lestrade,
-    biome: null,
+    biome: Biome.CrimsonMoor,
     environmentals: [Environmental.IonStorms]
   },
   167: {
@@ -1044,7 +1044,7 @@ export const planetData = {
   173: {
     name: "Gatria",
     sector: Sector.JinXi,
-    biome: null,
+    biome: Biome.CrimsonMoor,
     environmentals: [Environmental.IonStorms]
   },
   174: {
@@ -1242,7 +1242,7 @@ export const planetData = {
   206: {
     name: "Minchir",
     sector: Sector.Gellert,
-    biome: null,
+    biome: Biome.CrimsonMoor,
     environmentals: [Environmental.IonStorms]
   },
   207: {
@@ -1284,7 +1284,7 @@ export const planetData = {
   213: {
     name: "Overgoe Prime",
     sector: Sector.Sten,
-    biome: null,
+    biome: Biome.CrimsonMoor,
     environmentals: [Environmental.IonStorms]
   },
   214: {
@@ -1422,7 +1422,7 @@ export const planetData = {
   236: {
     name: "Stout",
     sector: Sector.Quintus,
-    biome: null,
+    biome: Biome.CrimsonMoor,
     environmentals: [Environmental.IonStorms]
   },
   237: {
@@ -1452,7 +1452,7 @@ export const planetData = {
   241: {
     name: "Ubanea",
     sector: Sector.Severin,
-    biome: null,
+    biome: Biome.CrimsonMoor,
     environmentals: [Environmental.IonStorms]
   },
   242: {
@@ -1506,7 +1506,7 @@ export const planetData = {
   250: {
     name: "Yed Prior",
     sector: Sector.Tanis,
-    biome: null,
+    biome: Biome.CrimsonMoor,
     environmentals: [Environmental.IonStorms]
   },
   251: {

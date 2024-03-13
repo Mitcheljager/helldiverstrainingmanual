@@ -42,5 +42,9 @@ export const Biome = {
   Desolate: {
     slug: "desolate",
     description: "Scorching temperatures, high winds, and low precipitation cause a near-constant cycle of fires to sweep this planet, punctuated by short bursts of lush rebirth between infernos."
+  },
+  CrimsonMoor: {
+    slug: "crimsonmoor",
+    description: "A crimson algae has propagated wildly across this entire planet, coating its rocky hills with a constant red that masks the spilt blood of the heroes who defend it from tyranny."
   }
 }
