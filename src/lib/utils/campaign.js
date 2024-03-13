@@ -7,7 +7,7 @@ export function formatCampaigns(campaigns, planetStatus, planetInfos, planetEven
   const zeroUnix = 1707313895 // Helldivers 2 server start time? No idea
 
   const mapped = (campaigns || []).map(campaign => {
-    const { planetIndex } = campaign
+    const { planetIndex, type } = campaign
     const event = planetEvents?.find(e => e.planetIndex === planetIndex)
 
     const { name, biome } = planetData[planetIndex]
@@ -21,8 +21,9 @@ export function formatCampaigns(campaigns, planetStatus, planetInfos, planetEven
     const { players } = currentStatus
 
     const percentage = 100 - (100 / maxHealth * health)
-    const defense = event?.eventType === 1
 
+    const defense = event?.eventType === 1
+    const majorOrder = type === 2
 
     const expireDateTime = event?.expireTime ? zeroUnix + event?.expireTime : 0
 
@@ -35,6 +36,7 @@ export function formatCampaigns(campaigns, planetStatus, planetInfos, planetEven
       maxHealth,
       percentage,
       defense,
+      majorOrder,
       biome,
       expireDateTime
     }

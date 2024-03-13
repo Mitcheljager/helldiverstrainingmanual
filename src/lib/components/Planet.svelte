@@ -5,6 +5,7 @@
 	import { fade, scale } from "svelte/transition"
 	import AnalyticsPopup from "$lib/components/AnalyticsPopup.svelte"
 	import IconDefense from "$lib/components/icons/IconDefense.svelte"
+	import IconMajorOrder from "$lib/components/icons/IconMajorOrder.svelte"
 
   export let planet = {}
   export let status = {}
@@ -15,7 +16,7 @@
   const dispatch = createEventDispatcher()
 
   $: ({ index, position } = planet)
-  $: ({ name, percentage, faction, defense, players } = campaign || {})
+  $: ({ name, percentage, faction, defense, majorOrder, players } = campaign || {})
   $: data = planetData[index]
 </script>
 
@@ -33,9 +34,13 @@
   style:--y={position.y}
   style:--percentage="{percentage || 0}%">
 
-  {#if defense}
+  {#if defense || majorOrder}
     <div class="icon">
-      <IconDefense />
+      {#if defense}
+        <IconDefense />
+      {:else if majorOrder}
+        <IconMajorOrder />
+      {/if}
     </div>
   {/if}
 

@@ -4,6 +4,7 @@
 	import { slide } from "svelte/transition"
 	import IconDefense from "$lib/components/icons/IconDefense.svelte"
 	import IconAnalytics from "$lib/components/icons/IconAnalytics.svelte"
+	import IconMajorOrder from "$lib/components/icons/IconMajorOrder.svelte"
 	import PlanetAnalytics from "$lib/components/PlanetAnalytics.svelte"
 	import RollingNumber from "$lib/components/RollingNumber.svelte"
 	import LocateOnMap from "$lib/components/LocateOnMap.svelte"
@@ -18,6 +19,7 @@
   export let maxHealth = 0
   export let players = 0
   export let defense = false
+  export let majorOrder = false
   export let expireDateTime = 0
   export let stacked = false
 
@@ -68,9 +70,13 @@
     <div class="bar">
       <div class="progress" style:width="{percentage}%" />
 
-      {#if defense}
+      {#if defense || majorOrder}
         <div class="icon">
-          <IconDefense />
+          {#if defense}
+            <IconDefense />
+          {:else if majorOrder}
+            <IconMajorOrder />
+          {/if}
         </div>
       {/if}
     </div>
