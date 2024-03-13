@@ -10,6 +10,7 @@
 	import Switch from "$lib/components/Switch.svelte"
 	import QuestionMark from "./QuestionMark.svelte"
 	import OnScreenControls from "$lib/components/OnScreenControls.svelte"
+	import { toSlug } from "$lib/utils/route";
 
   export let stratagem = ""
 
@@ -27,7 +28,7 @@
   let hideSequence = false
   let showControls = false
 
-  $: stratagemOptions = stratagems.map(i => i.items).flat(1).map(i => ({ text: i.name, value: i.sequence }))
+  $: stratagemOptions = stratagems.map(i => i.items).flat(1).map(i => ({ text: i.name, value: i.sequence, icon: `/images/stratagems/${toSlug(i.name)}.svg` }))
   $: extraOptions = [{ text: randomLabel, value: getRandomSequence() }]
   $: selectOptions = [...extraOptions, ...stratagemOptions]
   $: selectValue = selectOptions.find(i => i.text === stratagem)

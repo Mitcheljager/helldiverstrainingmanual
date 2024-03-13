@@ -19,12 +19,22 @@
 </script>
 
 <button class="select" use:outside on:close={() => active = false} on:click={() => active = !active}>
+  {#if value.icon}
+    <img loading="lazy" src={value.icon} alt="" />
+  {/if}
+
   {value.text}
 
   {#if active}
     <div class="dropdown" class:up transition:fly={{ y: -10, duration: 100 }}>
       {#each options as option}
-        <button class="item" class:active={option.text === value.text} on:click={() => change(option)}>{option.text}</button>
+        <button class="item" class:active={option.text === value.text} on:click={() => change(option)}>
+          {#if option.icon}
+            <img loading="lazy" src={option.icon} alt="" height="30" width="30" />
+          {/if}
+
+          {option.text}
+        </button>
       {/each}
     </div>
   {/if}
@@ -34,8 +44,12 @@
   .select {
     appearance: none;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: $margin * 0.25;
     width: 100%;
-    padding: $margin * 0.25;
+    padding: $margin * 0.15 $margin * 0.25;
     border: 5px solid $bg-dark;
     background: $bg-base;
     color: $white;
@@ -46,6 +60,11 @@
 
     &:hover {
       border-color: lighten($bg-dark, 10%);
+    }
+
+    img {
+      height: 2em;
+      width: auto;
     }
   }
 
@@ -73,6 +92,9 @@
 
   .item {
     appearance: none;
+    display: flex;
+    align-items: center;
+    gap: $margin * 0.25;
     width: 100%;
     border: 0;
     background: transparent;
@@ -85,6 +107,10 @@
     &:hover,
     &.active {
       background: darken($bg-dark, 10%);
+    }
+
+    img {
+      height: 1.5em;
     }
   }
 </style>

@@ -21,13 +21,19 @@
     <h1>{stratagem.name}</h1>
   {/if}
 
-  <strong>Stratagems / {category.category}</strong>
+  <div class="info">
+    <img src="/images/stratagems/{toSlug(stratagem.name)}.svg" alt="" width="80" height="80" />
 
-  {#if "cost" in stratagem}
-    <div class="cost">
-      Cost: <strong>{stratagem.cost?.toLocaleString()}</strong>
+    <div>
+      <strong>Stratagems / {category.category}</strong>
+
+      {#if "cost" in stratagem}
+        <div class="cost">
+          Cost: <strong>{stratagem.cost?.toLocaleString()}</strong>
+        </div>
+      {/if}
     </div>
-  {/if}
+  </div>
 
   {@html stratagem.content || ""}
 
@@ -37,8 +43,22 @@
 {/key}
 
 <style lang="scss">
+  img {
+    width: 5rem;
+    height: 5rem;
+    border: 5px solid $bg-dark;
+    padding: 5px;
+    background: $bg-base;
+  }
+
+  .info {
+    display: flex;
+    align-items: center;
+    gap: $margin * 0.5;
+    margin: $margin * 0.5 0;
+  }
+
   .cost {
-    margin: $margin * 0.25 0;
     color: $primary;
 
     strong {
