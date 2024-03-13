@@ -1,5 +1,5 @@
 <script>
-	import { toPath } from "$lib/utils/route.js"
+	import StratagemLink from "$lib/components/StratagemLink.svelte"
 
   export let data
 
@@ -15,22 +15,18 @@
 
 {@html category.content || ""}
 
-<ul class="mt-1/2 md:mt-1">
-  {#each category.items as item}
-    <li><a class="subsubroute" href={toPath(["stratagems", category.category, item.name])}><span>{item.name}</a></li>
+<div class="items">
+  {#each category.items as stratagem (stratagem.name)}
+    <StratagemLink {stratagem} />
   {/each}
-</ul>
+</div>
 
 <style lang="scss">
-  a {
-    text-decoration: none;
-  }
-
-  ul {
-    padding: 0;
-  }
-
-  li {
-    list-style: none;
+  .items {
+    display: flex;
+    flex-direction: column;
+    gap: $margin * 0.25;
+    max-width: $text-limit;
+    margin-top: $margin;
   }
 </style>
