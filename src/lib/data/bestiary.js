@@ -100,7 +100,7 @@ export const bestiary = [{
     `
   }, {
     name: "Shrieker",
-    appearance: `<p>Little is known about these flying monstrosities. Yes, you heard that right, they fly!`,
+    appearance: `<p>Little is known about these flying monstrosities. Yes, you heard that right, they fly!</p>`,
     tactics: `
       <p>More research is necessary before we can provide essential strategies. For now, do your duty, and document their behaviour.</p>
     `
