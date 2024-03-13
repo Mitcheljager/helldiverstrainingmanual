@@ -1,7 +1,9 @@
 <script>
-	import Hero from "$lib/components/Hero.svelte"
-	import StratagemLink from "$lib/components/StratagemLink.svelte"
+	import { browser } from "$app/environment"
 	import { toSlug } from "$lib/utils/route"
+  import Hero from "$lib/components/Hero.svelte"
+	import ModelViewer from "$lib/components/ModelViewer.svelte"
+	import StratagemLink from "$lib/components/StratagemLink.svelte"
 
   export let data
 
@@ -23,6 +25,10 @@
   </Hero>
 
   <strong>Bestiary / {faction.faction}</strong>
+
+  {#if browser}
+    <ModelViewer />
+  {/if}
 
   <div class="description">
     <h2 class="mt-1 mb-1/2">Appearance</h2>
