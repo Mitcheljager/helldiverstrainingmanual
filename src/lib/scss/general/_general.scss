@@ -56,6 +56,16 @@ ol {
   margin: $margin * 0.25 0;
 }
 
+blockquote {
+	max-width: $text-limit;
+	padding: $margin * 0.5;
+	margin: $margin * 0.5 0;
+	background: rgba($black, 0.2);
+	border-left: 5px solid $bg-dark;
+	color: lighten($text-color-light, 10%);
+	font-style: italic;
+}
+
 svg {
 	display: block;
 }

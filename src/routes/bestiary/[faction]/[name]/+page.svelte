@@ -5,7 +5,7 @@
   export let data
 
   $: ({ faction, enemy } = data)
-  $: ({ name, appearance, tactics } = enemy)
+  $: ({ name, appearance, tactics, quicktip } = enemy)
 </script>
 
 <svelte:head>
@@ -25,9 +25,13 @@
 
   <div class="description">
     <h2 class="mt-1 mb-1/2">Appearance</h2>
-    {@html appearance || ""}
+    <p>{appearance || ""}</p>
 
     <h2 class="mt-1 mb-1/2">Battlefield Tactics</h2>
+    {#if quicktip}
+      <blockquote>{@html quicktip}</blockquote>
+    {/if}
+
     {@html tactics || ""}
   </div>
 {/key}
