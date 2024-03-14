@@ -9,9 +9,8 @@
 	import Select from "$lib/components/Select.svelte"
 	import GamepadControls from "$lib/components/GamepadControls.svelte"
 	import Switch from "$lib/components/Switch.svelte"
-	import QuestionMark from "./QuestionMark.svelte"
+	import QuestionMark from "$lib/components/QuestionMark.svelte"
 	import OnScreenControls from "$lib/components/OnScreenControls.svelte"
-	import { text } from "@sveltejs/kit";
 
   export let stratagem = ""
 
