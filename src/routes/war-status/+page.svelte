@@ -13,7 +13,7 @@
   let fullscreen = false
 
   $: ({ status, info } = data)
-  $: ({ globalEvents, planetStatus } = (status || {}))
+  $: ({ globalEvents, planetStatus, planetEvents } = (status || {}))
   $: ({ planetInfos } = (info || {}))
   $: formattedCampaigns = formatCampaigns(status, info)
 
@@ -57,7 +57,7 @@
 
 <h2>Galactic Map</h2>
 
-<Map planets={planetInfos} status={planetStatus} campaigns={formattedCampaigns} on:fullscreen={() => fullscreen = !fullscreen} />
+<Map planets={planetInfos} status={planetStatus} campaigns={formattedCampaigns} events={planetEvents} on:fullscreen={() => fullscreen = !fullscreen} />
 
 <h2>Recent Events</h2>
 

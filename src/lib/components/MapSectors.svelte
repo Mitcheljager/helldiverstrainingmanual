@@ -6,20 +6,22 @@
 	import { fade } from "svelte/transition"
 
   export let status
+  export let events
   export let hoveringSector = null
 
   $: activeSectors = status && findActiveSectors()
 
   function findActiveSectors() {
-    const activePlanets = status.filter(p => p.owner !== 1)
+    const activePlanets = status.filter(p => p.owner !== 1 || events.find(c => c.planetIndex === p.index))
     const sectorsForPlanets = []
 
     activePlanets.forEach(({ index, owner }) => {
+      const event = events.find(c => c.planetIndex === index)
       const sector = planetData[index].sector
 
       if (sectorsForPlanets.find(({ name }) => name === sector)) return
 
-      sectorsForPlanets.push({ name: sector, path: sectorPaths[sector], owner })
+      sectorsForPlanets.push({ name: sector, path: sectorPaths[sector], owner: event?.race || owner })
     })
 
     return sectorsForPlanets

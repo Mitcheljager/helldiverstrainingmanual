@@ -17,6 +17,7 @@
   export let planets = []
   export let campaigns = []
   export let status = []
+  export let events = []
   export let fullscreen = false
   export let allowControls = true
 
@@ -171,7 +172,7 @@
       <div class="scaler" bind:clientWidth={innerWidth} />
 
       <div class="sectors">
-        <MapSectors {status} bind:hoveringSector />
+        <MapSectors {status} {events} bind:hoveringSector />
 
         <img class="outline" src="/images/map/outline.svg" alt="" draggable="false" />
       </div>
