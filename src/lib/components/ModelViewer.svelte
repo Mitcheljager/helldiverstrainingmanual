@@ -22,6 +22,7 @@
     camera.position.z = 5
 
     renderer = new WebGLRenderer({ antialias: true, canvas: element })
+    renderer.setClearColor(0x000000, 0)
 
     const controls = new OrbitControls(camera, renderer.domElement)
     controls.enableDamping = true
@@ -38,8 +39,8 @@
   }
 
   function resize() {
-    renderer.setSize(width, width / 1.5)
-    camera.aspect = width / (width / 1.5)
+    renderer.setSize(width, width / 2)
+    camera.aspect = width / (width / 2)
     camera.updateProjectionMatrix()
   }
 
@@ -63,28 +64,6 @@
       object.rotation.y = 90
 
       scene.add(object)
-
-      const boundingBox = new Box3().setFromObject(object)
-
-      const center = new Vector3()
-      boundingBox.getCenter(center)
-
-      // Calculate the radius of the bounding sphere
-      const sphere = new Sphere()
-      boundingBox.getBoundingSphere(sphere)
-      const radius = sphere.radius
-
-      // Set camera position and target to ensure the model is fully visible
-      const viewSize = radius
-      const fov = camera.fov * (Math.PI / 180)
-      let distance = Math.abs(viewSize / Math.sin(fov / 2))
-
-      // Adjust camera position
-      const direction = new Vector3()
-      camera.getWorldDirection(direction)
-      const newPosition = center.clone().add(direction.clone().multiplyScalar(distance))
-      camera.position.copy(newPosition)
-      camera.lookAt(center)
     }, (xhr) => {
       console.log((xhr.loaded / xhr.total) * 100 + "% loaded")
     }, (error) => console.log(error))
@@ -93,12 +72,39 @@
 
 <svelte:window on:resize={resize} />
 
-<div class="sizer" bind:clientWidth={width} />
 
-<canvas bind:this={element} />
+<div class="model-viewer">
+  <canvas bind:this={element} />
+
+  <img class="background" src="/images/biomes/desert.jpg" alt="" />
+  <div class="sizer" bind:clientWidth={width} />
+</div>
 
 <style lang="scss">
   .sizer {
+    width: 100%;
+  }
+
+  .model-viewer {
+    position: relative;
     max-width: $text-limit * 1.5;
+    border: 5px solid $white;
+    overflow: hidden;
+
+    @include breakpoint(md) {
+      margin: 0 $margin * -0.5;
+    }
+  }
+
+  .background {
+    position: absolute;
+    top: -10%;
+    left: -10%;
+    width: 120%;
+    height: 120%;
+    object-fit: cover;
+    z-index: -1;
+    filter: blur(2rem);
+    opacity: 0.25;
   }
 </style>

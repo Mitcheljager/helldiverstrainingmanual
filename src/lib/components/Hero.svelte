@@ -92,6 +92,10 @@
     background: lighten($bg-base, 5%);
     overflow: hidden;
 
+    @include breakpoint(md) {
+      margin: $margin * -0.5;
+    }
+
     &.small {
       height: clamp(12rem, 20vw, 17rem);
       max-width: $text-limit;
@@ -104,10 +108,6 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-    }
-
-    @include breakpoint(md) {
-      margin: $margin * -0.5;
     }
   }
 
