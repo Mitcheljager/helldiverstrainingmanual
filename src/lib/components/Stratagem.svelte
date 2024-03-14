@@ -11,12 +11,14 @@
 	import Switch from "$lib/components/Switch.svelte"
 	import QuestionMark from "./QuestionMark.svelte"
 	import OnScreenControls from "$lib/components/OnScreenControls.svelte"
+	import { text } from "@sveltejs/kit";
 
   export let stratagem = ""
 
   const options = ["up", "down", "left", "right"]
   const randomLabel = "Random Sequence"
-  const infiniteLabel = "20 Second Challenge"
+  const challengeSeconds = 20
+  const infiniteLabel = `${challengeSeconds} Second Challenge`
   const maxArrowsShown = 20
 
   let currentIndex = 0
@@ -24,7 +26,8 @@
   let complete = false
   let error = false
   let currentTime = 0
-  let bestTime = 0
+  let currentScore = 0
+  let bestScore = 0
   let interval = null
   let gamepadActive = false
   let hideSequence = false
@@ -33,7 +36,7 @@
   let lastTime = 0
 
   $: stratagemOptions = stratagems.map(i => i.items).flat(1).map(i => ({ text: i.name, value: i.sequence, icon: `/images/stratagems/${toSlug(i.name)}.svg` }))
-  $: extraOptions = [{ text: randomLabel, value: getRandomSequence() }]
+  $: extraOptions = [{ text: randomLabel, value: getRandomSequence() }, { text: infiniteLabel, value: [] }]
   $: selectOptions = [...extraOptions, ...stratagemOptions]
   $: selectValue = selectOptions.find(i => i.text === stratagem)
   $: randomize = selectValue?.text === randomLabel
@@ -66,6 +69,7 @@
     }
 
     if (!active) return
+    if (complete) return
     if (error) return
     if (currentIndex === sequence.length) return
     if (!["w", "ArrowUp", "du", "s", "ArrowDown", "dd", "a", "ArrowLeft", "dl", "d", "ArrowRight", "dr"].includes(key)) return
@@ -91,6 +95,7 @@
     if (currentIndex === sequence.length) success()
     if (currentIndex === 1) startTimer()
     if (infinite) sequence = [...sequence, getRandomDirection()]
+    if (infinite) currentScore++
   }
 
   function incorrect() {
@@ -115,6 +120,7 @@
     error = false
 
     currentTime = 0
+    currentScore = 0
     stopTimer()
 
     await tick()
@@ -132,6 +138,11 @@
 
   function increaseTimer() {
     if (interval) cancelAnimationFrame(interval)
+    if (infinite && currentTime > challengeSeconds * 1000) {
+      currentTime = challengeSeconds * 1000
+      success()
+      return
+    }
 
     const time = new Date().getTime()
 
@@ -143,7 +154,9 @@
 
   function stopTimer() {
     if (interval) cancelAnimationFrame(interval)
-    if (!error && currentTime && (!bestTime || currentTime < bestTime)) bestTime = currentTime
+
+    if (infinite && currentTime && (!bestScore || currentScore > bestScore)) bestScore = currentScore
+    if (!infinite && !error && currentTime && (!bestScore || currentTime < bestScore)) bestScore = currentTime
   }
 
   function toTime(seconds) {
@@ -152,7 +165,7 @@
 
   function change({ detail }) {
     selectValue = detail
-    bestTime = 0
+    bestScore = 0
     reset()
   }
 </script>
@@ -170,7 +183,7 @@
     <Select up options={selectOptions} value={selectValue} on:change={change} />
   </div>
 
-  <div class="codes" class:complete class:error class:infinite style:--index={currentIndex} style:--arrow-width="{arrowWidth}px" style:--offset-count={Math.max(maxArrowsShown * -1 + currentIndex, 0)}>
+  <div class="codes" class:complete class:error class:infinite style:--index={currentIndex} style:--arrow-width="{arrowWidth}px" style:--offset-count={Math.max(maxArrowsShown / -2 + currentIndex, 0)}>
     <div class="positioner">
       {#if hideSequence && currentIndex !== sequence.length}
         {#each { length: currentIndex + 1 } as _}
@@ -195,10 +208,22 @@
 
   {#if active}
     <div class="timer" transition:slide={{ duration: 200 }}>
-      <span>Timer: {#if error}Fail{:else}{toTime(currentTime / 1000)}<small>s</small>{/if}</span>
+      <span class="score">
+        <span>Time: {#if error}Fail{:else}{toTime(currentTime / 1000)}<small>s</small>{/if}</span>
 
-      {#if !randomize && bestTime}
-        <span class:highlighted={currentTime === bestTime}>Best: {toTime(bestTime / 1000)}<small>s</small></span>
+        {#if currentScore}
+          <span>Score: {currentScore}</span>
+        {/if}
+      </span>
+
+      {#if !randomize && bestScore}
+        <span class="best" class:highlighted={currentTime === bestScore || (currentScore && currentScore === bestScore)}>
+          {#if infinite}
+            Best: {bestScore}
+          {:else}
+            Best: {toTime(bestScore / 1000)}<small>s</small>
+          {/if}
+        </span>
       {/if}
     </div>
 
@@ -290,7 +315,7 @@
       flex-wrap: nowrap;
       justify-content: flex-start;
       margin-left: calc(50% - var(--arrow-width));
-      padding-left: calc((var(--arrow-width) + var(--gap)) * var(--offset-count));
+      padding-left: max(calc((var(--arrow-width) + var(--gap)) * var(--offset-count)), 1px);
       transform: translateX(calc((var(--arrow-width) + var(--gap)) * var(--index) * -1));
       transition: transform 100ms;
     }
@@ -311,9 +336,13 @@
     justify-content: space-between;
     padding: $margin * 0.25 0;
     font-family: $font-family-alt;
-    font-size: 1.15rem;
+    font-size: 1rem;
     font-weight: bolder;
     text-transform: uppercase;
+
+    @include breakpoint(sm) {
+      font-size: 1.15rem;
+    }
 
     small {
       font-size: 0.8em;
@@ -323,6 +352,26 @@
     .highlighted {
       color: $green;
     }
+  }
+
+  .score {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    @include breakpoint(sm) {
+      flex-direction: row;
+      gap: $margin * 0.5;
+    }
+
+    span {
+      display: block;
+    }
+  }
+
+  .best {
+    text-align: right;
+    white-space: nowrap;
   }
 
   .switches {
