@@ -1,8 +1,7 @@
 <script>
 	import { onMount } from "svelte"
 	import { browser } from "$app/environment"
-  import * as THREE from 'three'
-  import { DirectionalLight, HemisphereLight, PerspectiveCamera, Scene, WebGLRenderer } from "three"
+  import { DirectionalLight, HemisphereLight, PerspectiveCamera, Scene, WebGLRenderer, Sphere, Box3, Vector3 } from "three"
   import { OBJLoader, OrbitControls } from "three/examples/jsm/Addons.js"
 
   let width
@@ -63,28 +62,25 @@
       object.position.y = -0.75
       object.rotation.y = 90
 
-      // Add the object to the scene
       scene.add(object)
 
-      // Compute bounding box of the loaded object
-      const boundingBox = new THREE.Box3().setFromObject(object)
+      const boundingBox = new Box3().setFromObject(object)
 
-      // Calculate the center of the bounding box
-      const center = new THREE.Vector3()
+      const center = new Vector3()
       boundingBox.getCenter(center)
 
       // Calculate the radius of the bounding sphere
-      const sphere = new THREE.Sphere()
+      const sphere = new Sphere()
       boundingBox.getBoundingSphere(sphere)
       const radius = sphere.radius
 
       // Set camera position and target to ensure the model is fully visible
-      const viewSize = radius * 2
+      const viewSize = radius
       const fov = camera.fov * (Math.PI / 180)
       let distance = Math.abs(viewSize / Math.sin(fov / 2))
 
       // Adjust camera position
-      const direction = new THREE.Vector3()
+      const direction = new Vector3()
       camera.getWorldDirection(direction)
       const newPosition = center.clone().add(direction.clone().multiplyScalar(distance))
       camera.position.copy(newPosition)
