@@ -128,7 +128,6 @@
     --background-color: #{lighten($bg-base, 5%)};
     display: grid;
     grid-template-columns: 1fr 2fr;
-    margin-top: $margin * 0.25;
     max-width: $text-limit;
 
     @each $label, $color in $faction-colors {
