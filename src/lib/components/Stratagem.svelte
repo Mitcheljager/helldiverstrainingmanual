@@ -1,21 +1,23 @@
 <script>
+  import { browser } from "$app/environment"
+	import { onDestroy, tick } from "svelte"
+	import { fade, slide } from "svelte/transition"
+	import { toSlug } from "$lib/utils/route"
+	import { stratagems } from "$lib/data/stratagems"
   import Confetti from "svelte-confetti"
 	import Arrow from "$lib/components/Arrow.svelte"
-	import { fade, slide } from "svelte/transition"
-	import { onDestroy } from "svelte"
 	import Select from "$lib/components/Select.svelte"
-	import { stratagems } from "$lib/data/stratagems"
 	import GamepadControls from "$lib/components/GamepadControls.svelte"
-	import { browser } from "$app/environment"
 	import Switch from "$lib/components/Switch.svelte"
 	import QuestionMark from "./QuestionMark.svelte"
 	import OnScreenControls from "$lib/components/OnScreenControls.svelte"
-	import { toSlug } from "$lib/utils/route";
 
   export let stratagem = ""
 
   const options = ["up", "down", "left", "right"]
   const randomLabel = "Random Sequence"
+  const infiniteLabel = "20 Second Challenge"
+  const maxArrowsShown = 20
 
   let currentIndex = 0
   let active = false
@@ -27,28 +29,37 @@
   let gamepadActive = false
   let hideSequence = false
   let showControls = false
+  let arrowWidth = null
+  let lastTime = 0
 
   $: stratagemOptions = stratagems.map(i => i.items).flat(1).map(i => ({ text: i.name, value: i.sequence, icon: `/images/stratagems/${toSlug(i.name)}.svg` }))
   $: extraOptions = [{ text: randomLabel, value: getRandomSequence() }]
   $: selectOptions = [...extraOptions, ...stratagemOptions]
   $: selectValue = selectOptions.find(i => i.text === stratagem)
   $: randomize = selectValue?.text === randomLabel
+  $: infinite = selectValue?.text === infiniteLabel
   $: sequence = selectValue?.value || []
 
   onDestroy(stopTimer)
 
-  function getRandomSequence() {
-    const count = Math.floor(Math.random() * (10 - 4 + 1) + 4)
+  function getRandomSequence(max = 10, min = 4) {
+    const count = Math.floor(Math.random() * (max - min + 1) + min)
 
     let random = []
     for (let index = 0; index < count; index++) {
-      random = [...random, options[Math.floor(Math.random() * options.length)]]
+      random = [...random, getRandomDirection()]
     }
 
     return random
   }
 
-  function addGiven({ key }) {
+  function getRandomDirection() {
+    return options[Math.floor(Math.random() * options.length)]
+  }
+
+  function addGiven(event) {
+    const { key } = event
+
     if (key === "r" || key === "ga") {
       reset()
       return
@@ -79,6 +90,7 @@
 
     if (currentIndex === sequence.length) success()
     if (currentIndex === 1) startTimer()
+    if (infinite) sequence = [...sequence, getRandomDirection()]
   }
 
   function incorrect() {
@@ -93,10 +105,9 @@
     if (interval) stopTimer()
   }
 
-  function reset() {
-    if (randomize && currentIndex === sequence.length) {
-      selectValue = { text: randomLabel, value: getRandomSequence() }
-    }
+  async function reset() {
+    if (randomize && currentIndex === sequence.length) selectValue = { text: randomLabel, value: getRandomSequence() }
+    if (infinite && currentIndex) sequence = []
 
     currentIndex = 0
     complete = false
@@ -105,21 +116,44 @@
 
     currentTime = 0
     stopTimer()
+
+    await tick()
+
+    if (infinite) while (sequence.length < maxArrowsShown + currentIndex) sequence = [...sequence, getRandomDirection()]
   }
 
   function startTimer() {
     stopTimer()
     currentTime = 0
-    interval = setInterval(() => currentTime += 10, 10)
+    lastTime = 0
+
+    increaseTimer()
+  }
+
+  function increaseTimer() {
+    if (interval) cancelAnimationFrame(interval)
+
+    const time = new Date().getTime()
+
+    currentTime += time - (lastTime || time)
+    lastTime = time
+
+    interval = requestAnimationFrame(increaseTimer)
   }
 
   function stopTimer() {
-    if (interval) clearInterval(interval)
+    if (interval) cancelAnimationFrame(interval)
     if (!error && currentTime && (!bestTime || currentTime < bestTime)) bestTime = currentTime
   }
 
   function toTime(seconds) {
     return (Math.round(seconds * 100) / 100).toFixed(2)
+  }
+
+  function change({ detail }) {
+    selectValue = detail
+    bestTime = 0
+    reset()
   }
 </script>
 
@@ -133,26 +167,30 @@
 
 <section class="stratagem">
   <div class="mb-1/4">
-    <Select up options={selectOptions} value={selectValue} on:change={({ detail }) => selectValue = detail} />
+    <Select up options={selectOptions} value={selectValue} on:change={change} />
   </div>
 
-  <div class="codes" class:complete class:error>
-    {#if hideSequence && currentIndex !== sequence.length}
-      {#each { length: currentIndex + 1 } as _}
-        <QuestionMark />
-      {/each}
-    {:else}
-      {#each sequence as direction, i}
-        <Arrow {direction} filled={i < currentIndex} />
-      {/each}
-    {/if}
+  <div class="codes" class:complete class:error class:infinite style:--index={currentIndex} style:--arrow-width="{arrowWidth}px" style:--offset-count={Math.max(maxArrowsShown * -1 + currentIndex, 0)}>
+    <div class="positioner">
+      {#if hideSequence && currentIndex !== sequence.length}
+        {#each { length: currentIndex + 1 } as _}
+          <QuestionMark />
+        {/each}
+      {:else}
+        {#each sequence as direction, i}
+          {#if !infinite || (infinite && i >= currentIndex - maxArrowsShown / 2)}
+            <Arrow {direction} filled={i < currentIndex} bind:width={arrowWidth} />
+          {/if}
+        {/each}
+      {/if}
 
-    {#if complete}
-      <div class="confetti">
-        <Confetti infinite amount={30} size={15} x={[0, 1.5]} y={[0, 1.5]} colorArray={['#6ecb89', '#53bca0']} />
-        <Confetti infinite amount={30} size={15} x={[0, -1.5]} y={[0, 1.5]} colorArray={['#6ecb89', '#53bca0']} />
-      </div>
-    {/if}
+      {#if complete}
+        <div class="confetti">
+          <Confetti infinite amount={30} size={15} x={[0, 1.5]} y={[0, 1.5]} colorArray={['#6ecb89', '#53bca0']} />
+          <Confetti infinite amount={30} size={15} x={[0, -1.5]} y={[0, 1.5]} colorArray={['#6ecb89', '#53bca0']} />
+        </div>
+      {/if}
+    </div>
   </div>
 
   {#if active}
@@ -216,11 +254,6 @@
   }
 
   .codes {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: $margin * 0.15;
     padding: $margin * 0.25;
     min-height: 1rem;
     border: 5px solid $bg-dark;
@@ -242,6 +275,24 @@
       color: $red;
       border-color: $red;
       animation: pulse 500ms;
+    }
+  }
+
+  .positioner {
+    --gap: #{$margin * 0.15};
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--gap);
+
+    .infinite & {
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      margin-left: calc(50% - var(--arrow-width));
+      padding-left: calc((var(--arrow-width) + var(--gap)) * var(--offset-count));
+      transform: translateX(calc((var(--arrow-width) + var(--gap)) * var(--index) * -1));
+      transition: transform 100ms;
     }
   }
 

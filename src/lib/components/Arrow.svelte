@@ -1,9 +1,10 @@
 <script>
   export let filled = false
   export let direction = "right"
+  export let width = null
 </script>
 
-<div class="arrow {direction}" class:filled>
+<div class="arrow {direction}" class:filled bind:clientWidth={width}>
   {#if filled}
     <svg height="50px" width="50px" viewBox="0 0 26.774 26.774">
       <path d="M26.396,13.917l-9.979,8.254c0,0-1.186,1.255-1.186-0.103c0-1.364,0-4.654,0-4.654s-0.801,0-2.026,0
