@@ -1,10 +1,11 @@
 import { factions } from "$lib/data/factions"
 import { planetData } from "$lib/data/planets"
 
-export function formatCampaigns(campaigns, planetStatus, planetInfos, planetEvents) {
-  if (!campaigns || !planetStatus || !planetInfos) return []
+export function formatCampaigns(status, info) {
+  if (!status || !info) return []
 
-  const zeroUnix = 1707313895 // Helldivers 2 server start time? No idea
+  const { planetInfos } = info
+  const { planetStatus, campaigns, planetEvents } = status
 
   const mapped = (campaigns || []).map(campaign => {
     const { planetIndex, type } = campaign
@@ -25,7 +26,7 @@ export function formatCampaigns(campaigns, planetStatus, planetInfos, planetEven
     const defense = event?.eventType === 1
     const majorOrder = type === 2
 
-    const expireDateTime = event?.expireTime ? zeroUnix + event?.expireTime : 0
+    const expireDateTime = event?.expireTime ? new Date().getTime() / 1000 + event.expireTime - status.time : null
 
     return {
       planetIndex,

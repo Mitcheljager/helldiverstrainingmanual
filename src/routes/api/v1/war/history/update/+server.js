@@ -18,10 +18,7 @@ export async function GET({ url }) {
     // @ts-ignore
     ).map(promise => promise.value)
 
-    const { campaigns, planetStatus, planetEvents } = (status || {})
-    const { planetInfos } = (info || {})
-
-    const formattedCampaigns = formatCampaigns(campaigns, planetStatus, planetInfos, planetEvents)
+    const formattedCampaigns = formatCampaigns(status, info)
 
     await saveCampaignStatusHistory(formattedCampaigns)
 

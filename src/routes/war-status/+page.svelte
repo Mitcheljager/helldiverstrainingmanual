@@ -13,9 +13,9 @@
   let fullscreen = false
 
   $: ({ status, info } = data)
-  $: ({ globalEvents, campaigns, planetStatus, planetEvents } = (status || {}))
+  $: ({ globalEvents, planetStatus } = (status || {}))
   $: ({ planetInfos } = (info || {}))
-  $: formattedCampaigns = formatCampaigns(campaigns, planetStatus, planetInfos, planetEvents)
+  $: formattedCampaigns = formatCampaigns(status, info)
 
   onMount(() => {
     dataInterval = setInterval(invalidateAll, 10000)

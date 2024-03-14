@@ -12,10 +12,7 @@ export async function GET() {
   // @ts-ignore
   ).map(promise => promise.value)
 
-  const { campaigns, planetStatus, planetEvents } = status
-  const { planetInfos } = info
-
-  const formatted = formatCampaigns(campaigns, planetStatus, planetInfos, planetEvents)
+  const formatted = formatCampaigns(status, info)
 
   return new Response(JSON.stringify(formatted), { headers })
 }
