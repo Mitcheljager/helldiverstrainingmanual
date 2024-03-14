@@ -3,7 +3,7 @@
 	import { fetchHistory } from "$lib/api/history"
 	import { slide } from "svelte/transition"
 	import { planetData } from "$lib/data/planets"
-	import { browser } from "$app/environment";
+	import { browser } from "$app/environment"
 
   export let index
   export let row = false

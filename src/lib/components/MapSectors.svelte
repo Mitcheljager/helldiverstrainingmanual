@@ -3,7 +3,7 @@
   import { planetData } from "$lib/data/planets"
 	import { sectorPaths } from "$lib/data/sectorPaths"
 	import { toSlug } from "$lib/utils/route"
-	import { fade } from "svelte/transition";
+	import { fade } from "svelte/transition"
 
   export let status
   export let hoveringSector = null

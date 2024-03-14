@@ -1,5 +1,5 @@
 <script>
-	import Hero from "$lib/components/Hero.svelte";
+	import Hero from "$lib/components/Hero.svelte"
 	import { toSlug } from "$lib/utils/route"
 
   export let data

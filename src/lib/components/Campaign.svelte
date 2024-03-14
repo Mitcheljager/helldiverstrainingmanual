@@ -1,6 +1,6 @@
 <script>
 	import CampaignItem from "$lib/components/CampaignItem.svelte"
-	import { flip } from "svelte/animate";
+	import { flip } from "svelte/animate"
 
   export let formattedCampaigns = []
   export let stacked = false

@@ -1,6 +1,6 @@
 <script>
 	import { browser } from "$app/environment"
-	import { planetData } from "$lib/data/planets";
+	import { planetData } from "$lib/data/planets"
 
   export let foundPlanetIndexes = []
 

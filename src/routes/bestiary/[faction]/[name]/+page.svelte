@@ -1,6 +1,6 @@
 <script>
 	import Hero from "$lib/components/Hero.svelte"
-	import StratagemLink from "$lib/components/StratagemLink.svelte";
+	import StratagemLink from "$lib/components/StratagemLink.svelte"
 	import { toSlug } from "$lib/utils/route"
 
   export let data

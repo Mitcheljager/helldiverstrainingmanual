@@ -3,8 +3,6 @@
   import Hero from "$lib/components/Hero.svelte"
   import { planetData } from "$lib/data/planets"
 	import { toSlug } from "$lib/utils/route"
-  import { flip } from "svelte/animate"
-	import { fade, slide } from "svelte/transition";
 
   let query = ""
   let filteredSectors = []

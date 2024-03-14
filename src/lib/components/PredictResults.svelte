@@ -1,6 +1,6 @@
 <script>
-	import { browser } from "$app/environment";
-	import { fetchHistory } from "$lib/api/history";
+	import { browser } from "$app/environment"
+	import { fetchHistory } from "$lib/api/history"
   import { hoursDifference } from "$lib/utils/datetime"
 	import { onDestroy, onMount } from "svelte"
 
