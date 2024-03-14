@@ -60,7 +60,7 @@ export const planetData = {
   9: {
     name: "Fornskogur II",
     sector: Sector.Barnard,
-    biome: null,
+    biome: Biome.Jungle,
     environmentals: [Environmental.VolcanicActivity, Environmental.Rainstorms]
   },
   10: {
@@ -138,7 +138,7 @@ export const planetData = {
   22: {
     name: "Zegema Paradise",
     sector: Sector.Kelvin,
-    biome: null,
+    biome: Biome.Jungle,
     environmentals: [Environmental.VolcanicActivity, Environmental.Rainstorms]
   },
   23: {
@@ -150,7 +150,7 @@ export const planetData = {
   24: {
     name: "Primordia",
     sector: Sector.Iptus,
-    biome: null,
+    biome: Biome.Jungle,
     environmentals: [Environmental.VolcanicActivity, Environmental.Rainstorms]
   },
   25: {
@@ -162,7 +162,7 @@ export const planetData = {
   26: {
     name: "Nublaria I",
     sector: Sector.Celeste,
-    biome: null,
+    biome: Biome.Jungle,
     environmentals: [Environmental.VolcanicActivity, Environmental.Rainstorms]
   },
   27: {
@@ -366,7 +366,7 @@ export const planetData = {
   60: {
     name: "Irulta",
     sector: Sector.Saleria,
-    biome: null,
+    biome: Biome.Jungle,
     environmentals: [Environmental.VolcanicActivity, Environmental.Rainstorms]
   },
   61: {
@@ -391,7 +391,7 @@ export const planetData = {
     name: "Meridia",
     sector: Sector.Umlaut,
     biome: Biome.Jungle,
-    environmentals: [Environmental.FireTornadoes]
+    environmentals: [Environmental.VolcanicActivity, Environmental.Rainstorms]
   },
   65: {
     name: "Borea",
@@ -492,7 +492,7 @@ export const planetData = {
   81: {
     name: "Alta V",
     sector: Sector.Korpus,
-    biome: null,
+    biome: Biome.Jungle,
     environmentals: [Environmental.VolcanicActivity, Environmental.Rainstorms]
   },
   82: {
@@ -534,7 +534,7 @@ export const planetData = {
   88: {
     name: "Regnus",
     sector: Sector.Morgon,
-    biome: null,
+    biome: Biome.Jungle,
     environmentals: [Environmental.VolcanicActivity, Environmental.Rainstorms]
   },
   89: {
@@ -570,7 +570,7 @@ export const planetData = {
   94: {
     name: "Oasis",
     sector: Sector.Rictus,
-    biome: null,
+    biome: Biome.Jungle,
     environmentals: [Environmental.VolcanicActivity, Environmental.Rainstorms]
   },
   95: {
@@ -612,7 +612,7 @@ export const planetData = {
   101: {
     name: "East Iridium Trading Bay",
     sector: Sector.Tarragon,
-    biome: null,
+    biome: Biome.Jungle,
     environmentals: [Environmental.VolcanicActivity, Environmental.Rainstorms]
   },
   102: {
@@ -624,7 +624,7 @@ export const planetData = {
   103: {
     name: "Baldrick Prime",
     sector: Sector.Meridian,
-    biome: null,
+    biome: Biome.Jungle,
     environmentals: [Environmental.VolcanicActivity, Environmental.Rainstorms]
   },
   104: {
@@ -702,7 +702,7 @@ export const planetData = {
   116: {
     name: "Gaellivare",
     sector: Sector.Talus,
-    biome: null,
+    biome: Biome.Jungle,
     environmentals: [Environmental.VolcanicActivity, Environmental.Rainstorms]
   },
   117: {
@@ -714,7 +714,7 @@ export const planetData = {
   118: {
     name: "Kirrik",
     sector: Sector.Arturion,
-    biome: null,
+    biome: Biome.Jungle,
     environmentals: [Environmental.VolcanicActivity, Environmental.Rainstorms]
   },
   119: {
@@ -906,7 +906,7 @@ export const planetData = {
   150: {
     name: "Caph",
     sector: Sector.Theseus,
-    biome: null,
+    biome: Biome.Jungle,
     environmentals: [Environmental.VolcanicActivity, Environmental.Rainstorms]
   },
   151: {
@@ -978,7 +978,7 @@ export const planetData = {
   162: {
     name: "Clasa",
     sector: Sector.Tanis,
-    biome: null,
+    biome: Biome.Jungle,
     environmentals: [Environmental.VolcanicActivity, Environmental.Rainstorms]
   },
   163: {
@@ -1038,7 +1038,7 @@ export const planetData = {
   172: {
     name: "Gar Haren",
     sector: Sector.JinXi,
-    biome: null,
+    biome: Biome.Jungle,
     environmentals: [Environmental.VolcanicActivity, Environmental.Rainstorms]
   },
   173: {
@@ -1134,7 +1134,7 @@ export const planetData = {
   188: {
     name: "Klaka 5",
     sector: Sector.Alstrad,
-    biome: null,
+    biome: Biome.Jungle,
     environmentals: [Environmental.VolcanicActivity, Environmental.Rainstorms]
   },
   189: {
@@ -1188,7 +1188,7 @@ export const planetData = {
   197: {
     name: "Mantes",
     sector: Sector.Xzar,
-    biome: null,
+    biome: Biome.Jungle,
     environmentals: [Environmental.VolcanicActivity, Environmental.Rainstorms]
   },
   198: {
@@ -1212,7 +1212,7 @@ export const planetData = {
   201: {
     name: "Meissa",
     sector: Sector.Ymir,
-    biome: null,
+    biome: Biome.Jungle,
     environmentals: [Environmental.VolcanicActivity, Environmental.Rainstorms]
   },
   202: {
@@ -1266,7 +1266,7 @@ export const planetData = {
   210: {
     name: "Navi VII",
     sector: Sector.Lestrade,
-    biome: null,
+    biome: Biome.Jungle,
     environmentals: [Environmental.VolcanicActivity, Environmental.Rainstorms]
   },
   211: {
@@ -1326,7 +1326,7 @@ export const planetData = {
   220: {
     name: "Pollux 31",
     sector: Sector.Farsight,
-    biome: null,
+    biome: Biome.Jungle,
     environmentals: [Environmental.VolcanicActivity, Environmental.Rainstorms]
   },
   221: {
@@ -1356,7 +1356,7 @@ export const planetData = {
   225: {
     name: "Rogue 5",
     sector: Sector.Rigel,
-    biome: null,
+    biome: Biome.Jungle,
     environmentals: [Environmental.VolcanicActivity, Environmental.Rainstorms]
   },
   226: {
@@ -1410,7 +1410,7 @@ export const planetData = {
   234: {
     name: "Spherion",
     sector: Sector.Quintus,
-    biome: null,
+    biome: Biome.Jungle,
     environmentals: [Environmental.VolcanicActivity, Environmental.Rainstorms]
   },
   235: {
