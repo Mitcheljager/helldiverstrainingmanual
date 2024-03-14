@@ -260,10 +260,13 @@
     align-items: center;
     border-bottom: 0;
     background: darken($bg-dark, 10%) url("/images/map/stars.webp") no-repeat;
-    background-position: calc(50% - var(--x, 0px) * -0.025 * var(--zoom)) calc(50% - var(--y, 0px) * -0.025 * var(--zoom));
     background-size: auto calc(110% * (1 + var(--zoom) * 0.1));
     overflow: hidden;
     contain: paint;
+
+    @include breakpoint(lg) {
+      background-position: calc(50% - var(--x, 0px) * -0.025 * var(--zoom)) calc(50% - var(--y, 0px) * -0.025 * var(--zoom));
+    }
 
     &::before {
       content: "";
@@ -295,10 +298,14 @@
     max-width: var(--map-width);
     max-height: var(--map-width);
     transform: translateX(var(--x)) translateY(var(--y));
-    transition: background-size 200ms, margin-left 200ms;
+    transition: margin-left 200ms;
     touch-action: none;
     will-change: transform;
     contain: layout;
+
+    @include breakpoint(lg) {
+      transition: background-size 200ms, margin-left 200ms;
+    }
 
     img {
       display: block;
@@ -308,8 +315,11 @@
   .sectors {
     position: relative;
     transform: scale(calc(1.02 * var(--zoom)));
-    transition: transform 200ms;
     will-change: transform;
+
+    @include breakpoint(lg) {
+      transition: transform 200ms;
+    }
 
     :global(svg) {
       position: absolute;

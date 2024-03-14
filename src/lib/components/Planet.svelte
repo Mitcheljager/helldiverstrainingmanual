@@ -89,9 +89,12 @@
     border: 0;
     border-radius: 50%;
     background: var(--color) linear-gradient(to right, $super-earth var(--percentage), 0, var(--color) calc(100% - var(--percentage)));
-    transition: width 100ms, height 100ms, top 200ms, left 200ms, outline-offset 200ms, background-color 300ms;
     font-size: 0;
     cursor: pointer;
+
+    @include breakpoint(lg) {
+      transition: width 100ms, height 100ms, top 200ms, left 200ms, outline-offset 200ms, background-color 300ms;
+    }
 
     &:hover,
     &.active {
@@ -134,9 +137,13 @@
     pointer-events: none;
 
     :global(svg) {
-      height: calc(1.5rem * var(--zoom));
+      height: calc(1rem * var(--zoom));
       width: auto;
-      transition: height 200ms;
+
+      @include breakpoint(lg) {
+        transition: height 200ms;
+        height: calc(1.5rem * var(--zoom));
+      }
     }
   }
 
