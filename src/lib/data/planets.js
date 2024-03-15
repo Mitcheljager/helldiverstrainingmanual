@@ -1440,7 +1440,7 @@ export const planetData = {
   239: {
     name: "Tien Kwan",
     sector: Sector.Theseus,
-    biome: Biome.IceMoss,
+    biome: Biome.IceMossSpecial,
     environmentals: [Environmental.ExtremeCold, Environmental.MeteorStorms]
   },
   240: {

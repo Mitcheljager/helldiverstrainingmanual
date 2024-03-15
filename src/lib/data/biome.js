@@ -31,6 +31,10 @@ export const Biome = {
     slug: "icemoss",
     description: "Ice and moss-covered rock can be found across most of the surface of this planet."
   },
+  IceMossSpecial: {
+    slug: "icemoss-special",
+    description: "Ice and moss-covered rock can be found across most of the surface of this planet."
+  },
   Tundra: {
     slug: "tundra",
     description: "A perenially chilly climate has allowed short, colourful shrubs to flourish across this planet's surface."
