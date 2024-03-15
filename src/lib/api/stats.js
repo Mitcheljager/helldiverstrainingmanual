@@ -12,7 +12,7 @@ export async function fetchStats(fetch) {
   if (useCache()) return cache.result
 
   try {
-    const response = await fetch("https://api.diveharder.com/raw/planetStats")
+    const response = await fetch("https://api.diveharder.com/raw/planetStats?source=trainingmanual")
 
     if (!response.ok) throw new Error("Network response was not ok")
 
