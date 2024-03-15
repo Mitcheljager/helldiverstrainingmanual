@@ -81,7 +81,7 @@ export const bestiary = [{
     `
   }, {
     name: "Charger",
-    stratagems: [Stratagem.Railgun, Stratagem.Autocannon, Stratagem.Flamethrower, Stratagem.ExpendableAntiTank, Stratagem.ShieldGeneratorPack, Stratagem.JumpPack, Stratagem.Eagle110mmRocketPods, Stratagem.OrbitalRailcannonStrike, Stratagem.OrbitalPrecisionStrike],
+    stratagems: [Stratagem.Railgun, Stratagem.Autocannon, Stratagem.RecoillessRifle, Stratagem.Flamethrower, Stratagem.ExpendableAntiTank, Stratagem.ShieldGeneratorPack, Stratagem.JumpPack, Stratagem.Eagle110mmRocketPods, Stratagem.OrbitalRailcannonStrike, Stratagem.OrbitalPrecisionStrike],
     appearance: "The Charger presents a formidable threat on the battlefield, boasting a meter-thick exoskeleton that renders it nearly impervious to conventional weaponry. Its hulking frame and swift movements make it a daunting adversary, capable of unleashing devastating charges against unsuspecting Helldivers.",
     quicktip: "Their armor is next to impenetrable, but as is customary with bugs, their biggest weakness is their head. A well aim shot of heavy artillery will instantly take them out. Otherwise target their legs with heavy armor-piercing weapons or explosives to reveal their weak spots. Keep your distance, use obstacles, and coordinate with your squadmates to outmaneuver these armored behemoths.",
     tactics: `
