@@ -2,6 +2,7 @@
 	import { timeFromNow } from "$lib/utils/datetime"
 	import { onDestroy, onMount } from "svelte"
 	import { slide } from "svelte/transition"
+	import { browser } from "$app/environment"
 	import IconDefense from "$lib/components/icons/IconDefense.svelte"
 	import IconAnalytics from "$lib/components/icons/IconAnalytics.svelte"
 	import IconMajorOrder from "$lib/components/icons/IconMajorOrder.svelte"
@@ -31,7 +32,7 @@
   $: normalizedHealth = 1 - (1 / maxHealth * health) // This is used purely to shut up the compiler about missing props
 
   onMount(() => {
-    timeInterval = setInterval(() => timeKey = Math.random(), 1000)
+    if (browser) timeInterval = setInterval(() => timeKey = Math.random(), 1000)
   })
 
   onDestroy(() => {

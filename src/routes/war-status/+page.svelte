@@ -1,4 +1,5 @@
 <script>
+	import { browser } from "$app/environment"
 	import { invalidateAll } from "$app/navigation"
 	import { formatCampaigns } from "$lib/utils/campaign"
 	import { onDestroy, onMount } from "svelte"
@@ -20,7 +21,7 @@
   $: formattedCampaigns = formatCampaigns(status, info)
 
   onMount(() => {
-    dataInterval = setInterval(invalidateAll, 10000)
+    if (browser) dataInterval = setInterval(invalidateAll, 10000)
   })
 
   onDestroy(() => {
