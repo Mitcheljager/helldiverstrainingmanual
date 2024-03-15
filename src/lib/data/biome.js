@@ -1,7 +1,7 @@
 export const Biome = {
   RainForest: {
     slug: "rainforest",
-    description: "The strange subversion of photosynthesis that sustains the oddly-hued flora that flourishes on this planet remains an intriguing mgsterg to Super Earth's greatest exo-biologists."
+    description: "The strange subversion of photosynthesis that sustains the oddly-hued flora that flourishes on this planet remains an intriguing mystery to Super Earth's greatest exo-biologists."
   },
   Ethereal: {
     slug: "ethereal",
