@@ -4,8 +4,6 @@
 
   export let stats = {}
 
-  $: console.log(stats)
-
   $: items = [{
     text: "Years spend in active duty",
     value: secondsToYears(stats.missionTime).toLocaleString()

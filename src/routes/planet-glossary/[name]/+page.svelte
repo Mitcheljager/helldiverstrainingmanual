@@ -85,7 +85,7 @@
       {#await fetchStatsForPlanet(index)}
         Loading...
       {:then stats}
-        {#if stats}
+        {#if Object.keys(stats).length}
           <WarStatistics {stats} />
         {:else}
           <em>No statistics were found</em>

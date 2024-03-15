@@ -12,7 +12,7 @@ export async function GET({ params }) {
 
   try {
     const result = await fetchStats(fetch)
-    const data = result?.planets_stats?.find(p => p.planetIndex === index)
+    const data = result?.planets_stats?.find(p => p.planetIndex === index) || {}
 
     if (!data) throw new Error("No result")
 
