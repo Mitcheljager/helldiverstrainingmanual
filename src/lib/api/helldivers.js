@@ -3,6 +3,7 @@ const CacheTimeout = 10000
 
 const statusCache = { datetime: Date.now(), result: null }
 const infoCache = { datetime: Date.now(), result: null }
+const newsCache = { datetime: Date.now(), result: null }
 
 const options = { headers: { "Accept-Language": "en-US" } }
 
@@ -42,6 +43,24 @@ export async function fetchInfo(fetch) {
     const parsed = await response.json()
     infoCache.datetime = Date.now()
     infoCache.result = parsed
+
+    return parsed
+  } catch (error) {
+    console.error(error)
+  }
+}
+
+export async function fetchNews(fetch) {
+  if (useCache(newsCache)) return newsCache.result
+
+  try {
+    const response = await fetch(`https://api.live.prod.thehelldiversgame.com/api/NewsFeed/${WarId}`, options)
+
+    if (!response.ok) throw new Error("Network response was not ok")
+
+    const parsed = await response.json()
+    newsCache.datetime = Date.now()
+    newsCache.result = parsed
 
     return parsed
   } catch (error) {

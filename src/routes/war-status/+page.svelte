@@ -12,7 +12,7 @@
   let dataInterval
   let fullscreen = false
 
-  $: ({ status, info } = data)
+  $: ({ status, info, news } = data)
   $: ({ globalEvents, planetStatus, planetEvents } = (status || {}))
   $: ({ planetInfos } = (info || {}))
   $: formattedCampaigns = formatCampaigns(status, info)
@@ -61,11 +61,14 @@
 
 <h2>Recent Events</h2>
 
-{#if globalEvents}
+{#if news || globalEvents}
   <div class="items">
-    {#each [...globalEvents.reverse()] as { title, message }}
+    {#each [...(news || globalEvents)].reverse() as { title, message }}
       <div class="item">
-        <h3>{title || "Unknown"}</h3>
+        {#if title}
+          <h3>{title || "Unknown"}</h3>
+        {/if}
+
         <p class="content">
           {#if message}
             {message}

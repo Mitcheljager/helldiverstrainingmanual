@@ -14,6 +14,7 @@
 <ul>
   <li><code>/api/v1/war/status</code> - Provides the current status of all planets along with their player count</li>
   <li><code>/api/v1/war/info</code> - Provides static info of planet listed by their index</li>
+  <li><code>/api/v1/war/news</code> - Provides a news feed of messages that are delivered in-game</li>
   <li><code>/api/v1/war/campaign</code> - Provides a shorter and more ready to handle list of all current active planets</li>
   <li><code>/api/v1/war/history/[planetIndex]</code> - Provides the liberation history of a given planet. Returns the liberation status in 5 minutes intervals (with some variance). Status is only recorded when planet is active, as a result there may be big jumps between dates. Ordered from newest to latest, limited to 288 results (24 hours).</li>
   <li><code>/api/v1/planets</code> - Provides data about each planet, the first key matches the planet index</li>
