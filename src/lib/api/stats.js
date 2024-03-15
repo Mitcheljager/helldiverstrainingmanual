@@ -1,24 +1,18 @@
-const CacheTimeout = 60000
-const cache = { datetime: Date.now(), result: null }
-
-function useCache() {
-  if (!cache?.result) return false
-  if (Date.now() - cache?.datetime > CacheTimeout) return false
-
-  return true
-}
+import { apiCache } from "$lib/stores/cache"
 
 export async function fetchStats(fetch) {
-  if (useCache()) return cache.result
+  const key = "stats"
+  const cached = apiCache.check(key)
+
+  if (cached) return cached
 
   try {
-    const response = await fetch("https://api.diveharder.com/raw/planetStats?source=trainingmanual")
+    const response = await fetch("https://api.diveharder.com/raw/planetStats?source=trainingmanual-2")
 
     if (!response.ok) throw new Error("Network response was not ok")
 
     const parsed = await response.json()
-    cache.datetime = Date.now()
-    cache.result = parsed
+    apiCache.set(key, parsed, 60000)
 
     return parsed
   } catch (error) {

@@ -1,21 +1,13 @@
+import { apiCache } from "$lib/stores/cache"
+
 const WarId = 801
-const CacheTimeout = 10000
-
-const statusCache = { datetime: Date.now(), result: null }
-const infoCache = { datetime: Date.now(), result: null }
-const newsCache = { datetime: Date.now(), result: null }
-
 const options = { headers: { "Accept-Language": "en-US" } }
 
-function useCache(obj) {
-  if (!obj?.result) return false
-  if (Date.now() - obj?.datetime > CacheTimeout) return false
-
-  return true
-}
-
 export async function fetchStatus(fetch) {
-  if (useCache(statusCache)) return statusCache.result
+  const key = "status"
+  const cached = apiCache.check(key)
+
+  if (cached) return cached
 
   try {
     const response = await fetch(`https://api.live.prod.thehelldiversgame.com/api/WarSeason/${WarId}/Status`, options)
@@ -23,8 +15,7 @@ export async function fetchStatus(fetch) {
     if (!response.ok) throw new Error("Network response was not ok")
 
     const parsed = await response.json()
-    statusCache.datetime = Date.now()
-    statusCache.result = parsed
+    apiCache.set(key, parsed)
 
     return parsed
   } catch (error) {
@@ -33,7 +24,10 @@ export async function fetchStatus(fetch) {
 }
 
 export async function fetchInfo(fetch) {
-  if (useCache(infoCache)) return infoCache.result
+  const key = "info"
+  const cached = apiCache.check(key)
+
+  if (cached) return cached
 
   try {
     const response = await fetch(`https://api.live.prod.thehelldiversgame.com/api/WarSeason/${WarId}/WarInfo`, options)
@@ -41,8 +35,7 @@ export async function fetchInfo(fetch) {
     if (!response.ok) throw new Error("Network response was not ok")
 
     const parsed = await response.json()
-    infoCache.datetime = Date.now()
-    infoCache.result = parsed
+    apiCache.set(key, parsed)
 
     return parsed
   } catch (error) {
@@ -51,7 +44,10 @@ export async function fetchInfo(fetch) {
 }
 
 export async function fetchNews(fetch) {
-  if (useCache(newsCache)) return newsCache.result
+  const key = "news"
+  const cached = apiCache.check(key)
+
+  if (cached) return cached
 
   try {
     const response = await fetch(`https://api.live.prod.thehelldiversgame.com/api/NewsFeed/${WarId}`, options)
@@ -59,8 +55,7 @@ export async function fetchNews(fetch) {
     if (!response.ok) throw new Error("Network response was not ok")
 
     const parsed = await response.json()
-    newsCache.datetime = Date.now()
-    newsCache.result = parsed
+    apiCache.set(key, parsed)
 
     return parsed
   } catch (error) {
