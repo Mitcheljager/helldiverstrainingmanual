@@ -12,7 +12,7 @@
   export let showBackRoute = true
 
   $: ({ index, planet } = data)
-  $: ({ name, sector, biome, environmentals } = planet)
+  $: ({ name, sector, biome, environmentals, tidbit } = planet)
 </script>
 
 <svelte:head>
@@ -41,6 +41,8 @@
   <p class="mt-1/2">
     Part of the <strong>{sector} Sector</strong>
   </p>
+
+  {@html tidbit || ""}
 
   <h3 class="mt-1 mb-1/4">Environmental Effects</h3>
 

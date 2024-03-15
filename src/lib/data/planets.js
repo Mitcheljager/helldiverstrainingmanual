@@ -1439,6 +1439,10 @@ export const planetData = {
   },
   239: {
     name: "Tien Kwan",
+    tidbit: `
+      <p>Tien Kwan is the proud home of the renowned Morgunson Arsenal, where the finest Exosuits are forged! These cutting-edge marvels were on the brink of deployment across the galaxy until those pesky Automatons swooped in, trying to take what is ours. But Democracy prevailed once again, for our brave Helldivers swiftly sprang into action to safeguard this treasure trove of technology.</p>
+      <p>The Automatons, oblivious to the golden opportunity they had stumbled upon, were swiftly dealt with, thanks to the lightning-fast response of our elite forces. Super Earth's high command breathed a collective sigh of relief as Tien Kwan was liberated on March 8th, securing the future of the EXO-45 Patriot Exosuits and ensuring its immediate availability for requisition by our valiant troops. Another victory for Super Earth, thanks to the unwavering courage of our Helldivers!</p>
+    `,
     sector: Sector.Theseus,
     biome: Biome.IceMossSpecial,
     environmentals: [Environmental.ExtremeCold, Environmental.MeteorStorms]
