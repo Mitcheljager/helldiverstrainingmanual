@@ -1,9 +1,8 @@
 <script>
 	export let digit = ""
-	export let lineHeight = 12
 </script>
 
-<div class="wrapper" style:--line-height="{lineHeight}px" style:--offset="{-digit * lineHeight}px">
+<div class="wrapper" style:--digit={digit}>
   {#if isNaN(parseInt(digit))}
     {digit}
   {:else}
@@ -17,11 +16,11 @@
   .wrapper {
 		display: inline-flex;
 		flex-direction: column;
-		height: var(--line-height);
-		transform: translateY(var(--offset));
+		height: var(--line-height, 12px);
+		transform: translateY(calc((var(--digit) * -1) * var(--line-height, 12px)));
 		transition: transform 500ms;
-		font-size: var(--line-height);
-		line-height: var(--line-height);
+		font-size: var(--line-height, 12px);
+		line-height: var(--line-height, 12px);
 		text-align: center;
 	}
 

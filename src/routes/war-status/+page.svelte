@@ -6,15 +6,17 @@
 	import Map from "$lib/components/Map.svelte"
 	import Campaign from "$lib/components/Campaign.svelte"
 	import FullscreenMap from "$lib/components/FullscreenMap.svelte"
+	import WarStatistics from "$lib/components/WarStatistics.svelte"
 
   export let data
 
   let dataInterval
   let fullscreen = false
 
-  $: ({ status, info, news } = data)
+  $: ({ status, info, news, stats } = data)
   $: ({ globalEvents, planetStatus, planetEvents } = (status || {}))
   $: ({ planetInfos } = (info || {}))
+  $: ({ galaxy_stats: galaxyStats } = stats)
   $: formattedCampaigns = formatCampaigns(status, info)
 
   onMount(() => {
@@ -58,6 +60,19 @@
 <h2>Galactic Map</h2>
 
 <Map planets={planetInfos} status={planetStatus} campaigns={formattedCampaigns} events={planetEvents} on:fullscreen={() => fullscreen = !fullscreen} />
+
+<h2>War Statistics</h2>
+
+<p class="mt-1/2 mb-1/2">May the effort of those who came before us not be forgotten. May the efforts of those who have given all to Democracy not be in vain. Appreciate who they are, as they are more than mere statistics. They are the true heroes, those who came before us.</p>
+
+{#if Object.values(stats)?.length}
+  <WarStatistics statistics={galaxyStats} />
+{:else}
+  <div class="item no-connection mt-1">
+    <h3>Lost but not forgotten</h3>
+    <p class="content">Statistics are temporarily not available. Despite that, the efforts are not in vain, let that be certain.</p>
+  </div>
+{/if}
 
 <h2>Recent Events</h2>
 

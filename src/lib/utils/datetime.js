@@ -26,3 +26,8 @@ export function daysSinceDate(date) {
   const millisecondsInDay = 1000 * 60 * 60 * 24
   return Math.floor(differenceInMs / millisecondsInDay)
 }
+
+export function secondsToYears(seconds) {
+  const secondsInYear = 31536000; // 365 days * 24 hours * 60 minutes * 60 seconds
+  return Math.round(seconds / secondsInYear);
+}
