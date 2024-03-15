@@ -1,10 +1,12 @@
 <script>
 	import { browser } from "$app/environment"
 	import { fetchOwnershipForPlanet } from "$lib/api/ownership.js"
+	import { fetchStatsForPlanet } from "$lib/api/stats.js"
 	import EnvironmentalTooltip from "$lib/components/EnvironmentalTooltip.svelte"
 	import Hero from "$lib/components/Hero.svelte"
 	import OwnershipRecord from "$lib/components/OwnershipRecord.svelte"
 	import PlanetAnalytics from "$lib/components/PlanetAnalytics.svelte"
+	import WarStatistics from "$lib/components/WarStatistics.svelte"
 
   export let data
   export let showBackRoute = true
@@ -70,6 +72,24 @@
         {#each records as record}
           <OwnershipRecord {record} />
         {/each}
+      {/await}
+    {/if}
+  </div>
+
+  <h3 class="mt-1 mb-1/4">Planet Statistics</h3>
+
+  <div class="records">
+    {#if !index || !browser}
+      Loading...
+    {:else}
+      {#await fetchStatsForPlanet(index)}
+        Loading...
+      {:then stats}
+        {#if stats}
+          <WarStatistics {stats} />
+        {:else}
+          <em>No statistics were found</em>
+        {/if}
       {/await}
     {/if}
   </div>

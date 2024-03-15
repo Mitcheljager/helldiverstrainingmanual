@@ -25,3 +25,14 @@ export async function fetchStats(fetch) {
     console.error(error)
   }
 }
+
+export async function fetchStatsForPlanet(index) {
+  try {
+    const response = await fetch(`/api/v1/war/stats/${index}`)
+    const parsed = await response.json()
+
+    return parsed
+  } catch (error) {
+    console.error(error)
+  }
+}

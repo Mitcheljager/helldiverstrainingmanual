@@ -2,45 +2,47 @@
 	import RollingNumber from "$lib/components/RollingNumber.svelte"
 	import { secondsToYears } from "$lib/utils/datetime"
 
-  export let statistics = {}
+  export let stats = {}
+
+  $: console.log(stats)
 
   $: items = [{
     text: "Years spend in active duty",
-    value: secondsToYears(statistics.missionTime).toLocaleString()
+    value: secondsToYears(stats.missionTime).toLocaleString()
   }, {
     text: "Missions liberated",
-    value: statistics.missionsWon?.toLocaleString()
+    value: stats.missionsWon?.toLocaleString()
   }, {
     text: "Missions lost",
-    value: statistics.missionsLost?.toLocaleString()
+    value: stats.missionsLost?.toLocaleString()
   }, {
     text: "Success rate",
-    value: statistics.missionSuccessRate + "%"
+    value: stats.missionSuccessRate + "%"
   }, {
     divider: true
   }, {
     text: "Terminids squashed",
-    value: statistics.bugKills?.toLocaleString()
+    value: stats.bugKills?.toLocaleString()
   }, {
     text: "Automatons scrapped",
-    value: statistics.automatonKills?.toLocaleString()
+    value: stats.automatonKills?.toLocaleString()
   }, {
     text: "Bullets fired",
-    value: statistics.bulletsFired?.toLocaleString()
+    value: stats.bulletsFired?.toLocaleString()
   }, {
     text: "Bullets hit",
-    value: statistics.bulletsHit?.toLocaleString()
+    value: stats.bulletsHit?.toLocaleString()
   }, {
-    text: "Accuracy",
-    value: statistics.accurracy + "%"
+    text: "Weapon accuracy",
+    value: stats.accurracy + "%"
   }, {
     divider: true,
   }, {
     text: "Lives given to Democracy",
-    value: statistics.deaths?.toLocaleString()
+    value: stats.deaths?.toLocaleString()
   }, {
     text: "Accidentals",
-    value: statistics.friendlies?.toLocaleString()
+    value: stats.friendlies?.toLocaleString()
   }]
 </script>
 
