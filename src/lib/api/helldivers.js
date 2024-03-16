@@ -2,7 +2,7 @@ import { addCache, getCache } from "$lib/api/cache"
 
 const WarId = 801
 const options = { headers: { "Accept-Language": "en-US" } }
-const ttl = 20000
+const ttl = 60000
 
 export async function fetchStatus(fetch) {
   const key = "status"
