@@ -1,8 +1,10 @@
-import { apiCache } from "$lib/stores/cache"
+import { addCache, getCache } from "$lib/api/cache"
+
+const ttl = 60000
 
 export async function fetchStats(fetch) {
   const key = "stats"
-  const cached = apiCache.check(key)
+  const cached = await getCache(key, ttl)
 
   if (cached) return cached
 
@@ -12,7 +14,7 @@ export async function fetchStats(fetch) {
     if (!response.ok) throw new Error("Network response was not ok")
 
     const parsed = await response.json()
-    apiCache.set(key, parsed, 60000)
+    addCache(key, parsed, ttl)
 
     return parsed
   } catch (error) {

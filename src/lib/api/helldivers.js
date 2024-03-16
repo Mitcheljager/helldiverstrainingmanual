@@ -1,11 +1,12 @@
-import { apiCache } from "$lib/stores/cache"
+import { addCache, getCache } from "$lib/api/cache"
 
 const WarId = 801
 const options = { headers: { "Accept-Language": "en-US" } }
+const ttl = 20000
 
 export async function fetchStatus(fetch) {
   const key = "status"
-  const cached = apiCache.check(key)
+  const cached = await getCache(key, ttl)
 
   if (cached) return cached
 
@@ -15,7 +16,7 @@ export async function fetchStatus(fetch) {
     if (!response.ok) throw new Error("Network response was not ok")
 
     const parsed = await response.json()
-    apiCache.set(key, parsed)
+    addCache(key, parsed, ttl)
 
     return parsed
   } catch (error) {
@@ -25,7 +26,7 @@ export async function fetchStatus(fetch) {
 
 export async function fetchInfo(fetch) {
   const key = "info"
-  const cached = apiCache.check(key)
+  const cached = await getCache(key, ttl)
 
   if (cached) return cached
 
@@ -35,7 +36,7 @@ export async function fetchInfo(fetch) {
     if (!response.ok) throw new Error("Network response was not ok")
 
     const parsed = await response.json()
-    apiCache.set(key, parsed)
+    addCache(key, parsed, ttl)
 
     return parsed
   } catch (error) {
@@ -45,7 +46,7 @@ export async function fetchInfo(fetch) {
 
 export async function fetchNews(fetch) {
   const key = "news"
-  const cached = apiCache.check(key)
+  const cached = await getCache(key, ttl)
 
   if (cached) return cached
 
@@ -55,7 +56,7 @@ export async function fetchNews(fetch) {
     if (!response.ok) throw new Error("Network response was not ok")
 
     const parsed = await response.json()
-    apiCache.set(key, parsed)
+    addCache(key, parsed, ttl)
 
     return parsed
   } catch (error) {
