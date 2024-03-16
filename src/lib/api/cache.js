@@ -20,6 +20,6 @@ export async function addCache(key, data, ttl = 1000) {
 
   apiCache.set(key, data, ttl)
 
-  const { error } = await supabase.from("cache").upsert({ key, data, expires_at: now }, { onConflict: "key" }).select()
+  const { error } = await supabase.from("cache").upsert({ key: "test", data, expires_at: now }, { onConflict: "key" }).select()
   if (error) console.error(error)
 }
