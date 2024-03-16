@@ -33,7 +33,6 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@jill64/sentry-sveltekit-cloudflare": "^1.7.7",
 		"@sentry/sveltekit": "^7.107.0",
 		"@supabase/supabase-js": "^2.39.7",
 		"impetus": "^0.8.8",
