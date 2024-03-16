@@ -25,7 +25,7 @@
 
 {#key name}
   {#if biome}
-    <Hero small basepath="/images/biomes" filename="{biome.slug}">
+    <Hero small basepath="/images/biomes" filename="{biome.slug}" alt={name}>
       {name}
     </Hero>
   {:else}
