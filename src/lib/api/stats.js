@@ -1,11 +1,8 @@
 import { apiCache } from "$lib/stores/cache"
-import { logInSupabase } from "./logs"
 
 export async function fetchStats(fetch) {
   const key = "stats"
   const cached = apiCache.check(key)
-
-  logInSupabase({ cached: !!cached })
 
   if (cached) return cached
 
