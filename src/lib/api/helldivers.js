@@ -46,7 +46,7 @@ export async function fetchInfo(fetch) {
 
 export async function fetchNews(fetch) {
   const key = "news"
-  const cached = await getCache(key, ttl)
+  const cached = await getCache(key, 120000)
 
   if (cached) return cached
 
@@ -56,7 +56,7 @@ export async function fetchNews(fetch) {
     if (!response.ok) throw new Error("Network response was not ok")
 
     const parsed = await response.json()
-    addCache(key, parsed, ttl)
+    addCache(key, parsed, 120000)
 
     return parsed
   } catch (error) {
