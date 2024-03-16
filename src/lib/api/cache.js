@@ -5,9 +5,9 @@ export async function getCache(key, ttl) {
   const cachedInStore = apiCache.check(key)
   if (cachedInStore) return cachedInStore
 
-  const expiresAt = new Date(Date.now() - ttl).toISOString()
+  const expiresAt = new Date().toISOString()
 
-  const dbCache = await supabase.from("cache").select("created_at, data").gte("created_at", expiresAt).eq("key", key)
+  const dbCache = await supabase.from("cache").select("expires_at, data").gte("expires_at", expiresAt).eq("key", key)
   const data = dbCache?.data?.[0]?.data
 
   if (data) apiCache.set(key, data, ttl)
@@ -16,10 +16,10 @@ export async function getCache(key, ttl) {
 }
 
 export async function addCache(key, data, ttl = 1000) {
-  const now = new Date().toISOString()
+  const now = new Date(Date.now() + ttl).toISOString()
 
   apiCache.set(key, data, ttl)
 
-  const { error } = await supabase.from("cache").insert([{ key, data, created_at: now }]).select()
+  const { error } = await supabase.from("cache").upsert({ key, data, expires_at: now }, { onConflict: "key" }).select()
   if (error) console.error(error)
 }

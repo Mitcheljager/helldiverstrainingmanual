@@ -21,7 +21,7 @@
   $: formattedCampaigns = formatCampaigns(status, info)
 
   onMount(() => {
-    if (browser) dataInterval = setInterval(invalidateAll, 60000)
+    if (browser) dataInterval = setInterval(invalidateAll, 10000)
   })
 
   onDestroy(() => {
