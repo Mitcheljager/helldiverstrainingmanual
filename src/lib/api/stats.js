@@ -1,16 +1,8 @@
 import { apiCache } from "$lib/stores/cache"
-import * as Sentry from "@sentry/browser"
 
 export async function fetchStats(fetch) {
   const key = "stats"
   const cached = apiCache.check(key)
-
-  try {
-    if (cached) throw new Error("Stats request was cached")
-    else throw new Error("Stats request was NOT cached")
-  } catch (error) {
-    Sentry.captureException(error)
-  }
 
   if (cached) return cached
 
