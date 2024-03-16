@@ -341,6 +341,7 @@
     font-family: $font-family-brand;
     font-size: 1.25rem;
     line-height: 1em;
+    pointer-events: none;
   }
 
   .outline {
