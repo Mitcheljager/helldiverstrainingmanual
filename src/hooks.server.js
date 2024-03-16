@@ -1,8 +1,10 @@
+import * as Sentry from "@sentry/sveltekit";
 import { sequence } from "@sveltejs/kit/hooks"
 
-import { init } from '@jill64/sentry-sveltekit-cloudflare/client'
-
-init('https://833fd7ffbb41787467e62104ae116bbf@o4506918033293312.ingest.us.sentry.io/4506918036963328')
+Sentry.init({
+    dsn: "https://833fd7ffbb41787467e62104ae116bbf@o4506918033293312.ingest.us.sentry.io/4506918036963328",
+    tracesSampleRate: 1
+})
 
 /** @type {import('@sveltejs/kit').Handle} */
 export async function redirects({ event, resolve }) {
@@ -19,4 +21,5 @@ export async function redirects({ event, resolve }) {
   return await resolve(event)
 }
 
-export const handle = sequence(sequence(redirects))
+export const handle = sequence(Sentry.sentryHandle(), sequence(redirects))
+export const handleError = Sentry.handleErrorWithSentry();
