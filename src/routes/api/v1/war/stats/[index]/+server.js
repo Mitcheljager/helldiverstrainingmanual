@@ -8,7 +8,7 @@ export async function GET({ params }) {
   const planet = planetData[params.index]
   if (!planet) error(404, "Not found")
 
-  const headers = { "Content-Type": "application/json" }
+  const headers = { "Content-Type": "application/json", "cache-control": "max-age=60" }
 
   try {
     const result = await fetchStats(fetch)
