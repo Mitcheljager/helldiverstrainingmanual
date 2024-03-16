@@ -18,6 +18,10 @@
   }
 </script>
 
+<svelte:head>
+  <title>Boosters | Helldivers Training Manual</title>
+</svelte:head>
+
 <h1>Boosters</h1>
 
 <p>Boosters are the secret sauce to success in the Helldivers' arsenal, enhancing your combat capabilities to ensure victory against the relentless forces that stand against Democracy. These nifty gadgets provide various buffs to your entire squad, giving you the edge you need to crush the enemy beneath your boots. Each Helldivers gets to pick and choose their booster, so coordination is key! Discuss with your squadmates to ensure everyone's equipped with the right Boosters for the job. And if you're running solo or in a ragtag group, unlock a variety of Boosters to have options aplenty when squad coordination isn't an option.</p>

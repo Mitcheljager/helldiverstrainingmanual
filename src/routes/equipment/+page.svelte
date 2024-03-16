@@ -1,3 +1,7 @@
+
+i<svelte:head>
+  <title>{Equipment} | Helldivers Training Manual</title>
+</svelte:head>
 <h1>Equipment: What separates man from beast</h1>
 
 <p>In the unyielding crucible of battle, victory hinges not only on the courage of our hearts and the steel of our resolve but also on the tools and equipment we wield in the heat of combat. Equipment is the lifeblood of our war effort, the very arsenal upon which our triumphs are forged and our enemies vanquished.</p>
