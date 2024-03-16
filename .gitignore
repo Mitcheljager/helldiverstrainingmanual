@@ -12,3 +12,6 @@ vite.config.ts.timestamp-*
 .env
 .env.development
 .env.production
+
+# Sentry Config File
+.sentryclirc
