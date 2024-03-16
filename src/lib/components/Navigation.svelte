@@ -39,6 +39,11 @@
     subroutes: [
       ...bestiaryRoutes
     ]
+  }, {
+    text: "Equipment",
+    subroutes: [{
+      text: "Boosters"
+    }]
   }]
 
   function isActive(array = []) {

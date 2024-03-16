@@ -13,8 +13,8 @@
   function groupPlanetsBySector() {
     const groupedBySector = {}
 
-    for (const planetId in planetData) {
-      const planet = planetData[planetId]
+    for (const planetIndex in planetData) {
+      const planet = planetData[planetIndex]
       const sector = planet.sector
 
       if (!groupedBySector[sector]) groupedBySector[sector] = []
@@ -128,8 +128,8 @@
 
   .item {
     position: relative;
-    background: lighten($bg-base, 5%);
     padding: $margin * 0.25;
+    background: lighten($bg-base, 5%);
     color: $text-color-light;
     text-decoration: none;
 
@@ -146,8 +146,8 @@
     gap: $margin * 0.5;
     position: relative;
     min-height: 2rem;
-    font-weight: bold;
-    font-size: 1.15rem;
+    font-family: $font-family-brand;
+    font-size: 1.25rem;
 
     @include breakpoint(sm) {
       min-height: 3rem;
