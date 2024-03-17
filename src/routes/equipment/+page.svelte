@@ -1,6 +1,6 @@
 
 i<svelte:head>
-  <title>{Equipment} | Helldivers Training Manual</title>
+  <title>Equipment | Helldivers Training Manual</title>
 </svelte:head>
 <h1>Equipment: What separates man from beast</h1>
 
