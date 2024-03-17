@@ -41,7 +41,7 @@
     {#each [...news].reverse() as { message }}
       <div class="item">
         {#if message}
-          {message}
+          {@html message.replaceAll(/\n/g, "<br />")}
         {:else}
           <em>No message was provided</em>
         {/if}
