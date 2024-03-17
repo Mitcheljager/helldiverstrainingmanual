@@ -7,6 +7,8 @@
   let news = []
   let interval
 
+  $: parsedMessages = parseMessages(news)
+
   onMount(() => {
     interval = setInterval(get, 120000)
     get()
@@ -34,14 +36,26 @@
       loading = false
     }
   }
+
+  function parseMessages(news) {
+    return news.map(item => {
+      const [title, message] = (item?.message?.split(/\n/) || [])
+
+      return { title, message }
+    })
+  }
 </script>
 
 {#if news?.length}
   <div class="items">
-    {#each [...news].reverse() as { message }}
+    {#each parsedMessages as { title, message }}
       <div class="item">
-        {#if message}
-          {@html message.replaceAll(/\n/g, "<br />")}
+        {#if title && message}
+          <h5>{title}</h5>
+        {/if}
+
+        {#if message || title}
+          {@html message || title}
         {:else}
           <em>No message was provided</em>
         {/if}
@@ -68,5 +82,12 @@
     border: 5px solid $bg-dark;
     font-size: 1rem;
     line-height: 1.45em;
+
+    h5 {
+      padding: $margin * 0.25;
+      margin: $margin * -0.25 $margin * -0.25 $margin * 0.25;
+      background: lighten($bg-base, 5%);
+      color: $text-color-light;
+    }
   }
 </style>
