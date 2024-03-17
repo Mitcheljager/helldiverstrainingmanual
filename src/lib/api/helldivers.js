@@ -44,14 +44,14 @@ export async function fetchInfo(fetch) {
   }
 }
 
-export async function fetchNews(fetch) {
+export async function fetchNews(fetch, from = 0) {
   const key = "news"
-  const cached = await getCache(key, 120000)
+  // const cached = await getCache(key, 120000)
 
-  if (cached) return cached
+  // if (cached) return cached
 
   try {
-    const response = await fetch(`https://api.live.prod.thehelldiversgame.com/api/NewsFeed/${WarId}`, options)
+    const response = await fetch(`https://api.live.prod.thehelldiversgame.com/api/NewsFeed/${WarId}?fromTimeStamp=${from}`, options)
 
     if (!response.ok) throw new Error("Network response was not ok")
 

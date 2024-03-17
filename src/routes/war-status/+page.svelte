@@ -8,16 +8,17 @@
 	import Campaign from "$lib/components/Campaign.svelte"
 	import FullscreenMap from "$lib/components/FullscreenMap.svelte"
 	import WarStatistics from "$lib/components/WarStatistics.svelte"
+	import News from "$lib/components/News.svelte";
 
   export let data
 
   let dataInterval
   let fullscreen = false
 
-  $: ({ status, info, news, stats } = data)
-  $: ({ globalEvents, planetStatus, planetEvents } = (status || {}))
+  $: ({ status, info, stats } = data)
+  $: ({ planetStatus, planetEvents } = (status || {}))
   $: ({ planetInfos } = (info || {}))
-  $: ({ galaxy_stats: galaxyStats } = stats)
+  $: ({ galaxy_stats: galaxyStats } = (stats || {}))
   $: formattedCampaigns = formatCampaigns(status, info)
 
   onMount(() => {
@@ -77,26 +78,10 @@
 
 <h2>Recent Events</h2>
 
-{#if news || globalEvents}
-  <div class="items">
-    {#each [...(news || globalEvents)].reverse() as { title, message }}
-      <div class="item">
-        {#if title}
-          <h3>{title || "Unknown"}</h3>
-        {/if}
-
-        <p class="content">
-          {#if message}
-            {message}
-          {:else}
-            <em>No message was provided</em>
-          {/if}
-        </p>
-      </div>
-    {/each}
-  </div>
+{#if browser}
+  <News from={status.time - 432000} /> <!-- 5 days ago -->
 {:else}
-  <em>Failed to retrieve global events</em>
+  Loading...
 {/if}
 
 {#if fullscreen}
@@ -112,12 +97,6 @@
     gap: $margin * 0.25;
     width: 100%;
     margin: $margin 0 $margin * 0.25;
-  }
-
-  .items {
-    display: flex;
-    flex-direction: column;
-    gap: $margin * 0.25;
   }
 
   .item {
@@ -141,7 +120,6 @@
       margin: 0;
       background-color: lighten($bg-base, 5%);
       padding: $margin * 0.25;
-      transition: font-size 200ms, padding 200ms;
       word-break: break-word;
     }
   }
@@ -151,6 +129,5 @@
     padding: $margin * 0.25;
     font-size: 1rem;
     line-height: 1.45em;
-    transition: padding 200ms;
   }
 </style>
