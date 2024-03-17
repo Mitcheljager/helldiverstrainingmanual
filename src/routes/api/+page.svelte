@@ -160,7 +160,7 @@
 
   <div class="item">
     <code class="url">{basepath}/api/v1/war/history/[planetIndex]</code>
-    Provides the liberation history of a given planet. Returns the liberation status in 5 minutes intervals (with some variance). Status is only recorded when planet is active, as a result there may be big jumps between dates. Ordered from newest to latest, limited to 288 results (24 hours).
+    Provides the liberation history of a given planet. Returns the liberation status in 5 minutes intervals (with some variance). Status is only recorded when planet is active, as a result there may be big jumps between dates. Ordered from newest to latest, limited to 288 results (24 hours). The limit can be adjusting the <code>?length=[number]</code> to receive fewer than 288 results. More is currently not supported.
 
     <Expand let:toggle>
       <button on:click={toggle}>Toggle example response</button>
