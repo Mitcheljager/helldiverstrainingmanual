@@ -3,5 +3,6 @@ export function toSlug(string = "") {
 }
 
 export function toPath(array = []) {
-  return "/" + array.map(string => toSlug(string)).join("/")
+  const prepend = array[0].startsWith("/") ? "" : "/"
+  return prepend + array.map(string => toSlug(string)).join("/")
 }
