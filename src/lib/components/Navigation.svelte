@@ -43,6 +43,8 @@
     text: "Equipment",
     subroutes: [{
       text: "Boosters"
+    }, {
+      text: "Titles"
     }]
   }]
 
