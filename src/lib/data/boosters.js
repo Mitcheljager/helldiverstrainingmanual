@@ -51,7 +51,7 @@ export const boosters = [{
 }, {
   name: "Increased Reinforcement Budget",
   description: "Increases the number of available reinforcements.",
-  tidbit: "We'll bring some extras along to do your job if you fail to do so, <strong>one extra deployment for each active Helldiver in your squad.</strong>",
+  tidbit: "We'll bring some extras along to do your job should you fail. <strong>One extra deployment for each active Helldiver in your squad.</strong>",
   unlock: "Helldivers Mobilize Warbond",
   cost: {
     individual: 150,
@@ -61,7 +61,7 @@ export const boosters = [{
 }, {
   name: "Flexible Reinforcement Budget",
   description: "Reduces time until new reinforcements are granted once they've been depleted.",
-  tidbit: "We've lubed up the Hellpod carousels, allowing them to get into position that much faster after you've fully depleted all your initial reinforcements. <strong>The time for new reinforcements to become available has been decreased by 10%</strong>, make the most of it.",
+  tidbit: "We've lubed up the Hellpod carousels, allowing them to get into position that much faster after you've fully depleted all your available reinforcements. <strong>The time for new reinforcements to become available has been decreased by 10%</strong>, make the most of it.",
   unlock: "Steeled Veterans Premium Warbond",
   cost: {
     individual: 75,
