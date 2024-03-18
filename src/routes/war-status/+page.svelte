@@ -1,8 +1,8 @@
 <script>
 	import { browser } from "$app/environment"
-	import { invalidateAll } from "$app/navigation"
 	import { formatCampaigns } from "$lib/utils/campaign"
 	import { onDestroy, onMount } from "svelte"
+	import { api } from "$lib/api/api"
 	import Hero from "$lib/components/Hero.svelte"
 	import Map from "$lib/components/Map.svelte"
 	import Campaign from "$lib/components/Campaign.svelte"
@@ -12,7 +12,9 @@
 
   export let data
 
-  let dataInterval
+  let statusInterval
+  let infoInterval
+  let statsInterval
   let fullscreen = false
 
   $: ({ status, info, stats } = data)
@@ -22,11 +24,15 @@
   $: formattedCampaigns = formatCampaigns(status, info)
 
   onMount(() => {
-    if (browser) dataInterval = setInterval(invalidateAll, 20000)
+    if (browser) statusInterval = setInterval(async () => status = await api("war/status") || {}, 20000)
+    if (browser) infoInterval = setInterval(async () => info = await api("war/info") || {}, 300000)
+    if (browser) statsInterval = setInterval(async () => galaxyStats = await api(`war/stats`) || {}, 60000)
   })
 
   onDestroy(() => {
-    if (dataInterval) clearInterval(dataInterval)
+    if (statusInterval) clearInterval(statusInterval)
+    if (infoInterval) clearInterval(infoInterval)
+    if (statsInterval) clearInterval(statsInterval)
   })
 </script>
 

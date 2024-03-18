@@ -1,4 +1,5 @@
 import { addCache, getCache } from "$lib/api/cache"
+import { api } from "./api"
 
 const ttl = 60000
 
@@ -24,10 +25,7 @@ export async function fetchStats(fetch) {
 
 export async function fetchStatsForPlanet(index) {
   try {
-    const response = await fetch(`/api/v1/war/stats/${index}`)
-    const parsed = await response.json()
-
-    return parsed
+    return await api(`war/stats/${index}`)
   } catch (error) {
     console.error(error)
   }

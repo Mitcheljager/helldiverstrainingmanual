@@ -1,4 +1,5 @@
 <script>
+	import { api } from "$lib/api/api";
   import { onDestroy, onMount } from "svelte"
 
   export let from = 0
@@ -22,14 +23,11 @@
     loading = true
 
     try {
-      const data = await fetch(`/api/v1/war/news?from=${from}`)
+      const data = await api(`war/news?from=${from}`)
 
-      if (!data) throw new Error("No data retrieved from news fetch")
+      if (!data?.filter(n => n.message)) return
 
-      const response = await data.json()
-      if (!response?.filter(n => n.message)) return
-
-      news = response
+      news = data
     } catch {
       // ignore
     } finally {

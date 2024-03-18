@@ -1,16 +1,11 @@
 import { supabase } from "$lib/db"
+import { api } from "$lib/api/api"
 
 let lastCampaignEntry = 0
 
 export async function fetchHistory(planetIndex, { limit = 288 } = {}) {
   try {
-    const response = await fetch(`/api/v1/war/history/${planetIndex}?limit=${limit}`)
-
-    if (!response.ok) throw new Error("Network response was not ok")
-
-    const parsed = await response.json()
-
-    return parsed || {}
+    return await api(`war/history/${planetIndex}?limit=${limit}`) || {}
   } catch (error) {
     console.error(error)
   }
