@@ -8,7 +8,7 @@
 	import Campaign from "$lib/components/Campaign.svelte"
 	import FullscreenMap from "$lib/components/FullscreenMap.svelte"
 	import WarStatistics from "$lib/components/WarStatistics.svelte"
-	import News from "$lib/components/News.svelte";
+	import News from "$lib/components/News.svelte"
 
   export let data
 
@@ -22,7 +22,7 @@
   $: formattedCampaigns = formatCampaigns(status, info)
 
   onMount(() => {
-    if (browser) dataInterval = setInterval(invalidateAll, 10000)
+    if (browser) dataInterval = setInterval(invalidateAll, 20000)
   })
 
   onDestroy(() => {
