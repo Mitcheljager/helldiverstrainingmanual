@@ -14,6 +14,8 @@
   })
 
   afterNavigate(event => {
+    if (!event.from) return
+
     sidebarActive = false
 
     if (main && !("delta" in event)) main.scrollTo({ top: 0 })

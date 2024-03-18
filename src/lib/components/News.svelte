@@ -1,5 +1,5 @@
 <script>
-	import { api } from "$lib/api/api";
+	import { api } from "$lib/api/api"
   import { onDestroy, onMount } from "svelte"
 
   export let from = 0
