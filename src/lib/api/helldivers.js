@@ -36,6 +36,10 @@ export async function fetchInfo(fetch) {
     if (!response.ok) throw new Error("Network response was not ok")
 
     const parsed = await response.json()
+
+    // Delete the "settingsHash" key from each planet as the value compresses poorly while not providing anything useful
+    parsed.planetInfos.forEach(p => delete p.settingsHash)
+
     addCache(key, parsed, ttl)
 
     return parsed
