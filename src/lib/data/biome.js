@@ -50,5 +50,9 @@ export const Biome = {
   CrimsonMoor: {
     slug: "crimsonmoor",
     description: "A crimson algae has propagated wildly across this entire planet, coating its rocky hills with a constant red that masks the spilt blood of the heroes who defend it from tyranny."
+  },
+  Canyon: {
+    slug: "canyon",
+    description: "This arid, rocky biome covering this world has driven the evolution of exceptionally efficient water usage in its various organisms."
   }
 }

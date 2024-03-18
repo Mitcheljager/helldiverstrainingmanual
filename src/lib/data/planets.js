@@ -42,7 +42,7 @@ export const planetData = {
   6: {
     name: "Hydrofall Prime",
     sector: Sector.Barnard,
-    biome: null,
+    biome: Biome.Canyon,
     environmentals: [Environmental.Tremors]
   },
   7: {
@@ -216,7 +216,7 @@ export const planetData = {
   35: {
     name: "Effluvia",
     sector: Sector.Cancri,
-    biome: null,
+    biome: Biome.Canyon,
     environmentals: [Environmental.Tremors]
   },
   36: {
@@ -258,7 +258,7 @@ export const planetData = {
   42: {
     name: "Emeria",
     sector: Sector.Kelvin,
-    biome: null,
+    biome: Biome.Canyon,
     environmentals: [Environmental.Tremors]
   },
   43: {
@@ -300,7 +300,7 @@ export const planetData = {
   49: {
     name: "Azterra",
     sector: Sector.Orion,
-    biome: null,
+    biome: Biome.Canyon,
     environmentals: [Environmental.Tremors]
   },
   50: {
@@ -342,7 +342,7 @@ export const planetData = {
   56: {
     name: "Myrium",
     sector: Sector.Morgon,
-    biome: null,
+    biome: Biome.Canyon,
     environmentals: [Environmental.Tremors]
   },
   57: {
@@ -588,7 +588,7 @@ export const planetData = {
   97: {
     name: "Calypso",
     sector: Sector.Saleria,
-    biome: null,
+    biome: Biome.Canyon,
     environmentals: [Environmental.Tremors]
   },
   98: {
@@ -732,7 +732,7 @@ export const planetData = {
   121: {
     name: "Pioneer II",
     sector: Sector.Arturion,
-    biome: null,
+    biome: Biome.Canyon,
     environmentals: [Environmental.Tremors]
   },
   122: {
@@ -792,7 +792,7 @@ export const planetData = {
   131: {
     name: "Achird III",
     sector: Sector.Borgus,
-    biome: null,
+    biome: Biome.Canyon,
     environmentals: [Environmental.Tremors]
   },
   132: {
@@ -912,7 +912,7 @@ export const planetData = {
   151: {
     name: "Castor",
     sector: Sector.Theseus,
-    biome: null,
+    biome: Biome.Canyon,
     environmentals: [Environmental.Tremors]
   },
   152: {
@@ -1026,7 +1026,7 @@ export const planetData = {
   170: {
     name: "Fori Prime",
     sector: Sector.Draco,
-    biome: null,
+    biome: Biome.Canyon,
     environmentals: [Environmental.Tremors]
   },
   171: {
@@ -1146,13 +1146,13 @@ export const planetData = {
   190: {
     name: "Kraz",
     sector: Sector.Alstrad,
-    biome: null,
+    biome: Biome.Canyon,
     environmentals: [Environmental.Tremors]
   },
   191: {
     name: "Kuma",
     sector: Sector.Hawking,
-    biome: null,
+    biome: Biome.Canyon,
     environmentals: [Environmental.Tremors]
   },
   192: {
@@ -1332,7 +1332,7 @@ export const planetData = {
   221: {
     name: "Prasa",
     sector: Sector.Farsight,
-    biome: null,
+    biome: Biome.Canyon,
     environmentals: [Environmental.Tremors]
   },
   222: {
@@ -1374,7 +1374,7 @@ export const planetData = {
   228: {
     name: "Senge 23",
     sector: Sector.Omega,
-    biome: null,
+    biome: Biome.Canyon,
     environmentals: [Environmental.Tremors]
   },
   229: {
@@ -1570,7 +1570,7 @@ export const planetData = {
   260: {
     name: "Cyberstan",
     sector: Sector.Valdis,
-    biome: null,
+    biome: Biome.Canyon,
     environmentals: [Environmental.Tremors]
   }
 }
