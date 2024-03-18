@@ -100,6 +100,10 @@
     transition: transform 200ms;
 
     @include breakpoint(xxs) {
+      padding: $margin * 0.75;
+    }
+
+    @include breakpoint(xs) {
       padding: $margin;
     }
 
@@ -168,14 +172,18 @@
 
   .main {
     position: relative;
-    padding: $margin * 0.75 $margin * 0.75 $margin * 1.5;
+    padding: $margin * 0.5 $margin * 0.5 $margin * 1.5;
     height: 100dvh;
     overflow-y: auto;
     overflow-x: hidden;
 
     @include styled-scrollbar(thick);
 
-    @include breakpoint(lg) {
+    @include breakpoint(md) {
+      padding: $margin;
+    }
+
+    @include breakpoint(1200px) {
       padding: $margin * 2;
     }
 
