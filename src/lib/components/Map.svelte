@@ -422,9 +422,12 @@
     opacity: 0;
     filter: blur(100px);
     z-index: -1;
-    transform: translateX(calc(var(--x, 0px) * 0.15)) translateY(calc(var(--y, 0px) * 0.15));
     transition: opacity 1500ms;
     pointer-events: none;
+
+    @include breakpoint(lg) {
+      transform: translateX(calc(var(--x, 0px) * 0.15)) translateY(calc(var(--y, 0px) * 0.15));
+    }
 
     &.loaded {
       opacity: 0.5;
