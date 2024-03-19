@@ -25,6 +25,16 @@
 
 <p class="mt-1 font-tiny"><em>Under Section 4 of Subsection 238, Article XIII, Chapter 323 of the National Helldiver Authority, it is hereby mandated that all Helldivers must read and adhere to the guidelines outlined in this manual. Failure to recognize this manual may lead to immediate termination.</em></p>
 
+<h4 class="mt-1 mb-1/2">Continue reading</h4>
+
+<div class="external">
+  <p>Once you've absorbed every word in this manual from cover to cover, broaden your horizons by delving into additional sources. A knowledgeable Helldiver is a triumphant Helldiver. Arm yourself with wisdom and insight, for they are the greatest weapons in our arsenal.</p>
+
+  <a href="https://helldivers.wiki.gg" target="_blank" rel="noreferrer noopener">Helldivers.wiki.gg</a> - Get up to speed on the fine details. <br>
+  <a href="https://helldiverscompanion.com/" target="_blank" rel="noreferrer noopener">Helldivers Companion</a> - Stay up to date on our current War Efforts. <br>
+  <a href="https://divers.gg/" target="_blank" rel="noreferrer noopener">Divers.gg</a> - Discover all the gear in Super Earth's reserves.
+</div>
+
 <style lang="scss">
   .buttons {
     display: grid;
@@ -39,5 +49,10 @@
     @include breakpoint(md) {
       margin: $margin 0;
     }
+  }
+
+  .external a {
+    color: $white;
+    text-decoration: none;
   }
 </style>
