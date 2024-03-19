@@ -25,7 +25,7 @@
 
 <p class="mt-1 font-tiny"><em>Under Section 4 of Subsection 238, Article XIII, Chapter 323 of the National Helldiver Authority, it is hereby mandated that all Helldivers must read and adhere to the guidelines outlined in this manual. Failure to recognize this manual may lead to immediate termination.</em></p>
 
-<h4 class="mt-1 mb-1/2">Continue reading</h4>
+<h4 class="mt-1 mb-1/2">External sources</h4>
 
 <div class="external">
   <p>Once you've absorbed every word in this manual from cover to cover, broaden your horizons by delving into additional sources. A knowledgeable Helldiver is a triumphant Helldiver. Arm yourself with wisdom and insight, for they are the greatest weapons in our arsenal.</p>
