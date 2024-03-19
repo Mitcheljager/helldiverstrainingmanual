@@ -68,7 +68,7 @@ export async function fetchNews(fetch, from = 0) {
 }
 
 export async function fetchMajorOrders(fetch) {
-  const key = "major-order"
+  const key = "major-orders"
   const cached = await getCache(key, 120000)
 
   if (cached) return cached
