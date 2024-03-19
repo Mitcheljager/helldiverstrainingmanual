@@ -66,3 +66,23 @@ export async function fetchNews(fetch, from = 0) {
     console.error(error)
   }
 }
+
+export async function fetchMajorOrders(fetch) {
+  const key = "major-order"
+  const cached = await getCache(key, 120000)
+
+  if (cached) return cached
+
+  try {
+    const response = await fetch(`https://api.live.prod.thehelldiversgame.com/api/v2/Assignment/War/${WarId}`, options)
+
+    if (!response.ok) throw new Error("Network response was not ok")
+
+    const parsed = await response.json()
+    addCache(key, parsed, 120000)
+
+    return parsed
+  } catch (error) {
+    console.error(error)
+  }
+}

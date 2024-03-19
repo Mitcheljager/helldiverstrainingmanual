@@ -9,6 +9,7 @@
 	import FullscreenMap from "$lib/components/FullscreenMap.svelte"
 	import WarStatistics from "$lib/components/WarStatistics.svelte"
 	import News from "$lib/components/News.svelte"
+	import MajorOrder from "$lib/components/MajorOrders.svelte";
 
   export let data
 
@@ -81,6 +82,10 @@
     <p class="content">Statistics are temporarily not available. Despite that, the efforts are not in vain, let that be certain.</p>
   </div>
 {/if}
+
+<h2>Major Orders</h2>
+
+<MajorOrder />
 
 <h2>Recent Events</h2>
 

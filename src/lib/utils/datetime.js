@@ -31,3 +31,16 @@ export function secondsToYears(seconds) {
   const secondsInYear = 31536000; // 365 days * 24 hours * 60 minutes * 60 seconds
   return Math.round(seconds / secondsInYear);
 }
+
+export function secondsToHours(seconds) {
+  const secondsInDay = 3600; // 60 minutes * 60 seconds
+  return Math.round(seconds / secondsInDay);
+}
+
+export function secondsToDaysWithHours(seconds) {
+  const hours = secondsToHours(seconds)
+  const days = Math.floor(hours / 24)
+  const leftoverHours = Math.ceil(hours % 24)
+
+  return `${days}D ${leftoverHours}H`
+}
