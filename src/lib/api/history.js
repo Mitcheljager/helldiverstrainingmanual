@@ -1,8 +1,6 @@
 import { supabase } from "$lib/db"
 import { api } from "$lib/api/api"
 
-let lastCampaignEntry = 0
-
 export async function fetchHistory(planetIndex, { limit = 288 } = {}) {
   try {
     return await api(`war/history/${planetIndex}?limit=${limit}`) || {}
@@ -12,10 +10,6 @@ export async function fetchHistory(planetIndex, { limit = 288 } = {}) {
 }
 
 export async function saveCampaignStatusHistory(formattedCampaigns) {
-  const now = Date.now()
-
-  if ((now - lastCampaignEntry) / 1000 < 300) return // Only add a new entry every 5 minutes
-
   const requests = []
 
   formattedCampaigns.forEach(({ planetIndex, health, maxHealth, players, }) => {
@@ -35,6 +29,4 @@ export async function saveCampaignStatusHistory(formattedCampaigns) {
     // @ts-ignore
     throw new Error(error.message)
   }
-
-  lastCampaignEntry = now
 }
