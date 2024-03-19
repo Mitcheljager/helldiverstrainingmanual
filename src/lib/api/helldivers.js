@@ -3,11 +3,11 @@ import { addCache, getCache } from "$lib/api/cache"
 const WarId = 801
 const options = { headers: { "Accept-Language": "en-US" } }
 
-export async function fetchStatus(fetch) {
+export async function fetchStatus(fetch, { bypassCache = false } = {}) {
   const key = "status"
   const cached = await getCache(key, 20000)
 
-  if (cached) return cached
+  if (!bypassCache && cached) return cached
 
   try {
     const response = await fetch(`https://api.live.prod.thehelldiversgame.com/api/WarSeason/${WarId}/Status`, options)
@@ -15,7 +15,7 @@ export async function fetchStatus(fetch) {
     if (!response.ok) throw new Error("Network response was not ok")
 
     const parsed = await response.json()
-    addCache(key, parsed, 20000)
+    if (parsed?.planetStatus?.length) addCache(key, parsed, 20000)
 
     return parsed
   } catch (error) {
@@ -23,11 +23,11 @@ export async function fetchStatus(fetch) {
   }
 }
 
-export async function fetchInfo(fetch) {
+export async function fetchInfo(fetch, { bypassCache = false } = {}) {
   const key = "info"
   const cached = await getCache(key, 300000)
 
-  if (cached) return cached
+  if (!bypassCache && cached) return cached
 
   try {
     const response = await fetch(`https://api.live.prod.thehelldiversgame.com/api/WarSeason/${WarId}/WarInfo`, options)
@@ -39,7 +39,7 @@ export async function fetchInfo(fetch) {
     // Delete the "settingsHash" key from each planet as the value compresses poorly while not providing anything useful
     parsed.planetInfos.forEach(p => delete p.settingsHash)
 
-    addCache(key, parsed, 300000)
+    if (parsed?.planetInfos?.length) addCache(key, parsed, 300000)
 
     return parsed
   } catch (error) {
