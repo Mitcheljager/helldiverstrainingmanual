@@ -45,6 +45,12 @@
     }, {
       text: "Titles"
     }]
+  }, {
+    text: "Miscellaneous",
+    subroutes: [{
+      text: "Finding Super Samples",
+      route: "super-samples"
+    }]
   }]
 </script>
 
