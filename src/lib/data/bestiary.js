@@ -16,8 +16,9 @@ export const bestiary = [{
     stratagems: [Stratagem.ArcThrower, Stratagem.Flamethrower, Stratagem.GrenadeLauncher, Stratagem.Stalwart, Stratagem.GuardDogRover, Stratagem.OrbitalGasStrike, Stratagem.EagleStrafingRun, Stratagem.TeslaTower],
     appearance: "The lowliest of the Terminids, the Scavenger embodies mindless aggression and blind obedience to the hive's insatiable appetite for destruction. With a physique reminiscent of a prehistoric nightmare, this insectoid menace scuttles forth with reckless abandon, its presence heralded by a shrill shriek that beckons its brethren to swarm and overwhelm any who dare oppose the hive.",
     quicktip: "Don't underestimate their numbers. Whether you're facing Basic Scavengers, Juvenile Bile Spitters, or agile Hoppers, swift elimination is key. Focus your fire to prevent being overwhelmed and secure victory for Super Earth!",
+    images: ["/images/bestiary/backdrop-scavenger.jpg", "/images/bestiary/backdrop-bile-spitter.jpg", "/images/bestiary/backdrop-hopper.jpg"],
     tactics: `
-      <h3>Basic Scavengers</h3>
+      <h3>Basic Scavenger</h3>
       <p>These Basic Scavengers may seem primitive, but don't underestimate them, its strength lies in numbers, as even a modest swarm can swiftly dispatch unwary Helldivers. Despite its diminutive stature, it boasts surprising resilience, capable of felling a Helldiver with a mere handful of strikes.</p>
       <h3>Bile Spitter</h3>
       <p>Ah, the juvenile Bile Spitter, still in its larval stage, it's armed with a short-range bile-spit in addition to its claws. This nasty little critter's job is to ensnare and slow down its prey, making it easier for the rest of the swarm to close in. You'll often see them patrolling alongside other young horrors, casting a shadow of dread wherever they go.</p>
@@ -29,6 +30,7 @@ export const bestiary = [{
     stratagems: [Stratagem.ArcThrower, Stratagem.Flamethrower, Stratagem.GrenadeLauncher, Stratagem.MachineGun, Stratagem.PatriotExosuit, Stratagem.MachineGunSentry],
     appearance: "Warriors embody a relentless pursuit of mindless expansion and destruction. Their presence and armored exoskeletons evoke primal fear, serving as a chilling testament to the savagery of the Terminid swarm. With razor-sharp claws and menacing stature, they loom ominously over the battlefield, instilling terror in all who dare oppose their insatiable hunger for conquest.",
     quicktip: "Precision is paramount. Aim for weak spots beneath their armor or target their distinctive features for maximum effect. Employ shotguns or armor-piercing weapons to strip away defenses and expose vulnerabilities. And always be prepared for the explosive demise of a Bile Warrior, avoiding the resulting bile blast at all costs.",
+    images: ["/images/bestiary/backdrop-warrior.jpg", "/images/bestiary/backdrop-bile-warrior.jpg", "/images/bestiary/backdrop-hive-guard.jpg"],
     tactics: `
       <h3>Basic Warrior</h3>
       <p>The quintessential foot soldier of the Terminid horde, the Basic Warrior, though lightly armored, poses a significant threat in numbers. Agile and relentless, it charges forth with single-minded determination, its clawed appendages poised to rend flesh and bone. Utilizing its burrowing ability, it can emerge from beneath the earth to launch surprise attacks, catching unwary Helldivers off guard.</p>
@@ -47,6 +49,7 @@ export const bestiary = [{
     stratagems: [Stratagem.ArcThrower, Stratagem.GrenadeLauncher, Stratagem.Stalwart, Stratagem.GuardDogRover, Stratagem.EagleNapalmAirstrike, Stratagem.EagleStrafingRun],
     appearance: "The elusive Hunters epitomize the relentless pursuit of prey within the Terminid swarm. Agile and cunning, these formidable adversaries employ swift leaps and evasive maneuvers to outmaneuver their targets with unparalleled efficiency. Despite their diminutive size, their relentless pursuit and formidable agility make them a formidable threat on the battlefield.",
     quicktip: "Keep your distance and use rapid-firing weapons or explosives to take down Hunters swiftly. Prioritize eliminating them early in engagements to prevent them from overwhelming your squad with their relentless pursuit and debilitating bile attacks.",
+    images: ["/images/bestiary/backdrop-hunter.jpg"],
     tactics: `
       <p>Hunters exhibit a penchant for swift and relentless pursuit of their prey. Their agile movements and lightning-fast leaps make them challenging targets, evading incoming fire with remarkable dexterity.</p>
       <p>When engaging Hunters, prioritize swift and decisive action to neutralize them before they can close the distance and inflict harm upon Helldivers. Though agile and elusive, they possess relatively weak flesh and can be dispatched with ease when confronted with overwhelming firepower.</p>
@@ -59,6 +62,7 @@ export const bestiary = [{
     stratagems: [Stratagem.AntiMaterielRifle, Stratagem.Railgun, Stratagem.JumpPack, Stratagem.EagleSmokeStrike, Stratagem.OrbitalSmokeStrike, Stratagem.AutocannonSentry],
     appearance: "Stalkers epitomize stealth and subterfuge within the Terminid ranks, lurking in the shadows and striking with lethal precision. Camouflaged amidst the darkness, these formidable adversaries blend seamlessly into their surroundings, making them notoriously difficult to detect.",
     quicktip: `These ferocious beasts might think they are cloaked, but a keen eye will spot them from a mile away. Upon sight prioritise finding their hideout, heading towards the direction they came from. Killing them only goes so far when their backup is ready on speed dial.`,
+    images: ["/images/bestiary/backdrop-stalker.jpg"],
     tactics: `
       <p>Stalkers, the masters of deception, lurk within the shadows, patiently awaiting the perfect moment to strike with lethal precision. Their cunning maneuvers and lightning-fast assaults render them elusive targets, demanding sharp observation and lightning-quick reflexes to effectively neutralize.</p>
       <p>To unveil the presence of these stealthy foes, strategic utilization of Smoke Grenades or disturbance of spore clouds emitted from scattered eggs is paramount. Moving with the swiftness akin to their brethren, the Hunters, Stalkers employ similar tactics, utilizing their elongated tongues to ensnare and incapacitate their prey from afar.</p>
@@ -71,6 +75,7 @@ export const bestiary = [{
     stratagems: [Stratagem.GrenadeLauncher, Stratagem.AntiMaterielRifle, Stratagem.Autocannon, Stratagem.ShieldGeneratorPack, Stratagem.JumpPack, Stratagem.Eagle110mmRocketPods],
     appearance: "The grotesque Bile Spewer is a product of catastrophic chemical spills on Terminid E-710 farms, its bloated thorax brimming with corrosive acids ready to unleash upon encountering the forces of Democracy. These repugnant adversaries exude an aura of toxicity, their vile bile capable of dissolving even the hardiest of armor.",
     quicktip: "Neutralize Bile Spewers swiftly by targeting their vulnerable spots with explosives or aiming for their heads. Be wary of their corrosive attacks and mortar mode from a distance",
+    images: ["/images/bestiary/backdrop-nursing-spewer.jpg", "/images/bestiary/backdrop-bile-spewer.jpg"],
     tactics: `
       <p>Bile Spewers pose a significant threat to Helldivers, relentlessly bombarding their targets with streams of corrosive bile from a distance. Their acidic attacks can inflict substantial damage and hinder the movement of their adversaries, making them formidable adversaries on the battlefield.</p>
       <p>Targeting the back of Bile Spewers with explosives or aiming for their heads is the most effective method of neutralizing these noxious foes. While regular weapons may deal reduced damage, explosives and armor-piercing ammunition can exploit their vulnerabilities and swiftly dispatch them.</p>
@@ -84,6 +89,7 @@ export const bestiary = [{
     stratagems: [Stratagem.Railgun, Stratagem.Autocannon, Stratagem.RecoillessRifle, Stratagem.Flamethrower, Stratagem.ExpendableAntiTank, Stratagem.ShieldGeneratorPack, Stratagem.JumpPack, Stratagem.OrbitalRailcannonStrike, Stratagem.OrbitalPrecisionStrike],
     appearance: "The Charger presents a formidable threat on the battlefield, boasting a meter-thick exoskeleton that renders it nearly impervious to conventional weaponry. Its hulking frame and swift movements make it a daunting adversary, capable of unleashing devastating charges against unsuspecting Helldivers.",
     quicktip: "Their armor is next to impenetrable, but as is customary with bugs, their biggest weakness is their head. A well aim shot of heavy artillery will instantly take them out. Otherwise target their legs with heavy armor-piercing weapons or explosives to reveal their weak spots. Keep your distance, use obstacles, and coordinate with your squadmates to outmaneuver these armored behemoths.",
+    images: ["/images/bestiary/backdrop-charger.jpg", "/images/bestiary/backdrop-charger-bull.jpg"],
     tactics: `
       <p>When facing down a Charger, forget subtlety and finesse - this is a battle of brute force and rapid response. Chargers are the armored juggernauts of the Terminid horde, bulldozing their way through anything that stands in their path.</p>
       <p>Your best bet for taking down these armored monstrosities? Aim for the head for the big guns. A well placed heavy explosive round will instantly send them bug heaven. If you didn't bring your glassses, instead aim for their legs with your heaviest armor-piercing weaponry and blast away until you see sparks fly. Break through their armored plating, and you'll reveal the juicy bits underneath - aim for those, and you'll be sending these oversized bugs back to the scrap heap in no time.</p>
@@ -95,6 +101,7 @@ export const bestiary = [{
     stratagems: [Stratagem.AntiMaterielRifle, Stratagem.Railgun, Stratagem.LaserCannon, Stratagem.Autocannon, Stratagem.MortarSentry],
     appearance: "Behold, the Brood Commander - a towering monstrosity of armored menace, leading the Terminid horde with a ruthless determination to crush democracy beneath its spiky claws. With its imposing presence and commanding aura, it strikes fear into the hearts of even the most battle-hardened Helldivers.",
     quicktip: "These armored giants may be slower, but they bring a swarm of critters ready to wreak havoc. Target their vulnerable limbs to slow their advance, but stay wary - even headless, they're dangerous. Keep your distance, keep moving, and rain down firepower until they're down for the count.",
+    images: ["/images/bestiary/backdrop-brood-commander.jpg"],
     tactics: `
       <p>When facing off against a Brood Commander, you're in for a fight unlike any other. These armored behemoths may be slower than their brethren, but make no mistake - they're just as deadly. They bring a whole swarm of critters along with them, ready to unleash chaos at a moment's notice. But fear not, Helldiver, for where there's armor, there's weakness. While the Brood Commander may be encased in thick plating, its limbs are vulnerable targets ripe for destruction. Aim true and blast away at its legs, sending chunks of armor flying and slowing its advance to a crawl.</p>
       <p>And don't be fooled by its headless charge - even without a noggin, this beast is still a force to be reckoned with. Keep your distance, stay on the move, and rain down a hail of bullets until it collapses in a heap of twisted metal and shattered dreams.</p>
@@ -105,6 +112,7 @@ export const bestiary = [{
     stratagems: [Stratagem.Railgun, Stratagem.Autocannon, Stratagem.ExpendableAntiTank, Stratagem.JumpPack, Stratagem.Eagle110mmRocketPods, Stratagem.Eagle500KGBomb, Stratagem.OrbitalRailcannonStrike, Stratagem.OrbitalPrecisionStrike],
     appearance: "Prepare yourselves, Helldivers, for the ultimate test of courage and firepower - the monstrous Bile Titan. This towering bug, resembling a grotesque amalgamation of arachnid and nightmare, strides across the battlefield on four enormous legs, casting a sinister shadow over all who dare to oppose it. Its chitinous exoskeleton gleams with a sickly sheen, adorned with jagged spikes that serve as a grim reminder of its deadly capabilities.",
     quicktip: "These massive bugs are no joke, with acid attacks that can melt through anything in their path. Stay back, coordinate with your team, and use the terrain to your advantage. Aim for its mouth and vulnerable sacs to deal maximum damage.",
+    images: ["/images/bestiary/backdrop-bile-titan.jpg"],
     tactics: `
       <p>Engaging a Bile Titan is not for the faint of heart, nor the ill-prepared. These behemoths of bugkind are among the toughest enemies you'll face, their massive frames and relentless attacks posing a formidable challenge to even the most seasoned Helldivers.</p>
       <p>But fear not, for where there's a will, there's a way - and with the right strategy, even the mightiest Titan can be brought to its knees. When confronting one of these hulking monstrosities, remember the following:</p>

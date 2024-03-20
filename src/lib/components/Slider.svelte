@@ -1,5 +1,5 @@
 <script>
-	import TinySlider from "svelte-tiny-slider";
+	import TinySlider from "svelte-tiny-slider"
 	import SliderControl from "$lib/components/SliderControl.svelte"
 </script>
 

@@ -1,12 +1,13 @@
 <script>
 	import Hero from "$lib/components/Hero.svelte"
+	import Slider from "$lib/components/Slider.svelte";
 	import StratagemLink from "$lib/components/StratagemLink.svelte"
 	import { toSlug } from "$lib/utils/route"
 
   export let data
 
   $: ({ faction, enemy } = data)
-  $: ({ name, appearance, tactics, quicktip, stratagems } = enemy)
+  $: ({ name, appearance, tactics, quicktip, stratagems, images } = enemy)
 </script>
 
 <svelte:head>
@@ -27,6 +28,18 @@
   <div class="description">
     <h2 class="mt-1 mb-1/2">Appearance</h2>
     <p>{appearance || ""}</p>
+
+    {#if images?.length}
+      {#if images.length === 1}
+        <img class="slide single" loading="lazy" width="800" height="500" src={images[0]} alt="" />
+      {:else}
+        <Slider>
+          {#each images as src}
+            <img class="slide" loading="lazy" width="800" height="500" {src} alt="" />
+          {/each}
+        </Slider>
+      {/if}
+    {/if}
 
     <h2 class="mt-1 mb-1/2">Battlefield Tactics</h2>
     {#if quicktip}
@@ -73,5 +86,16 @@
     flex-direction: column;
     gap: $margin * 0.25;
     max-width: $text-limit;
+  }
+
+  .slide {
+    max-width: clamp(250px, 50vw, $text-limit);
+    height: auto;
+    border: 3px solid $primary;
+
+    &.single {
+      max-width: $text-limit;
+      margin-top: $margin;
+    }
   }
 </style>
