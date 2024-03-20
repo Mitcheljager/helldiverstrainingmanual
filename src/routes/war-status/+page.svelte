@@ -25,9 +25,11 @@
   $: formattedCampaigns = formatCampaigns(status, info)
 
   onMount(() => {
-    if (browser) statusInterval = setInterval(async () => status = await api("war/status") || {}, 20000)
-    if (browser) infoInterval = setInterval(async () => info = await api("war/info") || {}, 300000)
-    if (browser) statsInterval = setInterval(async () => galaxyStats = await api(`war/stats`) || {}, 60000)
+    if (!browser) return
+
+    statusInterval = setInterval(async () => status = await api("war/status") || {}, 20000)
+    infoInterval = setInterval(async () => info = await api("war/info") || {}, 300000)
+    statsInterval = setInterval(async () => galaxyStats = await api(`war/stats`) || {}, 60000)
   })
 
   onDestroy(() => {
