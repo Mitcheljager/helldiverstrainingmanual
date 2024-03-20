@@ -79,7 +79,7 @@
   }
 
   function setZoom(increase) {
-    zoom = Math.max(1, Math.min(3, zoom + increase))
+    zoom = Math.max(1, Math.min(4, zoom + increase))
   }
 
   async function bindImpetus() {

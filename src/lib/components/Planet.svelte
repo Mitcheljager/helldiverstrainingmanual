@@ -83,8 +83,8 @@
     left: calc(50% + (var(--inner-map-width) / 2) * var(--x) * var(--zoom));
     top: calc(50% + (var(--inner-map-width) / 2) * var(--y) * var(--zoom) * -1);
     transform: translateX(-50%) translateY(-50%);
-    width: calc(var(--size) * var(--zoom));
-    height: calc(var(--size) * var(--zoom));
+    width: calc(var(--size) * min(var(--zoom), 3));
+    height: calc(var(--size) * min(var(--zoom), 3));
     padding: 0;
     border: 0;
     border-radius: 50%;
