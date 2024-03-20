@@ -1,4 +1,5 @@
 <script>
+	import { browser } from "$app/environment"
 	import { api } from "$lib/api/api"
 	import { planetData } from "$lib/data/planets"
 	import { secondsToDaysWithHours } from "$lib/utils/datetime"
@@ -9,7 +10,7 @@
   let interval
 
   onMount(() => {
-    interval = setInterval(get, 120000)
+    if (browser) interval = setInterval(get, 120000)
     get()
   })
 

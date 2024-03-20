@@ -1,4 +1,5 @@
 <script>
+	import { browser } from "$app/environment"
 	import { api } from "$lib/api/api"
   import { onDestroy, onMount } from "svelte"
 
@@ -11,7 +12,7 @@
   $: parsedMessages = parseMessages(news)
 
   onMount(() => {
-    interval = setInterval(get, 120000)
+    if (browser) interval = setInterval(get, 120000)
     get()
   })
 
