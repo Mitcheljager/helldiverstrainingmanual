@@ -73,7 +73,7 @@
     if (currentIndex === sequence.length) return
     if (!["w", "ArrowUp", "du", "s", "ArrowDown", "dd", "a", "ArrowLeft", "dl", "d", "ArrowRight", "dr"].includes(key)) return
 
-    event?.preventDefault()
+    if (typeof event.preventDefault === "function") event.preventDefault()
 
     const current = sequence[currentIndex]
 
