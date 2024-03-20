@@ -4,6 +4,7 @@
 	import { planetData } from "$lib/data/planets"
 	import { secondsToDaysWithHours } from "$lib/utils/datetime"
   import { onDestroy, onMount } from "svelte"
+	import LocateOnMap from "./LocateOnMap.svelte";
 
   let loading = true
   let majorOrders = []
@@ -53,6 +54,7 @@
             {#each setting.tasks as { type, values }}
               <div class="task">
                 {#if type === 11}
+                  <LocateOnMap planetIndex={values[2]} />
                   {planetData[values[2]]?.name}
                 {/if}
               </div>
