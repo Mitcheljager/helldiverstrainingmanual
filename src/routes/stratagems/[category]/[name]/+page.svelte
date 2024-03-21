@@ -80,7 +80,7 @@
     }
   }
 
-	.category {
-		display: flex;
-	}
+  .category {
+    display: flex;
+  }
 </style>
