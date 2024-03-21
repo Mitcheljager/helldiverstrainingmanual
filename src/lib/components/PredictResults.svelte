@@ -54,7 +54,7 @@
       return
     }
 
-    const history = await fetchHistory(planetIndex, { limit: 2 })
+    const history = await fetchHistory(planetIndex, { type: "short" })
     if (history) calculateTimeTo100(history)
   }
 </script>

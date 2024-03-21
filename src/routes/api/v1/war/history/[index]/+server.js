@@ -3,8 +3,14 @@ import { supabase } from '$lib/db'
 export async function GET({ url, params }) {
   const headers = { "Content-Type": "application/json" }
 
-  const max = 288
-  const limit = Math.min(parseInt(url.searchParams.get("limit") || max.toString()), max) - 1
+  const type = url.searchParams.get("type") || "daily"
+  const limits = {
+    short: "2",
+    daily: "288"
+  }
+
+  const limit = limits[type]
+  if (!limit) throw new Error("Incorrect type given")
 
   try {
     const { data, error } = await supabase

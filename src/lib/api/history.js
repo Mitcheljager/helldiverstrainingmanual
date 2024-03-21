@@ -1,9 +1,21 @@
 import { supabase } from "$lib/db"
 import { api } from "$lib/api/api"
+import { addCache, getCache } from "$lib/api/cache"
 
-export async function fetchHistory(planetIndex, { limit = 288 } = {}) {
+export async function fetchHistory(planetIndex, { type = "daily" } = {}) {
+  const key = `history_${planetIndex}_${type}`
+  const cached = await getCache(key, { storeOnly: true })
+
+  if (cached) return cached
+
   try {
-    return await api(`war/history/${planetIndex}?limit=${limit}`) || {}
+    const data = await api(`war/history/${planetIndex}?type=${type}`) || {}
+
+    if (!data) return
+
+    addCache(key, data, 20000, { storeOnly: true })
+
+    return data
   } catch (error) {
     console.error(error)
   }
