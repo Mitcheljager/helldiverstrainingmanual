@@ -23,7 +23,10 @@
     </div>
   </Hero>
 
-  <strong>Bestiary / {faction.faction}</strong>
+  <strong class="category">
+    <a href="/bestiary">Bestiary </a>&nbsp;/&nbsp;
+    <a href="/bestiary/{toSlug(faction.faction)}">{faction.faction}</a>
+  </strong>
 
   <div class="description">
     <h2 class="mt-1 mb-1/2">Appearance</h2>
@@ -61,6 +64,16 @@
 {/key}
 
 <style lang="scss">
+  a {
+    display: grid;
+    align-items: flex-end;
+    color: $text-color;
+    text-decoration: none;
+
+    &:hover {
+      color: $white;
+    }
+  }
   .image {
     display: flex;
     align-items: center;
@@ -97,5 +110,9 @@
       max-width: $text-limit;
       margin-top: $margin;
     }
+  }
+
+  .category {
+    display: flex;
   }
 </style>
