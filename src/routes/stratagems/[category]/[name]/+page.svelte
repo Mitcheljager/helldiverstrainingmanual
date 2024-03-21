@@ -26,9 +26,9 @@
 
     <div>
       <strong class="category">
-				<a href="/stratagems">Stratagems </a>&nbsp;/&nbsp;
-				<a href="/stratagems/{toSlug(category.category)}">{category.category}</a>
-			</strong>
+        <a href="/stratagems">Stratagems </a>&nbsp;/&nbsp;
+        <a href="/stratagems/{toSlug(category.category)}">{category.category}</a>
+      </strong>
 
       {#if "cost" in stratagem}
         <div class="cost">
