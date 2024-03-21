@@ -78,8 +78,11 @@ export const bestiary = [{
     images: ["/images/bestiary/backdrop-nursing-spewer.jpg", "/images/bestiary/backdrop-bile-spewer.jpg"],
     tactics: `
       <p>Bile Spewers pose a significant threat to Helldivers, relentlessly bombarding their targets with streams of corrosive bile from a distance. Their acidic attacks can inflict substantial damage and hinder the movement of their adversaries, making them formidable adversaries on the battlefield.</p>
-      <p>Targeting the back of Bile Spewers with explosives or aiming for their heads is the most effective method of neutralizing these noxious foes. While regular weapons may deal reduced damage, explosives and armor-piercing ammunition can exploit their vulnerabilities and swiftly dispatch them.</p>
-      <p>A well-placed grenade or railgun shot to the head can often incapacitate or eliminate Bile Spewers with ease, while high-explosive rounds from a grenade launcher can neutralize them in just a few shots. Nursing Spewers, a sub-adult variant, possess similar traits but exhibit reduced tracking and damage on their attacks.</p>
+      <h3>Nursing Spewers</h3>
+      <p>Targeting the back of Bile Spewers with explosives or aiming for their heads is the most effective method of neutralizing these noxious foes. Explosives and armor-piercing ammunition can exploit their vulnerabilities and swiftly dispatch them.</p>
+      <p>A well-placed grenade or railgun shot to the head can often incapacitate or eliminate Spewers with ease, while high-explosive rounds from a grenade launcher can neutralize them in just a few shots.</p>
+      <h3>Bile Spewer</h3>
+      <p>A more threatening Spewer variant, the Bile Spewer, possess similar traits but exhibit increased tracking and damage on their attacks. As well as vastly improved resillience to light ammunition.</p>
       <p>It is imperative to remain vigilant, as Bile Spewers can transition into mortar mode when positioned at a distance, unleashing volleys of acidic projectiles capable of devastating Helldivers caught in their path.</p>
       <p>Engaging Bile Spewers demands precision and agility, as their highly corrosive attacks and chitinous armor pose significant challenges to Helldivers. Prioritize targeting their vulnerable abdomens and employ rapid-fire weaponry, explosives, and high-impact ordnance to neutralize these noxious adversaries and secure victory for Super Earth.</p>
       <p>Rare White Spewers present an unknown challenge to Helldivers, requiring further study to ascertain their capabilities.</p>
@@ -87,12 +90,12 @@ export const bestiary = [{
   }, {
     name: "Charger",
     stratagems: [Stratagem.Railgun, Stratagem.Autocannon, Stratagem.RecoillessRifle, Stratagem.Flamethrower, Stratagem.ExpendableAntiTank, Stratagem.ShieldGeneratorPack, Stratagem.JumpPack, Stratagem.OrbitalRailcannonStrike, Stratagem.OrbitalPrecisionStrike],
-    appearance: "The Charger presents a formidable threat on the battlefield, boasting a meter-thick exoskeleton that renders it nearly impervious to conventional weaponry. Its hulking frame and swift movements make it a daunting adversary, capable of unleashing devastating charges against unsuspecting Helldivers.",
+    appearance: "The Charger presents a formidable threat on the battlefield, boasting a meter-thick exoskeleton that renders it nearly impervious to conventional weaponry. Its hulking frame and swift movements make it a daunting adversary, capable of unleashing devastating charges against unsuspecting Helldivers. There are two variants of the Charger, believed to be a male and female variants, but no mating patterns have been observed. The \"bull\" appears to be more heavily armored, but in practice they are equal in resillience, strength, and intelligence.",
     quicktip: "Their armor is next to impenetrable, but as is customary with bugs, their biggest weakness is their head. A well aim shot of heavy artillery will instantly take them out. Otherwise target their legs with heavy armor-piercing weapons or explosives to reveal their weak spots. Keep your distance, use obstacles, and coordinate with your squadmates to outmaneuver these armored behemoths.",
     images: ["/images/bestiary/backdrop-charger.jpg", "/images/bestiary/backdrop-charger-bull.jpg"],
     tactics: `
       <p>When facing down a Charger, forget subtlety and finesse - this is a battle of brute force and rapid response. Chargers are the armored juggernauts of the Terminid horde, bulldozing their way through anything that stands in their path.</p>
-      <p>Your best bet for taking down these armored monstrosities? Aim for the head for the big guns. A well placed heavy explosive round will instantly send them bug heaven. If you didn't bring your glassses, instead aim for their legs with your heaviest armor-piercing weaponry and blast away until you see sparks fly. Break through their armored plating, and you'll reveal the juicy bits underneath - aim for those, and you'll be sending these oversized bugs back to the scrap heap in no time.</p>
+      <p>Your best bet for taking down these armored monstrosities? Aim for the head for the big guns. A well placed heavy explosive round will instantly send them to bug heaven. If you didn't bring your glassses, instead aim for their legs with your heaviest armor-piercing weaponry and blast away until you see sparks fly. Break through their armored plating, and you'll reveal the juicy bits underneath - aim for those, and you'll be sending these oversized bugs back to the scrap heap in no time.</p>
       <p>But if you're short on anti-armor firepower, fear not - explosives are your best friend. Lob a grenade or call in an airstrike to create weak spots in their tough exterior, then unload everything you've got into those chinks in their armor. It's like cracking open a nut - if the nut was the size of a small tank and wanted to crush you into paste.</p>
       <p>Remember, when tangling with Chargers, it's all about staying one step ahead of their thunderous charges. Keep your distance, use obstacles to your advantage, and work together with your squadmates to outmaneuver these armored behemoths. And whatever you do, don't let them get too close - you'll regret it faster than you can say "bug squashed."</p>
     `
@@ -117,14 +120,15 @@ export const bestiary = [{
       <p>Engaging a Bile Titan is not for the faint of heart, nor the ill-prepared. These behemoths of bugkind are among the toughest enemies you'll face, their massive frames and relentless attacks posing a formidable challenge to even the most seasoned Helldivers.</p>
       <p>But fear not, for where there's a will, there's a way - and with the right strategy, even the mightiest Titan can be brought to its knees. When confronting one of these hulking monstrosities, remember the following:</p>
       <ul>
-          <li><strong>Keep Your Distance:</strong> The Bile Titan's acid attacks are devastating, capable of melting through armor and flesh alike. Maintain a safe distance at all times, and avoid getting caught in the crossfire.</li>
-          <li><strong>Coordinate with Your Teammates:</strong> Bait the Titan and work together to exploit its weaknesses. While it's focused on one Helldiver, the others can target its vulnerable spots and chip away at its armor.</li>
-          <li><strong>Use the Terrain to Your Advantage:</strong> Seek cover behind rocks, buildings, and other obstacles to evade the Titan's attacks. High ground can also give you a strategic advantage, allowing you to rain down fire from above while staying out of harm's way.</li>
+        <li><strong>Keep Your Distance:</strong> The Bile Titan's acid attacks are devastating, capable of melting through armor and flesh alike. Maintain a safe distance at all times, and avoid getting caught in the crossfire.</li>
+        <li><strong>Coordinate with Your Teammates:</strong> Bait the Titan and work together to exploit its weaknesses. While it's focused on one Helldiver, the others can target its vulnerable spots and chip away at its armor.</li>
+        <li><strong>Use the Terrain to Your Advantage:</strong> Seek cover behind rocks, buildings, and other obstacles to evade the Titan's attacks. High ground can also give you a strategic advantage, allowing you to rain down fire from above while staying out of harm's way.</li>
       </ul>
       <p>As for targeting the Titan's weak spots, aim for its mouth and the vulnerable sacs beneath its body. These are the points where its armor is thinnest, making them prime targets for your firepower. Utilize anti-tank weapons, explosives, and precision stratagems to maximize your damage and bring the Titan to its knees.</p>
     `
   }, {
     name: "Shrieker",
+    stratagems: [Stratagem.ArcThrower, Stratagem.PatriotExosuit, Stratagem.Eagle500KGBomb],
     appearance: "I'm sure by now you've heard the rumors of flying bugs... Don't be ridiculous, bugs don't fly! Preposterous! There's been some imagery making the rounds that seems to suggest otherwise. Don't be fooled. These so-called \"flying bugs\" are nothing more than propaganda spread by communists, all in an sad attempt to threaten our democracy. Now get back to doing your duty, Helldiver.",
     images: ["/images/bestiary/backdrop-shrieker.jpg"],
     tactics: `
