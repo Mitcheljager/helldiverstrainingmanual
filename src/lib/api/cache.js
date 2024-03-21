@@ -6,7 +6,7 @@ export async function getCache(key) {
   if (cachedInStore) return cachedInStore
 
   try {
-    const dbCache = await redis.get(key)
+    const dbCache = redis ? await redis.get(key) : null
 
     if (!dbCache) return null
     if (Date.now() > dbCache?.expiresAt) return null
@@ -22,5 +22,10 @@ export async function addCache(key, data, ttl = 1000) {
   const expiresAt = Date.now() + ttl
 
   apiCache.set(key, data, ttl)
-  redis.set(key, JSON.stringify({ data, expiresAt }))
+
+  try {
+    if (redis) redis.set(key, JSON.stringify({ data, expiresAt }))
+  } catch {
+    // ignore
+  }
 }
