@@ -1,7 +1,6 @@
-import { createClient } from "redis"
+import { Redis } from "@upstash/redis"
 
-export const redis = createClient({
-	url: import.meta.env.REDIS_CONNECTION_STRING,
+export const redis = new Redis({
+  url: import.meta.env.VITE_REDIS_HOSTNAME,
+  token: import.meta.env.VITE_REDIS_UPSTASH_TOKEN,
 })
-
-redis.connect()

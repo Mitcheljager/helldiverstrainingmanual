@@ -5,13 +5,17 @@ export async function getCache(key) {
   const cachedInStore = apiCache.check(key)
   if (cachedInStore) return cachedInStore
 
-  const dbCache = await redis.get(key)
-  const data = dbCache ? JSON.parse(dbCache) : null
+  try {
+    const dbCache = await redis.get(key)
 
-  if (!data) return null
-  if (Date.now() > data?.expiresAt) return null
+    if (!dbCache) return null
+    if (Date.now() > dbCache?.expiresAt) return null
 
-  return data?.data
+    return dbCache?.data
+  } catch(e) {
+    console.log(e)
+    return null
+  }
 }
 
 export async function addCache(key, data, ttl = 1000) {
