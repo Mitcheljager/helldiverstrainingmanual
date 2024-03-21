@@ -13,7 +13,7 @@ export async function fetchHistory(planetIndex, { type = "daily" } = {}) {
 
     if (!data) return
 
-    addCache(key, data, 20000, { storeOnly: true })
+    addCache(key, data, 180000, { storeOnly: true })
 
     return data
   } catch (error) {
