@@ -55,14 +55,17 @@
   }
 
   a {
-    display: grid;
-    align-items: flex-end;
     color: $text-color;
     text-decoration: none;
 
     &:hover {
       color: $white;
     }
+  }
+
+  .category {
+    display: flex;
+    flex-wrap: wrap;
   }
 
   .info {
@@ -78,9 +81,5 @@
     strong {
       color: $white;
     }
-  }
-
-  .category {
-    display: flex;
   }
 </style>
