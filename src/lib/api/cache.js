@@ -1,25 +1,22 @@
-import { supabase } from "$lib/db"
+import { redis } from "$lib/redis"
 import { apiCache } from "$lib/stores/cache"
 
-export async function getCache(key, ttl) {
+export async function getCache(key) {
   const cachedInStore = apiCache.check(key)
   if (cachedInStore) return cachedInStore
 
-  const expiresAt = new Date().toISOString()
+  const dbCache = await redis.get(key)
+  const data = dbCache ? JSON.parse(dbCache) : null
 
-  const dbCache = await supabase.from("cache").select("expires_at, data").gte("expires_at", expiresAt).eq("key", key)
-  const data = dbCache?.data?.[0]?.data
+  if (!data) return null
+  if (Date.now() > data?.expiresAt) return null
 
-  if (data) apiCache.set(key, data, ttl)
-
-  return data
+  return data?.data
 }
 
 export async function addCache(key, data, ttl = 1000) {
-  const now = new Date(Date.now() + ttl).toISOString()
+  const expiresAt = Date.now() + ttl
 
   apiCache.set(key, data, ttl)
-
-  const { error } = await supabase.from("cache").upsert({ key, data, expires_at: now }, { onConflict: "key" }).select()
-  if (error) console.error(error)
+  redis.set(key, JSON.stringify({ data, expiresAt }))
 }

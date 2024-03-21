@@ -1,7 +1,7 @@
 <script>
 	import { browser } from "$app/environment"
 	import { fetchOwnershipForPlanet } from "$lib/api/ownership.js"
-	import { fetchStatsForPlanet } from "$lib/api/stats.js"
+	import { fetchStatsForPlanet } from "$lib/api/planets.js"
 	import EnvironmentalTooltip from "$lib/components/EnvironmentalTooltip.svelte"
 	import Hero from "$lib/components/Hero.svelte"
 	import OwnershipRecord from "$lib/components/OwnershipRecord.svelte"

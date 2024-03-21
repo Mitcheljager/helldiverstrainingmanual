@@ -5,7 +5,7 @@ const options = { headers: { "Accept-Language": "en-US" } }
 
 export async function fetchStatus(fetch, { bypassCache = false } = {}) {
   const key = "status"
-  const cached = await getCache(key, 20000)
+  const cached = await getCache(key)
 
   if (!bypassCache && cached) return cached
 
@@ -25,7 +25,7 @@ export async function fetchStatus(fetch, { bypassCache = false } = {}) {
 
 export async function fetchInfo(fetch, { bypassCache = false } = {}) {
   const key = "info"
-  const cached = await getCache(key, 300000)
+  const cached = await getCache(key)
 
   if (!bypassCache && cached) return cached
 
@@ -49,7 +49,7 @@ export async function fetchInfo(fetch, { bypassCache = false } = {}) {
 
 export async function fetchNews(fetch, from = 0) {
   const key = "news"
-  const cached = await getCache(key, 120000)
+  const cached = await getCache(key)
 
   if (cached) return cached
 
@@ -69,7 +69,7 @@ export async function fetchNews(fetch, from = 0) {
 
 export async function fetchMajorOrders(fetch) {
   const key = "major-orders"
-  const cached = await getCache(key, 120000)
+  const cached = await getCache(key)
 
   if (cached) return cached
 

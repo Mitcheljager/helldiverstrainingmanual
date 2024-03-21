@@ -1,11 +1,11 @@
 import { addCache, getCache } from "$lib/api/cache"
-import { api } from "./api"
+import { api } from "$lib/api/api"
 
 const ttl = 60000
 
 export async function fetchStats(fetch) {
   const key = "stats"
-  const cached = await getCache(key, ttl)
+  const cached = await getCache(key)
 
   if (cached) return cached
 
@@ -18,14 +18,6 @@ export async function fetchStats(fetch) {
     addCache(key, parsed, ttl)
 
     return parsed
-  } catch (error) {
-    console.error(error)
-  }
-}
-
-export async function fetchStatsForPlanet(index) {
-  try {
-    return await api(`war/stats/${index}`)
   } catch (error) {
     console.error(error)
   }
