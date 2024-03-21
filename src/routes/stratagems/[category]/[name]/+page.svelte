@@ -25,7 +25,10 @@
     <img src="/images/stratagems/{toSlug(stratagem.name)}.svg" alt="" width="80" height="80" />
 
     <div>
-      <strong>Stratagems / {category.category}</strong>
+      <strong class="category">
+        <a href="/stratagems">Stratagems </a>&nbsp;/&nbsp;
+        <a href="/stratagems/{toSlug(category.category)}">{category.category}</a>
+      </strong>
 
       {#if "cost" in stratagem}
         <div class="cost">
@@ -51,6 +54,17 @@
     background: $bg-base;
   }
 
+  a {
+    display: grid;
+    align-items: flex-end;
+    color: $text-color;
+    text-decoration: none;
+
+    &:hover {
+      color: $white;
+    }
+  }
+
   .info {
     display: flex;
     align-items: center;
@@ -64,5 +78,9 @@
     strong {
       color: $white;
     }
+  }
+
+  .category {
+    display: flex;
   }
 </style>
