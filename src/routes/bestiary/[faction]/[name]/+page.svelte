@@ -89,9 +89,13 @@
   }
 
   .slide {
-    max-width: clamp(250px, 50vw, $text-limit);
+    max-width: min(calc(100vw - $margin), 400px);
     height: auto;
     border: 3px solid $primary;
+
+    @include breakpoint(md) {
+      max-width: clamp(250px, 50vw, $text-limit);
+    }
 
     &.single {
       max-width: $text-limit;

@@ -23,10 +23,20 @@
   .slider {
     position: relative;
     max-width: $text-limit * 1.5;
-    margin: $margin * 0.5 0 0;
+    padding: 0 $margin * 0.5;
+    margin: $margin * 0.5 $margin * -0.5 0;
 
     @include breakpoint(md) {
+      padding: 0;
       margin: $margin $margin * -0.5 0;
+    }
+
+    :global(.slider) {
+      overflow: visible;
+
+      @include breakpoint(md) {
+        overflow: hidden;
+      }
     }
   }
 
@@ -40,7 +50,7 @@
 		width: 3rem;
 		height: 3rem;
 		padding: 0;
-		margin: 0;
+		margin: 0 0 0 $margin * 0.75;
 		border: 0;
 		border-radius: 50%;
 		background: $white;
@@ -49,6 +59,10 @@
 		z-index: 2;
 		cursor: pointer;
 
+    @include breakpoint(md) {
+      margin-left: 0
+    }
+
     &:hover {
       opacity: 1;
     }
@@ -56,6 +70,7 @@
     &.right {
       left: auto;
       right: 0;
+      margin: 0 $margin * 0.75 0 0;
       transform: translateX(50%) translateY(-50%);
     }
 

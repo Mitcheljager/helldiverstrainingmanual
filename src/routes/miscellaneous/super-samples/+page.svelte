@@ -18,7 +18,7 @@
 
 <Slider>
   {#each { length: 6 } as _, index}
-    <img class="slide" loading="lazy" src="/images/content/super-samples/super-samples-{index + 1}.jpg" alt="Super sample example {index + 1}" />
+    <img class="slide" loading="lazy" src="/images/content/super-samples/super-samples-{index + 1}.jpg" height="850" width="782" alt="Super Sample example {index + 1}" />
   {/each}
 </Slider>
 
@@ -33,7 +33,7 @@
 
 <Slider>
   {#each { length: 4 } as _, index}
-    <img class="slide" loading="lazy" src="/images/content/super-samples/depleted-super-samples-{index + 1}.jpg" alt="Super sample example {index + 1}" />
+    <img class="slide" loading="lazy" src="/images/content/super-samples/depleted-super-samples-{index + 1}.jpg" height="850" width="782" alt="Depleted Super Sample example {index + 1}" />
   {/each}
 </Slider>
 
@@ -53,6 +53,7 @@
 
   .slide {
     max-width: clamp(250px, 50vw, 350px);
+    height: auto;
     border: 3px solid $primary;
   }
 </style>
