@@ -1,7 +1,6 @@
 import { addCache, getCache } from "$lib/api/cache"
-import { api } from "$lib/api/api"
 
-const ttl = 60000
+const ttl = 300000
 
 export async function fetchStats(fetch) {
   const key = "stats"
