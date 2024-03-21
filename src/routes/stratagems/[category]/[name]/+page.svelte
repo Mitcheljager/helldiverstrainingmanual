@@ -1,11 +1,9 @@
 <script>
-	import Hero from '$lib/components/Hero.svelte';
-	import Stratagem from '$lib/components/Stratagem.svelte';
-	import { toSlug } from '$lib/utils/route';
+	import Hero from "$lib/components/Hero.svelte"
+	import Stratagem from "$lib/components/Stratagem.svelte"
+	import { toSlug } from "$lib/utils/route"
 
 	export let data;
-
-	console.log(data);
 
 	$: ({ category, stratagem } = data);
 </script>
@@ -52,6 +50,14 @@
 {/key}
 
 <style lang="scss">
+	img {
+		width: 5rem;
+		height: 5rem;
+		border: 5px solid $bg-dark;
+		padding: 5px;
+		background: $bg-base;
+	}
+
 	a {
 		display: grid;
 		align-items: flex-end;
@@ -61,14 +67,6 @@
 		&:hover {
 			color: $white;
 		}
-	}
-
-	img {
-		width: 5rem;
-		height: 5rem;
-		border: 5px solid $bg-dark;
-		padding: 5px;
-		background: $bg-base;
 	}
 
 	.info {
