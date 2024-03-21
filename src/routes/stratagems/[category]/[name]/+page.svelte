@@ -54,16 +54,16 @@
     background: $bg-base;
   }
 
-	a {
-		display: grid;
-		align-items: flex-end;
-		color: $text-color;
-		text-decoration: none;
+  a {
+    display: grid;
+    align-items: flex-end;
+    color: $text-color;
+    text-decoration: none;
 
-		&:hover {
-			color: $white;
-		}
-	}
+    &:hover {
+      color: $white;
+    }
+  }
 
   .info {
     display: flex;
