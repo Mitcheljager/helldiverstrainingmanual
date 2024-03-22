@@ -1,5 +1,6 @@
 <script>
 	import { browser } from "$app/environment"
+	import { api } from "$lib/api/api.js";
 	import { fetchOwnershipForPlanet } from "$lib/api/ownership.js"
 	import { fetchStatsForPlanet } from "$lib/api/planets.js"
 	import EnvironmentalTooltip from "$lib/components/EnvironmentalTooltip.svelte"
@@ -68,7 +69,7 @@
     {#if !index || !browser}
       Loading...
     {:else}
-      {#await fetchOwnershipForPlanet(index)}
+      {#await api(`war/ownership/${index}`)}
         Loading...
       {:then records}
         {#each records as record}
