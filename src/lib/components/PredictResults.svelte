@@ -27,7 +27,7 @@
   })
 
   function calculateTimeTo100(history) {
-    average = history.map(i => 100 - (100 / i.max_health * i.current_health)).reduce((a, b) => a + b) / history.length
+    average = history.map(i => 100 - (100 / i.max_health * i.current_health)).reduce((a, b) => a + b, 0) / history.length
 
     const firstEntryTime = history.length > 0 ? new Date(history[history.length - 1].created_at).getTime() : Date.now()
     const interval = Math.max(1, (Date.now() - firstEntryTime) / 1000)

@@ -83,7 +83,7 @@
       {#if Object.entries(data).length < 200}
         <em class="mt-1/4" in:slide|global={{ duration: 100 }}>
           {#if Object.entries(data).length === 0}
-            No activity has been recorded on this planet
+            No activity has been recorded on this planet in the last 24 hours
           {:else}
             This data is still populating
           {/if}

@@ -12,10 +12,13 @@ export async function GET({ url, params }) {
   const limit = limits[type]
   if (!limit) throw new Error("Incorrect type given")
 
+  const from = new Date(new Date().getTime() - 86400000).toISOString()
+
   try {
     const { data, error } = await supabase
       .from("history")
       .select("created_at, planet_index, current_health, max_health, player_count")
+      .gte("created_at", from)
       .eq("planet_index", params.index)
       .order("created_at", { ascending: false })
       .range(0, limit)
