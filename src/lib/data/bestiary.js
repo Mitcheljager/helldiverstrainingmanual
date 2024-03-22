@@ -62,7 +62,7 @@ export const bestiary = [{
     stratagems: [Stratagem.AntiMaterielRifle, Stratagem.Railgun, Stratagem.JumpPack, Stratagem.EagleSmokeStrike, Stratagem.OrbitalSmokeStrike, Stratagem.AutocannonSentry],
     appearance: "Stalkers epitomize stealth and subterfuge within the Terminid ranks, lurking in the shadows and striking with lethal precision. Camouflaged amidst the darkness, these formidable adversaries blend seamlessly into their surroundings, making them notoriously difficult to detect.",
     quicktip: `These ferocious beasts might think they are cloaked, but a keen eye will spot them from a mile away. Upon sight prioritise finding their hideout, heading towards the direction they came from. Killing them only goes so far when their backup is ready on speed dial.`,
-    images: ["/images/bestiary/backdrop-stalker.jpg"],
+    images: ["/images/bestiary/backdrop-stalker-nest-1.jpg", "/images/bestiary/backdrop-stalker.jpg"],
     tactics: `
       <p>Stalkers, the masters of deception, lurk within the shadows, patiently awaiting the perfect moment to strike with lethal precision. Their cunning maneuvers and lightning-fast assaults render them elusive targets, demanding sharp observation and lightning-quick reflexes to effectively neutralize.</p>
       <p>To unveil the presence of these stealthy foes, strategic utilization of Smoke Grenades or disturbance of spore clouds emitted from scattered eggs is paramount. Moving with the swiftness akin to their brethren, the Hunters, Stalkers employ similar tactics, utilizing their elongated tongues to ensnare and incapacitate their prey from afar.</p>
@@ -130,7 +130,7 @@ export const bestiary = [{
     name: "Shrieker",
     stratagems: [Stratagem.ArcThrower, Stratagem.PatriotExosuit, Stratagem.Eagle500KGBomb],
     appearance: "I'm sure by now you've heard the rumors of flying bugs... Don't be ridiculous, bugs don't fly! Preposterous! There's been some imagery making the rounds that seems to suggest otherwise. Don't be fooled. These so-called \"flying bugs\" are nothing more than propaganda spread by communists, all in an sad attempt to threaten our democracy. Now get back to doing your duty, Helldiver.",
-    images: ["/images/bestiary/backdrop-shrieker.jpg"],
+    images: ["/images/bestiary/backdrop-shrieker-nest-2.jpg", "/images/bestiary/backdrop-shrieker-nest-1.jpg", "/images/bestiary/backdrop-shrieker-nest-3.jpg", "/images/bestiary/backdrop-shrieker.jpg"],
     tactics: `
       <p>We need to deal with who ever is spreading these lies. They have even gone as far as to construct fake nests in order to make their sad attempts at deceit more convincing. But we know better. Nevertheless, we need to deal with these threats. These "nests" can be spotted from the other side of the planet, sticking out like a Christmas tree on a beach holiday.</p>
       <p>Heavy weaponary will deal with their lies before they are able to deploy their kites. You heard that right, kites. They think they are clever, releasing kites from their towers that resemble flying bugs. But let me tell you, it doesn't take a genius to see through their ruse, you can spot the strings attaching these kites to their "nests". Idiots.</p>
