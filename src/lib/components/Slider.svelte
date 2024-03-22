@@ -51,11 +51,10 @@
 		height: 3rem;
 		padding: 0;
 		margin: 0 0 0 $margin * 0.75;
-		border: 0;
+		border: 5px solid $bg-base;
 		border-radius: 50%;
-		background: $white;
+		background: $primary;
 		transform: translateX(-50%) translateY(-50%);
-		opacity: 0.75;
 		z-index: 2;
 		cursor: pointer;
 
@@ -64,7 +63,7 @@
     }
 
     &:hover {
-      opacity: 1;
+      background: $white;
     }
 
     &.right {
@@ -72,6 +71,10 @@
       right: 0;
       margin: 0 $margin * 0.75 0 0;
       transform: translateX(50%) translateY(-50%);
+
+      @include breakpoint(md) {
+        margin: 0;
+      }
     }
 
     :global(svg) {
