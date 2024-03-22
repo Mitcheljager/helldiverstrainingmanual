@@ -17,7 +17,7 @@
 <p>If you are on the hunt for these bad boys choose your missions wisely, selecting worlds with clear visibility and avoiding the treacherous jungles and sand planets where visibility is obscured. These pillars of goodness can be spotted from a mile away, that is if you can see a mile away.</p>
 
 <Slider>
-  {#each { length: 6 } as _, index}
+  {#each { length: 8 } as _, index}
     <img class="slide" loading="lazy" src="/images/content/super-samples/super-samples-{index + 1}.jpg" height="850" width="782" alt="Super Sample example {index + 1}" />
   {/each}
 </Slider>
