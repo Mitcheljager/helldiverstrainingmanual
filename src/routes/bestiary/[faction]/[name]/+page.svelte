@@ -106,7 +106,7 @@
     border: 3px solid $primary;
 
     @include breakpoint(md) {
-      max-width: clamp(250px, 50vw, $text-limit);
+      max-width: clamp(250px, 50vw, 650px);
     }
 
     &.single {
