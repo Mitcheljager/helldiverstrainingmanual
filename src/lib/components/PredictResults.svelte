@@ -12,6 +12,7 @@
   let estimatedEnd = null
   let average = 0
   let now = Date.now()
+  let stalemate = false
 
   $: hoursToGo = hoursDifference(estimatedEnd)
 
@@ -29,22 +30,24 @@
   function calculateTimeTo100(history) {
     average = history.map(i => 100 - (100 / i.max_health * i.current_health)).reduce((a, b) => a + b, 0) / history.length
 
+    const now = Date.now()
     const firstEntryTime = history.length > 0 ? new Date(history[history.length - 1].created_at).getTime() : Date.now()
-    const interval = Math.max(1, (Date.now() - firstEntryTime) / 1000)
+    const interval = Math.max(1, (now - firstEntryTime) / 1000)
 
     const rateOfChange = interval > 0 ? (percentage - average) / interval : 0
 
     const remainingPercentage = rateOfChange > 0 ? 100 - percentage : 0 + percentage
     const timeToFilledInSeconds = remainingPercentage / rateOfChange
 
-    const currentTimeInMilliseconds = Date.now()
-    const unixTimeToFilled = currentTimeInMilliseconds + timeToFilledInSeconds * 1000
+    const unixTimeToFilled = now + timeToFilledInSeconds * 1000
 
     const roundedPercentage = parseFloat(percentage.toFixed(4))
     const roundedAverage = parseFloat(average.toFixed(4))
 
+
     estimatedEnd = Math.floor(unixTimeToFilled / 1000)
-    rateDirection = roundedAverage === roundedPercentage || roundedPercentage === 0 ? 0 : roundedPercentage > roundedAverage ? 1 : -1
+    stalemate = unixTimeToFilled - now > (1000 * 60 * 60 * 24 * 30) // 30 days
+    rateDirection = roundedAverage === roundedPercentage || roundedPercentage === 0 || stalemate ? 0 : roundedPercentage > roundedAverage ? 1 : -1
   }
 
   async function predictResults() {
@@ -63,7 +66,7 @@
   Predicting results...
 {:else if percentage === 0 && average === 0}
   Overwhelming forces await
-{:else if estimatedEnd === Infinity || hoursToGo > 1000}
+{:else if stalemate}
   We're in a stalemate
 {:else}
   {estimatedEnd > (now / 1000) ? "Liberty" : "Withdrawal"} in
