@@ -118,7 +118,7 @@
   }
 </script>
 
-<svelte:window on:locate={locate} />
+<svelte:window on:locate={locate} on:show-modal={({ detail }) => modalIndex = detail} />
 
 <div
   class="wrapper"
@@ -228,7 +228,7 @@
   </div>
 </div>
 
-{#if modalIndex !== null}
+{#if modalIndex !== null && !fullscreen}
   <Modal on:close={() => modalIndex = null}>
     <PlanetGlossaryPage data={{ index: modalIndex, planet: planetData[modalIndex] }} showBackRoute={false} />
   </Modal>

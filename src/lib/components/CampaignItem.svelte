@@ -1,6 +1,6 @@
 <script>
 	import { timeFromNow } from "$lib/utils/datetime"
-	import { onDestroy, onMount } from "svelte"
+	import { createEventDispatcher, onDestroy, onMount } from "svelte"
 	import { slide } from "svelte/transition"
 	import { browser } from "$app/environment"
 	import IconDefense from "$lib/components/icons/IconDefense.svelte"
@@ -38,6 +38,12 @@
   onDestroy(() => {
     if (timeInterval) clearInterval(timeInterval)
   })
+
+  function bubbleEvent() {
+    const event = new CustomEvent('show-modal', { detail: planetIndex, bubbles: true })
+
+    window.dispatchEvent(event)
+  }
 </script>
 
 <div class="item {faction.toLowerCase().replace(" ", "-")}" class:stacked data-index={planetIndex} data-normalized={normalizedHealth}>
@@ -47,11 +53,13 @@
     </h3>
 
     <div class="actions">
-      <button on:click={() => showAnalytics = !showAnalytics}>
+      <button on:click={() => showAnalytics = !showAnalytics} aria-label="Planet analytics">
         <IconAnalytics />
       </button>
 
       <LocateOnMap {planetIndex} />
+
+      <button on:click={bubbleEvent} aria-label="Planet info">i</button>
     </div>
 
     {#if biome}
@@ -124,6 +132,17 @@
 {/if}
 
 <style lang="scss">
+  button {
+    @include reset-button();
+    font-family: $font-family-alt;
+    font-weight: bold;
+
+    &:hover {
+      background: rgba($black, 0.25);
+      box-shadow: 0 0 0 3px rgba($black, 0.25);
+    }
+  }
+
   .item {
     --border-color: #{$bg-dark};
     --background-color: #{lighten($bg-base, 5%)};
@@ -136,15 +155,6 @@
         --border-color: #{$color};
         --background-color: #{rgba($color, 0.25)};
       }
-    }
-  }
-
-  button {
-    @include reset-button();
-
-    &:hover {
-      background: rgba($black, 0.25);
-      box-shadow: 0 0 0 3px rgba($black, 0.25);
     }
   }
 
