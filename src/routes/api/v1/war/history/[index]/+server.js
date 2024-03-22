@@ -1,7 +1,8 @@
-import { fetchHistory } from '$lib/api/history.js'
+import { fetchHistory } from "$lib/api/history.js"
+import { getApiHeaders } from "$lib/utils/headers.js"
 
 export async function GET({ url, params }) {
-  const headers = { "Content-Type": "application/json", "Access-Control-Allow-Methods": "GET", "Access-Control-Allow-Origin": "*", "Access-Control-Allow-Headers": "*" }
+  const headers = getApiHeaders(60)
 
   try {
     const type = url.searchParams.get("type") || "daily"

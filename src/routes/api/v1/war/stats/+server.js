@@ -1,7 +1,8 @@
 import { fetchStats } from "$lib/api/stats"
+import { getApiHeaders } from "$lib/utils/headers"
 
 export async function GET() {
-  const headers = { "Content-Type": "application/json", "Access-Control-Allow-Methods": "GET", "Access-Control-Allow-Origin": "*", "Access-Control-Allow-Headers": "*" }
+  const headers = getApiHeaders(300)
 
   try {
     const result = await fetchStats(fetch)

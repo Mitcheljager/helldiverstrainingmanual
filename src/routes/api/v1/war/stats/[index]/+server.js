@@ -1,6 +1,7 @@
 import { error } from "@sveltejs/kit"
 import { planetData } from "$lib/data/planets"
 import { fetchStats } from "$lib/api/stats"
+import { getApiHeaders } from "$lib/utils/headers.js"
 
 export async function GET({ params }) {
   const index = parseInt(params.index)
@@ -8,7 +9,7 @@ export async function GET({ params }) {
   const planet = planetData[params.index]
   if (!planet) error(404, "Not found")
 
-  const headers = { "Content-Type": "application/json", "Access-Control-Allow-Methods": "GET", "Access-Control-Allow-Origin": "*", "Access-Control-Allow-Headers": "*" }
+  const headers = getApiHeaders(300)
 
   try {
     const result = await fetchStats(fetch)

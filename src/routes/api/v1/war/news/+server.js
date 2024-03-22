@@ -1,7 +1,8 @@
-import { fetchNews } from '$lib/api/helldivers'
+import { fetchNews } from "$lib/api/helldivers"
+import { getApiHeaders } from "$lib/utils/headers.js"
 
 export async function GET({ url }) {
-  const headers = { "Content-Type": "application/json", "Access-Control-Allow-Methods": "GET", "Access-Control-Allow-Origin": "*", "Access-Control-Allow-Headers": "*" }
+  const headers = getApiHeaders(120)
   const from = parseInt(url.searchParams.get("from") || "0")
   const data = await fetchNews(fetch, from)
 

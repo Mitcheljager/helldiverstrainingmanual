@@ -1,7 +1,8 @@
 import { fetchOwnershipForPlanet } from "$lib/api/ownership"
+import { getApiHeaders } from "$lib/utils/headers"
 
 export async function GET({ params }) {
-  const headers = { "cache-control": "max-age=600", "Content-Type": "application/json", "Access-Control-Allow-Methods": "GET", "Access-Control-Allow-Origin": "*", "Access-Control-Allow-Headers": "*" }
+  const headers = getApiHeaders(600)
 
   try {
     const data = await fetchOwnershipForPlanet(params.index)
