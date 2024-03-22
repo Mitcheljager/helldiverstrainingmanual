@@ -5,7 +5,7 @@ const options = { headers: { "Accept-Language": "en-US" } }
 
 export async function fetchStatus(fetch, { bypassCache = false } = {}) {
   const key = "status"
-  const cached = await getCache(key, { storeOnly: false })
+  const cached = await getCache(key, { storeOnly: true })
 
   if (!bypassCache && cached) return cached
 
