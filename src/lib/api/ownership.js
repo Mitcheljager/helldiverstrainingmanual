@@ -1,5 +1,5 @@
 import { supabase } from "$lib/db"
-import { addCache, getCache } from "./cache"
+import { addCache, getCache } from "$lib/api/cache"
 
 export async function fetchOwnership() {
   const key = "ownership"
@@ -13,7 +13,7 @@ export async function fetchOwnership() {
     .order("created_at", { ascending: false })
     .range(0, 1000)
 
-  addCache(key, data, 3600000, { storeOnly: true }) // 1 Hour
+  addCache(key, data, 21600000, { storeOnly: true }) // 6 Hours
 
   if (error) throw new Error(error.message)
 

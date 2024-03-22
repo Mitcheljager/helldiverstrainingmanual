@@ -1,7 +1,7 @@
 import { fetchOwnership } from "$lib/api/ownership"
 
 export async function GET() {
-  const headers = { "cache-control": "max-age=3600", "Content-Type": "application/json", "Access-Control-Allow-Methods": "GET", "Access-Control-Allow-Origin": "*", "Access-Control-Allow-Headers": "*" }
+  const headers = { "cache-control": "max-age=21600", "Content-Type": "application/json", "Access-Control-Allow-Methods": "GET", "Access-Control-Allow-Origin": "*", "Access-Control-Allow-Headers": "*" }
 
   try {
     const data = await fetchOwnership()
