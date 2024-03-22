@@ -78,7 +78,7 @@
 {:else if loading}
   Loading...
 {:else}
-  <em>Failed to retrieve Major Order</em>
+  <em>There are currently no Major Orders. Stand by for further instructions.</em>
 {/if}
 
 <style lang="scss">
