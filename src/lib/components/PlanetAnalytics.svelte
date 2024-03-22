@@ -1,9 +1,9 @@
 <script>
   import { LinkedChart, LinkedLabel, LinkedValue } from "svelte-tiny-linked-charts"
-	import { fetchHistory } from "$lib/api/history"
 	import { slide } from "svelte/transition"
 	import { planetData } from "$lib/data/planets"
 	import { browser } from "$app/environment"
+	import { api } from "$lib/api/api"
 
   export let index
   export let row = false
@@ -50,7 +50,7 @@
   {#if !browser}
     <span>Loading...</span>
   {:else}
-    {#await fetchHistory(index)}
+    {#await api(`war/history/${index}`)}
       <span>Loading...</span>
     {:then data}
       <div class="charts" class:row class:inline>

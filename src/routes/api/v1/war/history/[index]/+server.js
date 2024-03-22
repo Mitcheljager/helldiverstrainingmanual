@@ -1,29 +1,13 @@
-import { supabase } from '$lib/db'
+import { fetchHistory } from '$lib/api/history.js'
 
 export async function GET({ url, params }) {
   const headers = { "Content-Type": "application/json", "Access-Control-Allow-Methods": "GET", "Access-Control-Allow-Origin": "*", "Access-Control-Allow-Headers": "*" }
 
-  const type = url.searchParams.get("type") || "daily"
-  const limits = {
-    short: "2",
-    daily: "288"
-  }
-
-  const limit = limits[type]
-  if (!limit) throw new Error("Incorrect type given")
-
-  const from = new Date(new Date().getTime() - 86400000).toISOString()
-
   try {
-    const { data, error } = await supabase
-      .from("history")
-      .select("created_at, planet_index, current_health, max_health, player_count")
-      .gte("created_at", from)
-      .eq("planet_index", params.index)
-      .order("created_at", { ascending: false })
-      .range(0, limit)
+    const type = url.searchParams.get("type") || "daily"
 
-    if (error) throw new Error(error.message)
+    const data = await fetchHistory(params.index, { type })
+    if (!data) throw new Error("No data returned from history")
 
     return new Response(JSON.stringify(data), { headers })
   } catch (error) {

@@ -1,6 +1,6 @@
 <script>
 	import { browser } from "$app/environment"
-	import { fetchHistory } from "$lib/api/history"
+	import { api } from "$lib/api/api"
   import { hoursDifference } from "$lib/utils/datetime"
 	import { onDestroy, onMount } from "svelte"
 
@@ -19,7 +19,7 @@
     if (!browser) return
 
     predictResults()
-    interval = setInterval(predictResults, 300_000) // Every 5 minutes
+    interval = setInterval(predictResults, 300000) // Every 5 minutes
   })
 
   onDestroy(() => {
@@ -54,7 +54,7 @@
       return
     }
 
-    const history = await fetchHistory(planetIndex, { type: "short" })
+    const history = await api(`war/history/${planetIndex}?type=short`)
     if (history) calculateTimeTo100(history)
   }
 </script>

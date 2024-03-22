@@ -1,5 +1,4 @@
 import { supabase } from "$lib/db"
-import { api } from "$lib/api/api"
 import { addCache, getCache } from "$lib/api/cache"
 
 export async function fetchHistory(planetIndex, { type = "daily" } = {}) {
@@ -9,9 +8,25 @@ export async function fetchHistory(planetIndex, { type = "daily" } = {}) {
   if (cached) return cached
 
   try {
-    const data = await api(`war/history/${planetIndex}?type=${type}`) || {}
+    const limits = {
+      short: "2",
+      daily: "288"
+    }
 
-    if (!data) return
+    const limit = limits[type]
+    if (!limit) throw new Error("Incorrect type given")
+
+    const from = new Date(new Date().getTime() - 86400000).toISOString()
+
+    const { data, error } = await supabase
+      .from("history")
+      .select("created_at, planet_index, current_health, max_health, player_count")
+      .gte("created_at", from)
+      .eq("planet_index", planetIndex)
+      .order("created_at", { ascending: false })
+      .range(0, limit)
+
+    if (error) throw new Error(error.message)
 
     addCache(key, data, 180000, { storeOnly: true })
 
