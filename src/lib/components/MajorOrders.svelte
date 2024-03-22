@@ -10,8 +10,6 @@
   let majorOrders = []
   let interval
 
-  $: console.log(majorOrders)
-
   onMount(() => {
     if (browser) interval = setInterval(get, 120000)
     get()
