@@ -105,6 +105,7 @@
     border: 5px solid $super-earth;
     background: rgba($super-earth, 0.1);
     line-height: 1.45em;
+    color: $super-earth;
 
     @include breakpoint(md) {
       font-size: 1.15rem;
