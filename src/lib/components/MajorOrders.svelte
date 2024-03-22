@@ -10,6 +10,8 @@
   let majorOrders = []
   let interval
 
+  $: console.log(majorOrders)
+
   onMount(() => {
     if (browser) interval = setInterval(get, 120000)
     get()
@@ -38,7 +40,7 @@
 
 {#if majorOrders?.length}
   <div class="items">
-    {#each majorOrders as { setting, expiresIn }}
+    {#each majorOrders as { setting, expiresIn, progress }}
       <div class="item">
         <h5>
           {setting.taskDescription}
@@ -51,11 +53,19 @@
 
         {#if setting.tasks?.length}
           <div class="tasks">
-            {#each setting.tasks as { type, values }}
-              <div class="task">
-                {#if type === 11}
-                  <LocateOnMap planetIndex={values[2]} />
-                  {planetData[values[2]]?.name}
+            {#each setting.tasks as { type, values }, index}
+              <div class="task" class:incomplete={progress && progress[index] === 0}>
+                {#if type === 11 || type === 13}
+                  <div>
+                    <LocateOnMap planetIndex={values[2]} />
+                    {planetData[values[2]]?.name}
+                  </div>
+
+                  {#if progress && progress[index] === 1}
+                    <small>Controlled</small>
+                  {:else if progress}
+                    <small>Incomplete</small>
+                  {/if}
                 {/if}
               </div>
             {/each}
@@ -119,8 +129,11 @@
   }
 
   .task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: $margin * 0.25;
     width: 100%;
-    max-width: 20rem;
     padding: $margin * 0.15 $margin * 0.25;
     border-left: 5px solid $super-earth;
     background: linear-gradient(to right, rgba($super-earth, 0.1), transparent);
@@ -129,6 +142,27 @@
     font-family: $font-family-brand;
     font-size: 1.25rem;
     line-height: 1.35em;
+
+    @include breakpoint(sm) {
+      max-width: 20rem;
+    }
+
+    &.incomplete {
+      background: linear-gradient(to right, rgba($red, 0.1), transparent);
+      border-color: $red;
+
+      small {
+        color: $red;
+      }
+    }
+
+    small {
+      color: $super-earth;
+      opacity: 0.75;
+      font-weight: normal;
+      font-size: 0.85rem;
+      line-height: 1em;
+    }
   }
 
   .light {
