@@ -2,7 +2,7 @@ import { fetchHistory } from "$lib/api/history.js"
 import { getApiHeaders } from "$lib/utils/headers.js"
 
 export async function GET({ url, params }) {
-  const headers = getApiHeaders(60)
+  const headers = getApiHeaders(180)
 
   try {
     const type = url.searchParams.get("type") || "daily"
