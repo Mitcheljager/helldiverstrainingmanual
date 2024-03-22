@@ -1,8 +1,8 @@
-import { fetchInfo, fetchStatus } from '$lib/api/helldivers'
-import { formatCampaigns } from '$lib/utils/campaign'
+import { fetchInfo, fetchStatus } from "$lib/api/helldivers"
+import { formatCampaigns } from "$lib/utils/campaign"
 
 export async function GET() {
-  const headers = { 'Content-Type': 'application/json' }
+  const headers = { "Content-Type": "application/json", "Access-Control-Allow-Methods": "GET", "Access-Control-Allow-Origin": "*", "Access-Control-Allow-Headers": "*" }
 
   const [status, info] = (
     await Promise.allSettled([

@@ -1,7 +1,7 @@
 import { supabase } from '$lib/db'
 
 export async function GET({ url, params }) {
-  const headers = { "Content-Type": "application/json" }
+  const headers = { "Content-Type": "application/json", "Access-Control-Allow-Methods": "GET", "Access-Control-Allow-Origin": "*", "Access-Control-Allow-Headers": "*" }
 
   const type = url.searchParams.get("type") || "daily"
   const limits = {

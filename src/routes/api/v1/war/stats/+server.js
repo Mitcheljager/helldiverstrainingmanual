@@ -1,7 +1,7 @@
 import { fetchStats } from "$lib/api/stats"
 
 export async function GET() {
-  const headers = { "Content-Type": "application/json", "cache-control": "max-age=60" }
+  const headers = { "Content-Type": "application/json", "Access-Control-Allow-Methods": "GET", "Access-Control-Allow-Origin": "*", "Access-Control-Allow-Headers": "*" }
 
   try {
     const result = await fetchStats(fetch)
