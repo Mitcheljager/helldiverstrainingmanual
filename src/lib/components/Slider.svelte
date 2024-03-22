@@ -1,19 +1,23 @@
 <script>
 	import TinySlider from "svelte-tiny-slider"
 	import SliderControl from "$lib/components/SliderControl.svelte"
+	import { fade } from "svelte/transition"
+
+  let reachedEnd
+  let currentScrollPosition
 </script>
 
-<div class="slider">
-  <TinySlider gap="1rem">
+<div class="slider" class:border-right={!reachedEnd} class:border-left={currentScrollPosition > 0}>
+  <TinySlider gap="1rem" bind:reachedEnd bind:currentScrollPosition>
     <slot />
 
-    <svelte:fragment slot="controls" let:setIndex let:currentIndex let:reachedEnd>
+    <svelte:fragment slot="controls" let:setIndex let:currentIndex>
       {#if currentIndex > 0}
-        <button class="arrow left" on:click={() => setIndex(currentIndex - 1)}><SliderControl /></button>
+        <button class="arrow left" transition:fade={{ duration: 100 }} on:click={() => setIndex(currentIndex - 1)}><SliderControl /></button>
       {/if}
 
       {#if !reachedEnd}
-        <button class="arrow right" on:click={() => setIndex(currentIndex + 1)}><SliderControl direction="right" /></button>
+        <button class="arrow right" transition:fade={{ duration: 100 }} on:click={() => setIndex(currentIndex + 1)}><SliderControl direction="right" /></button>
       {/if}
     </svelte:fragment>
   </TinySlider>
@@ -25,10 +29,21 @@
     max-width: $text-limit * 1.5;
     padding: 0 $margin * 0.5;
     margin: $margin * 0.5 $margin * -0.5 0;
+    border-right: 3px solid transparent;
+    border-left: 3px solid transparent;
+    transition: border 200ms;
 
     @include breakpoint(md) {
       padding: 0;
       margin: $margin $margin * -0.5 0;
+    }
+
+    &.border-right {
+      border-right: 5px solid $primary;
+    }
+
+    &.border-left {
+      border-left: 5px solid $primary;
     }
 
     :global(.slider) {
@@ -51,7 +66,7 @@
 		height: 3rem;
 		padding: 0;
 		margin: 0 0 0 $margin * 0.75;
-		border: 5px solid $bg-base;
+		border: 3px solid $bg-base;
 		border-radius: 50%;
 		background: $primary;
 		transform: translateX(-50%) translateY(-50%);

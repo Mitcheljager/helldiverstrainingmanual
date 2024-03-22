@@ -103,7 +103,7 @@
   .slide {
     height: min(calc(100vw - $margin), 200px);
     width: auto;
-    border: 3px solid $primary;
+    border: 5px solid $primary;
 
     @include breakpoint(md) {
       height: clamp(200px, 30vw, 400px);

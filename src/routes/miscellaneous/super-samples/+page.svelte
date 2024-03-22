@@ -54,6 +54,6 @@
   .slide {
     max-width: clamp(250px, 50vw, 350px);
     height: auto;
-    border: 3px solid $primary;
+    border: 5px solid $primary;
   }
 </style>
