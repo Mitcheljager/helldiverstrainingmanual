@@ -4,7 +4,7 @@
 	import { planetData } from "$lib/data/planets"
 	import { secondsToDaysWithHours } from "$lib/utils/datetime"
   import { onDestroy, onMount } from "svelte"
-	import LocateOnMap from "./LocateOnMap.svelte";
+	import LocateOnMap from "$lib/components/LocateOnMap.svelte"
 
   let loading = true
   let majorOrders = []
