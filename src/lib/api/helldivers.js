@@ -5,7 +5,7 @@ const options = { headers: { "Accept-Language": "en-US" } }
 
 export async function fetchStatus(fetch, { bypassCache = false } = {}) {
   const key = "status"
-  const cached = await getCache(key, { storeOnly: true })
+  const cached = await getCache(key)
 
   if (!bypassCache && cached) return cached
 
@@ -15,7 +15,7 @@ export async function fetchStatus(fetch, { bypassCache = false } = {}) {
     if (!response.ok) throw new Error("Network response was not ok")
 
     const parsed = await response.json()
-    if (parsed?.planetStatus?.length) addCache(key, parsed, 20000, { storeOnly: true })
+    if (parsed?.planetStatus?.length) addCache(key, parsed, 20000)
 
     return parsed
   } catch (error) {
@@ -25,7 +25,7 @@ export async function fetchStatus(fetch, { bypassCache = false } = {}) {
 
 export async function fetchInfo(fetch, { bypassCache = false } = {}) {
   const key = "info"
-  const cached = await getCache(key, { storeOnly: true })
+  const cached = await getCache(key)
 
   if (!bypassCache && cached) return cached
 
@@ -39,7 +39,7 @@ export async function fetchInfo(fetch, { bypassCache = false } = {}) {
     // Delete the "settingsHash" key from each planet as the value compresses poorly while not providing anything useful
     parsed.planetInfos.forEach(p => delete p.settingsHash)
 
-    if (parsed?.planetInfos?.length) addCache(key, parsed, 300000, { storeOnly: true })
+    if (parsed?.planetInfos?.length) addCache(key, parsed, 300000)
 
     return parsed
   } catch (error) {
@@ -49,7 +49,7 @@ export async function fetchInfo(fetch, { bypassCache = false } = {}) {
 
 export async function fetchNews(fetch, from = 0) {
   const key = "news"
-  const cached = await getCache(key, { storeOnly: true })
+  const cached = await getCache(key)
 
   if (cached) return cached
 
@@ -59,7 +59,7 @@ export async function fetchNews(fetch, from = 0) {
     if (!response.ok) throw new Error("Network response was not ok")
 
     const parsed = await response.json()
-    addCache(key, parsed, 120000, { storeOnly: true })
+    addCache(key, parsed, 120000)
 
     return parsed
   } catch (error) {
@@ -69,7 +69,7 @@ export async function fetchNews(fetch, from = 0) {
 
 export async function fetchMajorOrders(fetch) {
   const key = "major-orders"
-  const cached = await getCache(key, { storeOnly: true })
+  const cached = await getCache(key)
 
   if (cached) return cached
 
@@ -79,7 +79,7 @@ export async function fetchMajorOrders(fetch) {
     if (!response.ok) throw new Error("Network response was not ok")
 
     const parsed = await response.json()
-    addCache(key, parsed, 120000, { storeOnly: true })
+    addCache(key, parsed, 120000)
 
     return parsed
   } catch (error) {
