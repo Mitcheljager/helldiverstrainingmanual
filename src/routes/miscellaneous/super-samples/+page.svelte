@@ -3,6 +3,10 @@
 	import Slider from "$lib/components/Slider.svelte"
 </script>
 
+<svelte:head>
+  <title>Where to find Super Samples | Helldivers Training Manual</title>
+</svelte:head>
+
 <Hero basepath="/images/content" filename="super-samples-cover">
   Where to find Super Samples
 

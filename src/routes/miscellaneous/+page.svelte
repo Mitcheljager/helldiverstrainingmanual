@@ -1,3 +1,7 @@
+<svelte:head>
+  <title>Miscellaneous | Helldivers Training Manual</title>
+</svelte:head>
+
 <h1>Miscellaneous</h1>
 
 <p>These are Miscellaneous Archives, a realm where the unclassified, the peculiar, and the extraordinary converge. Here, you will discover a trove of information that defies categorization, spanning from the arcane to the practical, from the bizarre to the indispensable.</p>
