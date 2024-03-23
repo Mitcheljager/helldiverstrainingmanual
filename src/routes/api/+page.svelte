@@ -1,5 +1,6 @@
 <script>
 	import Expand from "$lib/components/Expand.svelte";
+	import { Timeframe } from "$lib/data/timeframe";
 
   const basepath = "https://helldiverstrainingmanual.com"
 </script>
@@ -160,7 +161,7 @@
 
   <div class="item">
     <code class="url">{basepath}/api/v1/war/history/[planetIndex]</code>
-    Provides the liberation history of a given planet. Returns the liberation status in 5 minutes intervals (with some variance). Status is only recorded when planet is active, as a result there may be big jumps between dates. Ordered from newest to latest, limited to 288 results (24 hours). The limit can be adjusting using <code>?timeframe=[short|day]</code>. <code>short</code> Returns only 2 records. The options <code>week</code> and <code>month</code> are in the works but are not currently available.
+    Provides the liberation history of a given planet. Returns the liberation status in 5 minutes intervals (with some variance). Status is only recorded when planet is active, as a result there may be big jumps between dates. Ordered from newest to latest, limited to 288 results (24 hours). The limit can be adjusting using <code>?timeframe=[{Timeframe.Short}|{Timeframe.Day}]</code>. <code>{Timeframe.Short}</code> Returns only 2 records. The options <code>week</code> and <code>month</code> are in the works but are not currently available.
 
     <Expand let:toggle>
       <button on:click={toggle}>Toggle example response</button>

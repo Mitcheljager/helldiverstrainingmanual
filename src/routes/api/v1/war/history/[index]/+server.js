@@ -1,11 +1,12 @@
 import { fetchHistory } from "$lib/api/history.js"
+import { Timeframe } from "$lib/data/timeframe.js"
 import { getApiHeaders } from "$lib/utils/headers.js"
 
 export async function GET({ url, params }) {
   const headers = getApiHeaders(180)
 
   try {
-    const timeframe = url.searchParams.get("timeframe") || "day"
+    const timeframe = url.searchParams.get("timeframe") || Timeframe.Day
 
     const data = await fetchHistory(params.index, { timeframe })
     if (!data) throw new Error("No data returned from history")

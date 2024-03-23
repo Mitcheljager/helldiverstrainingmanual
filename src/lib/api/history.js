@@ -1,7 +1,8 @@
 import { supabase } from "$lib/db"
 import { addCache, getCache } from "$lib/api/cache"
+import { Timeframe } from "$lib/data/timeframe"
 
-export async function fetchHistory(planetIndex, { timeframe = "day" } = {}) {
+export async function fetchHistory(planetIndex, { timeframe = Timeframe.Day } = {}) {
   const key = `history_${planetIndex}_${timeframe}`
   const cached = await getCache(key, { storeOnly: true })
 
@@ -9,8 +10,8 @@ export async function fetchHistory(planetIndex, { timeframe = "day" } = {}) {
 
   try {
     const limits = {
-      short: "2",
-      day: "288"
+      [Timeframe.Short]: 2,
+      [Timeframe.Day]: 288
     }
 
     const limit = limits[timeframe]

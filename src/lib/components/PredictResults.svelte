@@ -1,6 +1,7 @@
 <script>
 	import { browser } from "$app/environment"
 	import { api } from "$lib/api/api"
+	import { Timeframe } from "$lib/data/timeframe";
   import { hoursDifference } from "$lib/utils/datetime"
 	import { onDestroy, onMount } from "svelte"
 
@@ -61,7 +62,7 @@
       return
     }
 
-    const history = await api(`war/history/${planetIndex}?timeframe=short`)
+    const history = await api(`war/history/${planetIndex}?timeframe=${Timeframe.Short}`)
     if (history) calculateTimeTo100(history)
   }
 </script>
