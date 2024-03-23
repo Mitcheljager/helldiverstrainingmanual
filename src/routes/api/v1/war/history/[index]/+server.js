@@ -5,9 +5,9 @@ export async function GET({ url, params }) {
   const headers = getApiHeaders(180)
 
   try {
-    const type = url.searchParams.get("type") || "daily"
+    const timeframe = url.searchParams.get("timeframe") || "day"
 
-    const data = await fetchHistory(params.index, { type })
+    const data = await fetchHistory(params.index, { timeframe })
     if (!data) throw new Error("No data returned from history")
 
     return new Response(JSON.stringify(data), { headers })

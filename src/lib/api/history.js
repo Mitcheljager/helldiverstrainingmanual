@@ -1,8 +1,8 @@
 import { supabase } from "$lib/db"
 import { addCache, getCache } from "$lib/api/cache"
 
-export async function fetchHistory(planetIndex, { type = "daily" } = {}) {
-  const key = `history_${planetIndex}_${type}`
+export async function fetchHistory(planetIndex, { timeframe = "day" } = {}) {
+  const key = `history_${planetIndex}_${timeframe}`
   const cached = await getCache(key, { storeOnly: true })
 
   if (cached) return cached
@@ -10,11 +10,11 @@ export async function fetchHistory(planetIndex, { type = "daily" } = {}) {
   try {
     const limits = {
       short: "2",
-      daily: "288"
+      day: "288"
     }
 
-    const limit = limits[type]
-    if (!limit) throw new Error("Incorrect type given")
+    const limit = limits[timeframe]
+    if (!limit) throw new Error("Incorrect timeframe given")
 
     const from = new Date(new Date().getTime() - 86400000).toISOString()
 

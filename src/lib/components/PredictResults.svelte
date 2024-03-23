@@ -61,7 +61,7 @@
       return
     }
 
-    const history = await api(`war/history/${planetIndex}?type=short`)
+    const history = await api(`war/history/${planetIndex}?timeframe=short`)
     if (history) calculateTimeTo100(history)
   }
 </script>
