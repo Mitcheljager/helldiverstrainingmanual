@@ -38,7 +38,8 @@
 
   function parseMessages(news) {
     return news.reverse().map(item => {
-      const [title, message] = (item?.message?.split(/\n/) || [])
+      const [title, ...splitMessage] = (item?.message?.split(/[\n\r]+/) || [])
+      const message = splitMessage.join("<br><br>")
 
       return { title, message }
     })
