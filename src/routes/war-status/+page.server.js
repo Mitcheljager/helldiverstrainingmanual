@@ -1,14 +1,13 @@
-import { fetchInfo, fetchStatus } from "$lib/api/helldivers"
-import { fetchStats } from "$lib/api/stats"
+import { api } from "$lib/api/api"
 
 // @ts-ignore
 /** @type {import('./$types').PageLoad} */
 export async function load({ fetch }) {
   const [status, info, stats] = (
     await Promise.allSettled([
-      fetchStatus(fetch).then(r => r || {}),
-      fetchInfo(fetch).then(r => r || {}),
-      fetchStats(fetch).then(r => r || {})
+      api('war/status', fetch).then(r => r || {}),
+      api('war/info', fetch).then(r => r || {}),
+      api('war/stats', fetch).then(r => r || {})
     ])
   // @ts-ignore
   ).map(promise => promise.value)

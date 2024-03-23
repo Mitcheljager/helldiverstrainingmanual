@@ -1,14 +1,13 @@
-import { fetchInfo, fetchStatus } from "$lib/api/helldivers"
-import { fetchOwnership } from "$lib/api/ownership"
+import { api } from "$lib/api/api"
 
 // @ts-ignore
 /** @type {import('./$types').PageLoad} */
 export async function load({ fetch }) {
   const [status, info, ownership] = (
     await Promise.allSettled([
-      fetchStatus(fetch).then(r => r || {}),
-      fetchInfo(fetch).then(r => r || {}),
-      fetchOwnership().then(r => r || [])
+      api('war/status', fetch).then(r => r || {}),
+      api('war/info', fetch).then(r => r || {}),
+      api('war/ownership', fetch).then(r => r || [])
     ])
   // @ts-ignore
   ).map(promise => promise.value)
