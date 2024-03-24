@@ -76,7 +76,7 @@
 
 <p class="mt-1/2 mb-1/2">May the effort of those who came before us not be forgotten. May the efforts of those who have given all to Democracy not be in vain. Appreciate who they are, as they are more than mere statistics. They are the true heroes, those who came before us.</p>
 
-{#if Object.values(stats || {})?.length}
+{#if Object.values(galaxyStats || {})?.length}
   <WarStatistics stats={galaxyStats} />
 {:else}
   <div class="item no-connection mt-1">
