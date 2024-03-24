@@ -58,6 +58,5 @@
   .slide {
     height: clamp(300px, 30vw, 400px);
     width: auto;
-    border: 5px solid $primary;
   }
 </style>

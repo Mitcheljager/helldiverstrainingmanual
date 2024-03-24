@@ -3,11 +3,13 @@
 	import SliderControl from "$lib/components/SliderControl.svelte"
 	import { fade } from "svelte/transition"
 
+  export let small = false
+
   let reachedEnd
   let currentScrollPosition
 </script>
 
-<div class="slider" class:border-right={!reachedEnd} class:border-left={currentScrollPosition > 0}>
+<div class="slider" class:small>
   <TinySlider gap="1rem" bind:reachedEnd bind:currentScrollPosition>
     <slot />
 
@@ -38,12 +40,12 @@
       margin: $margin $margin * -0.5 0;
     }
 
-    &.border-right {
-      border-right: 5px solid $primary;
-    }
+    &.small {
+      max-width: $text-limit;
 
-    &.border-left {
-      border-left: 5px solid $primary;
+      @include breakpoint(md) {
+        margin: 0;
+      }
     }
 
     :global(.slider) {
@@ -65,40 +67,35 @@
 		width: 3rem;
 		height: 3rem;
 		padding: 0;
-		margin: 0 0 0 $margin * 0.75;
-		border: 3px solid $bg-base;
-		border-radius: 50%;
-		background: $primary;
-		transform: translateX(-50%) translateY(-50%);
+		margin: 0;
+    border: 0;
+		background: $bg-base;
+		transform: translateY(-50%);
 		z-index: 2;
+    color: $white;
 		cursor: pointer;
 
     @include breakpoint(md) {
-      margin-left: 0
+      transform: translateX(-100%) translateY(-50%);
     }
 
     &:hover {
-      background: $white;
+      background: lighten($bg-base, 5%);
     }
 
     &.right {
       left: auto;
       right: 0;
-      margin: 0 $margin * 0.75 0 0;
-      transform: translateX(50%) translateY(-50%);
+      margin: 0;
 
       @include breakpoint(md) {
-        margin: 0;
+        transform: translateX(100%) translateY(-50%);
       }
     }
 
     :global(svg) {
-      height: 1.15rem;
-      width: 1.15rem;
-    }
-
-    :global(svg path) {
-      fill: $bg-base;
+      height: 1.75rem;
+      width: 1.75rem;
     }
 	}
 </style>

@@ -209,6 +209,7 @@ export const planetData = {
   },
   34: {
     name: "Hellmire",
+    imageCount: 3,
     sector: Sector.Mirin,
     biome: Biome.Desolate,
     environmentals: [Environmental.IntenseHeat, Environmental.FireTornadoes]
@@ -474,6 +475,7 @@ export const planetData = {
   },
   78: {
     name: "Crimsica",
+    imageCount: 3,
     sector: Sector.Draco,
     biome: Biome.CrimsonMoor,
     environmentals: [Environmental.IonStorms]
@@ -1281,6 +1283,7 @@ export const planetData = {
   },
   212: {
     name: "Oshaune",
+    imageCount: 2,
     sector: Sector.Mirin,
     biome: Biome.Highlands,
     environmentals: [Environmental.ThickFog, Environmental.Rainstorms]

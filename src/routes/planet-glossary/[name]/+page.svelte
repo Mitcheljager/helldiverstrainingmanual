@@ -1,17 +1,19 @@
 <script>
 	import { browser } from "$app/environment"
-	import { api } from "$lib/api/api.js"
+	import { api } from "$lib/api/api"
+	import { toSlug } from "$lib/utils/route"
 	import EnvironmentalTooltip from "$lib/components/EnvironmentalTooltip.svelte"
 	import Hero from "$lib/components/Hero.svelte"
 	import OwnershipRecord from "$lib/components/OwnershipRecord.svelte"
 	import PlanetAnalytics from "$lib/components/PlanetAnalytics.svelte"
+	import Slider from "$lib/components/Slider.svelte"
 	import WarStatistics from "$lib/components/WarStatistics.svelte"
 
   export let data
   export let showBackRoute = true
 
   $: ({ index, planet } = data)
-  $: ({ name, sector, biome, environmentals, tidbit } = planet)
+  $: ({ name, sector, biome, environmentals, tidbit, imageCount } = planet)
 </script>
 
 <svelte:head>
@@ -56,6 +58,16 @@
       <em>This planet has no environmental effects</em>
     {/if}
   </div>
+
+  {#if imageCount}
+    <div class="mt-1">
+      <Slider small>
+        {#each { length: imageCount } as _, i}
+          <img class="slide" loading="lazy" width="800" height="600" src="/images/planets/{toSlug(name)}-{i + 1}.jpg" alt="{name} {i + 1}" />
+        {/each}
+      </Slider>
+    </div>
+  {/if}
 
   <h3 class="mt-1 mb-1/4">Recent Activity</h3>
 
@@ -134,5 +146,14 @@
     flex-direction: column;
     gap: $margin * 0.25;
     max-width: $text-limit;
+  }
+
+  .slide {
+    height: min(100vw, 200px);
+    width: auto;
+
+    @include breakpoint(md) {
+      height: clamp(200px, 30vw, 400px);
+    }
   }
 </style>
