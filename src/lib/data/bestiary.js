@@ -128,7 +128,7 @@ export const bestiary = [{
     `
   }, {
     name: "Shrieker",
-    stratagems: [Stratagem.ArcThrower, Stratagem.PatriotExosuit, Stratagem.Eagle500KGBomb],
+    stratagems: [Stratagem.LaserCannon, Stratagem.ArcThrower, Stratagem.PatriotExosuit, Stratagem.Autocannon, Stratagem.Eagle500KGBomb],
     appearance: "I'm sure by now you've heard the rumors of flying bugs... Don't be ridiculous, bugs don't fly! Preposterous! There's been some imagery making the rounds that seems to suggest otherwise. Don't be fooled. These so-called \"flying bugs\" are nothing more than propaganda spread by communists, all in an sad attempt to threaten our democracy. Now get back to doing your duty, Helldiver.",
     images: ["/images/bestiary/backdrop-shrieker-nest-2.jpg", "/images/bestiary/backdrop-shrieker-nest-1.jpg", "/images/bestiary/backdrop-shrieker-nest-3.jpg", "/images/bestiary/backdrop-shrieker.jpg"],
     tactics: `
