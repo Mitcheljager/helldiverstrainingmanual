@@ -1187,12 +1187,14 @@ export const planetData = {
   },
   196: {
     name: "Malevelon Creek",
+    imageCount: 3,
     sector: Sector.Severin,
     biome: Biome.RainForest,
     environmentals: [Environmental.IonStorms]
   },
   197: {
     name: "Mantes",
+    imageCount: 4,
     sector: Sector.Xzar,
     biome: Biome.Jungle,
     environmentals: [Environmental.VolcanicActivity, Environmental.Rainstorms]
@@ -1277,6 +1279,7 @@ export const planetData = {
   },
   211: {
     name: "Nivel 43",
+    imageCount: 3,
     sector: Sector.Mirin,
     biome: Biome.Swamp,
     environmentals: [Environmental.ThickFog]
@@ -1462,12 +1465,14 @@ export const planetData = {
   },
   241: {
     name: "Ubanea",
+    imageCount: 2,
     sector: Sector.Severin,
     biome: Biome.CrimsonMoor,
     environmentals: [Environmental.IonStorms]
   },
   242: {
     name: "Ustotu",
+    imageCount: 4,
     sector: Sector.Trigon,
     biome: Biome.Desert,
     environmentals: [Environmental.IntenseHeat, Environmental.Tremors]
