@@ -338,6 +338,7 @@
     transform: translateX(-50%);
     padding: $margin * 0.15;
     color: $white;
+    text-shadow: 0 0 6px rgba($black, 0.75), 0 0 3px rgba($black, 0.75);
     font-family: $font-family-brand;
     font-size: 1.25rem;
     line-height: 1em;

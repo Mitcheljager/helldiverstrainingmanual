@@ -16,8 +16,9 @@
   const dispatch = createEventDispatcher()
 
   $: ({ index, position } = planet)
-  $: ({ name, percentage, faction, defense, majorOrder, players } = campaign || {})
+  $: ({ percentage, faction, defense, majorOrder, players } = campaign || {})
   $: data = planetData[index]
+  $: name = campaign?.name || data?.name || "Unknown Planet"
 </script>
 
 <button
@@ -33,6 +34,10 @@
   style:--x={position.x}
   style:--y={position.y}
   style:--percentage="{percentage || 0}%">
+
+  <div class="name">
+    {name}
+  </div>
 
   {#if defense || majorOrder}
     <div class="icon">
@@ -51,7 +56,7 @@
       {/if}
 
       <h5>
-        {name || data.name || "Unknown Planet"}
+        {name}
       </h5>
 
       {#if campaign}
@@ -125,6 +130,23 @@
       &.#{$label} {
         --color: #{$color};
       }
+    }
+  }
+
+  .name {
+    display: none;
+    position: absolute;
+    bottom: -0.5rem;
+    left: 50%;
+    transform: translateX(-50%) translateY(100%);
+    color: $white;
+    text-shadow: 0 0 6px rgba($black, 0.75), 0 0 3px rgba($black, 0.75);
+    font-size: 1.15rem;
+    font-family: $font-family-brand;
+    white-space: nowrap;
+
+    .planet:hover & {
+      display: block;
     }
   }
 
