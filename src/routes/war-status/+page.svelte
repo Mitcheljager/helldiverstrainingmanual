@@ -21,7 +21,6 @@
   $: ({ status, info, stats } = data)
   $: ({ planetStatus, planetEvents } = (status || {}))
   $: ({ planetInfos } = (info || {}))
-  $: ({ galaxy_stats: galaxyStats } = (stats || {}))
   $: formattedCampaigns = formatCampaigns(status, info)
 
   onMount(() => {
@@ -29,7 +28,7 @@
 
     statusInterval = setInterval(async () => status = await api("war/status") || {}, 20000)
     infoInterval = setInterval(async () => info = await api("war/info") || {}, 300000)
-    statsInterval = setInterval(async () => galaxyStats = await api(`war/stats`) || {}, 60000)
+    statsInterval = setInterval(async () => stats = await api(`war/stats`) || {}, 60000)
   })
 
   onDestroy(() => {
@@ -76,8 +75,8 @@
 
 <p class="mt-1/2 mb-1/2">May the effort of those who came before us not be forgotten. May the efforts of those who have given all to Democracy not be in vain. Appreciate who they are, as they are more than mere statistics. They are the true heroes, those who came before us.</p>
 
-{#if Object.values(galaxyStats || {})?.length}
-  <WarStatistics stats={galaxyStats} />
+{#if Object.values(stats || {})?.length}
+  <WarStatistics {stats} />
 {:else}
   <div class="item no-connection mt-1">
     <h3>Lost but not forgotten</h3>
