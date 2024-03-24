@@ -4,7 +4,7 @@
 	import { fade } from "svelte/transition"
 
   export let small = false
-  export let height = 400
+  export let height = 350
 
   let reachedEnd
   let currentScrollPosition
