@@ -121,10 +121,14 @@
   }
 
   .tasks {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+
     gap: $margin * 0.15;
     margin: $margin * 0.25 0;
+
+    @include breakpoint(sm) {
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    }
   }
 
   .task {
@@ -141,10 +145,6 @@
     font-family: $font-family-brand;
     font-size: 1.25rem;
     line-height: 1.35em;
-
-    @include breakpoint(sm) {
-      max-width: 20rem;
-    }
 
     &.incomplete {
       background: linear-gradient(to right, rgba($red, 0.1), transparent);
