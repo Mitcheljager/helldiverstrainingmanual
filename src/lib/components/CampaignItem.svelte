@@ -91,7 +91,7 @@
     </div>
 
     <div class="info">
-      <span class="percentage" class:has-icon={rateSpeed}>
+      <div class="percentage" class:has-icon={rateSpeed}>
         {#if rateSpeed !== 0}
           <svg
             class="rate-direction {rateSpeed > 0 ? "positive" : "negative" }"
@@ -103,17 +103,19 @@
           </svg>
         {/if}
 
-        <span>
-          <RollingNumber number={(percentage ? percentage.toFixed(4) : 0).toString()} />%
-          {defense ? "Defend!" : "Liberated"}
-        </span>
+        <div>
+          <span>
+            <RollingNumber number={(percentage ? percentage.toFixed(4) : 0).toString()} />%
+            {defense ? "Defend!" : "Liberated"}
+          </span>
 
-        {#if expireDateTime}
-          {#key timeKey}
-            {timeFromNow(expireDateTime)}
-          {/key}
-        {/if}
-      </span>
+          {#if expireDateTime}
+            {#key timeKey}
+              {timeFromNow(expireDateTime)}
+            {/key}
+          {/if}
+        </div>
+      </div>
 
       <span><RollingNumber number={players.toLocaleString()} /> Helldivers</span>
     </div>
@@ -312,13 +314,18 @@
   .percentage {
     display: flex;
     justify-content: space-between;
+    gap: $margin * 0.25;
 
     @include breakpoint(sm) {
-      display: inline;
+      display: flex;
     }
 
     &.has-icon {
       flex-direction: row-reverse;
+
+      @include breakpoint(sm) {
+        flex-direction: row;
+      }
     }
 
     .stacked & {
