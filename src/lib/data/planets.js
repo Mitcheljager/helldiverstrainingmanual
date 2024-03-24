@@ -389,6 +389,7 @@ export const planetData = {
   },
   64: {
     name: "Meridia",
+    tidbit: `<p>One of four planets where the Terminid Control System (TCS) was deployed, a network of massive towers that cover the planet in a neurotoxin known as Termincide. The deployment of these TCS towers took the combined effort of many helldivers and eventually lead to the Terminids being driven away for good.</p>`,
     sector: Sector.Umlaut,
     biome: Biome.Jungle,
     environmentals: [Environmental.VolcanicActivity, Environmental.Rainstorms]
@@ -755,12 +756,14 @@ export const planetData = {
   },
   125: {
     name: "Fenrir III",
+    tidbit: `<p>One of four planets where the Terminid Control System (TCS) was deployed, a network of massive towers that cover the planet in a neurotoxin known as Termincide. The deployment of these TCS towers took the combined effort of many helldivers and eventually lead to the Terminids being driven away for good.</p>`,
     sector: Sector.Umlaut,
     biome: Biome.Moon,
     environmentals: [Environmental.ExtremeCold, Environmental.MeteorStorms]
   },
   126: {
     name: "Turing",
+    tidbit: `<p>One of four planets where the Terminid Control System (TCS) was deployed, a network of massive towers that cover the planet in a neurotoxin known as Termincide. The deployment of these TCS towers took the combined effort of many helldivers and eventually lead to the Terminids being driven away for good.</p>`,
     sector: Sector.Umlaut,
     biome: Biome.Ethereal,
     environmentals: []
@@ -1013,6 +1016,7 @@ export const planetData = {
   },
   168: {
     name: "Erata Prime",
+    tidbit: `<p>One of four planets where the Terminid Control System (TCS) was deployed, a network of massive towers that cover the planet in a neurotoxin known as Termincide. The deployment of these TCS towers took the combined effort of many helldivers and eventually lead to the Terminids being driven away for good.</p>`,
     sector: Sector.Umlaut,
     biome: Biome.Desert,
     environmentals: [Environmental.IntenseHeat, Environmental.Tremors]
