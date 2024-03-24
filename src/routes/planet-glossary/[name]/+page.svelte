@@ -63,7 +63,7 @@
     <div class="mt-1">
       <Slider small>
         {#each { length: imageCount } as _, i}
-          <img class="slide" loading="lazy" width="800" height="600" src="/images/planets/{toSlug(name)}-{i + 1}.jpg" alt="{name} {i + 1}" />
+          <img loading="lazy" width="800" height="600" src="/images/planets/{toSlug(name)}-{i + 1}.jpg" alt="{name} {i + 1}" />
         {/each}
       </Slider>
     </div>
@@ -146,14 +146,5 @@
     flex-direction: column;
     gap: $margin * 0.25;
     max-width: $text-limit;
-  }
-
-  .slide {
-    height: min(100vw, 200px);
-    width: auto;
-
-    @include breakpoint(md) {
-      height: clamp(200px, 30vw, 400px);
-    }
   }
 </style>

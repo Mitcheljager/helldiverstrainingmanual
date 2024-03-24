@@ -37,7 +37,7 @@
 
 <Slider>
   {#each { length: 4 } as _, index}
-    <img class="slide" loading="lazy" src="/images/content/super-samples/depleted-super-samples-{index + 1}.jpg" height="850" width="782" alt="Depleted Super Sample example {index + 1}" />
+    <img loading="lazy" src="/images/content/super-samples/depleted-super-samples-{index + 1}.jpg" height="850" width="782" alt="Depleted Super Sample example {index + 1}" />
   {/each}
 </Slider>
 
@@ -53,10 +53,5 @@
       height: 100%;
       width: auto;
     }
-  }
-
-  .slide {
-    height: clamp(300px, 30vw, 400px);
-    width: auto;
   }
 </style>

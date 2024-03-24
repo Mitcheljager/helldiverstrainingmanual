@@ -4,12 +4,13 @@
 	import { fade } from "svelte/transition"
 
   export let small = false
+  export let height = 400
 
   let reachedEnd
   let currentScrollPosition
 </script>
 
-<div class="slider" class:small>
+<div class="slider" class:small style:--height="{height}px">
   <TinySlider gap="1rem" bind:reachedEnd bind:currentScrollPosition>
     <slot />
 
@@ -30,7 +31,7 @@
     position: relative;
     max-width: $text-limit * 1.5;
     padding: 0 $margin * 0.5;
-    margin: $margin * 0.5 $margin * -0.5 0;
+    margin: $margin $margin * -0.5 0;
     border-right: 3px solid transparent;
     border-left: 3px solid transparent;
     transition: border 200ms;
@@ -53,6 +54,16 @@
 
       @include breakpoint(md) {
         overflow: hidden;
+      }
+    }
+
+    :global(img) {
+      height: min(100vw, 200px);
+      width: auto;
+      background: lighten($bg-base, 5%);
+
+      @include breakpoint(md) {
+        height: clamp(200px, 30vw, var(--height));
       }
     }
   }

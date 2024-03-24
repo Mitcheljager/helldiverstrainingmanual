@@ -34,11 +34,11 @@
 
     {#if images?.length}
       {#if images.length === 1}
-        <img class="slide single" loading="lazy" width="800" height="500" src={images[0]} alt="" />
+        <img class="single" loading="lazy" width="800" height="500" src={images[0]} alt="" />
       {:else}
         <Slider>
           {#each images as src}
-            <img class="slide" loading="lazy" width="800" height="500" {src} alt="" />
+            <img loading="lazy" width="800" height="500" {src} alt="" />
           {/each}
         </Slider>
       {/if}
@@ -100,17 +100,10 @@
     max-width: $text-limit;
   }
 
-  .slide {
-    height: min(calc(100vw - $margin), 200px);
-    width: auto;
-
-    @include breakpoint(md) {
-      height: clamp(200px, 30vw, 400px);
-    }
-
-    &.single {
-      max-width: $text-limit;
-      margin-top: $margin;
-    }
+  .single {
+    width: 100%;
+    max-width: $text-limit;
+    height: auto;
+    margin-top: $margin;
   }
 </style>
