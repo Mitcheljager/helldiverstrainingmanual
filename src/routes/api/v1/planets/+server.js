@@ -4,5 +4,12 @@ import { getApiHeaders } from "$lib/utils/headers"
 export async function GET() {
   const headers = getApiHeaders(300)
 
-  return new Response(JSON.stringify(planetData), { headers })
+  const data = {}
+  Object.entries(planetData).forEach(([key, { name, sector, biome, environmentals }]) => {
+    data[key] = {
+      name, sector, biome, environmentals
+    }
+  })
+
+  return new Response(JSON.stringify(data), { headers })
 }
