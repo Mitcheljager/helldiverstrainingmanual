@@ -1,7 +1,6 @@
 <script>
 	import { browser } from "$app/environment"
-	import { api } from "$lib/api/api.js";
-	import { fetchOwnershipForPlanet } from "$lib/api/ownership.js"
+	import { api } from "$lib/api/api.js"
 	import { fetchStatsForPlanet } from "$lib/api/planets.js"
 	import EnvironmentalTooltip from "$lib/components/EnvironmentalTooltip.svelte"
 	import Hero from "$lib/components/Hero.svelte"
@@ -17,7 +16,9 @@
 </script>
 
 <svelte:head>
-  <title>{name} | Helldivers Training Manual</title>
+  {#if showBackRoute}
+    <title>{name} | Helldivers Training Manual</title>
+  {/if}
 </svelte:head>
 
 {#if showBackRoute}
