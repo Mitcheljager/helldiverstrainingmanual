@@ -61,7 +61,7 @@
 
   {#if imageCount}
     <div class="mt-1">
-      <Slider small>
+      <Slider small height={350}>
         {#each { length: imageCount } as _, i}
           <img loading="lazy" width="800" height="600" src="/images/planets/{toSlug(name)}-{i + 1}.jpg" alt="{name} {i + 1}" />
         {/each}
