@@ -40,15 +40,14 @@
     const remainingPercentage = rateOfChange > 0 ? 100 - percentage : 0 + percentage
     const timeToFilledInSeconds = remainingPercentage / rateOfChange
 
-    const unixTimeToFilled = now + timeToFilledInSeconds * 1000
-
     const roundedPercentage = parseFloat(percentage.toFixed(4))
     const roundedAverage = parseFloat(average.toFixed(4))
 
+    const unixTimeToFilled = now + timeToFilledInSeconds * 1000
     const normalizedRateOfChange = rateOfChange * 1000
 
     estimatedEnd = Math.floor(unixTimeToFilled / 1000)
-    stalemate = unixTimeToFilled - now > (1000 * 60 * 60 * 24 * 30) // 30 days
+    stalemate = Math.abs(unixTimeToFilled - now) > (1000 * 60 * 60 * 24 * 30) // 30 days
     rateSpeed = roundedAverage === roundedPercentage || roundedPercentage === 0 || stalemate ?
       0 :
       roundedPercentage > roundedAverage ?
