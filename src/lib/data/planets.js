@@ -1575,6 +1575,7 @@ export const planetData = {
   },
   259: {
     name: "Omicron",
+    imageCount: 4,
     sector: Sector.Lestrade,
     biome: Biome.Tundra,
     environmentals: []
