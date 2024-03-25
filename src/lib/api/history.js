@@ -25,7 +25,7 @@ export async function fetchHistory(planetIndex, { timeframe = Timeframe.Day } = 
       .gte("created_at", from)
       .eq("planet_index", planetIndex)
       .order("created_at", { ascending: false })
-      .range(0, limit)
+      .range(0, limit - 1)
 
     if (error) throw new Error(error.message)
 
