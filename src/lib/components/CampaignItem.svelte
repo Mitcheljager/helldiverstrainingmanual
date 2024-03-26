@@ -275,6 +275,7 @@
   .progress {
     background: $super-earth;
     height: 100%;
+    box-shadow: inset -2px 0 0 $bg-base;
     animation: progress 1000ms forwards;
   }
 
