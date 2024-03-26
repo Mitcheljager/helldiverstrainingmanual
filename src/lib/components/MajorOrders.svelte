@@ -122,7 +122,6 @@
 
   .tasks {
     display: grid;
-
     gap: $margin * 0.15;
     margin: $margin * 0.25 0;
 
