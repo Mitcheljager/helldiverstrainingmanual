@@ -10,10 +10,12 @@
   export let percentage = 0
 
   let interval
+  let loading = true
   let estimatedEnd = null
   let average = 0
   let now = Date.now()
   let stalemate = false
+  let ratePerHour = 0
 
   $: hoursToGo = hoursDifference(estimatedEnd)
 
@@ -46,6 +48,7 @@
     const unixTimeToFilled = now + timeToFilledInSeconds * 1000
     const normalizedRateOfChange = rateOfChange * 1000
 
+    ratePerHour = rateOfChange * 60 * 60
     estimatedEnd = Math.floor(unixTimeToFilled / 1000)
     stalemate = Math.abs(unixTimeToFilled - now) > (1000 * 60 * 60 * 24 * 30) // 30 days
     rateSpeed = roundedAverage === roundedPercentage || roundedPercentage === 0 || stalemate ?
@@ -61,26 +64,79 @@
       return
     }
 
-    const history = await api(`war/history/${planetIndex}?timeframe=${Timeframe.Short}`)
-    if (history) calculateTimeTo100(history)
+    loading = true
+
+    try {
+      const history = await api(`war/history/${planetIndex}?timeframe=${Timeframe.Short}`)
+      if (history) calculateTimeTo100(history)
+    } finally {
+      loading = false
+    }
   }
 </script>
 
-{#if estimatedEnd === null}
-  Predicting results...
-{:else if percentage === 0 && average === 0}
-  Overwhelming forces await
-{:else if stalemate}
-  We're in a stalemate
-{:else}
-  {estimatedEnd > (now / 1000) ? "Liberty" : "Withdrawal"} in
-  {#if hoursToGo < 1}
-    less than 1 hr
+<span>
+  {#if estimatedEnd === null}
+    Predicting results...
+  {:else if percentage === 0 && average === 0}
+    Overwhelming forces await
+  {:else if stalemate}
+    We're in a stalemate
   {:else}
-    {#if hoursToGo > 72}
-      about {Math.round(hoursToGo / 24)} days
+    {estimatedEnd > (now / 1000) ? "Liberty" : "Withdrawal"} in
+    {#if hoursToGo < 1}
+      less than 1 hr
     {:else}
-      about {hoursToGo} hrs
+      {#if hoursToGo > 72}
+        about {Math.round(hoursToGo / 24)} days
+      {:else}
+        about {hoursToGo} hrs
+      {/if}
     {/if}
   {/if}
-{/if}
+
+  {#if !loading}
+    <div class="tooltip">
+      {#if stalemate}
+        We're not making any meaningful progress
+      {:else}
+        We're {ratePerHour > 0 ? "gaining" : "losing" } {Math.abs(ratePerHour).toFixed(4)}% per hour
+      {/if}
+    </div>
+  {/if}
+</span>
+
+<style lang="scss">
+  span {
+    position: relative;
+  }
+
+  small {
+    line-height: 1em;
+  }
+
+  .tooltip {
+    display: none;
+    position: absolute;
+    bottom: $margin * -0.075;
+    transform: translateY(100%);
+    padding: $margin * 0.15;
+    border: 2px solid $bg-dark;
+    background: lighten($bg-base, 5%);
+    box-shadow: 0 0 0.5rem $black, 0 0 1rem $black;
+    z-index: 5;
+    color: $text-color;
+    font-size: 1rem;
+    line-height: 1.15em;
+    font-family: $font-family-brand;
+    font-weight: normal;
+
+    @include breakpoint(sm) {
+      white-space: nowrap;
+    }
+
+    span:hover & {
+      display: block;
+    }
+  }
+</style>
