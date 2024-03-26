@@ -27,7 +27,7 @@
   let timeInterval
   let timeKey = 0
   let showAnalytics = false
-  let rateSpeed
+  let ratePerHour
 
   $: normalizedHealth = 1 - (1 / maxHealth * health) // This is used purely to shut up the compiler about missing props
 
@@ -91,15 +91,15 @@
     </div>
 
     <div class="info">
-      <div class="percentage" class:has-icon={rateSpeed}>
-        {#if rateSpeed !== 0}
+      <div class="percentage" class:has-icon={ratePerHour}>
+        {#if ratePerHour !== 0}
           <svg
-            class="rate-direction {rateSpeed > 0 ? "positive" : "negative" }"
+            class="rate-direction {ratePerHour > 0 ? "positive" : "negative" }"
             width="20px"
             height="20px"
             viewBox="0 0 24 24">
 
-            <path fill="currentColor" d="M4.788 17.444A.5.5 0 0 1 4 17.035V6.965a.5.5 0 0 1 .788-.409l7.133 5.036a.5.5 0 0 1 0 .816l-7.133 5.036zM13 6.965a.5.5 0 0 1 {Math.abs(rateSpeed) > 0.25 ? ".788-.409l7.133 5.036a.5.5 0 0 1 0 .816l-7.133 5.036a.5.5 0 0 1-.788-.409V6.965z" : ""}"/>
+            <path fill="currentColor" d="M4.788 17.444A.5.5 0 0 1 4 17.035V6.965a.5.5 0 0 1 .788-.409l7.133 5.036a.5.5 0 0 1 0 .816l-7.133 5.036zM13 6.965a.5.5 0 0 1 {Math.abs(ratePerHour) > 0.75 ? ".788-.409l7.133 5.036a.5.5 0 0 1 0 .816l-7.133 5.036a.5.5 0 0 1-.788-.409V6.965z" : ""}"/>
           </svg>
         {/if}
 
@@ -121,7 +121,7 @@
     </div>
 
     <div class="info dark">
-      <PredictResults {planetIndex} {percentage} bind:rateSpeed />
+      <PredictResults {planetIndex} {percentage} bind:ratePerHour />
     </div>
   </div>
 </div>

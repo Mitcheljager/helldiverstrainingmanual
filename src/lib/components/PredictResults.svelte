@@ -6,7 +6,7 @@
 	import { onDestroy, onMount } from "svelte"
 
   export let planetIndex
-  export let rateSpeed = 0
+  export let ratePerHour = 0
   export let percentage = 0
 
   let interval
@@ -15,7 +15,6 @@
   let average = 0
   let now = Date.now()
   let stalemate = false
-  let ratePerHour = 0
 
   $: hoursToGo = hoursDifference(estimatedEnd)
 
@@ -42,19 +41,11 @@
     const remainingPercentage = rateOfChange > 0 ? 100 - percentage : 0 + percentage
     const timeToFilledInSeconds = remainingPercentage / rateOfChange
 
-    const roundedPercentage = parseFloat(percentage.toFixed(4))
-    const roundedAverage = parseFloat(average.toFixed(4))
-
     const unixTimeToFilled = now + timeToFilledInSeconds * 1000
-    const normalizedRateOfChange = rateOfChange * 1000
 
-    ratePerHour = rateOfChange * 60 * 60
     estimatedEnd = Math.floor(unixTimeToFilled / 1000)
     stalemate = Math.abs(unixTimeToFilled - now) > (1000 * 60 * 60 * 24 * 30) // 30 days
-    rateSpeed = roundedAverage === roundedPercentage || roundedPercentage === 0 || stalemate ?
-      0 :
-      roundedPercentage > roundedAverage ?
-      normalizedRateOfChange : -normalizedRateOfChange
+    ratePerHour = stalemate ? 0 : rateOfChange * 60 * 60
   }
 
   async function predictResults() {
