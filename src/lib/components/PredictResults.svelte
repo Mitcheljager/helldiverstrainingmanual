@@ -111,10 +111,6 @@
     position: relative;
   }
 
-  small {
-    line-height: 1em;
-  }
-
   .tooltip {
     display: none;
     position: absolute;
