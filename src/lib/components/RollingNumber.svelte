@@ -6,7 +6,7 @@
   $: digits = number.toString().split("")
 </script>
 
-<div class="digits">
+<div class="digits" aria-label="{number}%">
   {#each digits as digit, i (digits.length - i)}
     <RollingNumberDigit {digit} />
   {/each}
