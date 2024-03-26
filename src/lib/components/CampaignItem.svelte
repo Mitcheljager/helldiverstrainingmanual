@@ -234,11 +234,15 @@
 
   .rate-direction {
     display: inline-block;
-    top: 0;
     height: 0.75em;
+    margin-top: 1px;
     margin-right: 2px;
     width: auto;
     scale: 2;
+
+    @include breakpoint(sm) {
+      margin-right: 0;
+    }
 
     &.positive path {
       fill: $green;
@@ -314,7 +318,7 @@
   .percentage {
     display: flex;
     justify-content: space-between;
-    gap: $margin * 0.25;
+    gap: $margin * 0.15;
 
     @include breakpoint(sm) {
       display: flex;
