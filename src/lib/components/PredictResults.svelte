@@ -100,7 +100,7 @@
       {#if stalemate}
         We're not making any meaningful progress
       {:else}
-        We're {ratePerHour > 0 ? "gaining" : "losing" } {Math.abs(ratePerHour).toFixed(4)}% per hour
+        We're {ratePerHour > 0 ? "gaining" : "losing" } <mark>{Math.abs(ratePerHour).toFixed(4)}%</mark> per hour
       {/if}
     </div>
   {/if}
@@ -109,6 +109,11 @@
 <style lang="scss">
   span {
     position: relative;
+  }
+
+  mark {
+    background: transparent;
+    color: $white;
   }
 
   .tooltip {
