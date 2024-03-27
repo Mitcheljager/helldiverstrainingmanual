@@ -29,7 +29,7 @@ export async function fetchHistory(planetIndex, { timeframe = Timeframe.Day } = 
 
     if (error) throw new Error(error.message)
 
-    addCache(key, data, 180000, { storeOnly: true })
+    addCache(key, data, 300000, { storeOnly: true })
 
     return data
   } catch (error) {
