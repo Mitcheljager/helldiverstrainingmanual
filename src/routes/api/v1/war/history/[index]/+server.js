@@ -3,7 +3,7 @@ import { Timeframe } from "$lib/data/timeframe.js"
 import { getApiHeaders } from "$lib/utils/headers.js"
 
 export async function GET({ url, params }) {
-  const headers = getApiHeaders(180)
+  const headers = getApiHeaders(300)
 
   try {
     const timeframe = url.searchParams.get("timeframe") || Timeframe.Day
