@@ -1479,6 +1479,7 @@ export const planetData = {
   },
   243: {
     name: "Vandalon IV",
+    imageCount: 4,
     sector: Sector.Trigon,
     biome: Biome.Winter,
     environmentals: [Environmental.ExtremeCold, Environmental.Blizzards]
