@@ -73,6 +73,14 @@ export const Stratagem = {
     <p>But wait, there's more! The AC-8 isn't just for taking down big targets - it's also a force to be reckoned with against hordes of smaller enemies. With its high rate of fire, this cannon chews through anything foolish enough to stand in its way, leaving nothing but destruction in its wake.</p>
     `
   },
+  HeavyMachineGun: {
+    name: "Heavy Machine Gun",
+    cost: 6000,
+    sequence: ["down", "left", "up", "down", "down"],
+    content: `
+      <p>The MG-206 Heavy Machine Gun, a beast of a weapon that'll have you feeling like you're wrestling a bull on steroids. This bad boy packs a punch that'll make even the toughest bugs quake in their exoskeletons. But beware, handling this monster ain't for the faint of heart. With recoil that'll send you flying faster than a rocket launch, you'll need arms of steel and nerves of titanium to keep this baby under control. Get ready to unleash a storm of lead like never before.</p>
+    `
+  },
   Railgun: {
     name: "Railgun",
     cost: 10000,
@@ -351,6 +359,14 @@ export const Stratagem = {
     sequence: ["down", "right", "up", "left", "down"],
     content: `
       <p>This potent tool charges up to unleash bolts of crackling electricity, capable of arcing between multiple targets with devastating effect. Remarkably, the Arc Thrower's inexhaustible energy source ensures that it can be fired infinitely, delivering relentless punishment to our enemies without the need for traditional ammunition. However, wielders must exercise caution when deploying the Arc Thrower in close proximity to comrades, as its indiscriminate discharge may inadvertently harm nearby teammates.</p>
+    `
+  },
+  QuasarCannon: {
+    name: "Quasar Cannon",
+    cost: 7500,
+    sequence: ["down", "down", "up", "left", "right"],
+    content: `
+      <p>The LAS-99 Quasar Cannon, the pinnacle of raw firepower at your fingertips. This beast charges up to unleash a spectacular energy burst that'll leave your enemies in awe of your might. But brace yourself, because after unleashing such overwhelming power, this cannon needs a moment to catch its breath. It's not a flaw, it's a testament to its sheer potency.</p>
     `
   },
   ShieldGeneratorPack: {

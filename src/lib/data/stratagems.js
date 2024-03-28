@@ -15,6 +15,7 @@ export const stratagems = [{
     Stratagem.RecoillessRifle,
     Stratagem.Flamethrower,
     Stratagem.Autocannon,
+    Stratagem.HeavyMachineGun,
     Stratagem.Railgun,
     Stratagem.Spear
   ]
@@ -81,6 +82,7 @@ export const stratagems = [{
     Stratagem.GuardDogRover,
     Stratagem.BallisticShieldBackpack,
     Stratagem.ArcThrower,
+    Stratagem.QuasarCannon,
     Stratagem.ShieldGeneratorPack,
   ]
 }, {
