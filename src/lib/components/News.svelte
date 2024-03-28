@@ -40,7 +40,7 @@
     return news.reverse().map(item => {
       const [title, ...splitMessage] = (item?.message?.split(/[\n\r]+/) || [])
       const message = splitMessage.join("<br><br>")
-      const cleanedTitle = title.replace(/<i=\d+>/g, "").replace(/<\/i>/g, "")
+      const cleanedTitle = title?.replace(/<i=\d+>/g, "").replace(/<\/i>/g, "")
 
       return { title: cleanedTitle, message }
     })
