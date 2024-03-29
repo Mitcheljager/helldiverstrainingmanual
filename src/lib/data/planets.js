@@ -209,7 +209,7 @@ export const planetData = {
   },
   34: {
     name: "Hellmire",
-    imageCount: 3,
+    imageCount: 4,
     sector: Sector.Mirin,
     biome: Biome.Desolate,
     environmentals: [Environmental.IntenseHeat, Environmental.FireTornadoes]
