@@ -89,7 +89,7 @@ export const bestiary = [{
     `
   }, {
     name: "Charger",
-    stratagems: [Stratagem.Railgun, Stratagem.Autocannon, Stratagem.RecoillessRifle, Stratagem.Flamethrower, Stratagem.ExpendableAntiTank, Stratagem.ShieldGeneratorPack, Stratagem.JumpPack, Stratagem.OrbitalRailcannonStrike, Stratagem.OrbitalPrecisionStrike],
+    stratagems: [Stratagem.Railgun, Stratagem.Autocannon, Stratagem.RecoillessRifle, Stratagem.Flamethrower, Stratagem.ExpendableAntiTank, Stratagem.QuasarCannon, Stratagem.ShieldGeneratorPack, Stratagem.JumpPack, Stratagem.OrbitalRailcannonStrike, Stratagem.OrbitalPrecisionStrike],
     appearance: "The Charger presents a formidable threat on the battlefield, boasting a meter-thick exoskeleton that renders it nearly impervious to conventional weaponry. Its hulking frame and swift movements make it a daunting adversary, capable of unleashing devastating charges against unsuspecting Helldivers. There are two variants of the Charger, believed to be a male and female variants, but no mating patterns have been observed. The \"bull\" appears to be more heavily armored, but in practice they are equal in resillience, strength, and intelligence.",
     quicktip: "Their armor is next to impenetrable, but as is customary with bugs, their biggest weakness is their head. A well aim shot of heavy artillery will instantly take them out. Otherwise target their legs with heavy armor-piercing weapons or explosives to reveal their weak spots. Keep your distance, use obstacles, and coordinate with your squadmates to outmaneuver these armored behemoths.",
     images: ["/images/bestiary/backdrop-charger.jpg", "/images/bestiary/backdrop-charger-bull.jpg"],
@@ -202,7 +202,7 @@ export const bestiary = [{
     `
   }, {
     name: "Hulk",
-    stratagems: [Stratagem.Autocannon, Stratagem.AntiMaterielRifle, Stratagem.RecoillessRifle, Stratagem.Railgun, Stratagem.Eagle110mmRocketPods, Stratagem.OrbitalPrecisionStrike, Stratagem.OrbitalRailcannonStrike, Stratagem.Eagle500KGBomb],
+    stratagems: [Stratagem.Autocannon, Stratagem.AntiMaterielRifle, Stratagem.RecoillessRifle, Stratagem.Railgun, Stratagem.QuasarCannon, Stratagem.Eagle110mmRocketPods, Stratagem.OrbitalPrecisionStrike, Stratagem.OrbitalRailcannonStrike, Stratagem.Eagle500KGBomb],
     appearance: "As with all Automaton units, the plodding Hulk epitomizes brute force and relentless aggression, its towering form bristling with heavy weaponry designed for maximum destruction. From autocannons and rocket launchers to flamethrowers and buzzsaws, it stands as a formidable sentinel of the Automatons' relentless pursuit of dominance. Clad in heavy armor plating, its mechanical form exudes an aura of unyielding aggression, each step a thunderous proclamation of its unwavering dedication to crushing all opposition.",
     quicktip: "Target their weak spots with high-caliber ordnance to breach their armor. Focus on their exposed craniums for swift incapacitation. Disrupt their offensive capabilities by targeting their appendages. If all else fails, bring the big guns!",
     tactics: `
@@ -212,7 +212,7 @@ export const bestiary = [{
     `
   }, {
     name: "Tank",
-    stratagems: [Stratagem.Autocannon, Stratagem.ExpendableAntiTank, Stratagem.AntiMaterielRifle, Stratagem.RecoillessRifle, Stratagem.Railgun, Stratagem.Eagle110mmRocketPods, Stratagem.OrbitalPrecisionStrike, Stratagem.OrbitalRailcannonStrike, Stratagem.Eagle500KGBomb],
+    stratagems: [Stratagem.Autocannon, Stratagem.ExpendableAntiTank, Stratagem.AntiMaterielRifle, Stratagem.RecoillessRifle, Stratagem.Railgun, Stratagem.QuasarCannon, Stratagem.Eagle110mmRocketPods, Stratagem.OrbitalPrecisionStrike, Stratagem.OrbitalRailcannonStrike, Stratagem.Eagle500KGBomb],
     appearance: "Modeled after Super Earth tank designs, the Automaton Annihilator Tank stands as a crude imitation of its Super Earth counterpart, albeit plainly inferior in numerous aspects. Its bulky frame and slow-turning turret evoke a sense of outdated menace, a relic of a bygone era repurposed for the Automatons' relentless pursuit of domination.",
     quicktip: "Target it's engines and vents to inflict maximum damage. Their slow speed and reaction times makes them vulnerable to coordinated attacks. Draw out their fire by ducking in and out of cover.",
     tactics: `
@@ -223,7 +223,7 @@ export const bestiary = [{
     `
   }, {
     name: "Dropship",
-    stratagems: [Stratagem.ExpendableAntiTank, Stratagem.RecoillessRifle],
+    stratagems: [Stratagem.ExpendableAntiTank, Stratagem.RecoillessRifle, Stratagem.QuasarCannon],
     appearance: "Packed to the brim with robotic infantry, Dropships serve as the vanguard of the Automatons' relentless assault, conducting rapid deployment of advanced and mechanized units to reinforce their positions on the battlefield. These imposing vessels loom ominously over the battlefield, their sleek and streamlined design hinting at the formidable firepower they carry within.",
     quicktip: "Target their thrusters with high-caliber weaponry to ground them swiftly, but beware of the ensuing explosion.",
     tactics: `
