@@ -1459,6 +1459,7 @@ export const planetData = {
   },
   240: {
     name: "Troost",
+    tidbit: `<p>A mission was launched to capture an Automaton deep-space comms array from this planet. The Automaton have plans for something called "The Reclamation". Taking control of their communication may reveil vital intel on their plans.</p>`,
     sector: Sector.Trigon,
     biome: Biome.Swamp,
     environmentals: [Environmental.ThickFog]
