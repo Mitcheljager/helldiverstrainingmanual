@@ -129,14 +129,12 @@ export const bestiary = [{
   }, {
     name: "Shrieker",
     stratagems: [Stratagem.LaserCannon, Stratagem.ArcThrower, Stratagem.PatriotExosuit, Stratagem.Autocannon, Stratagem.Eagle500KGBomb],
-    appearance: "I'm sure by now you've heard the rumors of flying bugs... Don't be ridiculous, bugs don't fly! Preposterous! There's been some imagery making the rounds that seems to suggest otherwise. Don't be fooled. These so-called \"flying bugs\" are nothing more than propaganda spread by communists, all in an sad attempt to threaten our democracy. Now get back to doing your duty, Helldiver.",
+    appearance: "Just as our research had foretold, we've detected flying bugs. These monstrosities are incredibly territorial and will hunt down anyone daring to get close to their outcoves. Their large wings make them easy, yet fast moving, targets, so stay on the look out.",
     images: ["/images/bestiary/backdrop-shrieker-nest-2.jpg", "/images/bestiary/backdrop-shrieker-nest-1.jpg", "/images/bestiary/backdrop-shrieker-nest-3.jpg", "/images/bestiary/backdrop-shrieker.jpg"],
     tactics: `
-      <p>We need to deal with who ever is spreading these lies. They have even gone as far as to construct fake nests in order to make their sad attempts at deceit more convincing. But we know better. Nevertheless, we need to deal with these threats. These "nests" can be spotted from the other side of the planet, sticking out like a Christmas tree on a beach holiday.</p>
-      <p>Heavy weaponary will deal with their lies before they are able to deploy their kites. You heard that right, kites. They think they are clever, releasing kites from their towers that resemble flying bugs. But let me tell you, it doesn't take a genius to see through their ruse, you can spot the strings attaching these kites to their "nests". Idiots.</p>
-      <p>When you do come close they release their lies in droves, hoping to overwhelm you. But as it happens the paper material these things are constructed off is no match to even the lightest bullets.  Arm yourselves with heavy weaponry capable of mowing down hordes, and you'll make short work of these propaganda machines. But watch out, their limp bodies still pack a punch as they hit the ground.</p>
-      <p>And if push comes to shove, we'll deploy a Hellbomb at the base of those towers, blasting them to kingdom come in one fiery explosion that signals that Democracy will always prevail over communist lies.
-      <p>Flying bugs, as if.</p>
+      <p>These demonic bugs hide out in their nests until they sense their pray nearby. Luckily these nests can be spotted from the other side of the planet, sticking out like a Christmas tree on a beach holiday. Long distance heavy weaponary will demolish their homes before they hunt you down. </p>
+      <p>When you do come close to their nests they release their inhabitants in droves, hoping to overwhelm you. But as it happens the weak flesh of these bugs is no match to even the lightest bullets. Aim for their wings to quickly take them out of the skies. Arm yourselves with weaponry capable of mowing down hordes, and you'll make short work of these nasty creatures. But watch out, their limp bodies still pack a punch as they hit the ground.</p>
+      <p>If push comes to shove, we'll deploy a Hellbomb at the base of their nests, blasting them to kingdom come in one fiery explosion that signals that Democracy will always prevail.</p>
     `
   }]
 }, {
