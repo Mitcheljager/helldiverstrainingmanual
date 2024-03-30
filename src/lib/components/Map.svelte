@@ -154,7 +154,7 @@
                 {planet}
                 activeMajorOrder={majorOrdersPlanetIndexes.includes(planet.index)}
                 highlight={foundPlanetIndexes.includes(planet.index)}
-                campaign={getCampaign(planet.index)}
+                campaign={campaigns && getCampaign(planet.index)}
                 status={status && getStatus(planet.index)}
                 active={activeIndex === planet.index}
                 on:details={() => modalIndex = planet.index}

@@ -60,15 +60,19 @@
         {name}
       </h5>
 
-      {#if campaign}
-        <p>{faction}</p>
+      <p class="faction">{faction || factions[status.owner]}</p>
 
-        <p>
-          {percentage.toFixed(4)}%
+      {#if campaign}
+        <div class="bar">
+          <div class="progress" style:width="{percentage}%" />
+        </div>
+
+        <p class="small">
+          {percentage.toFixed(2)}%
           {defense ? "Defend!" : "Liberated"}
         </p>
 
-        <p>{players.toLocaleString()} Helldivers</p>
+        <p class="small">{players.toLocaleString()} Helldivers</p>
       {/if}
 
       <div class="actions">
@@ -218,6 +222,29 @@
       height: auto;
       mask-image: linear-gradient(to bottom, white, transparent);
     }
+  }
+
+  .faction {
+    color: var(--chart-color);
+    font-weight: bold;
+  }
+
+  .bar {
+    position: relative;
+    height: 0.5rem;
+    background: var(--border-color);
+    color: $white;
+    margin: $margin * 0.15 0;
+  }
+
+  .progress {
+    background: $super-earth;
+    height: 100%;
+  }
+
+  .small {
+    font-size: 0.85em;
+    opacity: 0.75;
   }
 
   .actions {
