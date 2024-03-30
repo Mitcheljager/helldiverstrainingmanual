@@ -3,18 +3,22 @@
 	import { fade, scale } from "svelte/transition"
 
   const dispatch = createEventDispatcher()
+
+  function closeOnBackdropClick({ target }) {
+    if (target.classList.contains("dialog") || target.closest(".dialog")) return
+
+    dispatch("close")
+  }
 </script>
 
 <svelte:window on:keydown={({ key }) => { if (key === "Escape") dispatch("close") }} />
 
-<div class="modal" transition:fade={{ duration: 200 }}>
+<!-- svelte-ignore a11y-click-events-have-key-events -->
+  <!-- svelte-ignore a11y-no-static-element-interactions -->
+<div class="modal" transition:fade={{ duration: 200 }} on:click={closeOnBackdropClick} >
   <div class="dialog" transition:scale={{ start: 0.85, duration: 200 }}>
     <slot />
   </div>
-
-  <!-- svelte-ignore a11y-click-events-have-key-events -->
-  <!-- svelte-ignore a11y-no-static-element-interactions -->
-  <div class="backdrop" on:click={() => dispatch("close")} />
 </div>
 
 <button class="close" on:click={() => dispatch("close")}>X</button>
@@ -49,15 +53,6 @@
     @include breakpoint(sm) {
       padding: $margin;
     }
-  }
-
-  .backdrop {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    z-index: -1;
   }
 
   .close {
