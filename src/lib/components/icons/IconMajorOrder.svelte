@@ -1,5 +1,5 @@
 <svg width="34px" height="31px" viewBox="0 0 76.000000 71.000000">
-  <g transform="translate(0.000000,71.000000) scale(0.100000,-0.100000)" fill="#fff" stroke="none">
+  <g transform="translate(0.000000,71.000000) scale(0.100000,-0.100000)" fill="#fff">
     <path d="M283 684 c-146 -52 -221 -240 -150 -380 46 -90 157 -164 249 -164 48
     0 134 32 175 67 66 53 95 111 101 199 4 68 2 79 -28 140 -33 68 -85 116 -153
     141 -44 16 -144 14 -194 -3z m182 -107 l60 -22 -3 -68 c-3 -60 -1 -72 19 -93
@@ -25,3 +25,13 @@
     <path d="M510 52 c0 -14 39 -46 47 -39 3 4 -2 16 -12 27 -19 21 -35 26 -35 12z"/>
   </g>
 </svg>
+
+<style lang="scss">
+  svg {
+    filter:
+      drop-shadow( 1px  0px 0px black)
+      drop-shadow(-1px  0px 0px black)
+      drop-shadow( 0px  1px 0px black)
+      drop-shadow( 0px -1px 0px black);
+  }
+</style>

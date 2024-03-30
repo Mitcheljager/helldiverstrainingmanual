@@ -18,6 +18,7 @@
   export let campaigns = []
   export let status = []
   export let events = []
+  export let majorOrdersPlanetIndexes = []
   export let fullscreen = false
   export let allowControls = true
 
@@ -148,9 +149,10 @@
       {#if browser}
         <div class="planets">
           {#each planets as planet (planet.index)}
-            {#if status && (getCampaign(planet.index) || getStatus(planet.index)?.owner !== 1 || showLiberated || foundPlanetIndexes.includes(planet.index))}
+            {#if status && (getCampaign(planet.index) || getStatus(planet.index)?.owner !== 1 || majorOrdersPlanetIndexes.includes(planet.index) || showLiberated || foundPlanetIndexes.includes(planet.index))}
               <Planet
                 {planet}
+                activeMajorOrder={majorOrdersPlanetIndexes.includes(planet.index)}
                 highlight={foundPlanetIndexes.includes(planet.index)}
                 campaign={getCampaign(planet.index)}
                 status={status && getStatus(planet.index)}

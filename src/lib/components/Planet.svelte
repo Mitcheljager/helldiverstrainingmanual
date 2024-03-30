@@ -12,11 +12,12 @@
   export let campaign = null
   export let active = false
   export let highlight = false
+  export let activeMajorOrder = false
 
   const dispatch = createEventDispatcher()
 
   $: ({ index, position } = planet)
-  $: ({ percentage, faction, defense, majorOrder, players } = campaign || {})
+  $: ({ percentage, faction, defense, majorOrder: eventMajorOrder, players } = campaign || {})
   $: data = planetData[index]
   $: name = campaign?.name || data?.name || "Unknown Planet"
 </script>
@@ -39,11 +40,11 @@
     {name}
   </div>
 
-  {#if defense || majorOrder}
+  {#if defense || eventMajorOrder || activeMajorOrder}
     <div class="icon">
       {#if defense}
         <IconDefense />
-      {:else if majorOrder}
+      {:else if eventMajorOrder || activeMajorOrder}
         <IconMajorOrder />
       {/if}
     </div>

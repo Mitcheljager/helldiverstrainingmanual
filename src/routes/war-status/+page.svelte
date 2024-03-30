@@ -16,6 +16,7 @@
   let statusInterval
   let infoInterval
   let statsInterval
+  let majorOrdersPlanetIndexes
   let fullscreen = false
 
   $: ({ status, info, stats } = data)
@@ -69,7 +70,7 @@
 
 <h2>Galactic Map</h2>
 
-<Map planets={planetInfos} status={planetStatus} campaigns={formattedCampaigns} events={planetEvents} on:fullscreen={() => fullscreen = !fullscreen} />
+<Map planets={planetInfos} status={planetStatus} campaigns={formattedCampaigns} events={planetEvents} {majorOrdersPlanetIndexes} on:fullscreen={() => fullscreen = !fullscreen} />
 
 <h2>War Statistics</h2>
 
@@ -86,7 +87,7 @@
 
 <h2>Major Orders</h2>
 
-<MajorOrder />
+<MajorOrder bind:majorOrdersPlanetIndexes />
 
 <h2>Recent Events</h2>
 

@@ -6,6 +6,8 @@
   import { onDestroy, onMount } from "svelte"
 	import LocateOnMap from "$lib/components/LocateOnMap.svelte"
 
+  export let majorOrdersPlanetIndexes = []
+
   let loading = true
   let majorOrders = []
   let interval
@@ -28,6 +30,7 @@
       if (!data?.filter(n => n.message)) return
 
       majorOrders = data
+      majorOrdersPlanetIndexes = (majorOrders?.map(o => o.setting?.tasks?.map(t => t.values[2])) || []).flat()
     } catch {
       // ignore
     } finally {
