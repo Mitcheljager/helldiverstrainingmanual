@@ -83,6 +83,14 @@
     zoom = Math.max(1, Math.min(4, zoom + increase))
   }
 
+  function wheelZoom(event) {
+    if (!event.ctrlKey) return
+
+    event.preventDefault()
+
+    setZoom(event.deltaY * -0.005)
+  }
+
   async function bindImpetus() {
     if (impetus) return
     if (!allowControls) return
@@ -143,7 +151,8 @@
     bind:clientWidth={mapWidth}
     bind:clientHeight={mapHeight}
     on:mousedown={startDrag}
-    on:mouseup={closePopup}>
+    on:mouseup={closePopup}
+    on:wheel={wheelZoom}>
 
     <div class="inner" bind:this={innerElement}>
       {#if browser}
