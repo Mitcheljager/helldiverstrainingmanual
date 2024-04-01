@@ -1,11 +1,11 @@
 import { supabase } from "$lib/db"
 import { addCache, getCache } from "$lib/api/cache"
 
-export async function fetchOwnership() {
+export async function fetchOwnership({ bypassCache = false } = {}) {
   const key = "ownership"
   const cached = await getCache(key, { storeOnly: true })
 
-  if (cached) return cached
+  if (!bypassCache && cached) return cached
 
   const { data, error } = await supabase
     .from("ownership")

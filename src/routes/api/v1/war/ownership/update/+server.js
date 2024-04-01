@@ -14,7 +14,7 @@ export async function GET({ url }) {
 
     const requests = []
 
-    const ownership = await fetchOwnership()
+    const ownership = await fetchOwnership({ bypassCache: true })
 
     planetStatus.forEach(planet => {
       const data = ownership.find(o => o.planet_index === planet.index)
