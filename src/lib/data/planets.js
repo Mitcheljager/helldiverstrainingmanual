@@ -24,7 +24,7 @@ export const planetData = {
   3: {
     name: "Widow's Harbor",
     sector: Sector.Altus,
-    biome: null,
+    biome: Biome.Moon,
     environmentals: [Environmental.ExtremeCold, Environmental.MeteorStorms]
   },
   4: {
@@ -404,7 +404,7 @@ export const planetData = {
   66: {
     name: "Curia",
     sector: Sector.Marspira,
-    biome: null,
+    biome: Biome.Moon,
     environmentals: [Environmental.ExtremeCold, Environmental.MeteorStorms]
   },
   67: {
@@ -464,7 +464,7 @@ export const planetData = {
   76: {
     name: "Terrek",
     sector: Sector.Orion,
-    biome: null,
+    biome: Biome.Moon,
     environmentals: [Environmental.ExtremeCold, Environmental.MeteorStorms]
   },
   77: {
@@ -525,7 +525,7 @@ export const planetData = {
   86: {
     name: "Rasp",
     sector: Sector.Gallux,
-    biome: null,
+    biome: Biome.Moon,
     environmentals: [Environmental.ExtremeCold, Environmental.MeteorStorms]
   },
   87: {
@@ -663,7 +663,7 @@ export const planetData = {
   109: {
     name: "Dolph",
     sector: Sector.Nanos,
-    biome: null,
+    biome: Biome.Moon,
     environmentals: [Environmental.ExtremeCold, Environmental.MeteorStorms]
   },
   110: {
@@ -978,7 +978,7 @@ export const planetData = {
   161: {
     name: "Claorell",
     sector: Sector.Tanis,
-    biome: null,
+    biome: Biome.Moon,
     environmentals: [Environmental.ExtremeCold, Environmental.MeteorStorms]
   },
   162: {
@@ -1081,7 +1081,7 @@ export const planetData = {
   178: {
     name: "Haldus",
     sector: Sector.Ferris,
-    biome: null,
+    biome: Biome.Moon,
     environmentals: [Environmental.ExtremeCold, Environmental.MeteorStorms]
   },
   179: {
@@ -1183,7 +1183,7 @@ export const planetData = {
   195: {
     name: "Maia",
     sector: Sector.Severin,
-    biome: null,
+    biome: Biome.Moon,
     environmentals: [Environmental.ExtremeCold, Environmental.MeteorStorms]
   },
   196: {
