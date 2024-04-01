@@ -71,7 +71,7 @@ export const boosters = [{
 }, {
   name: "Localisation Confusion",
   description: "Increases the time between enemy encounters.",
-  tidbit: "",
+  tidbit: "Through Cutting Edge Jamming Technology, generates a small electrical magnetic field around the Helldiver, interfering with both technological and biological tracking systems, reducing the enemies abilities to hone in on the Helldivers' location.",
   unlock: "Cutting Edge Premium Warbond",
   cost: {
     individual: 18,
