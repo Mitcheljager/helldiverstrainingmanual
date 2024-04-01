@@ -44,3 +44,15 @@ export function secondsToDaysWithHours(seconds) {
 
   return `${days}D ${leftoverHours}H`
 }
+
+export function humanReadableDatetime(datetime) {
+  const options = {
+    month: "short",
+    day: "numeric",
+    hour: "numeric",
+    minute: "numeric",
+    hour12: false,
+  }
+
+  return datetime.toLocaleDateString(undefined, options)
+}

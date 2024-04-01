@@ -4,6 +4,7 @@
 	import { planetData } from "$lib/data/planets"
 	import { browser } from "$app/environment"
 	import { api } from "$lib/api/api"
+	import { humanReadableDatetime } from "$lib/utils/datetime"
 
   export let index
   export let row = false
@@ -12,17 +13,8 @@
   function getChartProps(history, players = false) {
     const data = {}
     ;[...history].reverse().forEach((item) => {
-      const datetime = new Date(item.created_at)
-      const options = {
-        month: "short",
-        day: "numeric",
-        hour: "numeric",
-        minute: "numeric",
-        hour12: false,
-      }
-
       // @ts-ignore
-      const formattedDate = datetime.toLocaleDateString(undefined, options)
+      const formattedDate = humanReadableDatetime(datetime)
 
       data[formattedDate] = players ? item.player_count : getPlanetPercentage(item)
     })

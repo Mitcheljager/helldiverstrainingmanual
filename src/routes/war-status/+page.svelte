@@ -92,7 +92,7 @@
 <h2>Recent Events</h2>
 
 {#if browser}
-  <News from={status.time - 432000} /> <!-- 5 days ago -->
+  <News days={5} serverTimestamp={status.time} />
 {:else}
   Loading...
 {/if}
