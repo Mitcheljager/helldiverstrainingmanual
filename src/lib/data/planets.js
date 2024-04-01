@@ -922,6 +922,7 @@ export const planetData = {
   },
   152: {
     name: "Durgen",
+    imageCount: 3,
     sector: Sector.Severin,
     biome: Biome.Mesa,
     environmentals: [Environmental.IntenseHeat, Environmental.Sandstorms]
@@ -1443,6 +1444,7 @@ export const planetData = {
   },
   238: {
     name: "Tibit",
+    imageCount: 3,
     sector: Sector.Severin,
     biome: Biome.Ethereal,
     environmentals: []
