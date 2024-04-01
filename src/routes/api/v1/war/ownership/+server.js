@@ -2,7 +2,7 @@ import { fetchOwnership } from "$lib/api/ownership"
 import { getApiHeaders } from "$lib/utils/headers"
 
 export async function GET() {
-  const headers = getApiHeaders(21600)
+  const headers = getApiHeaders(3600)
 
   try {
     const data = await fetchOwnership()

@@ -13,7 +13,7 @@ export async function fetchOwnership({ bypassCache = false } = {}) {
     .order("created_at", { ascending: false })
     .range(0, 1000)
 
-  addCache(key, data, 21600000, { storeOnly: true }) // 6 Hours
+  addCache(key, data, 3600000, { storeOnly: true }) // 1 Hour
 
   if (error) throw new Error(error.message)
 
