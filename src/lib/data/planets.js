@@ -12,7 +12,7 @@ export const planetData = {
   1: {
     name: "Klen Dahth II",
     sector: Sector.Altus,
-    biome: null,
+    biome: Biome.Mesa,
     environmentals: [Environmental.IntenseHeat, Environmental.Sandstorms]
   },
   2: {
@@ -235,7 +235,7 @@ export const planetData = {
   38: {
     name: "Viridia Prime",
     sector: Sector.Cantolus,
-    biome: null,
+    biome: Biome.Mesa,
     environmentals: [Environmental.IntenseHeat, Environmental.Sandstorms]
   },
   39: {
@@ -277,7 +277,7 @@ export const planetData = {
   45: {
     name: "Mastia",
     sector: Sector.Marspira,
-    biome: null,
+    biome: Biome.Mesa,
     environmentals: [Environmental.IntenseHeat, Environmental.Sandstorms]
   },
   46: {
@@ -325,7 +325,7 @@ export const planetData = {
   53: {
     name: "Caramoor",
     sector: Sector.Korpus,
-    biome: null,
+    biome: Biome.Mesa,
     environmentals: [Environmental.IntenseHeat, Environmental.Sandstorms]
   },
   54: {
@@ -434,7 +434,7 @@ export const planetData = {
   71: {
     name: "Ratch",
     sector: Sector.Iptus,
-    biome: null,
+    biome: Biome.Mesa,
     environmentals: [Environmental.IntenseHeat, Environmental.Sandstorms]
   },
   72: {
@@ -519,7 +519,7 @@ export const planetData = {
   85: {
     name: "Moradesh",
     sector: Sector.Celeste,
-    biome: null,
+    biome: Biome.Mesa,
     environmentals: [Environmental.IntenseHeat, Environmental.Sandstorms]
   },
   86: {
@@ -585,7 +585,7 @@ export const planetData = {
   96: {
     name: "Outpost 32",
     sector: Sector.Saleria,
-    biome: null,
+    biome: Biome.Mesa,
     environmentals: [Environmental.IntenseHeat, Environmental.Sandstorms]
   },
   97: {
@@ -887,7 +887,7 @@ export const planetData = {
   146: {
     name: "Osupsam",
     sector: Sector.Tarragon,
-    biome: null,
+    biome: Biome.Mesa,
     environmentals: [Environmental.IntenseHeat, Environmental.Sandstorms]
   },
   147: {
@@ -923,7 +923,7 @@ export const planetData = {
   152: {
     name: "Durgen",
     sector: Sector.Severin,
-    biome: null,
+    biome: Biome.Mesa,
     environmentals: [Environmental.IntenseHeat, Environmental.Sandstorms]
   },
   153: {
@@ -1104,7 +1104,7 @@ export const planetData = {
   182: {
     name: "Heze Bay",
     sector: Sector.Hanzo,
-    biome: null,
+    biome: Biome.Mesa,
     environmentals: [Environmental.IntenseHeat, Environmental.Sandstorms]
   },
   183: {
@@ -1128,7 +1128,7 @@ export const planetData = {
   186: {
     name: "Keid",
     sector: Sector.Akira,
-    biome: null,
+    biome: Biome.Mesa,
     environmentals: [Environmental.IntenseHeat, Environmental.Sandstorms]
   },
   187: {
@@ -1164,7 +1164,7 @@ export const planetData = {
   192: {
     name: "Lastofe",
     sector: Sector.Theseus,
-    biome: null,
+    biome: Biome.Mesa,
     environmentals: [Environmental.IntenseHeat, Environmental.Sandstorms]
   },
   193: {
@@ -1318,7 +1318,7 @@ export const planetData = {
   217: {
     name: "Phact Bay",
     sector: Sector.JinXi,
-    biome: null,
+    biome: Biome.Mesa,
     environmentals: [Environmental.IntenseHeat, Environmental.Sandstorms]
   },
   218: {
@@ -1348,7 +1348,7 @@ export const planetData = {
   222: {
     name: "Propus",
     sector: Sector.Leo,
-    biome: null,
+    biome: Biome.Mesa,
     environmentals: [Environmental.IntenseHeat, Environmental.Sandstorms]
   },
   223: {
@@ -1390,7 +1390,7 @@ export const planetData = {
   229: {
     name: "Setia",
     sector: Sector.Omega,
-    biome: null,
+    biome: Biome.Mesa,
     environmentals: [Environmental.IntenseHeat, Environmental.Sandstorms]
   },
   230: {
@@ -1542,7 +1542,7 @@ export const planetData = {
   253: {
     name: "Zzaniah Prime",
     sector: Sector.Gellert,
-    biome: null,
+    biome: Biome.Mesa,
     environmentals: [Environmental.IntenseHeat, Environmental.Sandstorms]
   },
   254: {
@@ -1560,7 +1560,7 @@ export const planetData = {
   256: {
     name: "Diaspora X",
     sector: Sector.Lestrade,
-    biome: null,
+    biome: Biome.Mesa,
     environmentals: [Environmental.IntenseHeat, Environmental.Sandstorms]
   },
   257: {
@@ -1572,7 +1572,7 @@ export const planetData = {
   258: {
     name: "Zagon Prime",
     sector: Sector.Mirin,
-    biome: null,
+    biome: Biome.Mesa,
     environmentals: [Environmental.IntenseHeat, Environmental.Sandstorms]
   },
   259: {

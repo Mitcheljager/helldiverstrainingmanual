@@ -54,5 +54,9 @@ export const Biome = {
   Canyon: {
     slug: "canyon",
     description: "This arid, rocky biome covering this world has driven the evolution of exceptionally efficient water usage in its various organisms."
+  },
+  Mesa: {
+    slug: "mesa",
+    description: "A blazing-hot desert planet, it's rocky mesas are the sole interruptions to the endless sea of dunes."
   }
 }
