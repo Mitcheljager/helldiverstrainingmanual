@@ -220,6 +220,14 @@ export const bestiary = [{
       <p>Leverage a diverse arsenal of Stratagems and weaponry to exploit their weaknesses, combining anti-armor support weapons with explosive ordinance to swiftly dismantle their formidable defenses. Prioritize teamwork and coordination to maximize your efficacy against these formidable adversaries, orchestrating synchronized assaults to overwhelm them and ensure triumph for Super Earth.</p>
     `
   }, {
+    name: "Factory Strider",
+    appearance: "Stand by for further details...",
+    tactics: "<p>Collection any information you can. Battles are won through information. Do your duty and report back what you know."
+  }, {
+    name: "Combat ship",
+    appearance: "Stand by for further details...",
+    tactics: "<p>Collection any information you can. Battles are won through information. Do your duty and report back what you know."
+  }, {
     name: "Dropship",
     stratagems: [Stratagem.ExpendableAntiTank, Stratagem.RecoillessRifle, Stratagem.QuasarCannon],
     appearance: "Packed to the brim with robotic infantry, Dropships serve as the vanguard of the Automatons' relentless assault, conducting rapid deployment of advanced and mechanized units to reinforce their positions on the battlefield. These imposing vessels loom ominously over the battlefield, their sleek and streamlined design hinting at the formidable firepower they carry within.",
