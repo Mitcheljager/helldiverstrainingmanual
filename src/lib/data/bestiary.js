@@ -224,7 +224,7 @@ export const bestiary = [{
     appearance: "Stand by for further details...",
     tactics: "<p>Collection any information you can. Battles are won through information. Do your duty and report back what you know."
   }, {
-    name: "Combat ship",
+    name: "Gunship",
     appearance: "Stand by for further details...",
     tactics: "<p>Collection any information you can. Battles are won through information. Do your duty and report back what you know."
   }, {
