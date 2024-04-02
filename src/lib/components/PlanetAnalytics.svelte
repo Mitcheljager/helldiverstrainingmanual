@@ -14,7 +14,7 @@
     const data = {}
     ;[...history].reverse().forEach((item) => {
       // @ts-ignore
-      const formattedDate = humanReadableDatetime(datetime)
+      const formattedDate = humanReadableDatetime(new Date(item.created_at))
 
       data[formattedDate] = players ? item.player_count : getPlanetPercentage(item)
     })
