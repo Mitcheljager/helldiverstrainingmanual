@@ -1189,6 +1189,12 @@ export const planetData = {
   196: {
     name: "Malevelon Creek",
     imageCount: 3,
+    tidbit: `
+      <p>The Second Galactic War erupted like a supernova, and Malevelon Creek became ground zero for the Helldiver-Automaton showdown. The "Fight for the Creek" propaganda blitz called citizens to arms, turning the Creek into a metal recycling plant of epic proportions. As the battle raged on, the Helldivers faced an uphill battle, with liberation lower than a limbo stick at a black hole. Despite heroic efforts, the Creek fell, along with a string of planets like dominoes in a cosmic game of despair. But hope flickered like a stubborn candle flame when Mort was finally freed from Automaton clutches.</p>
+      <p>The Second Battle of Malevelon Creek became the stuff of legend, a tale of siege warfare that would make even the bravest Helldiver pause. The Automatons wanted every last Helldiver squashed like bugs in a cosmic boot, and casualties piled up like space junk orbiting a garbage planet. The Helldivers refused to yield, holding on like no other. When Mantes fell, reinforcements poured back into the Creek like a flood of righteous fury. Yet, the battle remained a quagmire, and Draupnir's liberation became the holy grail for weary soldiers.</p>
+      <p>Then, the Helldivers rose like a phoenix from the ashes, retaking Malevelon Creek in a blaze of glory. But the celebration was short-lived, as the Automatons launched a sneak attack the very next day. In a desperate struggle, the Helldivers purged the planet of the metal monstrosities, leaving behind a graveyard of twisted wreckage as a grim reminder of the horrors endured.</p>
+      <p>In commeration "Malevelon Creek Memorial Day" was born, celebrated on April 3rd, a solemn occasion to honor the fallen.</p>
+    `,
     sector: Sector.Severin,
     biome: Biome.RainForest,
     environmentals: [Environmental.IonStorms]
