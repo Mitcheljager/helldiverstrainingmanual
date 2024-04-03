@@ -5,7 +5,7 @@ export const Environmental = {
   },
   ThickFog: {
     name: "Thick Fog",
-    description : ""
+    description : "Dense fog lightly reduce visibility for both enemy and friendly units."
   },
   Rainstorms: {
     name: "Rainstorms",
@@ -21,7 +21,7 @@ export const Environmental = {
   },
   Blizzards: {
     name: "Blizzards",
-    description: ""
+    description: "Intense blizzard reduce mobility and moderately reduce visibility for both enemy and friendly units."
   },
   MeteorStorms: {
     name: "Meteor Storms",
@@ -29,7 +29,7 @@ export const Environmental = {
   },
   Sandstorms: {
     name: "Sandstorms",
-    description: ""
+    description: "Dense sandstorms reduce mobility and greatly reduce visibility for both enemy and friendly units."
   },
   IonStorms: {
     name: "Ion Storms",
