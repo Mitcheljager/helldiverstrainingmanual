@@ -14,10 +14,12 @@
 <p>From the humble beginnings of a Cadet, you shall prove your unwavering commitment to the cause, proving your mettle on the battlefield and demonstrating your prowess as a true defender of humanity. Each title, earned through feats of bravery and skill, marks another milestone in your journey to greatness. Let the galaxy tremble at the might of your name!</p>
 
 <div class="titles mt-1">
-  {#each titles as { name, requirement }}
+  {#each titles as { name, requirement, noImage }}
     <div class="title">
       <div class="icon">
-        <img src="/images/titles/{toSlug(name)}.svg" alt="" />
+        {#if !noImage}
+          <img src="/images/titles/{toSlug(name)}.svg" alt="" />
+        {/if}
       </div>
 
       <div>
@@ -59,9 +61,13 @@
     color: $white;
   }
 
+  .icon {
+    width: 5rem;
+  }
+
   img {
     display: block;
-    width: 5rem;
+    width: 100%;
     height: auto;
   }
 </style>

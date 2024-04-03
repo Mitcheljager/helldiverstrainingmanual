@@ -32,6 +32,46 @@ export const titles = [{
   name: "Skull Admiral",
   requirement: "Level 50"
 }, {
+  name: "Fleet Admiral",
+  requirement: "Level 60",
+  noImage: true
+}, {
+  name: "Admirable Admiral",
+  requirement: "Level 70",
+  noImage: true
+}, {
+  name: "Commander",
+  requirement: "Level 80",
+  noImage: true
+}, {
+  name: "Galactic Commander",
+  requirement: "Level 90",
+  noImage: true
+}, {
+  name: "Hell Commander",
+  requirement: "Level 100",
+  noImage: true
+}, {
+  name: "General",
+  requirement: "Level 110",
+  noImage: true
+}, {
+  name: "5-Star General",
+  requirement: "Level 120",
+  noImage: true
+}, {
+  name: "10-Star General",
+  requirement: "Level 130",
+  noImage: true
+}, {
+  name: "Private",
+  requirement: "Level 140",
+  noImage: true
+}, {
+  name: "Super Private",
+  requirement: "Level 150",
+  noImage: true
+}, {
   name: "Super Citizen",
   requirement: "Show your unwavering commitment to the cause by obtaining the Super Citizen package."
 }]
