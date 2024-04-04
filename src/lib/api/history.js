@@ -37,7 +37,7 @@ export async function fetchHistory(planetIndex, { timeframe = Timeframe.Day } = 
   }
 }
 
-export async function saveCampaignStatusHistory(formattedCampaigns) {
+export async function saveCampaignStatusHistory(formattedCampaigns, { timeframe = Timeframe.Short } = {}) {
   const requests = []
 
   formattedCampaigns.forEach(({ planetIndex, health, maxHealth, players, }) => {
@@ -45,7 +45,8 @@ export async function saveCampaignStatusHistory(formattedCampaigns) {
       planet_index: planetIndex,
       current_health: health,
       max_health: maxHealth,
-      player_count: players
+      player_count: players,
+      timeframe
     })
   })
 

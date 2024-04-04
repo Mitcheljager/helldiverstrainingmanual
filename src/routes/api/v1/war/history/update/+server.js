@@ -1,5 +1,6 @@
 import { fetchInfo, fetchStatus } from "$lib/api/helldivers"
 import { saveCampaignStatusHistory } from "$lib/api/history"
+import { Timeframe } from "$lib/data/timeframe.js"
 import { formatCampaigns } from "$lib/utils/campaign"
 
 export async function GET({ url }) {
@@ -9,6 +10,9 @@ export async function GET({ url }) {
     const token = url.searchParams.get("token")
 
     if (token !== import.meta.env.VITE_HISTORY_API_TOKEN) throw new Error("Incorrect token")
+
+    const timeframe = url.searchParams.get("timeframe") || Timeframe.Short
+    if (!Object.values(Timeframe).includes(timeframe)) throw new Error("Incorrect timeframe")
 
     let [status, info] = (
       await Promise.allSettled([
@@ -31,7 +35,7 @@ export async function GET({ url }) {
 
     const formattedCampaigns = formatCampaigns(status, info)
 
-    await saveCampaignStatusHistory(formattedCampaigns)
+    await saveCampaignStatusHistory(formattedCampaigns, { timeframe })
 
     return new Response(JSON.stringify({ status: "Done" }), { headers, status: 200 })
   } catch(error) {
