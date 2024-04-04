@@ -14,6 +14,12 @@ export async function fetchHistory(planetIndex, { timeframe = Timeframe.Day } = 
       [Timeframe.Day]: 288
     }
 
+    const fetchTimeframe = {
+      [Timeframe.Short]: [Timeframe.Short],
+      [Timeframe.Day]: [Timeframe.Short],
+      [Timeframe.Week]: [Timeframe.Hour]
+    }
+
     const limit = limits[timeframe]
     if (!limit) throw new Error("Incorrect timeframe given")
 
@@ -24,6 +30,7 @@ export async function fetchHistory(planetIndex, { timeframe = Timeframe.Day } = 
       .select("created_at, planet_index, current_health, max_health, player_count")
       .gte("created_at", from)
       .eq("planet_index", planetIndex)
+      .eq("timeframe", fetchTimeframe[timeframe])
       .order("created_at", { ascending: false })
       .range(0, limit - 1)
 
