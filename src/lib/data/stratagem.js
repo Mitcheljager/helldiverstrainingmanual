@@ -356,7 +356,7 @@ export const Stratagem = {
   ArcThrower: {
     name: "Arc Thrower",
     cost: 7000,
-    sequence: ["down", "right", "up", "left", "down"],
+    sequence: ["down", "right", "down", "up", "left", "left"],
     content: `
       <p>This potent tool charges up to unleash bolts of crackling electricity, capable of arcing between multiple targets with devastating effect. Remarkably, the Arc Thrower's inexhaustible energy source ensures that it can be fired infinitely, delivering relentless punishment to our enemies without the need for traditional ammunition. However, wielders must exercise caution when deploying the Arc Thrower in close proximity to comrades, as its indiscriminate discharge may inadvertently harm nearby teammates.</p>
     `
