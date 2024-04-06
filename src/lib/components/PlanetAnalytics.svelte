@@ -17,6 +17,13 @@
     { text: "One week", value: Timeframe.Week }
   ]
 
+  const dataSize = {
+    [Timeframe.Day]: 288,
+    [Timeframe.Week]: 168
+  }
+
+  const chartAspectRatio = 3 / 1
+
   let timeframe = Timeframe.Day
 
   function getChartProps(history, players = false) {
@@ -60,21 +67,29 @@
   </div>
 
   {#if !browser}
-    <span>Loading...</span>
+    Loading...
   {:else}
-    {#key timeframe}
-      {#await api(`war/history/${index}?timeframe=${timeframe}`)}
-        <span>Loading...</span>
-      {:then data}
-        <div class="charts" class:row class:inline>
+    <div class="charts" class:row class:inline>
+      {#key timeframe}
+        {#await api(`war/history/${index}?timeframe=${timeframe}`)}
+          <div class="chart">
+            <h5>Loading...</h5>
+            <svg width={chartAspectRatio} height="1" />
+          </div>
+
+          <div class="chart">
+            <h5>Loading...</h5>
+            <svg width={chartAspectRatio} height="1" />
+          </div>
+        {:then data}
           {#if Object.entries(data).length !== 0}
             {#each [{ header: "Liberation percentage", players: false }, { header: "Number of Helldivers", players: true }] as { header, players }}
-              <div class="chart" in:slide|global={{ duration: 100 }} >
+              <div class="chart">
                 <h5>{header}</h5>
 
                 <LinkedChart
-                  width={576}
-                  height={150}
+                  width={dataSize[timeframe] * 2}
+                  height={dataSize[timeframe] * 2 / chartAspectRatio}
                   gap={0}
                   barMinHeight={2}
                   barMinWidth={2}
@@ -91,21 +106,21 @@
               </div>
             {/each}
           {/if}
-        </div>
 
-        {#if Object.entries(data).length < 150}
-          <em class="mt-1/4" in:slide|global={{ duration: 100 }}>
-            {#if Object.entries(data).length === 0}
-              No activity has been recorded on this planet in the last 24 hours
-            {:else}
-              This data is still populating
-            {/if}
-          </em>
-        {/if}
-      {:catch}
-        Something went wrong when fetching the analytics.
-      {/await}
-    {/key}
+          {#if Object.entries(data).length < 150}
+            <em in:slide|global={{ duration: 100 }}>
+              {#if Object.entries(data).length === 0}
+                No activity has been recorded on this planet in the last 24 hours
+              {:else}
+                This data is still populating
+              {/if}
+            </em>
+          {/if}
+        {:catch}
+          Something went wrong when fetching the analytics.
+        {/await}
+      {/key}
+    </div>
   {/if}
 </div>
 
@@ -125,6 +140,7 @@
     font-weight: normal;
     color: darken($text-color, 20%);
     line-height: 1em;
+    text-align: left;
   }
 
   .header {
@@ -137,8 +153,7 @@
   }
 
   .charts {
-    display: flex;
-    flex-direction: column;
+    display: grid;
     gap: $margin * 0.25;
     width: 100%;
     min-width: 15rem;
@@ -147,7 +162,7 @@
 
     &.row {
       @include breakpoint(sm) {
-        flex-direction: row;
+        grid-template-columns: 1fr 1fr;
         width: 100%;
       }
     }
