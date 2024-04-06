@@ -5,10 +5,19 @@
 	import { browser } from "$app/environment"
 	import { api } from "$lib/api/api"
 	import { humanReadableDatetime } from "$lib/utils/datetime"
+	import { Timeframe } from "$lib/data/timeframe"
+	import Select from "$lib/components/Select.svelte"
 
   export let index
   export let row = false
   export let inline = false
+
+  const options = [
+    { text: "One day", value: Timeframe.Day },
+    { text: "One week", value: Timeframe.Week }
+  ]
+
+  let timeframe = Timeframe.Day
 
   function getChartProps(history, players = false) {
     const data = {}
@@ -39,51 +48,62 @@
     <h4 class="mb-1/4">{planetData[index].name}</h4>
   {/if}
 
+  <div class="select">
+    <Select
+      up
+      small
+      {options}
+      value={options[0]}
+      on:change={({ detail }) => timeframe = detail.value} />
+  </div>
+
   {#if !browser}
     <span>Loading...</span>
   {:else}
-    {#await api(`war/history/${index}`)}
-      <span>Loading...</span>
-    {:then data}
-      <div class="charts" class:row class:inline>
-        {#if Object.entries(data).length !== 0}
-          {#each [{ header: "Liberation percentage", players: false }, { header: "Number of Helldivers", players: true }] as { header, players }}
-            <div class="chart" in:slide|global={{ duration: 100 }} >
-              <h5>{header}</h5>
+    {#key timeframe}
+      {#await api(`war/history/${index}?timeframe=${timeframe}`)}
+        <span>Loading...</span>
+      {:then data}
+        <div class="charts" class:row class:inline>
+          {#if Object.entries(data).length !== 0}
+            {#each [{ header: "Liberation percentage", players: false }, { header: "Number of Helldivers", players: true }] as { header, players }}
+              <div class="chart" in:slide|global={{ duration: 100 }} >
+                <h5>{header}</h5>
 
-              <LinkedChart
-                width={576}
-                height={150}
-                gap={0}
-                barMinHeight={2}
-                barMinWidth={2}
-                linked="planet{index}"
-                uid={index + header}
-                lineColor="currentColor"
-                fill="var(--chart-color)"
-                {...getChartProps(data, players)} />
+                <LinkedChart
+                  width={576}
+                  height={150}
+                  gap={0}
+                  barMinHeight={2}
+                  barMinWidth={2}
+                  linked="planet{index}"
+                  uid={index + header}
+                  lineColor="currentColor"
+                  fill="var(--chart-color)"
+                  {...getChartProps(data, players)} />
 
-              <div class="labels">
-                <div><LinkedValue uid={index + header} transform={(value) => value.toLocaleString() + (players ? "" : "%")} /></div>
-                <div><LinkedLabel linked="planet{index}" /></div>
+                <div class="labels">
+                  <div><LinkedValue uid={index + header} transform={(value) => value.toLocaleString() + (players ? "" : "%")} /></div>
+                  <div><LinkedLabel linked="planet{index}" /></div>
+                </div>
               </div>
-            </div>
-          {/each}
-        {/if}
-      </div>
-
-      {#if Object.entries(data).length < 200}
-        <em class="mt-1/4" in:slide|global={{ duration: 100 }}>
-          {#if Object.entries(data).length === 0}
-            No activity has been recorded on this planet in the last 24 hours
-          {:else}
-            This data is still populating
+            {/each}
           {/if}
-        </em>
-      {/if}
-    {:catch}
-      Something went wrong when fetching the analytics.
-    {/await}
+        </div>
+
+        {#if Object.entries(data).length < 150}
+          <em class="mt-1/4" in:slide|global={{ duration: 100 }}>
+            {#if Object.entries(data).length === 0}
+              No activity has been recorded on this planet in the last 24 hours
+            {:else}
+              This data is still populating
+            {/if}
+          </em>
+        {/if}
+      {:catch}
+        Something went wrong when fetching the analytics.
+      {/await}
+    {/key}
   {/if}
 </div>
 
@@ -107,6 +127,10 @@
     font-weight: normal;
     color: darken($text-color, 20%);
     line-height: 1em;
+  }
+
+  .select {
+    margin-bottom: $margin * 0.25;
   }
 
   .charts {

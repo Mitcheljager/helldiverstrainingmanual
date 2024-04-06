@@ -9,7 +9,7 @@ export function timeFromNow(unixTimestamp) {
   return hours.toString().padStart(2, "0") + ":" + minutes.toString().padStart(2, "0") + ":" + seconds.toString().padStart(2, "0")
 }
 
-export function hoursDifference(unixTimestamp) {
+export function hoursFromNow(unixTimestamp) {
   const currentTime = Math.floor(Date.now() / 1000)
   const totalSeconds =  unixTimestamp - currentTime
 
@@ -55,4 +55,9 @@ export function humanReadableDatetime(datetime) {
   }
 
   return datetime.toLocaleDateString(undefined, options)
+}
+
+export function hoursDifference(start, end) {
+  const timeDifference = end.getTime() - start.getTime()
+  return Math.round(timeDifference / (1000 * 60 * 60))
 }

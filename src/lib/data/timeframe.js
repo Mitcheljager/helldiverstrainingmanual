@@ -1,5 +1,6 @@
 export const Timeframe = {
   Short: "short",
   Hour: "hour",
-  Day: "day"
+  Day: "day",
+  Week: "week"
 }

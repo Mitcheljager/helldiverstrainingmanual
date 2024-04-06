@@ -1,8 +1,8 @@
 <script>
 	import { browser } from "$app/environment"
 	import { api } from "$lib/api/api"
-	import { Timeframe } from "$lib/data/timeframe";
-  import { hoursDifference } from "$lib/utils/datetime"
+	import { Timeframe } from "$lib/data/timeframe"
+  import { hoursFromNow } from "$lib/utils/datetime"
 	import { onDestroy, onMount } from "svelte"
 
   export let planetIndex
@@ -16,7 +16,7 @@
   let now = Date.now()
   let stalemate = false
 
-  $: hoursToGo = hoursDifference(estimatedEnd)
+  $: hoursToGo = hoursFromNow(estimatedEnd)
 
   onMount(async () => {
     if (!browser) return

@@ -6,6 +6,7 @@
   export let options = []
   export let value = {}
   export let up = false
+  export let small = false
 
   const dispatch = createEventDispatcher()
 
@@ -18,7 +19,7 @@
   }
 </script>
 
-<button class="select" use:outside on:close={() => active = false} on:click={() => active = !active}>
+<button class="select" class:small use:outside on:close={() => active = false} on:click={() => active = !active}>
   {#if value.icon}
     <img loading="lazy" src={value.icon} alt="" />
   {/if}
@@ -62,6 +63,13 @@
       border-color: lighten($bg-dark, 10%);
     }
 
+    &.small {
+      width: auto;
+      padding: $margin * 0.1 $margin * 0.25;
+      border-width: 3px;
+      font-size: 1rem;
+    }
+
     img {
       height: 2em;
       width: auto;
@@ -75,6 +83,7 @@
     transform: translateY(100%);
     padding: $margin * 0.25;
     width: calc(100% + 10px);
+    min-width: 10rem;
     max-height: 20rem;
     border: 5px solid $bg-dark;
     background: lighten($bg-base, 5%);
@@ -87,6 +96,12 @@
       top: calc($margin * -0.25 - 5px);
       bottom: auto;
       transform: translateY(-100%);
+    }
+
+    .small & {
+      left: -3px;
+      padding: $margin * 0.15;
+      border-width: 3px;
     }
   }
 
@@ -107,6 +122,10 @@
     &:hover,
     &.active {
       background: darken($bg-dark, 10%);
+    }
+
+    .small & {
+      font-size: 1rem;
     }
 
     img {
