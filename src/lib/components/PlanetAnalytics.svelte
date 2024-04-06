@@ -44,17 +44,19 @@
 </script>
 
 <div>
-  {#if !inline}
-    <h4 class="mb-1/4">{planetData[index].name}</h4>
-  {/if}
+  <div class="header">
+    {#if !inline}
+      <h4 class="mb-1/4">{planetData[index].name}</h4>
+    {/if}
 
-  <div class="select">
-    <Select
-      up
-      small
-      {options}
-      value={options[0]}
-      on:change={({ detail }) => timeframe = detail.value} />
+    <div class="select">
+      <Select
+        right={!inline}
+        small
+        {options}
+        value={options[0]}
+        on:change={({ detail }) => timeframe = detail.value} />
+    </div>
   </div>
 
   {#if !browser}
@@ -108,10 +110,6 @@
 </div>
 
 <style lang="scss">
-  h4 {
-    text-align: center;
-  }
-
   h5 {
     margin: 0 0 $margin * 0.15;
     color: darken($text-color, 20%);
@@ -127,6 +125,11 @@
     font-weight: normal;
     color: darken($text-color, 20%);
     line-height: 1em;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
   }
 
   .select {

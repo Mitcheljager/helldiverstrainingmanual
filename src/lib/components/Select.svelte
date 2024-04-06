@@ -6,6 +6,7 @@
   export let options = []
   export let value = {}
   export let up = false
+  export let right = false
   export let small = false
 
   const dispatch = createEventDispatcher()
@@ -27,7 +28,7 @@
   {value.text}
 
   {#if active}
-    <div class="dropdown" class:up transition:fly={{ y: -10, duration: 100 }}>
+    <div class="dropdown" class:up class:right transition:fly={{ y: -10, duration: 100 }}>
       {#each options as option}
         <button class="item" class:active={option.text === value.text} on:click={() => change(option)}>
           {#if option.icon}
@@ -98,10 +99,22 @@
       transform: translateY(-100%);
     }
 
+    &.right {
+      left: auto;
+      right: -5px;
+
+      .small & {
+        right: -3px;
+      }
+    }
+
     .small & {
-      left: -3px;
       padding: $margin * 0.15;
       border-width: 3px;
+
+      &:not(.right) {
+        left: -3px;
+      }
     }
   }
 
