@@ -971,6 +971,7 @@ export const planetData = {
   },
   160: {
     name: "Chort Bay",
+    imageCount: 3,
     sector: Sector.Lacaille,
     biome: Biome.Toxic,
     environmentals: [Environmental.IntenseHeat, Environmental.AcidStorms]
