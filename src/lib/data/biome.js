@@ -58,5 +58,9 @@ export const Biome = {
   Mesa: {
     slug: "mesa",
     description: "A blazing-hot desert planet, it's rocky mesas are the sole interruptions to the endless sea of dunes."
+  },
+  Toxic: {
+    slug: "toxic",
+    description: "Dense, toxic fumes from deep within the planet's crust seep out of cracks in the earth and coat the ground in a sickly haze."
   }
 }

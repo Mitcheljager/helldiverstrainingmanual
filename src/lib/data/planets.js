@@ -54,7 +54,7 @@ export const planetData = {
   8: {
     name: "Darrowsport",
     sector: Sector.Barnard,
-    biome: null,
+    biome: Biome.Toxic,
     environmentals: [Environmental.IntenseHeat, Environmental.AcidStorms]
   },
   9: {
@@ -114,7 +114,7 @@ export const planetData = {
   18: {
     name: "Wraith",
     sector: Sector.Idun,
-    biome: null,
+    biome: Biome.Toxic,
     environmentals: [Environmental.IntenseHeat, Environmental.AcidStorms]
   },
   19: {
@@ -319,7 +319,7 @@ export const planetData = {
   52: {
     name: "Slif",
     sector: Sector.Celeste,
-    biome: null,
+    biome: Biome.Toxic,
     environmentals: [Environmental.IntenseHeat, Environmental.AcidStorms]
   },
   53: {
@@ -458,7 +458,7 @@ export const planetData = {
   75: {
     name: "Esker",
     sector: Sector.Falstaff,
-    biome: null,
+    biome: Biome.Toxic,
     environmentals: [Environmental.IntenseHeat, Environmental.AcidStorms]
   },
   76: {
@@ -513,7 +513,7 @@ export const planetData = {
   84: {
     name: "Skaash",
     sector: Sector.Ursa,
-    biome: null,
+    biome: Biome.Toxic,
     environmentals: [Environmental.IntenseHeat, Environmental.AcidStorms]
   },
   85: {
@@ -681,7 +681,7 @@ export const planetData = {
   112: {
     name: "Vernen Wells",
     sector: Sector.Hydra,
-    biome: null,
+    biome: Biome.Toxic,
     environmentals: [Environmental.IntenseHeat, Environmental.AcidStorms]
   },
   113: {
@@ -729,7 +729,7 @@ export const planetData = {
   120: {
     name: "Wilford Station",
     sector: Sector.Arturion,
-    biome: null,
+    biome: Biome.Toxic,
     environmentals: [Environmental.IntenseHeat, Environmental.AcidStorms]
   },
   121: {
@@ -779,7 +779,7 @@ export const planetData = {
   128: {
     name: "Darius II",
     sector: Sector.Borgus,
-    biome: null,
+    biome: Biome.Toxic,
     environmentals: [Environmental.IntenseHeat, Environmental.AcidStorms]
   },
   129: {
@@ -881,7 +881,7 @@ export const planetData = {
   145: {
     name: "Botein",
     sector: Sector.Guang,
-    biome: null,
+    biome: Biome.Toxic,
     environmentals: [Environmental.IntenseHeat, Environmental.AcidStorms]
   },
   146: {
@@ -948,7 +948,7 @@ export const planetData = {
   156: {
     name: "Charbal-VII",
     sector: Sector.Andromeda,
-    biome: null,
+    biome: Biome.Toxic,
     environmentals: [Environmental.IntenseHeat, Environmental.AcidStorms]
   },
   157: {
@@ -972,8 +972,8 @@ export const planetData = {
   160: {
     name: "Chort Bay",
     sector: Sector.Lacaille,
-    biome: Biome.RainForest,
-    environmentals: [Environmental.IonStorms]
+    biome: Biome.Toxic,
+    environmentals: [Environmental.IntenseHeat, Environmental.AcidStorms]
   },
   161: {
     name: "Claorell",
@@ -1171,7 +1171,7 @@ export const planetData = {
   193: {
     name: "Leng Secundus",
     sector: Sector.Quintus,
-    biome: null,
+    biome: Biome.Toxic,
     environmentals: [Environmental.IntenseHeat, Environmental.AcidStorms]
   },
   194: {
@@ -1245,7 +1245,7 @@ export const planetData = {
   204: {
     name: "Merak",
     sector: Sector.Valdis,
-    biome: null,
+    biome: Biome.Toxic,
     environmentals: [Environmental.IntenseHeat, Environmental.AcidStorms]
   },
   205: {
@@ -1379,7 +1379,7 @@ export const planetData = {
   226: {
     name: "Rirga Bay",
     sector: Sector.Rigel,
-    biome: null,
+    biome: Biome.Toxic,
     environmentals: [Environmental.IntenseHeat, Environmental.AcidStorms]
   },
   227: {
@@ -1403,7 +1403,7 @@ export const planetData = {
   230: {
     name: "Shete",
     sector: Sector.XiTauri,
-    biome: null,
+    biome: Biome.Toxic,
     environmentals: [Environmental.IntenseHeat, Environmental.AcidStorms]
   },
   231: {
@@ -1502,7 +1502,7 @@ export const planetData = {
   245: {
     name: "Wasat",
     sector: Sector.Ymir,
-    biome: null,
+    biome: Biome.Toxic,
     environmentals: [Environmental.IntenseHeat, Environmental.AcidStorms]
   },
   246: {
