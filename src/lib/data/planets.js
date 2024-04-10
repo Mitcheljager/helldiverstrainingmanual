@@ -681,8 +681,8 @@ export const planetData = {
   112: {
     name: "Vernen Wells",
     sector: Sector.Hydra,
-    biome: Biome.Toxic,
-    environmentals: [Environmental.IntenseHeat, Environmental.AcidStorms]
+    biome: Biome.Canyon,
+    environmentals: [Environmental.Tremors]
   },
   113: {
     name: "Aesir Pass",
@@ -966,8 +966,8 @@ export const planetData = {
   159: {
     name: "Choohe",
     sector: Sector.Lacaille,
-    biome: Biome.Desert,
-    environmentals: [Environmental.IntenseHeat, Environmental.Tremors]
+    biome: Biome.Mesa,
+    environmentals: [Environmental.IntenseHeat, Environmental.Sandstorms]
   },
   160: {
     name: "Chort Bay",
@@ -1223,7 +1223,7 @@ export const planetData = {
     name: "Matar Bay",
     sector: Sector.Andromeda,
     biome: Biome.Highlands,
-    environmentals: [Environmental.ThickFog, Environmental.Rainstorms]
+    environmentals: [Environmental.Rainstorms]
   },
   201: {
     name: "Meissa",
