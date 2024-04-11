@@ -1216,7 +1216,7 @@ export const planetData = {
   199: {
     name: "Martale",
     sector: Sector.Andromeda,
-    biome: null,
+    biome: Biome.Tundra,
     environmentals: []
   },
   200: {
