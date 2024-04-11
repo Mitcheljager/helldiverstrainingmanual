@@ -71,11 +71,21 @@ export const boosters = [{
 }, {
   name: "Localisation Confusion",
   description: "Increases the time between enemy encounters.",
-  tidbit: "Through Cutting Edge Jamming Technology, generates a small electrical magnetic field around the Helldiver, interfering with both technological and biological tracking systems, reducing the enemies abilities to hone in on the Helldivers' location.",
+  tidbit: "Through Cutting Edge Jamming Technology, generate a small electrical magnetic field around the Helldiver, interfering with both technological and biological tracking systems, reducing the enemies abilities to hone in on the Helldivers' location.",
   unlock: "Cutting Edge Premium Warbond",
   cost: {
     individual: 18,
     total: 18,
     page: 1,
+  }
+}, {
+  name: "Expert Extraction Pilot",
+  description: "Lowers the time it takes for the extraction shuttle to reach the extraction beacon.",
+  tidbit: "Only the best of the best for the best. This pilot is ready at a moments notice to extract you from any situation. Their expertise <strong>reduces the time it takes to arrive by 15%</strong>.",
+  unlock: "Democratic Detonation Warbond",
+  cost: {
+    individual: 55,
+    total: 115,
+    page: 2,
   }
 }]
