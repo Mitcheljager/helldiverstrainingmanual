@@ -222,11 +222,16 @@ export const bestiary = [{
   }, {
     name: "Factory Strider",
     appearance: "Stand by for further details...",
-    tactics: "<p>Collection any information you can. Battles are won through information. Do your duty and report back what you know."
+    tactics: "<p>Collection any information you can. Battles are won through information. Do your duty and report back what you know.</p>"
   }, {
     name: "Gunship",
-    appearance: "Stand by for further details...",
-    tactics: "<p>Collection any information you can. Battles are won through information. Do your duty and report back what you know."
+    appearance: "After weeks of relentless attempts at aerial supremacy, the Automatons have finally made a breakthrough: the dropships are UAVs armed to the teeth with rockets, cannons, and other artillery. They patrol overhead, guarding their fabricators with relentless ferocity and are capable of reinforcing the Automaton ground forces, creating an impenetrable wall of firepower.",
+    quicktip: "Coordinate with your team to split up their attention and draw their fire, allowing positional advances onto the base of the fabricator. Once in position, call in Hellbomb, run for the hills, and watch the sparks fly.",
+    tactics: `
+      <p>While is it entirely possible to evade gunship fabricators, the SEAF infantry back home would have a heap of trouble dealing with them in the cleanup process. Therefore, it's encouraged that Helldivers deal with the threat whenever possible. Destroying the gunship is quite easy; one shot with a Heavy Weaponry will send a gunship back to the scrapyard.</p>
+      <p>The best way to defend against gunships is simple; utilize cover. Despite their intense barrage of lasers and rockets, their onslaught is incapable of penetrating the rough terrain of the planet soil. Duck behind rocks, buildings, into divots, anything that can stand between you and scanning searchlight of the gunship. However, be warned: Gunships have been known to swarm teams of Helldivers en masse, leaving no vantage point unturned and no place to hide from imminent annihilation. Know when to retreat, and live to fight another day.</p>
+      <p>To deal with the threat for good, divers must infiltrate the territory of the gunship fabricator and clear out automaton resistance. Once available, call in a Hellbomb at the base of the fabricator towers and begin the detonation sequence. If all goes well, you and your teammates can watch the fireworks from a distance as the Automatons are sent back to their makers</p>
+    `
   }, {
     name: "Dropship",
     stratagems: [Stratagem.ExpendableAntiTank, Stratagem.RecoillessRifle, Stratagem.QuasarCannon],
