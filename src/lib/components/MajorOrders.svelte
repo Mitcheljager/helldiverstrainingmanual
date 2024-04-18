@@ -62,7 +62,7 @@
                   {(progress || 0).toLocaleString()} / {(values[2] || 0).toLocaleString()}
 
                   <div class="bar">
-                    <div class="progress" style:width="{100 / values[2] * progress}px" />
+                    <div class="progress" style:width="{100 / values[2] * progress}%" />
                   </div>
                 {/if}
 
