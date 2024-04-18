@@ -29,6 +29,8 @@
 
       if (!data?.filter(n => n.message)) return
 
+      console.log(data)
+
       majorOrders = data
       majorOrdersPlanetIndexes = (majorOrders?.map(o => o.setting?.tasks?.map(t => t.values[2])) || []).flat()
     } catch {
@@ -55,7 +57,15 @@
         {#if setting.tasks?.length}
           <div class="tasks">
             {#each setting.tasks as { type, values }, index}
-              <div class="task" class:incomplete={progress && progress[index] === 0}>
+              <div class="task" class:incomplete={(progress && progress[index] === 0) || (progress && values[2] && progress < values[2])} class:block={type === 3}>
+                {#if type === 3}
+                  {(progress || 0).toLocaleString()} / {(values[2] || 0).toLocaleString()}
+
+                  <div class="bar">
+                    <div class="progress" style:width="{100 / values[2] * progress}px" />
+                  </div>
+                {/if}
+
                 {#if type === 11 || type === 13}
                   <div>
                     <LocateOnMap planetIndex={values[2]} />
@@ -157,6 +167,10 @@
       }
     }
 
+    &.block {
+      display: block;
+    }
+
     small {
       color: $super-earth;
       opacity: 0.75;
@@ -194,5 +208,26 @@
     background: $white;
     color: $super-earth;
     white-space: nowrap;
+  }
+
+  .bar {
+    flex: 0 0 auto;
+    position: relative;
+    height: 0.75rem;
+    background: rgba($super-earth, 0.5);
+    margin: $margin * 0.15 0 0;
+
+    .incomplete & {
+      background: rgba($red, 0.25);
+    }
+  }
+
+  .progress {
+    background: $super-earth;
+    height: 100%;
+
+    .incomplete & {
+      background: $red;
+    }
   }
 </style>
