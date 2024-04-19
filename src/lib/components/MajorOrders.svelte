@@ -29,8 +29,6 @@
 
       if (!data?.filter(n => n.message)) return
 
-      console.log(data)
-
       majorOrders = data
       majorOrdersPlanetIndexes = (majorOrders?.map(o => o.setting?.tasks?.map(t => t.values[2])) || []).flat()
     } catch {
