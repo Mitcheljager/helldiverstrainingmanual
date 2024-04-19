@@ -57,12 +57,18 @@
         {#if setting.tasks?.length}
           <div class="tasks">
             {#each setting.tasks as { type, values }, index}
-              <div class="task" class:incomplete={(progress && progress[index] === 0) || (progress && values[2] && progress < values[2])} class:block={type === 3}>
-                {#if type === 3}
-                  {(progress || 0).toLocaleString()} / {(values[2] || 0).toLocaleString()}
+              <div class="task" class:incomplete={(progress && progress[index] === 0) || (progress && values[2] && progress < values[2])} class:block={type === 3 || type === 12}>
+                {setting?.taskDescription || ""}
+
+                {#if type === 3 || type === 12}
+                  <small>{(progress || 0).toLocaleString()} / {(values[2] || values[0] || 0).toLocaleString()}</small>
 
                   <div class="bar">
-                    <div class="progress" style:width="{100 / values[2] * progress}%" />
+                    <div class="progress" style:width="{100 / (values[2] || values[0]) * progress}%" />
+
+                    <div class="value">
+                      {(100 / (values[2] || values[0]) * progress).toFixed(2)}%
+                    </div>
                   </div>
                 {/if}
 
@@ -213,7 +219,7 @@
   .bar {
     flex: 0 0 auto;
     position: relative;
-    height: 0.75rem;
+    height: 1.5rem;
     background: rgba($super-earth, 0.5);
     margin: $margin * 0.15 0 0;
 
@@ -229,5 +235,16 @@
     .incomplete & {
       background: $red;
     }
+  }
+
+  .value {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 0.85rem;
+    font-weight: normal;
+    font-family: $font-family-alt;
+    opacity: 0.75;
   }
 </style>
