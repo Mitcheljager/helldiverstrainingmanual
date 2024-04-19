@@ -954,8 +954,8 @@ export const planetData = {
   157: {
     name: "Charon Prime",
     sector: Sector.Andromeda,
-    biome: null,
-    environmentals: [Environmental.IntenseHeat]
+    biome: Biome.CrimsonMoor,
+    environmentals: [Environmental.IonStorms]
   },
   158: {
     name: "Choepessa IV",
