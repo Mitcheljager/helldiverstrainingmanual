@@ -30,7 +30,7 @@
       if (!data?.filter(n => n.message)) return
 
       majorOrders = data
-      majorOrdersPlanetIndexes = (majorOrders?.map(o => o.setting?.tasks?.map(t => t.values[2])) || []).flat()
+      majorOrdersPlanetIndexes = (majorOrders?.map(o => o.setting?.tasks?.map(t => t.values[2])) || []).flat().filter(Boolean)
     } catch {
       // ignore
     } finally {
