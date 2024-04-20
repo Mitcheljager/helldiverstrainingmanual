@@ -9,7 +9,13 @@ export async function fetchStats(fetch) {
   if (cached) return cached
 
   try {
-    const response = await fetch("https://api.diveharder.com/raw/planetStats?source=trainingmanual-3")
+    const response = await fetch("https://api.diveharder.com/raw/planetStats",
+                                 {
+                                   headers: {
+                                     "User-Agent": "Helldivers Training Manual"
+                                   },
+                                   redirect: "follow"
+                                 })
 
     if (!response.ok) throw new Error("Network response was not ok")
 
