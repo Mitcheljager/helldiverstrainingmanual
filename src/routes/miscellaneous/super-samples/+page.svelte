@@ -29,6 +29,10 @@
 <h3 class="mt-1 mb-1/2">Don't be deceived, for another pillar was made</h3>
 
 <p>
+  Update: It appears the information below may no longer be correct. It seems super samples may have replenished at depleated veins. Be vigilant!
+</p>
+
+<p>
   Beware, Helldivers, for not all pillars are alike. The bugs seem particularly keen to get their slimy claws on these sugar cubes. As such you might find pillars that have been fully depleted of Super Uranium. These can be identified by the gooey mess these foul creatures have left. Yet another reason to despise these bastards.<br>
   On the Automaton front you might find similarly depleted pillars that have been stripped of resources by previous research teams who were not able to properly dispose of their left overs. You can identify these by various types of trash around its base.
 </p>
