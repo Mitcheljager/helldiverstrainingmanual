@@ -62,6 +62,10 @@
 
 <h2>Active Efforts</h2>
 
+<div class="item no-connection mb-1/2">
+  <p class="content">Real-time communication has been disrupted and war updates have been paused until further notice.</p>
+</div>
+
 <Campaign {formattedCampaigns} />
 
 {#if Object.keys(status)?.length === 0}
