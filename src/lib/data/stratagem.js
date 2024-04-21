@@ -432,7 +432,7 @@ export const Stratagem = {
   EMSMortarSentry: {
     name: "EMS Mortar Sentry",
     cost: 8000,
-    sequence: ["down", "down", "up", "up", "left"],
+    sequence: ["down", "up", "right", "down", "right"],
     content: `
       <p>An electrifying turret armed with static field generators that disrupt enemy advances with the fervor of democracy itself. This mighty guardian stands as a bastion of liberty, its pulsating fields of electromagnetic fury casting a net of confusion upon the enemy ranks, leaving tyranny quaking in its boots. With each thunderous pulse, the EMS Mortar Sentry proclaims the triumph of freedom's champions, striking fear into the hearts of all who dare oppose the righteous march of democracy.</p>
     `
