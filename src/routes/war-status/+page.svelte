@@ -9,7 +9,7 @@
 	import FullscreenMap from "$lib/components/FullscreenMap.svelte"
 	import WarStatistics from "$lib/components/WarStatistics.svelte"
 	import News from "$lib/components/News.svelte"
-	import MajorOrder from "$lib/components/MajorOrders.svelte";
+	import MajorOrder from "$lib/components/MajorOrders.svelte"
 
   export let data
 
@@ -61,10 +61,6 @@
 {/if}
 
 <h2>Active Efforts</h2>
-
-<div class="item no-connection mb-1/2">
-  <p class="content">Real-time communication has been disrupted and war updates have been paused until further notice.</p>
-</div>
 
 <Campaign {formattedCampaigns} />
 
