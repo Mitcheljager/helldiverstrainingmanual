@@ -11,7 +11,7 @@
 <!-- svelte-ignore a11y-no-static-element-interactions -->
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <div class="environmental" class:full on:click|preventDefault on:mouseenter={() => active = true} on:mouseleave={() => active = false}>
-  <img loading="lazy" src="/images/environmentals/{toSlug(environmental.name)}.png" alt={environmental.name} />
+  <img loading="lazy" src="/images/environmentals/{toSlug(environmental.name)}.svg" alt={environmental.name} />
 
   {#if active || full}
     <div class="tooltip" transition:fly={{ y: 10, duration: 100 }}>
