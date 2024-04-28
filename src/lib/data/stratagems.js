@@ -16,6 +16,7 @@ export const stratagems = [{
     Stratagem.Flamethrower,
     Stratagem.Autocannon,
     Stratagem.HeavyMachineGun,
+    Stratagem.AirburstRocketLauncher,
     Stratagem.Railgun,
     Stratagem.Spear
   ]

@@ -67,10 +67,10 @@ export const Stratagem = {
     cost: 7000,
     sequence: ["down", "left", "down", "up", "up", "right"],
     content: `
-    <p>The AC-8 Autocannon is a fully-automatic cannon designed to rain destruction upon light vehicle armor with ruthless efficiency. With its rapid-fire capability, this weapon turns enemy vehicles into scrap metal faster than you can say "reload."</p>
-    <p>The AC-8 comes equipped with a support backpack, allowing your trusty teammates to lend a hand and make reloading a breeze. With their help, you'll be back in action and ready to unleash another barrage of bullets in no time.</p>
-    <p>One advantage of the AC-8 is its ability to destroy objectives from a considerable distance away. Whether you're taking out enemy installations or blasting through fortified defenses, this cannon has got you covered.</p>
-    <p>But wait, there's more! The AC-8 isn't just for taking down big targets - it's also a force to be reckoned with against hordes of smaller enemies. With its high rate of fire, this cannon chews through anything foolish enough to stand in its way, leaving nothing but destruction in its wake.</p>
+      <p>The AC-8 Autocannon is a fully-automatic cannon designed to rain destruction upon light vehicle armor with ruthless efficiency. With its rapid-fire capability, this weapon turns enemy vehicles into scrap metal faster than you can say "reload."</p>
+      <p>The AC-8 comes equipped with a support backpack, allowing your trusty teammates to lend a hand and make reloading a breeze. With their help, you'll be back in action and ready to unleash another barrage of bullets in no time.</p>
+      <p>One advantage of the AC-8 is its ability to destroy objectives from a considerable distance away. Whether you're taking out enemy installations or blasting through fortified defenses, this cannon has got you covered.</p>
+      <p>But wait, there's more! The AC-8 isn't just for taking down big targets - it's also a force to be reckoned with against hordes of smaller enemies. With its high rate of fire, this cannon chews through anything foolish enough to stand in its way, leaving nothing but destruction in its wake.</p>
     `
   },
   HeavyMachineGun: {
@@ -79,6 +79,15 @@ export const Stratagem = {
     sequence: ["down", "left", "up", "down", "down"],
     content: `
       <p>The MG-206 Heavy Machine Gun, a beast of a weapon that'll have you feeling like you're wrestling a bull on steroids. This bad boy packs a punch that'll make even the toughest bugs quake in their exoskeletons. But beware, handling this monster ain't for the faint of heart. With recoil that'll send you flying faster than a rocket launch, you'll need arms of steel and nerves of titanium to keep this baby under control. Get ready to unleash a storm of lead like never before.</p>
+    `
+  },
+  AirburstRocketLauncher: {
+    name: "Airburst Rocket Launcher",
+    cost: 8000,
+    sequence: ["down", "up", "up", "left", "right"],
+    content: `
+      <p>This bad boy fires a rocket that doesn't just hit the mark, it explodes in style, showering the target with a delightful cluster of explosive bomblets. It's like a fireworks show, but with more boom and less "oohs" and "ahhs."</p>
+      <p>Wield it with care, my friend, for its potency demands a skilled hand. Aim high to avoid the fiery rain that this beast unleashes as it reaches it apex.
     `
   },
   Railgun: {
