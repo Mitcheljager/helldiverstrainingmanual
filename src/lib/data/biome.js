@@ -62,5 +62,9 @@ export const Biome = {
   Toxic: {
     slug: "toxic",
     description: "Dense, toxic fumes from deep within the planet's crust seep out of cracks in the earth and coat the ground in a sickly haze."
+  },
+  BugInfested: {
+    slug: "buginfested",
+    description: "Entirely unforeseeable mutations from the Termicide led to hyper-accelerated bug growth on this planet, turning it into a Supercolony. It is corrupted beyond saving. The bugs infest every inch of it, down to the mantle, spawning trillions of spores every day."
   }
 }

@@ -392,7 +392,7 @@ export const planetData = {
     name: "Meridia",
     tidbit: `<p>One of four planets where the Terminid Control System (TCS) was deployed, a network of massive towers that cover the planet in a neurotoxin known as Termincide. The deployment of these TCS towers took the combined effort of many helldivers and eventually lead to the Terminids being driven away for good.</p>`,
     sector: Sector.Umlaut,
-    biome: Biome.Jungle,
+    biome: Biome.BugInfested,
     environmentals: [Environmental.VolcanicActivity, Environmental.Rainstorms]
   },
   65: {
