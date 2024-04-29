@@ -53,7 +53,7 @@
   {#if active}
     <div class="popup" transition:scale={{ start: 0.85, duration: 150 }}>
       {#if data.biome}
-        <img src="/images/biomes/{data.biome.slug}.jpg" alt="{data.biome.slug} biome" height="128" width="400" />
+        <img src="/images/biomes/small/webp/{data.biome.slug}.webp" alt="{data.biome.slug} biome" height="128" width="400" />
       {/if}
 
       <h5>
