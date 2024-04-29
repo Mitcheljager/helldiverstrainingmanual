@@ -56,8 +56,6 @@
           <div class="tasks">
             {#each setting.tasks as { type, values }, index}
               <div class="task" class:incomplete={(progress && progress[index] === 0) || (progress && values[2] && progress < values[2])} class:block={type === 3 || type === 12}>
-                {setting?.taskDescription || ""}
-
                 {#if type === 3 || type === 12}
                   <small>{(progress || 0).toLocaleString()} / {(values[2] || values[0] || 0).toLocaleString()}</small>
 
