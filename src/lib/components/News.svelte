@@ -59,7 +59,7 @@
 
     const parsedNews = news.reverse().map(item => {
       const [title, ...splitMessage] = (item?.message?.split(/[\n\r]+/) || [])
-      const message = splitMessage.join("<br><br>")
+      const message = splitMessage.filter(m => m?.trim()).join("<br><br>")
       const cleanedTitle = title?.replace(/<i=\d+>/g, "").replace(/<\/i>/g, "")
 
       return { title: cleanedTitle, message, timestamp: Date.now() - serverTimestamp * 1000 + item.published * 1000 }
