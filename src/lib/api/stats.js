@@ -9,7 +9,7 @@ export async function fetchStats(fetch) {
   if (cached) return cached
 
   try {
-    const response = await fetch("https://api.diveharder.com/raw/planetStats",
+    const response = await fetch("https://api.diveharder.com/raw/planet_stats",
                                  {
                                    headers: {
                                      "User-Agent": "Helldivers Training Manual",
