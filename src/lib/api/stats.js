@@ -12,7 +12,9 @@ export async function fetchStats(fetch) {
     const response = await fetch("https://api.diveharder.com/raw/planetStats",
                                  {
                                    headers: {
-                                     "User-Agent": "Helldivers Training Manual"
+                                     "User-Agent": "Helldivers Training Manual",
+                                     "X-Super-Client": "Helldivers Training Manual",
+                                     "X-Super-Contact": "@mitsiee || gh/Mitcheljager"
                                    },
                                    redirect: "follow"
                                  })
