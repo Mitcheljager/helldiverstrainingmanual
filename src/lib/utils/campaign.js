@@ -24,7 +24,6 @@ export function formatCampaigns(status, info) {
     const percentage = 100 - (100 / maxHealth * health)
 
     const defense = event?.eventType === 1
-    const majorOrder = type === 2
 
     const expireDateTime = event?.expireTime ? new Date().getTime() / 1000 + event.expireTime - status.time : null
 
@@ -37,7 +36,6 @@ export function formatCampaigns(status, info) {
       maxHealth,
       percentage,
       defense,
-      majorOrder,
       biome,
       expireDateTime
     }
