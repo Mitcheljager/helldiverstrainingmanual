@@ -184,6 +184,67 @@
   </div>
 
   <div class="item">
+    <code class="url">{basepath}/api/v1/war/major-orders</code>
+    Provides the currently active Major Order(s). This endpoint is straight from the official API and can be confusing to use at times. The index of the currently active planets can be found using each task values[2] value. The way tasks are structured can change between different major orders.
+
+    <Expand let:toggle>
+      <button on:click={toggle}>Toggle example response</button>
+      <pre class="example" slot="content">
+        [&#123;
+          "id32": 738112495,
+          "progress": [
+            1,
+            1,
+            1,
+            0
+          ],
+          "expiresIn": 12069,
+          "setting": &#123;
+            "type": 4,
+            "overrideTitle": "MAJOR ORDER",
+            "overrideBrief": "The Supercolony has caused sudden outbreaks on multiple planets. They must be contained immediately.",
+            "taskDescription": "Liberate all designated planets.",
+            "tasks": [
+              &#123;
+                "type": 11,
+                "values": [
+                  1,
+                  1,
+                  79
+                ],
+                "valueTypes": [
+                  3,
+                  11,
+                  12
+                ]
+              &#125;,
+              &#123;
+                "type": 11,
+                "values": [
+                  1,
+                  1,
+                  127
+                ],
+                "valueTypes": [
+                  3,
+                  11,
+                  12
+                ]
+              &#125;
+            ],
+            "reward": &#123;
+              "type": 1,
+              "id32": 897894480,
+              "amount": 40
+            &#125;,
+            "flags": 0
+          &#125;
+        &#125;]
+      </pre>
+    </Expand>
+  </div>
+
+  <div class="item">
     <code class="url">{basepath}/api/v1/planets</code>
     Provides data about each planet, the first key matches the planet index.<br>
     The data includes information about the conditions and type of planet. The type of planet is listed as <code>biome</code>. The names of the biomes are <em>not</em> names from the game, they are made up. Some biomes will be <code>null</code> because the type is not known yet. Environmentals almost always match the biome. For example, a desert biome will always have Intense Heat and Tremors. The only exception to this currently is Tien Kwan. More exceptions could happen in the future, which is why Environmentals are listed separately from the Biome itself.
