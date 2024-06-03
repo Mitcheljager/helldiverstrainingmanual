@@ -451,7 +451,15 @@ export const Stratagem = {
     cost: 20000,
     sequence: ["left", "down", "right", "up", "left", "down", "down"],
     content: `
-      <p>Introducing the latest addition to the Helldivers' arsenal: the "Patriot Exosuit." This formidable drivable bipedal mech stands as a beacon of freedom and firepower on the battlefield. With its sleek design and cutting-edge technology, the Patriot Exosuit is a symbol of Super Earth's unwavering resolve against the alien threats that seek to engulf humanity. Equipped with a devastating rocket launcher and a rapid-firing machine gun, this mechanical behemoth brings the heat to any hostile encounter. Whether raining down explosive ordinance from above or laying down suppressive fire against advancing enemies, the Patriot Exosuit is a force to be reckoned with. Pilots will find themselves in the driver's seat of sheer power and versatility, ready to turn the tide of battle in the name of liberty and justice.</p>
+      <p>This formidable drivable bipedal mech stands as a beacon of freedom and firepower on the battlefield. With its sleek design and cutting-edge technology, the Patriot Exosuit is a symbol of Super Earth's unwavering resolve against the alien threats that seek to engulf humanity. Equipped with a devastating rocket launcher and a rapid-firing machine gun, this mechanical behemoth brings the heat to any hostile encounter. Whether raining down explosive ordinance from above or laying down suppressive fire against advancing enemies, the Patriot Exosuit is a force to be reckoned with. Pilots will find themselves in the driver's seat of sheer power and versatility, ready to turn the tide of battle in the name of liberty and justice.</p>
+    `
+  },
+  EmancipatorExosuit: {
+    name: "Emancipator Exosuit",
+    cost: 20000,
+    sequence: ["left", "down", "right", "up", "left", "down", "up"],
+    content: `
+      <p>This marvel of modern warfare is a heavily-armored walking fortress, equipped with dual autocannons that unleash a relentless barrage upon your foes. Step into the Emancipator, and stride across the battlefield with the confidence of a titan, knowing that nothing stands between you and victory—except perhaps the smoldering wreckage of your enemies!</p>
     `
   },
   Reinforce: {

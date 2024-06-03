@@ -100,7 +100,8 @@ export const stratagems = [{
     Stratagem.AutocannonSentry,
     Stratagem.RocketSentry,
     Stratagem.EMSMortarSentry,
-    Stratagem.PatriotExosuit
+    Stratagem.PatriotExosuit,
+    Stratagem.EmancipatorExosuit
   ]
 }, {
   category: "Mission Stratagems",
