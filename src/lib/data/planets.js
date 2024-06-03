@@ -390,9 +390,13 @@ export const planetData = {
   },
   64: {
     name: "Meridia",
-    tidbit: `<p>One of four planets where the Terminid Control System (TCS) was deployed, a network of massive towers that cover the planet in a neurotoxin known as Termincide. The deployment of these TCS towers took the combined effort of many helldivers and eventually lead to the Terminids being driven away for good.</p>`,
+    tidbit: `
+      <p>One of four planets where the Terminid Control System (TCS) was deployed, a network of massive towers that cover the planet in a neurotoxin known as Termincide. The deployment of these TCS towers took the combined effort of many helldivers and eventually lead to the Terminids being driven away for good.</p>
+      <p>The Termincide deployment backfired, causing mutations in bugs that caused them to reproduce at an expedited rate. A super colony was erected on Meridia, overflowing the planet with bugs in unmanageble numbers. High command declared the planet to be lost until the next operation would start, focusing on the destruction of Meridia with the use of Dark Fluid</p>
+      <p>The Supercolony on Meridia was eradicated by the valiant effort of the Helldivers. Following the injection of Dark Fluid, Meridia collapsed into a black hole. The Supercolony was succesfully dealt with, along with any matter that dares to come in close vicinity to the now ever looming void.</p>
+    `,
     sector: Sector.Umlaut,
-    biome: Biome.BugInfested,
+    biome: Biome.BlackHole,
     environmentals: [Environmental.VolcanicActivity, Environmental.Rainstorms]
   },
   65: {

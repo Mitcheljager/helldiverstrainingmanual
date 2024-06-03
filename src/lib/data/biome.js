@@ -66,5 +66,9 @@ export const Biome = {
   BugInfested: {
     slug: "buginfested",
     description: "Entirely unforeseeable mutations from the Termicide led to hyper-accelerated bug growth on this planet, turning it into a Supercolony. It is corrupted beyond saving. The bugs infest every inch of it, down to the mantle, spawning trillions of spores every day."
+  },
+  BlackHole: {
+    slug: "blackhole",
+    description: "The planet has collapsed into a black hole."
   }
 }
