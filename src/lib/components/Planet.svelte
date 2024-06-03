@@ -6,6 +6,7 @@
 	import AnalyticsPopup from "$lib/components/AnalyticsPopup.svelte"
 	import IconDefense from "$lib/components/icons/IconDefense.svelte"
 	import IconMajorOrder from "$lib/components/icons/IconMajorOrder.svelte"
+	import { Biome } from "$lib/data/biome"
 
   export let planet = {}
   export let status = {}
@@ -31,6 +32,7 @@
   class="planet {(faction || factions[status.owner])?.toLowerCase().replace(" ", "-")}"
   class:active
   class:highlight
+  class:black-hole={data.biome?.slug === Biome.BlackHole.slug}
   class:controlled={!campaign}
   style:--x={position.x}
   style:--y={position.y}
@@ -129,6 +131,11 @@
     &.highlight {
       outline: 2px solid $white;
       outline-offset: 2px;
+    }
+
+    &.black-hole {
+      background: $black;
+      box-shadow: inset 0 0 calc(2px * var(--zoom)) #f9f1f8, inset 0 0 calc(5px * var(--zoom)) #9175dd;
     }
 
     @each $label, $color in $faction-colors {
