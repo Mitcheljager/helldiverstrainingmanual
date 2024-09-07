@@ -414,8 +414,8 @@ export const planetData = {
   67: {
     name: "Tarsh",
     sector: Sector.Marspira,
-    biome: Biome.Winter,
-    environmentals: [Environmental.ExtremeCold, Environmental.Blizzards]
+    biome: Biome.Morass,
+    environmentals: [Environmental.ThickFog]
   },
   68: {
     name: "Shelt",
@@ -1044,8 +1044,8 @@ export const planetData = {
   171: {
     name: "Gacrux",
     sector: Sector.JinXi,
-    biome: null,
-    environmentals: []
+    biome: Biome.Undergrowth,
+    environmentals: [Environmental.Rainstorms]
   },
   172: {
     name: "Gar Haren",

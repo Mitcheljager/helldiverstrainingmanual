@@ -70,5 +70,13 @@ export const Biome = {
   BlackHole: {
     slug: "blackhole",
     description: "The planet has collapsed into a black hole."
+  },
+  Undergrowth: {
+    slug: "undergrowth",
+    description: "Tall, gnarled trees flourish across the surface of this forested world. Sunlight filters past dangling vines, to the saturated undergrowth below."
+  },
+  Morass: {
+    slug: "morass",
+    description: "Squelching mud, twisting roots; the odor of rot and anarchy. A teeming, endless morass."
   }
 }
