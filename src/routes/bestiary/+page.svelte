@@ -25,7 +25,7 @@
       <picture>
         <source type="image/webp" srcset="/images/content/webp/{toSlug(faction) + ".webp"}"  />
         <source type="image/jpg" srcset="/images/content/{toSlug(faction) + ".jpg"}">
-        <img src="/images/content/{toSlug(faction)}.jpg" alt={faction}>
+        <img src="/images/content/{toSlug(faction)}.jpg" alt={faction} width="1200" height="675">
       </picture>
     </a>
   {/each}
@@ -52,6 +52,7 @@
       display: block;
       width: 100%;
       height: auto;
+      background: $bg-dark;
     }
 
     h3 {

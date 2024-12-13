@@ -244,4 +244,11 @@ export const bestiary = [{
       <p>When confronting Dropships, prioritize coordination and communication with your comrades to maximize your efficacy and minimize the peril they pose. By pinpointing their vulnerabilities and deploying strategic maneuvers, you can thwart the Automatons' endeavors to fortify their positions and secure triumphant glory for Super Earth.</p>
     `
   }]
+}, {
+  faction: factions[4],
+  biome: Biome.BlackHole,
+  description: `
+    <p>More info to follow. Stay on your guard, Helldiver.</p>
+  `,
+  enemies: []
 }]
