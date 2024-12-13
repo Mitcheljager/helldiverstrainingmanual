@@ -475,9 +475,9 @@ export const Stratagem = {
     cost: 10000,
     sequence: ["right", "right", "down", "left", "right", "up"],
     content: `
-      <p>We're proud to hand you the next evolution in bug control through the use of thoroughly cleansing fire. While our previous napalm weaponry has focused on precision, this barrage takes a blanket approach. No nest is large enough the out of bounds of this ever cleansing shower of highly effect inflammatory shampoo.</p>
-      <p>Select your target, ready the marshmellow, sit back, and watch as any enemy, be it bug, robotic, or interterestial, is quickly turned to a golden crisp, leaving not a single spore untoasted.</p>
-      <p>In the hands of a well training Helldiver, this orbital weapon can lay waste to entire fields on enemies, or anything else in it's path. As such it should be noted that the cleansing powers have been carefully calibrated to not harm your fellow Helldivers. Any claim otherwise is false and will not be upheld.</p>
+      <p>We're proud to hand you the next evolution in bug control through the use of thoroughly cleansing fire. While our previous napalm weaponry focused on precision, this barrage takes a blanket approach. No nest is large enough to be out of bounds of this ever-cleansing shower of highly effective inflammatory shampoo.</p>
+      <p>Select your target, ready the marshmallow, sit back, and watch as any enemy—be it bug, robotic, or interterrestrial—is quickly turned to a golden crisp, leaving not a single spore untoasted.</p>
+      <p>In the hands of a well-trained Helldiver, this orbital weapon can lay waste to entire fields of enemies—or anything else in its path. As such, it should be noted that the cleansing powers have been carefully calibrated to not harm your fellow Helldivers. Any claim otherwise is false and will not be upheld.</p>
     `
   },
   AntiTankMines: {
