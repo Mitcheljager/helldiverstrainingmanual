@@ -1,6 +1,6 @@
 <script>
 	import { timeFromNow } from "$lib/utils/datetime"
-	import { createEventDispatcher, onDestroy, onMount } from "svelte"
+	import { onDestroy, onMount } from "svelte"
 	import { slide } from "svelte/transition"
 	import { browser } from "$app/environment"
 	import IconDefense from "$lib/components/icons/IconDefense.svelte"
