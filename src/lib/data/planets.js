@@ -751,8 +751,8 @@ export const planetData = {
   123: {
     name: "Socorro III",
     sector: Sector.Falstaff,
-    biome: null,
-    environmentals: []
+    biome: Biome.Morass,
+    environmentals: [Environmental.ThickFog]
   },
   124: {
     name: "Bore Rock",
