@@ -194,6 +194,10 @@
             <Arrow {direction} filled={i < currentIndex} bind:width={arrowWidth} />
           {/if}
         {/each}
+
+        {#if !sequence.length}
+          <strong>Data unknown</strong>
+        {/if}
       {/if}
 
       {#if complete}

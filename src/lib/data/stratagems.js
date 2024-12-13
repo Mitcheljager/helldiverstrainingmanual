@@ -17,6 +17,7 @@ export const stratagems = [{
     Stratagem.Autocannon,
     Stratagem.HeavyMachineGun,
     Stratagem.AirburstRocketLauncher,
+    Stratagem.Commando,
     Stratagem.Railgun,
     Stratagem.Spear
   ]
@@ -35,6 +36,7 @@ export const stratagems = [{
     Stratagem.Orbital380mmHEBarrage,
     Stratagem.OrbitalWalkingBarrage,
     Stratagem.OrbitalLaser,
+    Stratagem.OrbitalNapalmBarrage,
     Stratagem.OrbitalRailcannonStrike
   ]
 }, {
@@ -83,6 +85,7 @@ export const stratagems = [{
     Stratagem.GuardDogRover,
     Stratagem.BallisticShieldBackpack,
     Stratagem.ArcThrower,
+    Stratagem.AntiTankMines,
     Stratagem.QuasarCannon,
     Stratagem.ShieldGeneratorPack,
   ]
@@ -90,7 +93,6 @@ export const stratagems = [{
   category: "Robotics Workshop",
   content: `
     <p>These versatile sentries serve as stalwart guardians, capable of deploying devastating weaponry to hold strategic locations and thwart hostile advances. From machine gun emplacements and gatling turrets to mortar installations and energy-based defenses, each Sentry variant offers unique advantages tailored to different combat scenarios. When deployed strategically, these automated sentries can provide invaluable support, bolstering Helldiver firepower and securing key objectives with unwavering vigilance. However, their effectiveness hinges on proper placement and maintenance, as well as the Helldivers' ability to anticipate and adapt to enemy tactics.</p>
-
   `,
   items: [
     Stratagem.MachineGunSentry,
@@ -102,6 +104,25 @@ export const stratagems = [{
     Stratagem.EMSMortarSentry,
     Stratagem.PatriotExosuit,
     Stratagem.EmancipatorExosuit
+  ]
+}, {
+  category: "Chemical Agents",
+  content: `
+    <p>Biological Warfare, on our terms. They started it.</p>
+  `,
+  items: [
+    Stratagem.Steriliser,
+    Stratagem.GuardDogDogBreath
+  ]
+}, {
+  category: "Urban Legends",
+  content: `
+    <p>Taking the fight to the streets.</p>
+  `,
+  items: [
+    Stratagem.DirectionalShield,
+    Stratagem.FlameSentry,
+    Stratagem.AntiTankEmplacement
   ]
 }, {
   category: "Mission Stratagems",

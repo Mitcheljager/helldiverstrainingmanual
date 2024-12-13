@@ -462,6 +462,65 @@ export const Stratagem = {
       <p>This marvel of modern warfare is a heavily-armored walking fortress, equipped with dual autocannons that unleash a relentless barrage upon your foes. Step into the Emancipator, and stride across the battlefield with the confidence of a titan, knowing that nothing stands between you and victory—except perhaps the smoldering wreckage of your enemies!</p>
     `
   },
+  Commando: {
+    name: "Commando",
+    cost: 20000,
+    sequence: ["down", "left", "up", "down", "right"],
+    content: `
+      <p>This is not just any missile launcher, this intelligent apex predator launches laser-guided smart missiles that do the track your every intention. A laser-guiding system keeps rocket exactly on target, with no enemy able to get away from it's ever present grasp. This beauty is able to fire up four missiles at once, for when one just won't do.</p>
+    `
+  },
+  OrbitalNapalmBarrage: {
+    name: "Orbital Napalm Barrage",
+    cost: 10000,
+    sequence: ["right", "right", "down", "left", "right", "up"],
+    content: `
+      <p></p>
+    `
+  },
+  AntiTankMines: {
+    name: "Anti-Tank Mines",
+    cost: 7000,
+    sequence: ["down", "left", "up", "up"],
+    content: `
+      <p></p>
+    `
+  },
+  Steriliser: {
+    name: "Steriliser",
+    sequence: ["down", "left", "up", "down", "left"],
+    content: `
+      <p></p>
+    `
+  },
+  GuardDogDogBreath: {
+    name: "Guard Dog Dog Breath",
+    sequence: ["down", "up", "left", "up", "right", "up"],
+    content: `
+      <p></p>
+    `
+  },
+  DirectionalShield: {
+    name: "Directional Shield",
+    sequence: [],
+    content: `
+      <p></p>
+    `
+  },
+  FlameSentry: {
+    name: "Flame Sentry",
+    sequence: [],
+    content: `
+      <p></p>
+    `
+  },
+  AntiTankEmplacement: {
+    name: "Anti-Tank Emplacement",
+    sequence: [],
+    content: `
+      <p></p>
+    `
+  },
   Reinforce: {
     name: "Reinforce",
     sequence: ["up", "down", "right", "left", "up"],
@@ -504,7 +563,6 @@ export const Stratagem = {
     sequence: ["down", "up", "left", "down", "up", "right", "down", "up"],
     content: `
       <p>The "Hellbomb" is a formidable weapon utilized by Helldivers to obliterate enemy encampments with overwhelming force. Upon deployment, it can be activated to unleash a massive explosion, creating a devastating blast radius that annihilates anything in its path. This destructive capability makes it an indispensable tool for clearing out entrenched enemy positions and disrupting hostile operations. However, its potency comes with a significant risk - Helldivers must evacuate the area swiftly to avoid being caught in the cataclysmic aftermath.</p>
-
     `
   }
 }

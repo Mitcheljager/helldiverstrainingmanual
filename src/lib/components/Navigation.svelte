@@ -1,6 +1,5 @@
 <script>
 	import { stratagems } from "$lib/data/stratagems"
-  import { page } from "$app/stores"
 	import { toPath } from "$lib/utils/route"
 	import { bestiary } from "$lib/data/bestiary"
 	import NavigationItem from "$lib/components/NavigationItem.svelte"
