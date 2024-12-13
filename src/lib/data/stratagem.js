@@ -502,21 +502,21 @@ export const Stratagem = {
   },
   DirectionalShield: {
     name: "Directional Shield",
-    sequence: [],
+    sequence: ["down", "up", "left", "right", "left", "down"],
     content: `
       <p></p>
     `
   },
   FlameSentry: {
     name: "Flame Sentry",
-    sequence: [],
+    sequence: ["down", "up", "right", "down", "up", "up"],
     content: `
       <p></p>
     `
   },
   AntiTankEmplacement: {
     name: "Anti-Tank Emplacement",
-    sequence: [],
+    sequence: ["down", "up", "left", "right", "right", "right"],
     content: `
       <p></p>
     `
