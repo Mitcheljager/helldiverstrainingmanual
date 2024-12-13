@@ -475,7 +475,9 @@ export const Stratagem = {
     cost: 10000,
     sequence: ["right", "right", "down", "left", "right", "up"],
     content: `
-      <p></p>
+      <p>We're proud to hand you the next evolution in bug control through the use of thoroughly cleansing fire. While our previous napalm weaponry has focused on precision, this barrage takes a blanket approach. No nest is large enough the out of bounds of this ever cleansing shower of highly effect inflammatory shampoo.</p>
+      <p>Select your target, ready the marshmellow, sit back, and watch as any enemy, be it bug, robotic, or interterestial, is quickly turned to a golden crisp, leaving not a single spore untoasted.</p>
+      <p>In the hands of a well training Helldiver, this orbital weapon can lay waste to entire fields on enemies, or anything else in it's path. As such it should be noted that the cleansing powers have been carefully calibrated to not harm your fellow Helldivers. Any claim otherwise is false and will not be upheld.</p>
     `
   },
   AntiTankMines: {
@@ -490,7 +492,10 @@ export const Stratagem = {
     name: "Steriliser",
     sequence: ["down", "left", "up", "down", "left"],
     content: `
-      <p></p>
+      <p>The Galaxy is full of those looking to spread their seed in Super Earth territory. To deal with this ever growing threat we have to stop being before they are born; In comes the Steriliser. This highly effective spray pushes back enemy forces and makes them regret ever setting foot in your general line of sight.</p>
+      <p>The spray comes equipped with 3 compound: Bug Begone, quickly neutralizing any bugs along with smells they might leave behind, Civil Diffesent Disinfectant, surpressing circuitry with a high corrosive power and taking care of Pro-Automaton graffiti, and Quick XPand, a compound that quickly expands when coming in contact with extra terrestial orifices. Different blends for different threats, create by the finest Super Earth scientists.</p>
+      <p>Please note; Despite the name, this tool has not been proven to have any effect on the fertility of it's users and fellow Super Earth citizens. Any lasting effects on the user, birth defects, or intercourse related quarrels are purely coincidental and can not be attributed to this tool.</p>
+      <p>Warning: Highly flammable.</p>
     `
   },
   GuardDogDogBreath: {
