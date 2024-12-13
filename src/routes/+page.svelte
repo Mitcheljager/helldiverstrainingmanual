@@ -15,7 +15,7 @@
 
 <p>Congratulations on joining the <strong>Helldivers</strong>, the elite fighting force tasked with spreading <em>Liberty</em> and <em>Democracy</em> across the galaxy. As a Helldiver, you are not just a soldier; you are a beacon of <strong>freedom</strong> in the darkest corners of the universe.</p>
 
-<p>Before you embark on your journey to liberate alien worlds from the clutches of tyranny, it is imperative that you understand the gravity of your mission. While the enemy may manifest in the form of giant <em>bugs</em> (<strong>Terminids</strong>) or ruthless robot AI (<strong>Automatons</strong>), the true battle lies in the fight to protect your loved ones back home. Every mission you undertake, every sacrifice you make, is in service of ensuring the safety and security of your families and fellow citizens.</p>
+<p>Before you embark on your journey to liberate alien worlds from the clutches of tyranny, it is imperative that you understand the gravity of your mission. While the enemy may manifest in the form of giant <em>bugs</em> (<strong>Terminids</strong>), ruthless robot AI (<strong>Automatons</strong>), or extraterrestial beings (<strong>Illuminates</strong>), the true battle lies in the fight to protect your loved ones back home. Every mission you undertake, every sacrifice you make, is in service of ensuring the safety and security of your families and fellow citizens.</p>
 
 <p>But fear not, for you are not alone in this noble endeavor. You are part of a brother- and sisterhood of warriors, united by a common cause and bound by unbreakable bonds of camaraderie. Together, we will face the hordes of enemies that stand between us and victory, armed with our wits, our weapons, and an unwavering belief in the righteousness of our cause.</p>
 
