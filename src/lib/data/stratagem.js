@@ -476,7 +476,7 @@ export const Stratagem = {
     sequence: ["right", "right", "down", "left", "right", "up"],
     content: `
       <p>We're proud to hand you the next evolution in bug control through the use of thoroughly cleansing fire. While our previous napalm weaponry focused on precision, this barrage takes a blanket approach. No nest is large enough to be out of bounds of this ever-cleansing shower of highly effective inflammatory shampoo.</p>
-      <p>Select your target, ready the marshmallow, sit back, and watch as any enemy—be it bug, robotic, or interterrestrial—is quickly turned to a golden crisp, leaving not a single spore untoasted.</p>
+      <p>Select your target, ready the marshmallow, sit back, and watch as any enemy—be it bug, robotic, or extraterrestrial—is quickly turned to a golden crisp, leaving not a single spore untoasted.</p>
       <p>In the hands of a well-trained Helldiver, this orbital weapon can lay waste to entire fields of enemies—or anything else in its path. As such, it should be noted that the cleansing powers have been carefully calibrated to not harm your fellow Helldivers. Any claim otherwise is false and will not be upheld.</p>
     `
   },
