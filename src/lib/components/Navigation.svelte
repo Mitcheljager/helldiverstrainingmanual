@@ -38,19 +38,6 @@
     subroutes: [
       ...bestiaryRoutes
     ]
-  }, {
-    text: "Equipment",
-    subroutes: [{
-      text: "Boosters"
-    }, {
-      text: "Titles"
-    }]
-  }, {
-    text: "Miscellaneous",
-    subroutes: [{
-      text: "Finding Super Samples",
-      route: "super-samples"
-    }]
   }]
 </script>
 
