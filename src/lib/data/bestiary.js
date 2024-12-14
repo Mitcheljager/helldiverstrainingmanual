@@ -260,7 +260,7 @@ export const bestiary = [{
   enemies: [{
     name: "Voteless",
     stratagems: [Stratagem.GrenadeLauncher, Stratagem.OrbitalGasStrike, Stratagem.EagleNapalmAirstrike, Stratagem.OrbitalNapalmBarrage, Stratagem.IncendiaryMines, Stratagem.MachineGun],
-    appearance: "A humanoid figured with numerous grows covering it's body. Blue luminous eye stare blindly with no direction.",
+    appearance: "A humanoid figured with numerous growths covering it's body and void filled head. Blue luminous eye stare blindly with no direction.",
     quicktip: "These mindless creatures attack in large hordes, hoping to overwhelm your team with shear numbers. They go down with just a few shots, but being down is not a guarenteed end. Aim for the brain to make sure they stay down.",
     tactics: `
       <p>Please stand by...</p>
