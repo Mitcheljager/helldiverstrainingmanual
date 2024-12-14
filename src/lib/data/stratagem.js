@@ -467,7 +467,7 @@ export const Stratagem = {
     cost: 20000,
     sequence: ["down", "left", "up", "down", "right"],
     content: `
-      <p>This is not just any missile launcher, this intelligent apex predator launches laser-guided smart missiles that do the track your every intention. A laser-guiding system keeps rocket exactly on target, with no enemy able to get away from it's ever present gaze.</p>
+      <p>This missile launcher is equipped with an intelligent laser-guided smart missile system that do track your every intention. Pull the trigger and keep the enemy in sight to continously inform the fired missile of the position of the enemy. No ill-intentioned creature will be able to hide from your constant gaze.</p>
       <p>This beauty is able to dispense democracy up to 4 rockets at a time.</p>
     `
   },
