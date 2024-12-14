@@ -221,8 +221,15 @@ export const bestiary = [{
     `
   }, {
     name: "Factory Strider",
-    appearance: "Stand by for further details...",
-    tactics: "<p>Collection any information you can. Battles are won through information. Do your duty and report back what you know.</p>"
+    appearance: "A charming 20-ton quadrupedal metal monstrosity in the form of a  stomping factory. It houses a large array of slow, but powerful weaponry.",
+    stratagems: [Stratagem.RecoillessRifle, Stratagem.Autocannon, Stratagem.Eagle500KGBomb, Stratagem.OrbitalPrecisionStrike, Stratagem.EagleStrafingRun],
+    tactics: `
+      <p>Upon detecting the scent of your heroism, the Factory Strider lets out a bone-chilling roar, and its cannon gets straight to work. It spits out up rounds of searing death if you dare to linger in its line of sight. If that's not personal enough, its high RPM Gatling lasers (aimed via its robotic head) will make Swiss cheese out of anything unfortunate enough to stand in front of it. Oh, and in case you're thinking of hiding under it—don't. It spawns friends.</p>
+      <p>This beast can take a punch. Bring out all the big bombs you have on you, and more.</p>
+      <p>Despite it's seemingly impossible to breach defenses, it houses a number of weakspots. It's conveniently glowing eyes can taken out with a precise and high powered shot. If you prefer a more up close approach, the undercarriage has a number of doors which let out the trojan soldiers hidden inside. Each door can be taken out with a good spray and spray.</p>
+      <p>This beast is programmed with one goal; Take you out with whatever it has got. Their programming is simple and rudimentary. Use their elementary level targeting system against their own troops, and use their cannons to take out their own structure.
+      <p>Be careful when it let's out their inevitable deathrattle, as they explode on death, taking out anyone unfortunate enough to be underneath this tin can.</p>
+    `
   }, {
     name: "Gunship",
     appearance: "After weeks of relentless attempts at aerial supremacy, the Automatons have finally made a breakthrough: the dropships are UAVs armed to the teeth with rockets, cannons, and other artillery. They patrol overhead, guarding their fabricators with relentless ferocity and are capable of reinforcing the Automaton ground forces, creating an impenetrable wall of firepower.",
@@ -250,5 +257,45 @@ export const bestiary = [{
   description: `
     <p>More info to follow. Stay on your guard, Helldiver.</p>
   `,
-  enemies: []
+  enemies: [{
+    name: "Voteless",
+    stratagems: [Stratagem.GrenadeLauncher, Stratagem.OrbitalGasStrike, Stratagem.EagleNapalmAirstrike, Stratagem.OrbitalNapalmBarrage, Stratagem.IncendiaryMines, Stratagem.MachineGun],
+    appearance: "A humanoid figured with numerous grows covering it's body. Blue luminous eye stare blindly with no direction.",
+    quicktip: "These mindless creatures attack in large hordes, hoping to overwhelm your team with shear numbers. They go down with just a few shots, but being down is not a guarenteed end. Aim for the brain to make sure they stay down.",
+    tactics: `
+      <p>Please stand by...</p>
+    `
+  }, {
+    name: "Watcher",
+    stratagems: [Stratagem.AntiMaterielRifle, Stratagem.HeavyMachineGun],
+    appearance: "A fast and nimble drone whose primary goal is to scout the environment for any threat. That's you, the threat. Once they have laid eyes on you they will attempt to scan you by getting up close.",
+    quicktip: "Keep a distance to avoid getting scanned. Once their lights turn from a ghostly blue to a ghastly purple, take them out as soon as possible.",
+    tactics: `
+      <p>Take them out before they are able to complete their scan, as a successfull scan will result in a direct call for reinforcements.</p>
+    `
+  }, {
+    name: "Overseer",
+    stratagems: [Stratagem.QuasarCannon, Stratagem.Commando, Stratagem.AntiMaterielRifle],
+    appearance: "Powerful and intimidating, capable of dealing heavy blows in both ranged and close quarters combat with their staff-like weapon. A light shimmer gives away their cowarding need for defenses in the form on some sort of energy shielding.",
+    quicktip: "Their shields do not cover their full bodies, leaving their lower legs uncovered. Aim for the knees and make them bend to the might of the Helldivers.",
+    tactics: `
+      <p>Please stand by...</p>
+    `
+  }, {
+    name: "Harvester",
+    stratagems: [Stratagem.OrbitalRailcannonStrike, Stratagem.OrbitalPrecisionStrike, Stratagem.AntiTankEmplacement, Stratagem.HMGEmplacement],
+    appearance: "This 3-legged behemoth is the best these vile invaders have to offer. This towering tripod comes equipped with a large scanning array and slow turning laser weaponry.",
+    quicktip: "Work together with your team to keep their shields down and focus heavy fire on their large glowing eye.",
+    tactics: `
+      <p>Take out their shields with light weaponry and aim for the eye with your most democratic tools.</p>
+    `
+  }, {
+    name: "Warp Ship",
+    stratagems: [Stratagem.OrbitalPrecisionStrike],
+    appearance: "These large disc shaped ships maneuver with great speed, allowing them to arrive in an instant when called upon. Blue shimmering energy shield protect these transports from all fire.",
+    quicktip: "While in the air, these ships route all their power away from defenses, making them far more vulnerable.",
+    tactics: `
+      <p>While parked, take out their shields with small arms fire. Finish them off quickly with a well place explosive in the brightly glowing opening.</p>
+    `
+  }]
 }]
