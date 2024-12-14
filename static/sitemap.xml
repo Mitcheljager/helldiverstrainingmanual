@@ -1,1763 +1,1839 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-
-
+		<!--	created with www.mysitemapgenerator.com	-->
+		<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-  <loc>https://helldiverstrainingmanual.com/</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>1.00</priority>
+	<loc>https://helldiverstrainingmanual.com/</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>1.0</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/war-status</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <changefreq>daily</changefreq>
-  <priority>0.90</priority>
+	<loc>https://helldiverstrainingmanual.com/war-status</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>1.0</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planetary-records</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <changefreq>daily</changefreq>
-  <priority>0.90</priority>
+	<loc>https://helldiverstrainingmanual.com/planetary-records</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>1.0</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.90</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>1.0</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/stratagems</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://helldiverstrainingmanual.com/stratagems</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>1.0</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/stratagems/interactive-practice</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.90</priority>
+	<loc>https://helldiverstrainingmanual.com/stratagems/interactive-practice</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/stratagems/support-weapons</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://helldiverstrainingmanual.com/stratagems/support-weapons</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/stratagems/support-weapons/machine-gun</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://helldiverstrainingmanual.com/stratagems/support-weapons/machine-gun</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/stratagems/support-weapons/anti-materiel-rifle</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://helldiverstrainingmanual.com/stratagems/support-weapons/anti-materiel-rifle</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/stratagems/support-weapons/stalwart</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://helldiverstrainingmanual.com/stratagems/support-weapons/stalwart</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/stratagems/support-weapons/expendable-anti-tank</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://helldiverstrainingmanual.com/stratagems/support-weapons/expendable-anti-tank</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/stratagems/support-weapons/recoilless-rifle</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://helldiverstrainingmanual.com/stratagems/support-weapons/recoilless-rifle</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/stratagems/support-weapons/flamethrower</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://helldiverstrainingmanual.com/stratagems/support-weapons/flamethrower</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/stratagems/support-weapons/autocannon</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://helldiverstrainingmanual.com/stratagems/support-weapons/autocannon</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/stratagems/support-weapons/railgun</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://helldiverstrainingmanual.com/stratagems/support-weapons/heavy-machine-gun</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/stratagems/support-weapons/spear</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://helldiverstrainingmanual.com/stratagems/support-weapons/airburst-rocket-launcher</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/stratagems/orbital-cannons</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://helldiverstrainingmanual.com/stratagems/support-weapons/commando</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/stratagems/orbital-cannons/orbital-gatling-barrage</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://helldiverstrainingmanual.com/stratagems/support-weapons/railgun</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/stratagems/orbital-cannons/orbital-airburst-strike</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://helldiverstrainingmanual.com/stratagems/support-weapons/spear</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/stratagems/orbital-cannons/orbital-120mm-he-barrage</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://helldiverstrainingmanual.com/stratagems/orbital-cannons</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/stratagems/orbital-cannons/orbital-380mm-he-barrage</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://helldiverstrainingmanual.com/stratagems/orbital-cannons/orbital-gatling-barrage</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/stratagems/orbital-cannons/orbital-walking-barrage</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://helldiverstrainingmanual.com/stratagems/orbital-cannons/orbital-airburst-strike</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/stratagems/orbital-cannons/orbital-laser</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://helldiverstrainingmanual.com/stratagems/orbital-cannons/orbital-120mm-he-barrage</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/stratagems/orbital-cannons/orbital-railcannon-strike</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://helldiverstrainingmanual.com/stratagems/orbital-cannons/orbital-380mm-he-barrage</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/stratagems/hangar</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://helldiverstrainingmanual.com/stratagems/orbital-cannons/orbital-walking-barrage</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/stratagems/hangar/eagle-strafing-run</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://helldiverstrainingmanual.com/stratagems/orbital-cannons/orbital-laser</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/stratagems/hangar/eagle-airstrike</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://helldiverstrainingmanual.com/stratagems/orbital-cannons/orbital-napalm-barrage</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/stratagems/hangar/eagle-cluster-bomb</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://helldiverstrainingmanual.com/stratagems/orbital-cannons/orbital-railcannon-strike</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/stratagems/hangar/eagle-napalm-airstrike</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://helldiverstrainingmanual.com/stratagems/hangar</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/stratagems/hangar/jump-pack</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://helldiverstrainingmanual.com/stratagems/hangar/eagle-strafing-run</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/stratagems/hangar/eagle-smoke-strike</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://helldiverstrainingmanual.com/stratagems/hangar/eagle-airstrike</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/stratagems/hangar/eagle-110mm-rocket-pods</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://helldiverstrainingmanual.com/stratagems/hangar/eagle-cluster-bomb</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/stratagems/hangar/eagle-500kg-bomb</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://helldiverstrainingmanual.com/stratagems/hangar/eagle-napalm-airstrike</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/stratagems/bridge</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://helldiverstrainingmanual.com/stratagems/hangar/jump-pack</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/stratagems/bridge/orbital-precision-strike</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://helldiverstrainingmanual.com/stratagems/hangar/eagle-smoke-strike</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/stratagems/bridge/orbital-gas-strike</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://helldiverstrainingmanual.com/stratagems/hangar/eagle-110mm-rocket-pods</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/stratagems/bridge/orbital-ems-strike</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://helldiverstrainingmanual.com/stratagems/hangar/eagle-500kg-bomb</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/stratagems/bridge/orbital-smoke-strike</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://helldiverstrainingmanual.com/stratagems/bridge</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/stratagems/bridge/hmg-emplacement</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://helldiverstrainingmanual.com/stratagems/bridge/orbital-precision-strike</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/stratagems/bridge/shield-generator-relay</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://helldiverstrainingmanual.com/stratagems/bridge/orbital-gas-strike</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/stratagems/bridge/tesla-tower</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://helldiverstrainingmanual.com/stratagems/bridge/orbital-ems-strike</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/stratagems/engineering-bay</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://helldiverstrainingmanual.com/stratagems/bridge/orbital-smoke-strike</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/stratagems/engineering-bay/anti-personnel-minefield</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://helldiverstrainingmanual.com/stratagems/bridge/hmg-emplacement</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/stratagems/engineering-bay/supply-pack</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://helldiverstrainingmanual.com/stratagems/bridge/shield-generator-relay</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/stratagems/engineering-bay/grenade-launcher</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://helldiverstrainingmanual.com/stratagems/bridge/tesla-tower</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/stratagems/engineering-bay/laser-cannon</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://helldiverstrainingmanual.com/stratagems/engineering-bay</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/stratagems/engineering-bay/incendiary-mines</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://helldiverstrainingmanual.com/stratagems/engineering-bay/anti-personnel-minefield</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/stratagems/engineering-bay/guard-dog-rover</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://helldiverstrainingmanual.com/stratagems/engineering-bay/supply-pack</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/stratagems/engineering-bay/ballistic-shield-backpack</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://helldiverstrainingmanual.com/stratagems/engineering-bay/grenade-launcher</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/stratagems/engineering-bay/arc-thrower</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://helldiverstrainingmanual.com/stratagems/engineering-bay/laser-cannon</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/stratagems/engineering-bay/shield-generator-pack</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://helldiverstrainingmanual.com/stratagems/engineering-bay/incendiary-mines</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/stratagems/robotics-workshop</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://helldiverstrainingmanual.com/stratagems/engineering-bay/guard-dog-rover</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/stratagems/robotics-workshop/machine-gun-sentry</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://helldiverstrainingmanual.com/stratagems/engineering-bay/ballistic-shield-backpack</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/stratagems/robotics-workshop/gatling-sentry</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://helldiverstrainingmanual.com/stratagems/engineering-bay/arc-thrower</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/stratagems/robotics-workshop/mortar-sentry</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://helldiverstrainingmanual.com/stratagems/engineering-bay/anti-tank-mines</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/stratagems/robotics-workshop/guard-dog</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://helldiverstrainingmanual.com/stratagems/engineering-bay/quasar-cannon</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/stratagems/robotics-workshop/autocannon-sentry</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://helldiverstrainingmanual.com/stratagems/engineering-bay/shield-generator-pack</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/stratagems/robotics-workshop/rocket-sentry</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://helldiverstrainingmanual.com/stratagems/robotics-workshop</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/stratagems/robotics-workshop/ems-mortar-sentry</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://helldiverstrainingmanual.com/stratagems/robotics-workshop/machine-gun-sentry</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/stratagems/robotics-workshop/patriot-exosuit</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://helldiverstrainingmanual.com/stratagems/robotics-workshop/gatling-sentry</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/stratagems/mission-stratagems</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://helldiverstrainingmanual.com/stratagems/robotics-workshop/mortar-sentry</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/stratagems/mission-stratagems/reinforce</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://helldiverstrainingmanual.com/stratagems/robotics-workshop/guard-dog</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/stratagems/mission-stratagems/sos-beacon</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://helldiverstrainingmanual.com/stratagems/robotics-workshop/autocannon-sentry</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/stratagems/mission-stratagems/resupply</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://helldiverstrainingmanual.com/stratagems/robotics-workshop/rocket-sentry</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/stratagems/mission-stratagems/super-earth-flag</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://helldiverstrainingmanual.com/stratagems/robotics-workshop/ems-mortar-sentry</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/stratagems/mission-stratagems/upload-data</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://helldiverstrainingmanual.com/stratagems/robotics-workshop/patriot-exosuit</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/stratagems/mission-stratagems/hellbomb</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://helldiverstrainingmanual.com/stratagems/robotics-workshop/emancipator-exosuit</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/bestiary</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.90</priority>
+	<loc>https://helldiverstrainingmanual.com/stratagems/chemical-agents</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/bestiary/terminids</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.90</priority>
+	<loc>https://helldiverstrainingmanual.com/stratagems/chemical-agents/steriliser</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/bestiary/terminids/scavenger</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://helldiverstrainingmanual.com/stratagems/chemical-agents/guard-dog-dog-breath</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/bestiary/terminids/warrior</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://helldiverstrainingmanual.com/stratagems/urban-legends</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/bestiary/terminids/hunter</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://helldiverstrainingmanual.com/stratagems/urban-legends/directional-shield</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/bestiary/terminids/stalker</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://helldiverstrainingmanual.com/stratagems/urban-legends/flame-sentry</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/bestiary/terminids/bile-spewer</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://helldiverstrainingmanual.com/stratagems/urban-legends/anti-tank-emplacement</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/bestiary/terminids/charger</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://helldiverstrainingmanual.com/stratagems/mission-stratagems</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/bestiary/terminids/brood-commander</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://helldiverstrainingmanual.com/stratagems/mission-stratagems/reinforce</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/bestiary/terminids/bile-titan</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://helldiverstrainingmanual.com/stratagems/mission-stratagems/sos-beacon</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/bestiary/terminids/shrieker</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://helldiverstrainingmanual.com/stratagems/mission-stratagems/resupply</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/bestiary/automatons</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.90</priority>
+	<loc>https://helldiverstrainingmanual.com/stratagems/mission-stratagems/super-earth-flag</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/bestiary/automatons/trooper</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://helldiverstrainingmanual.com/stratagems/mission-stratagems/upload-data</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/bestiary/automatons/commissar</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://helldiverstrainingmanual.com/stratagems/mission-stratagems/hellbomb</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/bestiary/automatons/scout-strider</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://helldiverstrainingmanual.com/bestiary</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>1.0</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/bestiary/automatons/berserker</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://helldiverstrainingmanual.com/bestiary/terminids</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/bestiary/automatons/devastator</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://helldiverstrainingmanual.com/bestiary/terminids/scavenger</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/bestiary/automatons/hulk</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://helldiverstrainingmanual.com/bestiary/terminids/warrior</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/bestiary/automatons/tank</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://helldiverstrainingmanual.com/bestiary/terminids/hunter</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/bestiary/automatons/dropship</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://helldiverstrainingmanual.com/bestiary/terminids/stalker</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/api</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://helldiverstrainingmanual.com/bestiary/terminids/bile-spewer</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/disclaimer</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://helldiverstrainingmanual.com/bestiary/terminids/charger</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/alaraph</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/bestiary/terminids/brood-commander</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/alathfar-xi</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/bestiary/terminids/bile-titan</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/andar</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/bestiary/terminids/shrieker</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/asperoth-prime</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/bestiary/automatons</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/keid</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/bestiary/automatons/trooper</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/klaka-5</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/bestiary/automatons/commissar</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/kneth-port</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/bestiary/automatons/scout-strider</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/kraz</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/bestiary/automatons/berserker</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/klen-dahth-ii</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/bestiary/automatons/devastator</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/new-haven</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/bestiary/automatons/hulk</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/pathfinder-v</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/bestiary/automatons/tank</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/pilen-v</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/bestiary/automatons/factory-strider</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/widow's-harbor</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/bestiary/automatons/gunship</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/charbal-vii</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/bestiary/automatons/dropship</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/charon-prime</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/bestiary/illuminates</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/marfark</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/api</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>1.0</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/martale</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/disclaimer</loc>
+	<lastmod>2024-12-14T04:51:43+01:00</lastmod>
+	<priority>1.0</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/matar-bay</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/alaraph</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/arkturus</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/alathfar-xi</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/deneb-secundus</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/andar</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/electra-bay</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/asperoth-prime</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/kirrik</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/keid</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/mortax-prime</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/klaka-5</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/pioneer-ii</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/kneth-port</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/wilford-station</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/kraz</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/darrowsport</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/klen-dahth-ii</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/fornskogur-ii</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/new-haven</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/hydrofall-prime</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/pathfinder-v</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/marre-iv</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/pilen-v</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/midasburg</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/widow&apos;s-harbor</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/veil</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/charbal-vii</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/achernar-secundus</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/charon-prime</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/achird-iii</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/marfark</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/darius-ii</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/martale</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/ursica-xi</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/matar-bay</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/cerberus-iiic</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/arkturus</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/effluvia</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/deneb-secundus</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/fort-sanctuary</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/electra-bay</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/prosperity-falls</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/kirrik</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/seyshel-beach</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/mortax-prime</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/freedom-peak</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/pioneer-ii</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/kelvinor</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/wilford-station</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/martyr's-bay</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/darrowsport</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/obari</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/fornskogur-ii</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/viridia-prime</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/hydrofall-prime</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/ivis</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/marre-iv</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/krakatwo</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/midasburg</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/moradesh</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/veil</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/nublaria-i</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/achernar-secundus</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/slif</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/achird-iii</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/sulfura</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/darius-ii</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/crimsica</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/ursica-xi</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/estanu</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/cerberus-iiic</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/fori-prime</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/effluvia</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/bore-rock</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/fort-sanctuary</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/erson-sands</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/prosperity-falls</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/esker</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/seyshel-beach</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/socorro-iii</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/freedom-peak</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/grand-errant</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/kelvinor</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/pherkad-secundus</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/martyr&apos;s-bay</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/polaris-prime</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/obari</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/pollux-31</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/viridia-prime</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/prasa</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/ivis</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/hadar</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/krakatwo</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/haldus</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/moradesh</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/herthon-secundus</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/nublaria-i</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/zea-rugosia</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/slif</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/acubens-prime</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/sulfura</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/adhara</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/crimsica</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/afoyay-bay</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/estanu</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/bashyr</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/fori-prime</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/kharst</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/bore-rock</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/rasp</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/erson-sands</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/blistica</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/esker</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/minchir</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/socorro-iii</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/mintoria</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/grand-errant</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/zosma</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/pherkad-secundus</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/zzaniah-prime</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/polaris-prime</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/diluvia</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/pollux-31</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/okul-vi</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/prasa</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/solghast</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/hadar</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/alderidge-cove</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/haldus</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/bellatrix</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/herthon-secundus</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/botein</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/zea-rugosia</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/elysian-meadows</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/acubens-prime</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/khandark</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/adhara</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/ain-5</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/afoyay-bay</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/alairt-iii</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/bashyr</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/alamak-vii</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/kharst</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/heze-bay</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/rasp</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/new-stockholm</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/blistica</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/euphoria-iii</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/minchir</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/kuma</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/mintoria</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/mordia-9</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/zosma</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/skitter</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/zzaniah-prime</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/aesir-pass</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/diluvia</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/menkent</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/okul-vi</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/vernen-wells</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/solghast</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/atrama</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/alderidge-cove</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/maw</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/bellatrix</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/myradesh</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/botein</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/wraith</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/elysian-meadows</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/iridica</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/khandark</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/krakabos</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/ain-5</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/primordia</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/alairt-iii</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/providence</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/alamak-vii</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/ratch</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/heze-bay</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/valgaard</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/new-stockholm</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/acamar-iv</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/euphoria-iii</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/gacrux</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/kuma</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/gar-haren</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/mordia-9</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/gatria</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/skitter</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/pandion-xxiv</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/aesir-pass</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/phact-bay</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/menkent</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/emeria</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/vernen-wells</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/fort-justice</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/atrama</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/igla</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/maw</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/new-kiruna</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/myradesh</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/zegema-paradise</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/wraith</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/alta-v</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/iridica</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/caramoor</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/krakabos</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/crucible</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/primordia</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/inari</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/providence</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/volterra</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/ratch</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/diaspora-x</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/valgaard</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/enuliale</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/acamar-iv</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/epsilon-phoencis-vi</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/gacrux</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/gemstone-bluffs</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/gar-haren</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/nabatea-secundus</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/gatria</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/navi-vii</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/pandion-xxiv</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/omicron</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/phact-bay</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/choohe</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/emeria</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/chort-bay</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/fort-justice</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/lesath</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/igla</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/penta</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/new-kiruna</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/haka</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/zegema-paradise</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/halies-port</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/alta-v</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/propus</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/caramoor</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/ras-algethi</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/crucible</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/barabos</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/inari</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/curia</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/volterra</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/fenmire</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/diaspora-x</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/mastia</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/enuliale</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/tarsh</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/epsilon-phoencis-vi</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/baldrick-prime</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/gemstone-bluffs</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/emorath</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/nabatea-secundus</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/ilduna-prime</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/navi-vii</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/liberty-ridge</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/omicron</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/hellmire</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/choohe</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/nivel-43</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/chort-bay</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/oshaune</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/lesath</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/zagon-prime</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/penta</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/eukoria</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/haka</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/mog</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/halies-port</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/myrium</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/propus</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/regnus</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/ras-algethi</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/bekvam-iii</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/barabos</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/dolph</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/curia</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/duma-tyr</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/fenmire</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/julheim</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/mastia</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/hydrobius</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/tarsh</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/karlia</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/baldrick-prime</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/seasse</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/emorath</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/senge-23</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/ilduna-prime</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/setia</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/liberty-ridge</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/angel's-venture</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/hellmire</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/azterra</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/nivel-43</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/cirrus</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/oshaune</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/fort-union</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/zagon-prime</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/heeth</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/eukoria</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/terrek</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/mog</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/veld</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/myrium</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/leng-secundus</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/regnus</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/spherion</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/bekvam-iii</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/stor-tha-prime</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/dolph</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/stout</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/duma-tyr</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/termadon</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/julheim</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/genesis-prime</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/hydrobius</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/grafmere</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/karlia</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/iro</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/seasse</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/kerth-secundus</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/senge-23</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/oasis</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/setia</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/parsh</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/angel&apos;s-venture</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/valmox</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/azterra</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/hesoe-prime</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/cirrus</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/hort</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/fort-union</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/rd-4</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/heeth</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/rirga-bay</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/terrek</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/rogue-5</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/veld</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/borea</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/leng-secundus</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/gunvald</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/spherion</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/oslo-station</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/stor-tha-prime</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/calypso</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/stout</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/irulta</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/termadon</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/outpost-32</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/genesis-prime</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/reaf</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/grafmere</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/durgen</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/iro</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/maia</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/kerth-secundus</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/malevelon-creek</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/oasis</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/tibit</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/parsh</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/ubanea</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/valmox</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/super-earth</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/hesoe-prime</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/azur-secundus</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/hort</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/overgoe-prime</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/rd-4</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/partion</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/rirga-bay</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/peacock</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/rogue-5</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/trandor</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/borea</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/gaellivare</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/gunvald</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/imber</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/oslo-station</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/shallus</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/calypso</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/shelt</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/irulta</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/claorell</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/outpost-32</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/clasa</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/reaf</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/demiurg</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/durgen</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/vog-sojoth</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/maia</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/yed-prior</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/malevelon-creek</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/zefia</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/tibit</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/brink-2</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/ubanea</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/bunda-secundus</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/super-earth</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/canopus</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/azur-secundus</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/east-iridium-trading-bay</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/overgoe-prime</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/osupsam</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/partion</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/caph</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/peacock</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/castor</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/trandor</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/kuper</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/gaellivare</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/lastofe</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/imber</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/the-weir</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/shallus</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/tien-kwan</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/shelt</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/choepessa-iv</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/claorell</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/troost</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/clasa</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/ustotu</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/demiurg</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/vandalon-iv</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/vog-sojoth</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/varylia-5</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/yed-prior</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/erata-prime</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/zefia</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/fenrir-iii</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/brink-2</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/meridia</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/bunda-secundus</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/turing</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/canopus</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/acrab-xi</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/east-iridium-trading-bay</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/acrux-ix</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/osupsam</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/gemma</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/caph</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/skaash</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/castor</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/aurora-bay</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/kuper</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/cyberstan</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/lastofe</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/mekbuda</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/the-weir</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/merak</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/tien-kwan</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/merga-iv</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/choepessa-iv</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/vindemitarix-prime</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/troost</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/shete</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/ustotu</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/siemnot</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/vandalon-iv</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/sirius</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/varylia-5</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/skat-bay</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/erata-prime</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/draupnir</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/fenrir-iii</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/ingmar</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/meridia</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/mantes</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/turing</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/mort</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/acrab-xi</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/p%C3%B6pli-ix</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/acrux-ix</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/meissa</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/gemma</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/vega-bay</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/skaash</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/wasat</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/aurora-bay</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/wezen</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/cyberstan</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://helldiverstrainingmanual.com/planet-glossary/x-45</loc>
-  <lastmod>2024-03-13T02:25:00+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/mekbuda</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
-
-
+<url>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/merak</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/merga-iv</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/vindemitarix-prime</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/shete</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/siemnot</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/sirius</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/skat-bay</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/draupnir</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/ingmar</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/mantes</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/mort</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/p%C3%B6pli-ix</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/meissa</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/vega-bay</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/wasat</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/wezen</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://helldiverstrainingmanual.com/planet-glossary/x-45</loc>
+	<lastmod>2024-12-14T04:51:47+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
 </urlset>
