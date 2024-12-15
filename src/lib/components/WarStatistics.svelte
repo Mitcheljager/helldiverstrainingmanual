@@ -4,6 +4,8 @@
 
   export let stats = {}
 
+  console.log(stats)
+
   $: items = [{
     text: "Years spend in active duty",
     value: secondsToYears(stats.missionTime).toLocaleString()
@@ -24,6 +26,9 @@
   }, {
     text: "Automatons scrapped",
     value: stats.automatonKills?.toLocaleString()
+  }, {
+    text: "Illuminates eradicated",
+    value: stats.illuminateKills?.toLocaleString()
   }, {
     text: "Bullets fired",
     value: stats.bulletsFired?.toLocaleString()
