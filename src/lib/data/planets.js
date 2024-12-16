@@ -420,7 +420,7 @@ export const planetData = {
   68: {
     name: "Shelt",
     sector: Sector.Talus,
-    biome: null,
+    biome: Biome.Tundra,
     environmentals: []
   },
   69: {
@@ -1050,8 +1050,8 @@ export const planetData = {
   172: {
     name: "Gar Haren",
     sector: Sector.JinXi,
-    biome: Biome.Jungle,
-    environmentals: [Environmental.VolcanicActivity, Environmental.Rainstorms]
+    biome: Biome.Morass,
+    environmentals: [Environmental.ThickFog]
   },
   173: {
     name: "Gatria",
