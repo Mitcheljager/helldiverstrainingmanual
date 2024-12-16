@@ -583,7 +583,7 @@ export const planetData = {
   95: {
     name: "Genesis Prime",
     sector: Sector.Rictus,
-    biome: Biome.CrimsonMoor,
+    biome: Biome.Jungle,
     environmentals: [Environmental.IonStorms]
   },
   96: {
