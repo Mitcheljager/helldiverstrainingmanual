@@ -4,10 +4,14 @@
 
   import "$lib/scss/app.scss"
   import "$lib/scss/fonts.scss"
+	import { hydrated } from "$lib/stores/app"
+	import { onMount } from "svelte"
 
   let main
   let sidebarActive = false
   let scrollPositions = {}
+
+  onMount(() => $hydrated = true)
 
   beforeNavigate(event => {
     if (main && !("delta" in event)) scrollPositions[event.from] = main.scrollTop

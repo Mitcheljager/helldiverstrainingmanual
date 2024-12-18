@@ -1,6 +1,8 @@
 <script>
 	import { browser } from "$app/environment"
 	import { fly } from "svelte/transition"
+  import { hydrated } from "$lib/stores/app"
+	import { onMount } from "svelte"
 
   export let basepath = ""
   export let filename = ""
@@ -12,7 +14,10 @@
   let videoElement
   let videoPlaying = false
   let loading = false
-  let loaded = false
+  let loaded = !browser || (browser && !$hydrated)
+  let fade = !loaded
+
+  onMount(() => $hydrated = true)
 
   function playpause() {
     if (videoPlaying) videoElement.pause()
@@ -71,16 +76,14 @@
   <h1 class:small in:fly|global={{ y: 20, duration: 400 }}><slot /></h1>
 {/if}
 
-{#if browser}
-  {#if basepath && filename}
-    <picture>
-      <source type="image/webp" srcset="{basepath}/webp/{filename + ".webp"}"  />
-      <source type="image/jpg" srcset="{basepath}/{filename + ".jpg"}">
-      <img src="{basepath}/{filename}.jpg" class="blur" class:loaded {alt} on:load={() => loaded = true}>
-    </picture>
-  {:else if video && poster}
-    <img class="blur" class:loaded src={poster} {alt} on:load={() => loaded = true}>
-  {/if}
+{#if basepath && filename}
+  <picture>
+    <source type="image/webp" srcset="{basepath}/webp/{filename + ".webp"}"  />
+    <source type="image/jpg" srcset="{basepath}/{filename + ".jpg"}">
+    <img src="{basepath}/{filename}.jpg" class="blur" class:loaded class:fade {alt} on:load={() => loaded = true}>
+  </picture>
+{:else if video && poster}
+  <img class="blur" class:loaded class:fade src={poster} {alt} on:load={() => loaded = true}>
 {/if}
 
 <style lang="scss">
@@ -177,8 +180,11 @@
     opacity: 0;
     filter: blur(100px);
     z-index: -1;
-    transition: opacity 1500ms;
     pointer-events: none;
+
+    &.fade {
+      transition: opacity 1500ms;
+    }
 
     &.loaded {
       opacity: 0.5;
