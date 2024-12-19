@@ -1,5 +1,5 @@
 export function toSlug(string = "") {
-  return string.toLowerCase().replaceAll(" ", "-")
+  return string.toLowerCase().replaceAll(" ", "-").replaceAll(".", "")
 }
 
 export function toPath(array = []) {

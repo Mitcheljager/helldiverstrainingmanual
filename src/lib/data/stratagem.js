@@ -378,6 +378,13 @@ export const Stratagem = {
       <p>The LAS-99 Quasar Cannon, the pinnacle of raw firepower at your fingertips. This beast charges up to unleash a spectacular energy burst that'll leave your enemies in awe of your might. But brace yourself, because after unleashing such overwhelming power, this cannon needs a moment to catch its breath. It's not a flaw, it's a testament to its sheer potency.</p>
     `
   },
+  WaspLauncher: {
+    name: "W.A.S.P. Launcher",
+    sequence: ["down", "down", "up", "down", "right"],
+    content: `
+      <p>Wasps, ready to ruin someone's picnic. This powerful launcher comes equipped with high precise, fast moving projectiles that seek out any enemy in it's vision. This feat of Super Earth engineer is able to dispense Justice from vast distances. Lock on any unfortunate targets, sqeeuze te trigger, and watch as these insects start swarming towards their prey. But don't be too trigger happy, as even a single wasp is nothing to scroff at. The StA-X3 W.A.S.P Launcher has proven to be especially effective against flying targets, showing them who truly rules the air space.</p>
+    `
+  },
   ShieldGeneratorPack: {
     name: "Shield Generator Pack",
     cost: 10000,

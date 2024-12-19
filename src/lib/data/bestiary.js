@@ -275,7 +275,7 @@ export const bestiary = [{
     `
   }, {
     name: "Overseer",
-    stratagems: [Stratagem.QuasarCannon, Stratagem.Commando, Stratagem.AntiMaterielRifle],
+    stratagems: [Stratagem.QuasarCannon, Stratagem.Commando, Stratagem.AntiMaterielRifle, Stratagem.WaspLauncher],
     appearance: "Powerful and intimidating, capable of dealing heavy blows in both ranged and close quarters combat with their staff-like weapon. A light shimmer gives away their cowarding need for defenses in the form on some sort of energy shielding.",
     quicktip: "Their shields do not cover their full bodies, leaving their lower legs uncovered. Aim for the knees and make them bend to the might of the Helldivers.",
     tactics: `
@@ -283,7 +283,7 @@ export const bestiary = [{
     `
   }, {
     name: "Harvester",
-    stratagems: [Stratagem.OrbitalRailcannonStrike, Stratagem.OrbitalPrecisionStrike, Stratagem.AntiTankEmplacement, Stratagem.HMGEmplacement],
+    stratagems: [Stratagem.OrbitalRailcannonStrike, Stratagem.OrbitalPrecisionStrike, Stratagem.AntiTankEmplacement, Stratagem.HMGEmplacement, Stratagem.WaspLauncher],
     appearance: "This 3-legged behemoth is the best these vile invaders have to offer. This towering tripod comes equipped with a large scanning array and slow turning laser weaponry.",
     quicktip: "Work together with your team to keep their shields down and focus heavy fire on their large glowing eye.",
     tactics: `

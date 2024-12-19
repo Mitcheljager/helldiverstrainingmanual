@@ -88,6 +88,7 @@ export const stratagems = [{
     Stratagem.AntiTankMines,
     Stratagem.QuasarCannon,
     Stratagem.ShieldGeneratorPack,
+    Stratagem.WaspLauncher
   ]
 }, {
   category: "Robotics Workshop",
