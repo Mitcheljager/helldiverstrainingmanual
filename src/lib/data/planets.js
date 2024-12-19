@@ -796,7 +796,7 @@ export const planetData = {
     name: "Achernar Secundus",
     sector: Sector.Borgus,
     biome: Biome.Highlands,
-    environmentals: [Environmental.ThickFog, Environmental.Rainstorms]
+    environmentals: [Environmental.Rainstorms]
   },
   131: {
     name: "Achird III",
