@@ -776,8 +776,9 @@ export const planetData = {
   },
   127: {
     name: "Angel's Venture",
+    tidbit: `<p>Torn apart by the Meridian singularity. Once the home of many, now a reminder of the destruction the enemy is willing to inflict in order to put our democracy to a halt.</p>`,
     sector: Sector.Orion,
-    biome: Biome.Tundra,
+    biome: Biome.Shattered,
     environmentals: []
   },
   128: {

@@ -78,5 +78,9 @@ export const Biome = {
   Morass: {
     slug: "morass",
     description: "Squelching mud, twisting roots; the odor of rot and anarchy. A teeming, endless morass."
+  },
+  Shattered: {
+    slug: "shattered",
+    description: "All that remains of a planet torn apart by the Meridian singularity."
   }
 }

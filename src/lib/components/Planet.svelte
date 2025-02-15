@@ -33,6 +33,7 @@
   class:active
   class:highlight
   class:black-hole={data.biome?.slug === Biome.BlackHole.slug}
+  class:shattered={data.biome?.slug === Biome.Shattered.slug}
   class:controlled={!campaign}
   style:--x={position.x}
   style:--y={position.y}
@@ -136,6 +137,12 @@
     &.black-hole {
       background: $black;
       box-shadow: inset 0 0 calc(2px * var(--zoom)) #f9f1f8, inset 0 0 calc(5px * var(--zoom)) #9175dd;
+      z-index: 1;
+    }
+
+    &.shattered {
+      background: $gray;
+      border: 2px solid darken($red, 20%);
     }
 
     @each $label, $color in $faction-colors {
