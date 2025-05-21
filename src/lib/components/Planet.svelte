@@ -71,7 +71,7 @@
         </div>
 
         <p class="small">
-          {percentage.toFixed(2)}%
+          {Math.max(percentage, 0).toFixed(2)}%
           {defense ? "Defend!" : "Liberated"}
         </p>
 

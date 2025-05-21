@@ -105,7 +105,7 @@
 
         <div>
           <span>
-            <RollingNumber number={(percentage ? percentage.toFixed(4) : 0).toString()} />%
+            <RollingNumber number={(percentage ? Math.max(percentage, 0).toFixed(4) : 0).toString()} />%
             {defense ? "Defend!" : "Liberated"}
           </span>
 
