@@ -22,7 +22,7 @@
 
 <button class="select" class:small use:outside on:close={() => active = false} on:click={() => active = !active}>
   {#if value.icon}
-    <img loading="lazy" src={value.icon} alt="" />
+    <img loading="lazy" src={value.icon} alt="" width="43" height="43" />
   {/if}
 
   {value.text}
