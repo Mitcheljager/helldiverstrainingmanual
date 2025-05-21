@@ -1,5 +1,6 @@
 <script>
 	import { afterNavigate, beforeNavigate } from "$app/navigation"
+	import NavigatingIndicator from "$lib/components/NavigatingIndicator.svelte";
   import Navigation from "$lib/components/Navigation.svelte"
 
   import "$lib/scss/app.scss"
@@ -26,6 +27,8 @@
     else if (main) main.scrollTo({ top: scrollPositions[event.to] || 0 })
   })
 </script>
+
+<NavigatingIndicator />
 
 <div class="layout">
   <aside class="sidebar" class:active={sidebarActive} id="navigation">
