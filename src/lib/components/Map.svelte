@@ -125,6 +125,11 @@
 
     wrapperElement.scrollIntoView({ behavior: "smooth", block: "center" })
   }
+
+  function filterInvalidPlanets(planets) {
+    // Filter out planets that are at 0,0 except for Super Earth
+    return planets.filter(p => p.index === 0 || p.position.x != 0)
+  }
 </script>
 
 <svelte:window on:locate={locate} on:show-modal={({ detail }) => modalIndex = detail} />
@@ -157,7 +162,7 @@
     <div class="inner" bind:this={innerElement}>
       {#if browser}
         <div class="planets">
-          {#each planets as planet (planet.index)}
+          {#each filterInvalidPlanets(planets) as planet (planet.index)}
             {#if status && (getCampaign(planet.index) || getStatus(planet.index)?.owner !== 1 || majorOrdersPlanetIndexes.includes(planet.index) || showLiberated || foundPlanetIndexes.includes(planet.index))}
               <Planet
                 {planet}

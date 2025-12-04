@@ -1601,5 +1601,47 @@ export const planetData = {
     sector: Sector.Valdis,
     biome: Biome.Canyon,
     environmentals: [Environmental.Tremors]
+  },
+  261: {
+    name: "Fury",
+    sector: Sector.Xzar,
+    biome: Biome.Magma,
+    environmentals: [],
+    from: "2025-12-04"
+  },
+  262: {
+    name: "K",
+    sector: Sector.Trigon,
+    biome: Biome.Magma,
+    environmentals: [],
+    from: "2025-12-04"
+  },
+  263: {
+    name: "",
+    sector: "",
+    biome: "",
+    environmentals: [],
+    from: "2025-12-04"
+  },
+  264: {
+    name: "",
+    sector: "",
+    biome: "",
+    environmentals: [],
+    from: "2025-12-04"
+  },
+  265: {
+    name: "",
+    sector: "",
+    biome: "",
+    environmentals: [],
+    from: "2025-12-04"
+  },
+  266: {
+    name: "Mox",
+    sector: Sector.Xzar,
+    biome: Biome.Magma,
+    environmentals: [],
+    from: "2025-12-04"
   }
 }

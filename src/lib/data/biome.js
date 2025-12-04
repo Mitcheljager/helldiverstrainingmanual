@@ -82,5 +82,9 @@ export const Biome = {
   Shattered: {
     slug: "shattered",
     description: "All that remains of a planet torn apart by the Meridian singularity."
+  },
+  Magma: {
+    slug: "magma",
+    description: "Constant eruptions keep this planet covered in lava flows and utterly inhospitable to Democratic life. It also makes it a treasure trove of rare minerals."
   }
 }
