@@ -1,5 +1,6 @@
 <script>
 	import { daysSinceDate } from "$lib/utils/datetime"
+  import { planetData } from "$lib/data/planets"
 	import Map from "$lib/components/Map.svelte"
 	import Range from "$lib/components/Range.svelte"
 	import Hero from "$lib/components/Hero.svelte"
@@ -37,7 +38,7 @@
       return newPlanet
     })
 
-    return result
+    return filterPlanetsByDate(result, endDate)
   }
 
   function groupRecords() {
@@ -55,6 +56,14 @@
 
     return groupedRecords
   }
+
+  // Remove planets that were created after the given date
+  function filterPlanetsByDate(planets, date) {
+    return planets.filter(planet => {
+      const startDate = planetData[planet.index].from || 0
+      return new Date(startDate) < date
+    })
+  }
 </script>
 
 <svelte:head>
@@ -67,7 +76,7 @@
 
 <p class="mb-1">This archive serves as a chronicle of the ever-shifting control over the planets, documenting the ebb and flow of the ongoing conflict. Explore the records to witness the fierce battles and strategic maneuvers that determine the fate of each world in this relentless tug of war. May these records serve as a testament to the bravery and sacrifice of all those who fight for Democracy and Liberty in the unforgiving depths of space.</p>
 
-<Map planets={planetInfos} status={planetStatusByDate} allowControls={false}>
+<Map planets={filterPlanetsByDate(planetInfos, endDate)} status={planetStatusByDate} allowControls={false}>
   <div class="date-selector" slot="tray">
     <h5 class="m-0">View by date</h5>
 
