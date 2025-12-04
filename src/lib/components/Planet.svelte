@@ -19,7 +19,7 @@
 
   $: ({ index, position } = planet)
   $: ({ percentage, faction, defense, majorOrder: eventMajorOrder, players } = campaign || {})
-  $: data = planetData[index]
+  $: data = planetData[index] || {}
   $: name = campaign?.name || data?.name || "Unknown Planet"
 </script>
 

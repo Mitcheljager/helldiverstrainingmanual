@@ -17,7 +17,7 @@
 
     activePlanets.forEach(({ index, owner }) => {
       const event = events.find(c => c.planetIndex === index)
-      const sector = planetData[index].sector
+      const sector = planetData[index]?.sector || "Unknown"
 
       if (sectorsForPlanets.find(({ name }) => name === sector)) return
 

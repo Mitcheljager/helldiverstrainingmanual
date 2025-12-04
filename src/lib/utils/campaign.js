@@ -8,8 +8,13 @@ export function formatCampaigns(status, info) {
   const { planetStatus, campaigns, planetEvents } = status
 
   const mapped = (campaigns || []).map(campaign => {
-    const { planetIndex, type } = campaign
+    const { planetIndex } = campaign
     const event = planetEvents?.find(e => e.planetIndex === planetIndex)
+
+    const planet = planetData[planetIndex]
+
+    // In case new planets get added that aren't yet present.
+    if (!planet) return { planetIndex, name: "", faction: factions[0], players: 0, health: 0, maxHealth: 0, percentage: 0, defense: false, biome: null, expireDateTime: 0 }
 
     const { name, biome } = planetData[planetIndex]
 
