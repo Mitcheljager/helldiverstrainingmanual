@@ -46,10 +46,6 @@
   {/each}
 </nav>
 
-<div class="coming-soon">
-  More coming soon...
-</div>
-
 <div class="footer">
   <a href="/api">API</a> <br>
   <a href="/disclaimer">Disclaimer</a> <br>
@@ -62,16 +58,6 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-  }
-
-  .coming-soon {
-    padding: $margin * 0.25;
-    margin-top: $margin;
-    background: repeating-linear-gradient(45deg, $bg-dark, $bg-dark 4px, transparent 4px, transparent 0.75rem);
-    color: $text-color-light;
-    font-weight: bold;
-    text-align: center;
-    font-family: $font-family-brand;
   }
 
   .footer {
