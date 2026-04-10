@@ -245,6 +245,61 @@
   </div>
 
   <div class="item">
+    <code class="url">{basepath}/api/v1/war/stats</code>
+    Provides overall gameplay stats
+
+    <Expand let:toggle>
+      <button on:click={toggle}>Toggle example response</button>
+      <pre class="example" slot="content">
+        &#123;
+          "missionsWon": 893291049,
+          "missionsLost": 87660665,
+          "missionTime": 2909083773757,
+          "bugKills": 196638028882,
+          "automatonKills": 106074571730,
+          "illuminateKills": 64046639807,
+          "bulletsFired": 1726743382440,
+          "bulletsHit": 1877778736911,
+          "timePlayed": 2909083773757,
+          "deaths": 7852667848,
+          "revives": 2,
+          "friendlies": 899873271,
+          "missionSuccessRate": 91,
+          "accurracy": 100
+        &#125;
+      </pre>
+    </Expand>
+  </div>
+
+  <div class="item">
+    <code class="url">{basepath}/api/v1/war/stats/[planetIndex]</code>
+    Provides overall gameplay stats for a specific planet, given by the index of the planet
+
+    <Expand let:toggle>
+      <button on:click={toggle}>Toggle example response</button>
+      <pre class="example" slot="content">
+        &#123;
+          "planetIndex": 102
+          "missionsWon": 445852
+          "missionsLost": 46068
+          "missionTime": 1905200968
+          "bugKills": 0
+          "automatonKills": 471
+          "illuminateKills": 308055342
+          "bulletsFired": 1556843017
+          "bulletsHit": 1495226562
+          "timePlayed": 1905200968
+          "deaths": 3207219
+          "revives": 0,
+          "friendlies": 583616
+          "missionSuccessRate": 90
+          "accurracy": 96
+        &#125;
+      </pre>
+    </Expand>
+  </div>
+
+  <div class="item">
     <code class="url">{basepath}/api/v1/planets</code>
     Provides data about each planet, the first key matches the planet index.<br>
     The data includes information about the conditions and type of planet. The type of planet is listed as <code>biome</code>. The names of the biomes are <em>not</em> names from the game, they are made up. Some biomes will be <code>null</code> because the type is not known yet. Environmentals almost always match the biome. For example, a desert biome will always have Intense Heat and Tremors. The only exception to this currently is Tien Kwan. More exceptions could happen in the future, which is why Environmentals are listed separately from the Biome itself.
