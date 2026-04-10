@@ -84,7 +84,7 @@
       {#if new Date(endDate) < startOfRecordingDate}
         <em>Pre recordings</em>
       {:else}
-        {new Date(endDate).toLocaleDateString(undefined, { month: "long", day: "numeric" })}
+        {new Date(endDate).toLocaleDateString(undefined, { year: "numeric", month: "long", day: "numeric" })}
       {/if}
     </Range>
   </div>
@@ -100,7 +100,7 @@
       {#if new Date(datetime - dayInMilliseconds) < startOfRecordingDate}
         Initial recording <br>
       {:else}
-        {new Date(datetime).toLocaleDateString(undefined, { month: "long", day: "numeric" })} <br>
+        {new Date(datetime).toLocaleDateString(undefined, { year: "numeric", month: "long", day: "numeric" })} <br>
       {/if}
     </h3>
 
