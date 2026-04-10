@@ -85,16 +85,18 @@
           </div>
         {/if}
 
-        <div class="reward">
-          Reward:
+        {#if setting.reward}
+          <div class="reward">
+            Reward:
 
-          <strong>
-            {setting.reward.amount}
-            {#if setting.reward.type === 1}
-              Medals
-            {/if}
-          </strong>
-        </div>
+            <strong>
+              {setting.reward?.amount}
+              {#if setting.reward.type === 1}
+                Medals
+              {/if}
+            </strong>
+          </div>
+        {/if}
       </div>
     {/each}
   </div>
