@@ -349,7 +349,7 @@ export const planetData = {
   57: {
     name: "Kerth Secundus",
     sector: Sector.Rictus,
-    biome: null,
+    biome: Biome.Tundra,
     environmentals: []
   },
   58: {
@@ -850,7 +850,7 @@ export const planetData = {
   139: {
     name: "Alamak VII",
     sector: Sector.Hanzo,
-    biome: null,
+    biome: Biome.Ethereal,
     environmentals: []
   },
   140: {
