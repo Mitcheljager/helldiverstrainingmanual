@@ -1619,21 +1619,21 @@ export const planetData = {
   263: {
     name: "",
     sector: "",
-    biome: "",
+    biome: null,
     environmentals: [],
     from: "2025-12-04"
   },
   264: {
     name: "",
     sector: "",
-    biome: "",
+    biome: null,
     environmentals: [],
     from: "2025-12-04"
   },
   265: {
     name: "",
     sector: "",
-    biome: "",
+    biome: null,
     environmentals: [],
     from: "2025-12-04"
   },
