@@ -1,7 +1,7 @@
 import { error } from "@sveltejs/kit"
 import { planetData } from "$lib/data/planets"
-import { fetchStats } from "$lib/api/stats"
 import { getApiHeaders } from "$lib/utils/headers.js"
+import { fetchStats } from "$lib/api/helldivers"
 
 export async function GET({ params }) {
   const index = parseInt(params.index)

@@ -86,3 +86,23 @@ export async function fetchMajorOrders(fetch) {
     console.error(error)
   }
 }
+
+export async function fetchStats(fetch, { bypassCache = false } = {}) {
+  const key = "status"
+  const cached = await getCache(key, { storeOnly: true })
+
+  if (!bypassCache && cached) return cached
+
+  try {
+    const response = await fetch(`https://api.live.prod.thehelldiversgame.com/api/Stats/War/${WarId}/Summary`, options)
+
+    if (!response.ok) throw new Error("Network response was not ok")
+
+    const parsed = await response.json()
+    if (parsed?.planetStatus?.length) addCache(key, parsed, 120000, { storeOnly: true })
+
+    return parsed
+  } catch (error) {
+    console.error(error)
+  }
+}

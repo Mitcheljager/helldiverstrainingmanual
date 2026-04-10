@@ -1,4 +1,4 @@
-import { fetchStats } from "$lib/api/stats"
+import { fetchStats } from "$lib/api/helldivers"
 import { getApiHeaders } from "$lib/utils/headers"
 
 export async function GET() {
