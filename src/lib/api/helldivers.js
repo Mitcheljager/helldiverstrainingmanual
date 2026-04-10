@@ -99,7 +99,7 @@ export async function fetchStats(fetch, { bypassCache = false } = {}) {
     if (!response.ok) throw new Error("Network response was not ok")
 
     const parsed = await response.json()
-    if (parsed?.planetStatus?.length) addCache(key, parsed, 120000, { storeOnly: true })
+    if (parsed?.planetStatus?.length) addCache(key, parsed, 20000, { storeOnly: true })
 
     return parsed
   } catch (error) {
