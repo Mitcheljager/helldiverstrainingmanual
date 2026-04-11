@@ -6,8 +6,8 @@ export const planetData = {
   0: {
     name: "Super Earth",
     sector: Sector.Sol,
-    biome: null,
-    environmentals: []
+    biome: Biome.SuperEarth,
+    environmentals: [Environmental.Rainstorms]
   },
   1: {
     name: "Klen Dahth II",
