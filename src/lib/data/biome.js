@@ -87,8 +87,12 @@ export const Biome = {
     slug: "magma",
     description: "Constant eruptions keep this planet covered in lava flows and utterly inhospitable to Democratic life. It also makes it a treasure trove of rare minerals."
   },
+  Lush: {
+    slug: "lush",
+    description: ""
+  },
   SuperEarth: {
     slug: "superearth",
     description: "Super Earth is the blinding beacon that shines the light of democracy through the stars. The sprawling heart that beats in time to mankind's quest of liberation. Here live the wealthy, important and proud. Here live those who have pulled themselves up by their bootstraps and achieved their dreams. Here live the citizens of Super Earth."
-  }
+  },
 }
