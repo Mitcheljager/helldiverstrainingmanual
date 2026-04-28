@@ -13,7 +13,7 @@ export const planetData = {
     name: "Klen Dahth II",
     sector: Sector.Altus,
     biome: Biome.Mesa,
-    environmentals: [Environmental.IntenseHeat, Environmental.Sandstorms]
+    environmentals: [Environmental.IntenseHeatDurial, Environmental.ExtremeColdNocturnal, Environmental.Sandstorms]
   },
   2: {
     name: "Pathfinder V",
@@ -37,7 +37,7 @@ export const planetData = {
     name: "Pilen V",
     sector: Sector.Altus,
     biome: Biome.Desert,
-    environmentals: [Environmental.IntenseHeat, Environmental.Tremors]
+    environmentals: [Environmental.IntenseHeatDurial, Environmental.Tremors]
   },
   6: {
     name: "Hydrofall Prime",
@@ -49,7 +49,7 @@ export const planetData = {
     name: "Zea Rugosia",
     sector: Sector.Ferris,
     biome: Biome.Desert,
-    environmentals: [Environmental.IntenseHeat, Environmental.Tremors]
+    environmentals: [Environmental.IntenseHeatDurial, Environmental.Tremors]
   },
   8: {
     name: "Darrowsport",
@@ -73,7 +73,7 @@ export const planetData = {
     name: "Cerberus IIIc",
     sector: Sector.Cancri,
     biome: Biome.Desert,
-    environmentals: [Environmental.IntenseHeat, Environmental.Tremors]
+    environmentals: [Environmental.IntenseHeatDurial, Environmental.Tremors]
   },
   12: {
     name: "Prosperity Falls",
@@ -236,7 +236,7 @@ export const planetData = {
     name: "Viridia Prime",
     sector: Sector.Cantolus,
     biome: Biome.Mesa,
-    environmentals: [Environmental.IntenseHeat, Environmental.Sandstorms]
+    environmentals: [Environmental.IntenseHeatDurial, Environmental.ExtremeColdNocturnal, Environmental.Sandstorms]
   },
   39: {
     name: "Obari",
@@ -248,7 +248,7 @@ export const planetData = {
     name: "Myradesh",
     sector: Sector.Idun,
     biome: Biome.Desert,
-    environmentals: [Environmental.IntenseHeat, Environmental.Tremors]
+    environmentals: [Environmental.IntenseHeatDurial, Environmental.Tremors]
   },
   41: {
     name: "Atrama",
@@ -278,7 +278,7 @@ export const planetData = {
     name: "Mastia",
     sector: Sector.Marspira,
     biome: Biome.Mesa,
-    environmentals: [Environmental.IntenseHeat, Environmental.Sandstorms]
+    environmentals: [Environmental.IntenseHeatDurial, Environmental.ExtremeColdNocturnal, Environmental.Sandstorms]
   },
   46: {
     name: "Shallus",
@@ -308,7 +308,7 @@ export const planetData = {
     name: "Azur Secundus",
     sector: Sector.Sten,
     biome: Biome.Desert,
-    environmentals: [Environmental.IntenseHeat, Environmental.Tremors]
+    environmentals: [Environmental.IntenseHeatDurial, Environmental.Tremors]
   },
   51: {
     name: "Ivis",
@@ -326,7 +326,7 @@ export const planetData = {
     name: "Caramoor",
     sector: Sector.Korpus,
     biome: Biome.Mesa,
-    environmentals: [Environmental.IntenseHeat, Environmental.Sandstorms]
+    environmentals: [Environmental.IntenseHeatDurial, Environmental.ExtremeColdNocturnal, Environmental.Sandstorms]
   },
   54: {
     name: "Kharst",
@@ -439,7 +439,7 @@ export const planetData = {
     name: "Ratch",
     sector: Sector.Iptus,
     biome: Biome.Mesa,
-    environmentals: [Environmental.IntenseHeat, Environmental.Sandstorms]
+    environmentals: [Environmental.IntenseHeatDurial, Environmental.ExtremeColdNocturnal, Environmental.Sandstorms]
   },
   72: {
     name: "Julheim",
@@ -524,7 +524,7 @@ export const planetData = {
     name: "Moradesh",
     sector: Sector.Celeste,
     biome: Biome.Mesa,
-    environmentals: [Environmental.IntenseHeat, Environmental.Sandstorms]
+    environmentals: [Environmental.IntenseHeatDurial, Environmental.ExtremeColdNocturnal, Environmental.Sandstorms]
   },
   86: {
     name: "Rasp",
@@ -590,7 +590,7 @@ export const planetData = {
     name: "Outpost 32",
     sector: Sector.Saleria,
     biome: Biome.Mesa,
-    environmentals: [Environmental.IntenseHeat, Environmental.Sandstorms]
+    environmentals: [Environmental.IntenseHeatDurial, Environmental.ExtremeColdNocturnal, Environmental.Sandstorms]
   },
   97: {
     name: "Calypso",
@@ -728,7 +728,7 @@ export const planetData = {
     name: "Mortax Prime",
     sector: Sector.Arturion,
     biome: Biome.Desert,
-    environmentals: [Environmental.IntenseHeat, Environmental.Tremors]
+    environmentals: [Environmental.IntenseHeatDurial, Environmental.Tremors]
   },
   120: {
     name: "Wilford Station",
@@ -746,7 +746,7 @@ export const planetData = {
     name: "Erson Sands",
     sector: Sector.Falstaff,
     biome: Biome.Desert,
-    environmentals: [Environmental.IntenseHeat, Environmental.Tremors]
+    environmentals: [Environmental.IntenseHeatDurial, Environmental.Tremors]
   },
   123: {
     name: "Socorro III",
@@ -893,7 +893,7 @@ export const planetData = {
     name: "Osupsam",
     sector: Sector.Tarragon,
     biome: Biome.Mesa,
-    environmentals: [Environmental.IntenseHeat, Environmental.Sandstorms]
+    environmentals: [Environmental.IntenseHeatDurial, Environmental.ExtremeColdNocturnal, Environmental.Sandstorms]
   },
   147: {
     name: "Brink-2",
@@ -911,7 +911,7 @@ export const planetData = {
     name: "Canopus",
     sector: Sector.Tarragon,
     biome: Biome.Desert,
-    environmentals: [Environmental.IntenseHeat, Environmental.Tremors]
+    environmentals: [Environmental.IntenseHeatDurial, Environmental.Tremors]
   },
   150: {
     name: "Caph",
@@ -930,7 +930,7 @@ export const planetData = {
     imageCount: 3,
     sector: Sector.Severin,
     biome: Biome.Mesa,
-    environmentals: [Environmental.IntenseHeat, Environmental.Sandstorms]
+    environmentals: [Environmental.IntenseHeatDurial, Environmental.ExtremeColdNocturnal, Environmental.Sandstorms]
   },
   153: {
     name: "Draupnir",
@@ -972,7 +972,7 @@ export const planetData = {
     name: "Choohe",
     sector: Sector.Lacaille,
     biome: Biome.Mesa,
-    environmentals: [Environmental.IntenseHeat, Environmental.Sandstorms]
+    environmentals: [Environmental.IntenseHeatDurial, Environmental.ExtremeColdNocturnal, Environmental.Sandstorms]
   },
   160: {
     name: "Chort Bay",
@@ -1028,7 +1028,7 @@ export const planetData = {
     tidbit: `<p>One of four planets where the Terminid Control System (TCS) was deployed, a network of massive towers that cover the planet in a neurotoxin known as Termincide. The deployment of these TCS towers took the combined effort of many helldivers and eventually lead to the Terminids being driven away for good.</p>`,
     sector: Sector.Umlaut,
     biome: Biome.Desert,
-    environmentals: [Environmental.IntenseHeat, Environmental.Tremors]
+    environmentals: [Environmental.IntenseHeatDurial, Environmental.Tremors]
   },
   169: {
     name: "Estanu",
@@ -1112,7 +1112,7 @@ export const planetData = {
     name: "Heze Bay",
     sector: Sector.Hanzo,
     biome: Biome.Mesa,
-    environmentals: [Environmental.IntenseHeat, Environmental.Sandstorms]
+    environmentals: [Environmental.IntenseHeatDurial, Environmental.ExtremeColdNocturnal, Environmental.Sandstorms]
   },
   183: {
     name: "Hort",
@@ -1124,7 +1124,7 @@ export const planetData = {
     name: "Hydrobius",
     sector: Sector.Omega,
     biome: Biome.Desert,
-    environmentals: [Environmental.IntenseHeat, Environmental.Tremors]
+    environmentals: [Environmental.IntenseHeatDurial, Environmental.Tremors]
   },
   185: {
     name: "Karlia",
@@ -1136,7 +1136,7 @@ export const planetData = {
     name: "Keid",
     sector: Sector.Akira,
     biome: Biome.Mesa,
-    environmentals: [Environmental.IntenseHeat, Environmental.Sandstorms]
+    environmentals: [Environmental.IntenseHeatDurial, Environmental.ExtremeColdNocturnal, Environmental.Sandstorms]
   },
   187: {
     name: "Khandark",
@@ -1172,7 +1172,7 @@ export const planetData = {
     name: "Lastofe",
     sector: Sector.Theseus,
     biome: Biome.Mesa,
-    environmentals: [Environmental.IntenseHeat, Environmental.Sandstorms]
+    environmentals: [Environmental.IntenseHeatDurial, Environmental.ExtremeColdNocturnal, Environmental.Sandstorms]
   },
   193: {
     name: "Leng Secundus",
@@ -1332,7 +1332,7 @@ export const planetData = {
     name: "Phact Bay",
     sector: Sector.JinXi,
     biome: Biome.Mesa,
-    environmentals: [Environmental.IntenseHeat, Environmental.Sandstorms]
+    environmentals: [Environmental.IntenseHeatDurial, Environmental.ExtremeColdNocturnal, Environmental.Sandstorms]
   },
   218: {
     name: "Pherkad Secundus",
@@ -1344,7 +1344,7 @@ export const planetData = {
     name: "Polaris Prime",
     sector: Sector.Farsight,
     biome: Biome.Desert,
-    environmentals: [Environmental.IntenseHeat, Environmental.Tremors]
+    environmentals: [Environmental.IntenseHeatDurial, Environmental.Tremors]
   },
   220: {
     name: "Pollux 31",
@@ -1362,7 +1362,7 @@ export const planetData = {
     name: "Propus",
     sector: Sector.Leo,
     biome: Biome.Mesa,
-    environmentals: [Environmental.IntenseHeat, Environmental.Sandstorms]
+    environmentals: [Environmental.IntenseHeatDurial, Environmental.ExtremeColdNocturnal, Environmental.Sandstorms]
   },
   223: {
     name: "Ras Algethi",
@@ -1404,7 +1404,7 @@ export const planetData = {
     name: "Setia",
     sector: Sector.Omega,
     biome: Biome.Mesa,
-    environmentals: [Environmental.IntenseHeat, Environmental.Sandstorms]
+    environmentals: [Environmental.IntenseHeatDurial, Environmental.ExtremeColdNocturnal, Environmental.Sandstorms]
   },
   230: {
     name: "Shete",
@@ -1490,7 +1490,7 @@ export const planetData = {
     imageCount: 4,
     sector: Sector.Trigon,
     biome: Biome.Desert,
-    environmentals: [Environmental.IntenseHeat, Environmental.Tremors]
+    environmentals: [Environmental.IntenseHeatDurial, Environmental.Tremors]
   },
   243: {
     name: "Vandalon IV",
@@ -1557,7 +1557,7 @@ export const planetData = {
     name: "Zzaniah Prime",
     sector: Sector.Gellert,
     biome: Biome.Mesa,
-    environmentals: [Environmental.IntenseHeat, Environmental.Sandstorms]
+    environmentals: [Environmental.IntenseHeatDurial, Environmental.ExtremeColdNocturnal, Environmental.Sandstorms]
   },
   254: {
     name: "Skitter",
@@ -1575,7 +1575,7 @@ export const planetData = {
     name: "Diaspora X",
     sector: Sector.Lestrade,
     biome: Biome.Mesa,
-    environmentals: [Environmental.IntenseHeat, Environmental.Sandstorms]
+    environmentals: [Environmental.IntenseHeatDurial, Environmental.ExtremeColdNocturnal, Environmental.Sandstorms]
   },
   257: {
     name: "Gemstone Bluffs",
@@ -1587,7 +1587,7 @@ export const planetData = {
     name: "Zagon Prime",
     sector: Sector.Mirin,
     biome: Biome.Mesa,
-    environmentals: [Environmental.IntenseHeat, Environmental.Sandstorms]
+    environmentals: [Environmental.IntenseHeatDurial, Environmental.ExtremeColdNocturnal, Environmental.Sandstorms]
   },
   259: {
     name: "Omicron",
@@ -1643,5 +1643,23 @@ export const planetData = {
     biome: Biome.Magma,
     environmentals: [],
     from: "2025-12-04"
+  },
+  267: {
+    name: "Big Rock",
+    section: Sector.Sten,
+    biome: Biome.IceMoss,
+    environmentals: [Environmental.ExtremeCold]
+  },
+  268: {
+    name: "Luxuriant",
+    section: Sector.JinXi,
+    biome: Biome.Mesa,
+    environmentals: [Environmental.IntenseHeatDurial, Environmental.ExtremeColdNocturnal, Environmental.Sandstorms]
+  },
+  269: {
+    name: "Brilliance",
+    section: Sector.Orion,
+    biome: Biome.RainForest,
+    environmentals: [Environmental.IonStorms]
   }
 }

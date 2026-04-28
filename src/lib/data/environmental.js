@@ -3,6 +3,10 @@ export const Environmental = {
     name: "Extreme Cold",
     description: "Icy temperatures reduce rate of fire and delay heat buildup in weapons."
   },
+  ExtremeColdNocturnal: {
+    name: "Nocturnal Extreme Cold",
+    description: "At night icy temperatures reduce rate of fire and delay heat buildup in weapons."
+  },
   ThickFog: {
     name: "Thick Fog",
     description : "Dense fog lightly reduce visibility for both enemy and friendly units."
@@ -14,6 +18,10 @@ export const Environmental = {
   IntenseHeat: {
     name: "Intense Heat",
     description: "High temperatures increase stamina drain and speed up heat buildup in weapons"
+  },
+  IntenseHeatDurial: {
+    name: "Durial Intense Heat",
+    description: "During the day high temperatures increase stamina drain and speed up heat buildup in weapons"
   },
   Tremors: {
     name: "Tremors",
