@@ -1648,18 +1648,21 @@ export const planetData = {
     name: "Big Rock",
     section: Sector.Sten,
     biome: Biome.IceMoss,
-    environmentals: [Environmental.ExtremeCold]
+    environmentals: [Environmental.ExtremeCold],
+    from: "2026-04-28"
   },
   268: {
     name: "Luxuriant",
     section: Sector.JinXi,
     biome: Biome.Mesa,
-    environmentals: [Environmental.IntenseHeatDurial, Environmental.ExtremeColdNocturnal, Environmental.Sandstorms]
+    environmentals: [Environmental.IntenseHeatDurial, Environmental.ExtremeColdNocturnal, Environmental.Sandstorms],
+    from: "2026-04-28"
   },
   269: {
     name: "Brilliance",
     section: Sector.Orion,
     biome: Biome.RainForest,
-    environmentals: [Environmental.IonStorms]
+    environmentals: [Environmental.IonStorms],
+    from: "2026-04-28"
   }
 }
