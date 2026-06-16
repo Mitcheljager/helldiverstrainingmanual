@@ -868,7 +868,7 @@ export const planetData = {
   142: {
     name: "Andar",
     sector: Sector.Akira,
-    biome: null,
+    biome: Biome.Tundra,
     environmentals: []
   },
   143: {
@@ -904,7 +904,7 @@ export const planetData = {
   148: {
     name: "Bunda Secundus",
     sector: Sector.Tarragon,
-    biome: null,
+    biome: Biome.Tundra,
     environmentals: []
   },
   149: {
@@ -1367,7 +1367,7 @@ export const planetData = {
   223: {
     name: "Ras Algethi",
     sector: Sector.Leo,
-    biome: null,
+    biome: Biome.Tundra,
     environmentals: []
   },
   224: {
@@ -1668,14 +1668,14 @@ export const planetData = {
   270: {
     name: "Unknown",
     section: "",
-    biome: "",
+    biome: null,
     environmentals: [],
     from: ""
   },
   271: {
     name: "Unknown",
     section: "",
-    biome: "",
+    biome: null,
     environmentals: [],
     from: ""
   },
