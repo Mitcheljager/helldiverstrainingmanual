@@ -46,7 +46,7 @@
   }
 </script>
 
-<div class="item {faction.toLowerCase().replace(" ", "-")}" class:stacked data-index={planetIndex} data-normalized={normalizedHealth}>
+<div class="item {(faction || "").toLowerCase()?.replace(" ", "-")}" class:stacked data-index={planetIndex} data-normalized={normalizedHealth}>
   <div class="title">
     <h3>
       {name || "Unknown Planet"}
