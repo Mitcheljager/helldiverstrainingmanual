@@ -71,7 +71,7 @@
                 {#if type === 11 || type === 13}
                   <div>
                     <LocateOnMap planetIndex={values[2]} />
-                    {planetData[values[2]]?.name}
+                    {planetData[values[2]]?.name || "Unknown planet"}
                   </div>
 
                   {#if progress && progress[index] === 1}
