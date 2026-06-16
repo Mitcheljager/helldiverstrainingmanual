@@ -1664,5 +1664,33 @@ export const planetData = {
     biome: Biome.Lush,
     environmentals: [],
     from: "2026-04-28"
+  },
+  270: {
+    name: "Unknown",
+    section: "",
+    biome: "",
+    environmentals: [],
+    from: ""
+  },
+  271: {
+    name: "Unknown",
+    section: "",
+    biome: "",
+    environmentals: [],
+    from: ""
+  },
+  272: {
+    name: "Basquine VIII",
+    section: Sector.Rigel,
+    biome: Biome.Autumn,
+    environmentals: [],
+    from: "2026-06-16"
+  },
+  273: {
+    name: "Sangis",
+    section: Sector.Omega,
+    biome: Biome.Autumn,
+    environmentals: [],
+    from: "2026-06-16"
   }
 }
