@@ -313,7 +313,7 @@ export const planetData = {
   51: {
     name: "Ivis",
     sector: Sector.Celeste,
-    biome: Biome.Winter,
+    biome: Biome.Shattered,
     environmentals: [Environmental.ExtremeCold, Environmental.Blizzards]
   },
   52: {
@@ -523,8 +523,8 @@ export const planetData = {
   85: {
     name: "Moradesh",
     sector: Sector.Celeste,
-    biome: Biome.Mesa,
-    environmentals: [Environmental.IntenseHeatDurial, Environmental.ExtremeColdNocturnal, Environmental.Sandstorms]
+    biome: Biome.Shattered,
+    environmentals: []
   },
   86: {
     name: "Rasp",
