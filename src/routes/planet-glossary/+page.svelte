@@ -17,6 +17,8 @@
       const planet = planetData[planetIndex]
       const sector = planet.sector
 
+      if (!sector || !planet.name) continue
+
       if (!groupedBySector[sector]) groupedBySector[sector] = []
       groupedBySector[sector].push(planet)
     }
