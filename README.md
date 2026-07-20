@@ -36,3 +36,7 @@ npm run build
 You can preview the production build with `npm run preview`.
 
 > To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+
+## Related Resources
+
+- [Helldivers 2 Guides](https://hd2guides.com/) — Helldivers 2 stratagem tier lists, warbond guides, mission strategies, and loadout builds.
