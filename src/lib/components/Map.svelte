@@ -127,7 +127,6 @@
   }
 
   function filterInvalidPlanets(planets) {
-    console.log(planets)
     // Filter out planets that are at 0,0 except for Super Earth
     return planets.filter(p => p.index === 0 || p.position.x != 0)
   }
