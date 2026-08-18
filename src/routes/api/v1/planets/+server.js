@@ -6,8 +6,10 @@ export async function GET() {
 
   const data = {}
   Object.entries(planetData).forEach(([key, { name, sector, biome, environmentals }]) => {
-    data[key] = {
-      name, sector, biome, environmentals
+    if (name !== "Unknown") {
+      data[key] = {
+        name, sector, biome, environmentals
+      }
     }
   })
 
