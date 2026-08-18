@@ -127,6 +127,7 @@
   }
 
   function filterInvalidPlanets(planets) {
+    console.log(planets)
     // Filter out planets that are at 0,0 except for Super Earth
     return planets.filter(p => p.index === 0 || p.position.x != 0)
   }
@@ -173,7 +174,7 @@
                 active={activeIndex === planet.index}
                 on:details={() => modalIndex = planet.index}
                 on:click={() => activeIndex = activeIndex === planet.index ? -1 : planet.index}
-                on:mouseenter={() => hoveringSector = planetData[planet.index].sector} />
+                on:mouseenter={() => hoveringSector = planetData[planet.index]?.sector} />
             {/if}
           {/each}
 
