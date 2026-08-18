@@ -1777,4 +1777,109 @@ export const planetData = {
     environmentals: [],
     from: ""
   },
+  286: {
+    name: "Unknown",
+    section: "",
+    biome: null,
+    environmentals: [],
+    from: ""
+  },
+  287: {
+    name: "Unknown",
+    section: "",
+    biome: null,
+    environmentals: [],
+    from: ""
+  },
+  288: {
+    name: "Unknown",
+    section: "",
+    biome: null,
+    environmentals: [],
+    from: ""
+  },
+  289: {
+    name: "Unknown",
+    section: "",
+    biome: null,
+    environmentals: [],
+    from: ""
+  },
+  290: {
+    name: "Unknown",
+    section: "",
+    biome: null,
+    environmentals: [],
+    from: ""
+  },
+  291: {
+    name: "Unknown",
+    section: "",
+    biome: null,
+    environmentals: [],
+    from: ""
+  },
+  292: {
+    name: "Unknown",
+    section: "",
+    biome: null,
+    environmentals: [],
+    from: ""
+  },
+  293: {
+    name: "Unknown",
+    section: "",
+    biome: null,
+    environmentals: [],
+    from: ""
+  },
+  294: {
+    name: "Unknown",
+    section: "",
+    biome: null,
+    environmentals: [],
+    from: ""
+  },
+  295: {
+    name: "Unknown",
+    section: "",
+    biome: null,
+    environmentals: [],
+    from: ""
+  },
+  296: {
+    name: "Unknown",
+    section: "",
+    biome: null,
+    environmentals: [],
+    from: ""
+  },
+  297: {
+    name: "Unknown",
+    section: "",
+    biome: null,
+    environmentals: [],
+    from: ""
+  },
+  298: {
+    name: "Unknown",
+    section: "",
+    biome: null,
+    environmentals: [],
+    from: ""
+  },
+  299: {
+    name: "Unknown",
+    section: "",
+    biome: null,
+    environmentals: [],
+    from: ""
+  },
+  300: {
+    name: "Unknown",
+    section: "",
+    biome: null,
+    environmentals: [],
+    from: ""
+  },
 }
