@@ -1618,7 +1618,7 @@ export const planetData = {
   },
   263: {
     name: "",
-    sector: "",
+    sector: Sector.Omega,
     biome: null,
     environmentals: [],
     from: "2025-12-04"
@@ -1692,5 +1692,89 @@ export const planetData = {
     biome: Biome.Autumn,
     environmentals: [],
     from: "2026-06-16"
-  }
+  },
+  274: {
+    name: "Unknown",
+    section: Sector.Omega,
+    biome: null,
+    environmentals: [],
+    from: ""
+  },
+  275: {
+    name: "Unknown",
+    section: Sector.XiTauri,
+    biome: null,
+    environmentals: [],
+    from: ""
+  },
+  276: {
+    name: "Unknown",
+    section: Sector.Akira,
+    biome: null,
+    environmentals: [],
+    from: ""
+  },
+  277: {
+    name: "Unknown",
+    section: Sector.XiTauri,
+    biome: null,
+    environmentals: [],
+    from: ""
+  },
+  278: {
+    name: "Unknown",
+    section: Sector.XiTauri,
+    biome: null,
+    environmentals: [],
+    from: ""
+  },
+  279: {
+    name: "Unknown",
+    section: Sector.XiTauri,
+    biome: null,
+    environmentals: [],
+    from: ""
+  },
+  280: {
+    name: "Unknown",
+    section: Sector.XiTauri,
+    biome: null,
+    environmentals: [],
+    from: ""
+  },
+  281: {
+    name: "Unknown",
+    section: Sector.XiTauri,
+    biome: null,
+    environmentals: [],
+    from: ""
+  },
+  282: {
+    name: "Unknown",
+    section: "",
+    biome: null,
+    environmentals: [],
+    from: ""
+  },
+  283: {
+    name: "Unknown",
+    section: "",
+    biome: null,
+    environmentals: [],
+    from: ""
+  },
+  284: {
+    name: "Unknown",
+    section: "",
+    biome: null,
+    environmentals: [],
+    from: ""
+  },
+  285: {
+    name: "Unknown",
+    section: "",
+    biome: null,
+    environmentals: [],
+    from: ""
+  },
 }
