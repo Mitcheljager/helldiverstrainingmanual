@@ -11,9 +11,11 @@
   function findPlanets(value) {
     if (!value) return []
 
-    return Object.entries(planetData)
-      .filter(([_, { name }]) => name.toLowerCase().includes(value.toLowerCase()))
+    const filteredPlanets = Object.entries(planetData)
+      .filter(([index, { name }]) => name.toLowerCase().includes(value.toLowerCase()) || index.toString() === value)
       .map(([index]) => parseInt(index))
+
+    return filteredPlanets
   }
 </script>
 
