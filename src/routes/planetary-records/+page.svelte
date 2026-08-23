@@ -21,7 +21,7 @@
   $: startDate = [...records].reverse()[0].created_at
   $: endDate = Date.now() + (daysAgo * dayInMilliseconds)
   $: numberOfDays = daysSinceDate(startDate)
-  $: planetStatusInitialOwner = planetStatus.map(p => ({ ...p, owner: planetInfos[p.index].initialOwner }))
+  $: planetStatusInitialOwner = planetStatus.map(p => ({ ...p, owner: planetInfos[p.index]?.initialOwner }))
   $: planetStatusByDate = getPlanetStatusBasedOnDate(endDate)
 
   function getPlanetStatusBasedOnDate(endDate) {
