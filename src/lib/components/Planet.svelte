@@ -40,8 +40,6 @@
   style:--y={position.y}
   style:--percentage="{percentage || 0}%">
 
-  <div class="index">{index}</div>
-
   <div class="name">
     {name}
   </div>
@@ -294,9 +292,5 @@
       background: rgba($black, 0.25);
       box-shadow: 0 0 0 0.25rem rgba($black, 0.25);
     }
-  }
-
-  .index {
-    font-size: 12px;
   }
 </style>
