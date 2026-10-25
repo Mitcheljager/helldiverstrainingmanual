@@ -1,17 +1,11 @@
 <script>
 	import { stratagems } from "$lib/data/stratagems"
 	import { toPath } from "$lib/utils/route"
-	import { bestiary } from "$lib/data/bestiary"
 	import NavigationItem from "$lib/components/NavigationItem.svelte"
 
   const stratagemRoutes = stratagems.map(s => ({
     text: s.category,
     subroutes: s.items.map(i => ({ text: i.name }))
-  }))
-
-  const bestiaryRoutes = bestiary.map(b => ({
-    text: b.faction,
-    subroutes: b.enemies.map(i => ({ text: i.name }))
   }))
 
   const routes = [{
@@ -31,11 +25,6 @@
         text: "Interactive Practice",
       },
       ...stratagemRoutes
-    ]
-  }, {
-    text: "Bestiary",
-    subroutes: [
-      ...bestiaryRoutes
     ]
   }]
 </script>

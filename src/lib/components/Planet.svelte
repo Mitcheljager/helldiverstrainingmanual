@@ -35,9 +35,12 @@
   class:black-hole={data.biome?.slug === Biome.BlackHole.slug}
   class:shattered={data.biome?.slug === Biome.Shattered.slug}
   class:controlled={!campaign}
+  class:unknown={name === "Unknown Planet"}
   style:--x={position.x}
   style:--y={position.y}
   style:--percentage="{percentage || 0}%">
+
+  <div class="index">{index}</div>
 
   <div class="name">
     {name}
@@ -143,6 +146,10 @@
     &.shattered {
       background: $gray;
       border: 2px solid darken($red, 20%);
+    }
+
+    &.unknown {
+      background: red;
     }
 
     @each $label, $color in $faction-colors {
@@ -287,5 +294,9 @@
       background: rgba($black, 0.25);
       box-shadow: 0 0 0 0.25rem rgba($black, 0.25);
     }
+  }
+
+  .index {
+    font-size: 12px;
   }
 </style>
