@@ -15,5 +15,16 @@ export default defineConfig({
 				`
 			}
 		}
-	}
+  },
+  build: {
+    rollupOptions: {
+      output:{
+        manualChunks(id) {
+          if (id.includes(".css")) return "style"
+          if (id.includes("lib/data")) return "data"
+          if (id.includes("components")) return "components"
+        }
+      }
+    }
+  }
 })
