@@ -8,6 +8,9 @@
   export let planetIndex
   export let ratePerHour = 0
   export let percentage = 0
+  export let players = 0
+
+  const minimumPlayers = 200
 
   let interval
   let loading = true
@@ -49,7 +52,7 @@
   }
 
   async function predictResults() {
-    if (percentage === 0) {
+    if (percentage === 0 || players < minimumPlayers) {
       average = 0
       estimatedEnd = 0
       return
@@ -69,7 +72,7 @@
 <span>
   {#if estimatedEnd === null}
     Predicting results...
-  {:else if percentage === 0 && average === 0}
+  {:else if (percentage === 0 && average === 0) || players < minimumPlayers}
     Overwhelming forces await
   {:else if stalemate}
     We're in a stalemate

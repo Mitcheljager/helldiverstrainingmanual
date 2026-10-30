@@ -121,7 +121,7 @@
     </div>
 
     <div class="info dark">
-      <PredictResults {planetIndex} {percentage} bind:ratePerHour />
+      <PredictResults {planetIndex} {percentage} {players} bind:ratePerHour />
     </div>
   </div>
 </div>
