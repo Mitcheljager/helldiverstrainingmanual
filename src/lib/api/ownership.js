@@ -3,7 +3,7 @@ import { addCache, getCache } from "$lib/api/cache"
 
 export async function fetchOwnership({ bypassCache = false } = {}) {
   const key = "ownership"
-  const cached = await getCache(key, { storeOnly: true })
+  const cached = getCache(key)
 
   if (!bypassCache && cached) return cached
 
@@ -13,7 +13,7 @@ export async function fetchOwnership({ bypassCache = false } = {}) {
     .order("created_at", { ascending: false })
     .range(0, 1000)
 
-  addCache(key, data, 3600000, { storeOnly: true }) // 1 Hour
+  addCache(key, data, 3600000) // 1 Hour
 
   if (error) throw new Error(error.message)
 
@@ -22,7 +22,7 @@ export async function fetchOwnership({ bypassCache = false } = {}) {
 
 export async function fetchOwnershipForPlanet(index) {
   const key = `ownership_${index}`
-  const cached = await getCache(key, { storeOnly: true })
+  const cached = getCache(key)
 
   if (cached) return cached
 
@@ -33,7 +33,7 @@ export async function fetchOwnershipForPlanet(index) {
     .eq("planet_index", index)
     .range(0, 1000)
 
-  addCache(key, data, 600000, { storeOnly: true }) // 10 Minutes
+  addCache(key, data, 600000) // 10 Minutes
 
   if (error) throw new Error(error.message)
 

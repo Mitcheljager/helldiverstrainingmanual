@@ -5,7 +5,7 @@ import { hoursDifference } from "$lib/utils/datetime"
 
 export async function fetchHistory(planetIndex, { timeframe = Timeframe.Day } = {}) {
   const key = `history_${planetIndex}_${timeframe}`
-  const cached = await getCache(key, { storeOnly: true })
+  const cached = getCache(key)
 
   if (cached) return cached
 
@@ -48,7 +48,7 @@ export async function fetchHistory(planetIndex, { timeframe = Timeframe.Day } = 
 
     if (error) throw new Error(error.message)
 
-    addCache(key, data, 300000, { storeOnly: true })
+    addCache(key, data, 300000)
 
     return data
   } catch (error) {

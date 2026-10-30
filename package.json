@@ -38,7 +38,6 @@
 	"type": "module",
 	"dependencies": {
 		"@supabase/supabase-js": "^2.49.4",
-		"@upstash/redis": "^1.28.4",
 		"impetus": "^0.8.8",
 		"svelte-confetti": "^2.0.0",
 		"svelte-tiny-linked-charts": "^2.0.0",
