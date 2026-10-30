@@ -2,7 +2,7 @@ import { fetchStats } from "$lib/api/helldivers"
 import { getApiHeaders } from "$lib/utils/headers"
 
 export async function GET() {
-  const headers = getApiHeaders(300)
+  const headers = getApiHeaders(1200)
 
   try {
     const result = await fetchStats(fetch)

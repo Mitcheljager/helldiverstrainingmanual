@@ -27,9 +27,9 @@
   onMount(() => {
     if (!browser) return
 
-    statusInterval = setInterval(async () => status = await api("war/status") || {}, 20000)
-    infoInterval = setInterval(async () => info = await api("war/info") || {}, 300000)
-    statsInterval = setInterval(async () => stats = await api(`war/stats`) || {}, 60000)
+    statusInterval = setInterval(async () => status = await api("war/status") || {}, 30000)
+    infoInterval = setInterval(async () => info = await api("war/info") || {}, 600000)
+    statsInterval = setInterval(async () => stats = await api(`war/stats`) || {}, 1200000)
   })
 
   onDestroy(() => {
