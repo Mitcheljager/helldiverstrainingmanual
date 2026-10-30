@@ -25,7 +25,7 @@
   <button on:click|preventDefault={() => dispatch("click", { key: "r" })}>↻</button>
 </div>
 
-<div class="scaler" bind:clientWidth={availableWidth} />
+<div class="scaler" bind:clientWidth={availableWidth}></div>
 
 <style lang="scss">
   button {

@@ -50,7 +50,7 @@
 <div class="items">
   {#each items as { text, value, divider }}
     {#if divider}
-      <div class="divider" />
+      <div class="divider"></div>
     {:else if value}
       <div class="item">
         <p class="text">{text}</p>

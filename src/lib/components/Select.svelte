@@ -30,13 +30,15 @@
   {#if active}
     <div class="dropdown" class:up class:right transition:fly={{ y: -10, duration: 100 }}>
       {#each options as option}
-        <button class="item" class:active={option.text === value.text} on:click={() => change(option)}>
+        <!-- svelte-ignore a11y_click_events_have_key_events -->
+        <!-- svelte-ignore a11y_no_static_element_interactions -->
+        <span class="item" class:active={option.text === value.text} on:click={() => change(option)}>
           {#if option.icon}
             <img loading="lazy" src={option.icon} alt="" height="30" width="30" />
           {/if}
 
           {option.text}
-        </button>
+        </span>
       {/each}
     </div>
   {/if}

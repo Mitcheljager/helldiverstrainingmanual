@@ -13,6 +13,8 @@
 <strong>Stratagems</strong>
 <h1>{category.category}</h1>
 
+
+<!-- eslint-disable-next-line svelte/no-at-html-tags -->
 {@html category.content || ""}
 
 <div class="items">

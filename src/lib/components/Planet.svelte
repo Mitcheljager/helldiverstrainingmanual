@@ -68,7 +68,7 @@
 
       {#if campaign}
         <div class="bar">
-          <div class="progress" style:width="{percentage}%" />
+          <div class="progress" style:width="{percentage}%"></div>
         </div>
 
         <p class="small">
@@ -82,7 +82,9 @@
       <div class="actions">
         <AnalyticsPopup {index} />
 
-        <button class="details" on:click={() => dispatch("details")}>Planet details</button>
+        <!-- svelte-ignore a11y_click_events_have_key_events -->
+        <!-- svelte-ignore a11y_no_static_element_interactions -->
+        <span class="details" on:click={() => dispatch("details")}>Planet details</span>
       </div>
     </div>
   {/if}

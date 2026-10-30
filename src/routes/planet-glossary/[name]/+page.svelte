@@ -45,6 +45,7 @@
     Part of the <strong>{sector} Sector</strong>
   </p>
 
+  <!-- eslint-disable-next-line svelte/no-at-html-tags -->
   {@html tidbit || ""}
 
   <h3 class="mt-1 mb-1/4">Environmental Effects</h3>

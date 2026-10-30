@@ -28,7 +28,7 @@
 <button class:active on:click={toggle}>
   <div class="label"><slot /></div>
   <div class="switch">
-    <div class="knob" />
+    <div class="knob"></div>
   </div>
 </button>
 

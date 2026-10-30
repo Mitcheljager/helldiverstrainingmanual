@@ -33,7 +33,6 @@
       <img src="{basepath}/{filename}.jpg" {alt}>
     </picture>
   {:else if video}
-    <!-- svelte-ignore a11y-media-has-caption -->
     <video
       {poster}
       src={video}
@@ -45,7 +44,7 @@
       on:click={playpause}
       on:waiting={() => loading = true}
       on:playing={() => { videoPlaying = true; loading = false }}
-      on:pause={() => videoPlaying = false} />
+      on:pause={() => videoPlaying = false}></video>
 
     <button class="play" on:click={playpause}>
       {#if loading}

@@ -38,6 +38,7 @@
     </div>
   </div>
 
+  <!-- eslint-disable-next-line svelte/no-at-html-tags -->
   {@html stratagem.content || ""}
 
   <div class="mt-1/2 md:mt-1">

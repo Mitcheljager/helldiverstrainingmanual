@@ -77,7 +77,7 @@
 
   <div class="content">
     <div class="bar">
-      <div class="progress" style:width="{percentage}%" />
+      <div class="progress" style:width="{percentage}%"></div>
 
       {#if defense || majorOrder}
         <div class="icon">

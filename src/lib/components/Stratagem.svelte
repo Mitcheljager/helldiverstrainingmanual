@@ -239,7 +239,7 @@
   {/if}
 
   {#if !active}
-    <div class="pt-1/4" transition:slide={{ duration: 200 }} />
+    <div class="pt-1/4" transition:slide={{ duration: 200 }}></div>
 
     <button class="button" on:click={() => active = true} transition:slide={{ duration: 200 }}>
       Start Practice

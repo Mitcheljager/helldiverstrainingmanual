@@ -148,7 +148,6 @@
   bind:this={wrapperElement}>
 
   <!-- svelte-ignore a11y-no-static-element-interactions -->
-  <!-- svelte-ignore a11y-click-events-have-key-events -->
   <div
     class="map"
     class:loading={!browser}
@@ -185,7 +184,7 @@
         </div>
       {/if}
 
-      <div class="scaler" bind:clientWidth={innerWidth} />
+      <div class="scaler" bind:clientWidth={innerWidth}></div>
 
       <div class="sectors">
         <MapSectors {status} {events} bind:hoveringSector />

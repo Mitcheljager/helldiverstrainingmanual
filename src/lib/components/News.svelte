@@ -2,8 +2,7 @@
 	import { browser } from "$app/environment"
 	import { api } from "$lib/api/api"
   import { onDestroy, onMount } from "svelte"
-	import OwnershipRecord from "./OwnershipRecord.svelte";
-	import { humanReadableDatetime } from "$lib/utils/datetime";
+	import OwnershipRecord from "./OwnershipRecord.svelte"
 
   export let days = 0
   export let serverTimestamp = 0
@@ -86,6 +85,7 @@
           <div class="date">{new Date(item.timestamp).toLocaleDateString(undefined, { month: "long", day: "numeric" })}</div>
 
           {#if item.message || item.title}
+            <!-- eslint-disable-next-line svelte/no-at-html-tags -->
             {@html item.message || item.title}
 
           {:else}

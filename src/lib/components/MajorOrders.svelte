@@ -60,7 +60,7 @@
                   <small>{(progress || 0).toLocaleString()} / {(values[2] || values[0] || 0).toLocaleString()}</small>
 
                   <div class="bar">
-                    <div class="progress" style:width="{100 / (values[2] || values[0]) * progress}%" />
+                    <div class="progress" style:width="{100 / (values[2] || values[0]) * progress}%"></div>
 
                     <div class="value">
                       {(100 / (values[2] || values[0]) * progress).toFixed(2)}%
