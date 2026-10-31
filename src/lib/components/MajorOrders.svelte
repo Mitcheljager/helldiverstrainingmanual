@@ -29,6 +29,8 @@
 
       if (!data?.filter(n => n.message)) return
 
+      console.log(data)
+
       majorOrders = data
       majorOrdersPlanetIndexes = (majorOrders?.map(o => o.setting?.tasks?.map(t => t.values[2])) || []).flat().filter(Boolean)
     } catch {
@@ -55,15 +57,18 @@
         {#if setting.tasks?.length}
           <div class="tasks">
             {#each setting.tasks as { type, values }, index}
-              <div class="task" class:incomplete={(progress && progress[index] === 0) || (progress && values[2] && progress < values[2])} class:block={type === 3 || type === 12}>
-                {#if type === 3 || type === 12}
-                  <small>{(progress || 0).toLocaleString()} / {(values[2] || values[0] || 0).toLocaleString()}</small>
+              {@const progressValue = Array.isArray(progress) ? progress[index] : progress}
+              {@const isProgressableType = type === 2 || type === 3 || type === 12}
+
+              <div class="task" class:incomplete={(progressValue === 0) || (progressValue && values[2] && progressValue < values[2])} class:block={isProgressableType}>
+                {#if isProgressableType}
+                  <small>{(progressValue || 0).toLocaleString()} / {(values[2] || values[0] || 0).toLocaleString()}</small>
 
                   <div class="bar">
-                    <div class="progress" style:width="{100 / (values[2] || values[0]) * progress}%"></div>
+                    <div class="progress" style:width="{100 / (values[2] || values[0]) * progressValue}%"></div>
 
                     <div class="value">
-                      {(100 / (values[2] || values[0]) * progress).toFixed(2)}%
+                      {(100 / (values[2] || values[0]) * progressValue).toFixed(2)}%
                     </div>
                   </div>
                 {/if}
@@ -74,7 +79,7 @@
                     {planetData[values[2]]?.name || "Unknown planet"}
                   </div>
 
-                  {#if progress && progress[index] === 1}
+                  {#if progressValue === 1}
                     <small>Controlled</small>
                   {:else if progress}
                     <small>Incomplete</small>
