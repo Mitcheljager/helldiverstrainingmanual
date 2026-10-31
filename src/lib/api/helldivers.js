@@ -88,7 +88,7 @@ export async function fetchMajorOrders(fetch) {
 }
 
 export async function fetchStats(fetch, { bypassCache = false } = {}) {
-  const key = "status"
+  const key = "stats"
   const cached = getCache(key)
 
   if (!bypassCache && cached) return cached
