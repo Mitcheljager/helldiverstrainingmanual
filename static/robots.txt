@@ -1,0 +1,43 @@
+# Crawling pages on and related to helldiverstrainingmanual.com for the purpose of training, input, or search as it pertains to LLMs or other generative AI models is not permitted.
+
+User-agent: *
+Crawl-delay: 3
+
+User-agent: Googlebot
+Disallow:
+
+User-agent: AdsBot-Google
+Disallow:
+
+User-agent: Googlebot-Image
+Disallow:
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: SemrushBot-SA
+Disallow: /
+
+User-agent: SemrushBot-SI
+Disallow: /
+
+User-agent: SemrushBot-SWA
+Disallow: /
+
+User-agent: SemrushBot-CT
+Disallow: /
+
+User-agent: SemrushBot-BM
+Disallow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: Yandex
+Disallow: /
+
+User-agent: PetalBot
+Disallow: /
+
+User-agent:*
+Allow: /rails/active_storage/*
