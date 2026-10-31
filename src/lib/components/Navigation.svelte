@@ -39,7 +39,9 @@
   <a href="/api">API</a> <br>
   <a href="/disclaimer">Disclaimer</a> <br>
   Contact me on Discord: @mitsiee <br>
-  Contribute on <a href="https://github.com/Mitcheljager/helldiverstrainingmanual" target="_blank" rel="noreferrer noopener">GitHub</a>
+  Contribute on <a href="https://github.com/Mitcheljager/helldiverstrainingmanual" target="_blank" rel="noreferrer noopener">GitHub</a> <br>
+  <br>
+  <strong>No Automatons allowed!</strong> Using any page or content for purposes pertaining to LLMs or other generative models is not permitted.
 </div>
 
 <style lang="scss">
